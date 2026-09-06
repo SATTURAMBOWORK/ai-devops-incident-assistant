@@ -1,0 +1,20 @@
+{
+  "name": "incident-assistant-backend",
+  "version": "1.0.0",
+  "description": "Express API that analyzes logs and metrics with an LLM to triage incidents",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test tests/"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "supertest": "^7.1.4"
+  }
+}

@@ -1,0 +1,1 @@
+# TODO: node:22-alpine, npm ci --omit=dev, copy src, non-root user, EXPOSE 5000.

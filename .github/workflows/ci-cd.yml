@@ -1,0 +1,4 @@
+# TODO: on push/PR to main ->
+#   test:   node 22, npm ci + npm test for backend and frontend
+#   build:  build both images, push to registry (needs: test)
+#   deploy: deploy the pushed images (needs: build, main branch only)
