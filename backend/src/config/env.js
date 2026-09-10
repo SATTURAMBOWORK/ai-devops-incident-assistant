@@ -10,12 +10,13 @@ export const env = {
   MONGO_DB_NAME: process.env.MONGO_DB_NAME || 'incident-assistant',
 
   VOYAGE_API_KEY: process.env.VOYAGE_API_KEY,
+  GROQ_API_KEY: process.env.GROQ_API_KEY,
 };
 
 // Fail loudly at startup rather than mysteriously on the first request.
 // A missing secret should never get as far as a user-facing 500.
 export function assertEnv() {
-  const missing = ['MONGO_URI', 'VOYAGE_API_KEY'].filter((key) => !env[key]);
+  const missing = ['MONGO_URI', 'VOYAGE_API_KEY', 'GROQ_API_KEY'].filter((key) => !env[key]);
   if (missing.length) {
     throw new Error(`Missing required environment variables: ${missing.join(', ')}`);
   }
