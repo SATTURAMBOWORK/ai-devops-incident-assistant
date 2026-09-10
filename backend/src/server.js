@@ -2,6 +2,7 @@ import 'dotenv/config'; // must be first - loads .env before anything reads it
 import app from './app.js';
 import { env, assertEnv } from './config/env.js';
 import { connectDB, disconnectDB } from './config/db.js';
+import { initRetrieval } from './services/retrieval.service.js';
 import logger from './utils/logger.js';
 
 async function start() {
@@ -14,6 +15,13 @@ async function start() {
   const server = app.listen(env.PORT, () => {
     logger.info(`Server running in ${env.NODE_ENV} mode on http://localhost:${env.PORT}`);
   });
+
+  // Warm up the runbook index in the background. NOT awaited, unlike the
+  // database: the app can serve history and health checks without it, and
+  // retrieve() retries on demand - so a Voyage outage is a warning, not a crash.
+  initRetrieval().catch((err) =>
+    logger.warn('Runbook index not built yet, will retry on first analysis:', err.message)
+  );
 
   // Graceful shutdown: Docker sends SIGTERM when stopping a container. Finish
   // in-flight requests and close the DB rather than being killed mid-write.
