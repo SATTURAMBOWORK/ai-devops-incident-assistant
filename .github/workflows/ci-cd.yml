@@ -1,4 +1,68 @@
-# TODO: on push/PR to main ->
-#   test:   node 22, npm ci + npm test for backend and frontend
-#   build:  build both images, push to registry (needs: test)
-#   deploy: deploy the pushed images (needs: build, main branch only)
+# CI/CD pipeline. GitHub reads this file and runs the jobs on its own machines.
+#
+# Now (CI v1):  run the backend test suite on every push and pull request.
+# Step 9:       + frontend build, + build and push Docker images (needs: tests).
+# Step 10:      + deploy the pushed images (needs: build, main branch only).
+
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# If you push twice in a row, cancel the older run instead of running both.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  backend-test:
+    name: Backend tests
+    runs-on: ubuntu-latest
+    # A hung test should fail the run, not burn CI minutes for 6 hours.
+    timeout-minutes: 10
+
+    # The app lives in backend/, not the repo root, so every `run` starts there.
+    defaults:
+      run:
+        working-directory: backend
+
+    env:
+      # Where mongodb-memory-server keeps its MongoDB binary (~100 MB). A fixed
+      # path OUTSIDE node_modules, so the cache below can restore it before
+      # `npm ci` - otherwise it is downloaded again on every single run.
+      MONGOMS_DOWNLOAD_DIR: ${{ github.workspace }}/.cache/mongodb-binaries
+
+    # No secrets needed: the tests fake Voyage and Groq and use an in-memory
+    # MongoDB, so CI never needs API keys or a real database.
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v7
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          # Cache downloaded npm packages, keyed on the lockfile.
+          cache: npm
+          cache-dependency-path: backend/package-lock.json
+
+      - name: Cache MongoDB binary
+        uses: actions/cache@v6
+        with:
+          path: ${{ github.workspace }}/.cache/mongodb-binaries
+          key: mongodb-binaries-${{ runner.os }}-${{ hashFiles('backend/package-lock.json') }}
+
+      # `npm ci`, not `npm install`: installs exactly what package-lock.json
+      # says, and fails if package.json and the lockfile disagree.
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+
+  # TODO (Step 9): frontend job - npm ci + npm run build in frontend/
+  # TODO (Step 9): build job - build both Docker images, push to registry (needs: backend-test)
+  # TODO (Step 10): deploy job - deploy the pushed images (needs: build, main branch only)
