@@ -6,3 +6,12 @@ build/
 *.log
 .DS_Store
 coverage/
+
+# Python / ML service
+.venv/
+__pycache__/
+*.pyc
+
+# Trained model artifact: regenerate with `python ml/train.py`.
+# Binary files bloat git history and change completely on every retrain.
+ml/model.joblib

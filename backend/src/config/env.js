@@ -11,6 +11,12 @@ export const env = {
 
   VOYAGE_API_KEY: process.env.VOYAGE_API_KEY,
   GROQ_API_KEY: process.env.GROQ_API_KEY,
+
+  // Our own ML service (ml/main.py). Not in assertEnv below on purpose: the
+  // classifier is optional, so a missing URL degrades one feature instead of
+  // stopping the app from booting. The default is the local dev port; in
+  // docker-compose it becomes http://ml-service:8000.
+  ML_SERVICE_URL: process.env.ML_SERVICE_URL || 'http://localhost:8000',
 };
 
 // Fail loudly at startup rather than mysteriously on the first request.

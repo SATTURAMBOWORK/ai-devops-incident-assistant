@@ -3,3 +3,11 @@ dist
 .git
 .env
 *.log
+
+# Python / ML service
+.venv
+ml/.venv
+__pycache__
+*.pyc
+# Built inside the image by train.py - see docker/Dockerfile.ml
+ml/model.joblib

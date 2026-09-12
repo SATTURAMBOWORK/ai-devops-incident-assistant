@@ -1,0 +1,21 @@
+# Exact versions, not ranges.
+#
+# scikit-learn writes model.joblib in a format tied to its own version and to
+# numpy's. Training with one version and loading with another can fail outright,
+# or - worse - load and silently predict differently. Pinning is what makes
+# "it worked on my machine" also true inside the container and in CI.
+#
+# Regenerate after changing a dependency:
+#   .venv/Scripts/python.exe -m pip freeze > requirements.txt
+
+# --- training and inference ---
+scikit-learn==1.9.1
+joblib==1.6.0        # saves/loads the trained pipeline
+numpy==2.5.3         # scikit-learn's array backend
+scipy==1.18.1        # sparse matrices behind TF-IDF
+threadpoolctl==3.6.0 # pulled in by scikit-learn, pinned so builds are reproducible
+
+# --- serving ---
+fastapi==0.141.1
+uvicorn==0.52.4      # ASGI server that actually runs FastAPI
+pydantic==2.13.5     # request/response validation, see schemas.py

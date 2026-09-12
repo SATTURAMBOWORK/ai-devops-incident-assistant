@@ -1,6 +1,7 @@
 import Incident from '../models/Incident.js';
 import { retrieve } from './retrieval.service.js';
 import { analyzeIncident, trimLogs } from './analysis.service.js';
+import { classifyLogs } from './classifier.service.js';
 import { AppError } from '../middleware/errorHandler.js';
 import logger from '../utils/logger.js';
 
@@ -25,8 +26,26 @@ export async function createIncident({ title, logs, metrics }) {
     //    The full original logs stay stored on the incident.
     const trimmedLogs = trimLogs(logs);
 
-    // 3. Retrieve: which runbook entries match these logs? (the R in RAG)
-    const matches = await retrieve(trimmedLogs);
+    // 3. Retrieve which runbook entries match these logs (the R in RAG), and
+    //    ask our own classifier what category it thinks this is.
+    //
+    //    Run together rather than one after the other: neither needs the
+    //    other's result, and retrieval waits on a network call to Voyage. Done
+    //    sequentially the classifier would add its latency to every request;
+    //    in parallel it costs effectively nothing.
+    //
+    //    Promise.all is safe here only because classifyLogs never rejects - it
+    //    returns null instead. A throwing call would take retrieval down with it.
+    const [matches, classification] = await Promise.all([
+      retrieve(trimmedLogs),
+      classifyLogs(trimmedLogs),
+    ]);
+
+    if (classification) {
+      logger.info(
+        `Classifier: ${classification.label} (${classification.confidence})`
+      );
+    }
 
     // 4. Analyze: logs + metrics + matched runbook steps -> structured JSON.
     const { analysis, model, tokensUsed } = await analyzeIncident({
@@ -41,6 +60,9 @@ export async function createIncident({ title, logs, metrics }) {
       status: 'completed',
       analysis,
       retrievedDocs: matches.map(({ title: docTitle, score }) => ({ title: docTitle, score })),
+      // undefined when the classifier was unavailable or unsure - Mongoose
+      // simply omits the field rather than storing a half-empty object.
+      classification: classification ?? undefined,
       model,
       tokensUsed,
       durationMs: Date.now() - startedAt,

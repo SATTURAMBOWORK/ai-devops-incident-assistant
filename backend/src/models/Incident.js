@@ -39,6 +39,28 @@ const retrievedDocSchema = new Schema(
   { _id: false }
 );
 
+// What our own trained classifier predicted (the Python service in ml/).
+//
+// Stored alongside the LLM's analysis rather than merged into it, so the two
+// stay comparable: you can query later for incidents where the model and the
+// LLM disagreed, which is exactly the set worth adding to the training data.
+//
+// Every field is optional - the classifier is allowed to be unavailable or
+// unsure, and an incident analysed without it is still a complete incident.
+const classificationSchema = new Schema(
+  {
+    label: String, // runbook category id, e.g. 'oom-killed'
+    confidence: { type: Number, min: 0, max: 1 },
+    // Runners-up, kept because a 0.45/0.40 split is a meaningfully different
+    // answer from a 0.45 with nothing behind it.
+    alternatives: [{ _id: false, label: String, confidence: Number }],
+    // Which trained model said this. Without it, predictions from different
+    // model versions are indistinguishable in the database.
+    modelVersion: String,
+  },
+  { _id: false }
+);
+
 const incidentSchema = new Schema(
   {
     title: { type: String, trim: true, maxlength: 200, default: 'Untitled incident' },
@@ -59,6 +81,7 @@ const incidentSchema = new Schema(
 
     analysis: analysisSchema,
     retrievedDocs: [retrievedDocSchema],
+    classification: classificationSchema,
 
     // Cheap observability: what it cost and how long it took.
     model: String,
