@@ -1,1 +1,91 @@
-# TODO: services - mongo (with a named volume), backend, frontend.
+# The whole app with one command:
+#   docker compose up --build
+# then open http://localhost:8080
+#
+# Needs backend/.env with VOYAGE_API_KEY and GROQ_API_KEY (copy .env.example).
+# MONGO_URI and ML_SERVICE_URL from that file are overridden below to point at
+# the containers, so the same .env works for local dev and for compose.
+
+name: incident-assistant
+
+services:
+  mongo:
+    # Pinned to a major version: a floating "latest" could jump a major version
+    # on some rebuild, and MongoDB does not always read an older version's data.
+    image: mongo:8
+    restart: unless-stopped
+    volumes:
+      # A named volume, so incidents survive `docker compose down` and rebuilds.
+      # Only `docker compose down -v` deletes it.
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    # No ports: only the backend talks to the database, over the compose
+    # network. Publishing 27017 would expose an unauthenticated database.
+
+  ml-service:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.ml
+    restart: unless-stopped
+    # Published only so you can open http://localhost:8000/docs in a demo. The
+    # backend reaches it over the compose network either way.
+    ports:
+      - "8000:8000"
+    healthcheck:
+      # Asks whether the MODEL is loaded, not just whether the process is up.
+      # python, because the slim image has no curl or wget.
+      test:
+        - CMD
+        - python
+        - -c
+        - "import json,sys,urllib.request; sys.exit(0 if json.load(urllib.request.urlopen('http://localhost:8000/health'))['model_loaded'] else 1)"
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+  backend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.backend
+    restart: unless-stopped
+    env_file:
+      - backend/.env
+    # `environment` wins over env_file, so these replace the local-dev values.
+    environment:
+      NODE_ENV: production
+      MONGO_URI: mongodb://mongo:27017
+      ML_SERVICE_URL: http://ml-service:8000
+    ports:
+      - "5000:5000"
+    depends_on:
+      # server.js connects to MongoDB before listening and exits if it cannot,
+      # so wait until the database actually answers, not just until it starts.
+      mongo:
+        condition: service_healthy
+      # Deliberately NOT waiting for ml-service to be healthy: the classifier
+      # is optional, and the backend already works without it. Starting in
+      # parallel also means the ML image's slower startup never delays the app.
+      ml-service:
+        condition: service_started
+
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.frontend
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    depends_on:
+      # nginx looks up "backend" once at startup and refuses to start if the
+      # name does not resolve yet, so wait for a healthy backend.
+      backend:
+        condition: service_healthy
+
+volumes:
+  mongo-data:

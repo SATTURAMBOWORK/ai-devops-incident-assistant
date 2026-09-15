@@ -11,3 +11,6 @@ __pycache__
 *.pyc
 # Built inside the image by train.py - see docker/Dockerfile.ml
 ml/model.joblib
+# Tests run in CI, not in production. (Raw Loghub files in ml/data/loghub/ are
+# already excluded by *.log above.)
+ml/tests

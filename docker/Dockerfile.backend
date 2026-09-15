@@ -1,1 +1,38 @@
-# TODO: node:22-alpine, npm ci --omit=dev, copy src, non-root user, EXPOSE 5000.
+# Build from the repo root, like the other images:
+#   docker build -f docker/Dockerfile.backend -t incident-backend .
+
+# Node 22 matches CI. alpine keeps the image small (~60MB base vs ~400MB), and
+# unlike the ML image nothing here needs glibc - the backend has no native
+# dependencies.
+FROM node:22-alpine
+
+# Express and several libraries skip dev-only work when this is set.
+ENV NODE_ENV=production
+
+WORKDIR /app
+
+# Dependencies first, in their own cached layer: rebuilt only when the lockfile
+# changes, not on every source edit.
+#
+# --omit=dev leaves out supertest and mongodb-memory-server. The latter would
+# otherwise download a ~100MB MongoDB binary into an image that never runs tests.
+COPY backend/package.json backend/package-lock.json ./
+RUN npm ci --omit=dev && npm cache clean --force
+
+COPY backend/src ./src
+
+# The official image ships a non-root "node" user. Running as it means a
+# compromised process cannot rewrite the code it is running.
+USER node
+
+EXPOSE 5000
+
+# /api/health returns 503 when MongoDB is disconnected, so this marks the
+# container unhealthy for exactly the case where it cannot serve requests.
+# wget, not curl: busybox wget is already in alpine, curl is not.
+HEALTHCHECK --interval=15s --timeout=5s --start-period=20s --retries=3 \
+  CMD wget -qO- http://localhost:5000/api/health > /dev/null || exit 1
+
+# `node` directly, not `npm start`: npm does not forward SIGTERM to its child,
+# so `docker stop` would skip server.js's graceful shutdown and kill it after 10s.
+CMD ["node", "src/server.js"]
