@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router';
 import { getIncident } from '../services/api.js';
 import Loader from '../components/Loader.jsx';
+import ClassifierPrediction from '../components/ClassifierPrediction.jsx';
 import { formatDate, sentenceCase } from '../utils/format.js';
 
 const METRIC_LABELS = {
@@ -181,6 +182,11 @@ export default function IncidentPage() {
                   </p>
                 )}
               </section>
+
+              <ClassifierPrediction
+                classification={incident.classification}
+                retrievedDocs={incident.retrievedDocs}
+              />
 
               {metrics.length > 0 && (
                 <section>

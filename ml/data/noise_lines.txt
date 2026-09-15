@@ -1,0 +1,1764 @@
+[Tue Nov 29 06:12:12 2005] [error] uriMap.mapUri() uri must start with /
+Jul 27 14:42:00 combo kernel: ide-floppy driver 0.99.newide
+Sep 19 05:57:38 combo kernel: PCI: Probing PCI hardware
+Dec 15 03:49:19 LabSZ sshd[11816]: Bad protocol version identification '\377\375\001SSH-2.0-OpenSSH_6.2' from 123.59.60.110 port 34170
+Jun 10 11:31:45 combo kernel: Intel machine check architecture supported.
+Dec 11 09:21:33 LabSZ sshd[22470]: Accepted password for curi from 137.189.90.232 port 20601 ssh2
+Jul 27 14:42:00 combo kernel: Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+Jun 10 11:37:02 combo ntpd[2327]: kernel time sync enabled 0001
+Sep 19 05:57:38 combo kernel: PCI: Using IRQ router PIIX/ICH [8086/2410] at 0000:00:1f.0
+[Sat Jun 25 04:04:32 2005] [notice] mod_security/1.9dev2 configured
+Sep 19 05:57:39 combo kernel: ICH: IDE controller at PCI slot 0000:00:1f.1
+Jan 26 12:22:06 combo kernel:   Normal zone: 28334 pages, LIFO batch:6
+Dec  6 12:22:59 combo kernel: Enabling unmasked SIMD FPU exception support... done.
+Jun 13 04:09:20 combo su(pam_unix)[15888]: session opened for user news by (uid=0)
+[Sun Jun 12 04:04:33 2005] [notice] Apache/2.0.49 (Fedora) configured -- resuming normal operations
+Jun  9 06:06:21 combo kernel: Intel machine check reporting enabled on CPU#0.
+Sep 28 09:10:48 combo network: Bringing up interface eth0:  succeeded
+Jan 26 12:22:12 combo kernel: SELinux:  Setting up existing superblocks.
+Sep 19 05:57:38 combo kernel: isapnp: No Plug & Play device found
+Jan 26 12:22:13 combo kernel: audit(1138278089.855:0): avc:  denied  { getattr } for  pid=1 exe=/sbin/init path=/dev/initctl dev=hda2 ino=1031635 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=fifo_file
+Jun  9 06:06:34 combo kernel: Bluetooth: HCI socket layer initialized
+Jun 10 11:31:44 combo kernel: SELinux:  Starting in permissive mode
+[Sat Jun 11 03:03:16 2005] [notice] mod_jk2 Shutting down
+[Sun Jun 19 04:09:06 2005] [notice] LDAP: Built with OpenLDAP LDAP SDK
+Jan 26 12:20:09 combo mysqld: Stopping MySQL:  failed
+Dec  6 12:22:59 combo kernel: isapnp: No Plug & Play device found
+Jan 26 12:23:30 combo mdmonitor: mdadm succeeded
+Oct 25 10:08:48 combo kernel: Enabling unmasked SIMD FPU exception support... done.
+Jan 26 12:22:06 combo irqbalance: irqbalance startup succeeded
+[Thu Jul 21 03:37:31 2005] [error] [client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/
+Sep 19 05:57:40 combo apmd[1748]: Version 3.0.2 (APM BIOS 1.2, Linux driver 1.16ac)
+Jan 26 12:22:12 combo kernel: md: ... autorun DONE.
+Sep 19 05:57:45 combo kernel: ip_tables: (C) 2000-2002 Netfilter core team
+Sep 28 09:08:42 combo canna: Stopping Canna server: succeeded
+Sep 28 09:10:59 combo kernel: Bluetooth: HCI device and connection manager initialized
+Dec 10 08:26:40 LabSZ sshd[24383]: Did not receive identification string from 5.188.10.180
+Jun 10 11:31:50 combo kernel: kjournald starting.  Commit interval 5 seconds
+Jul 20 13:59:41 combo rpc.statd[1636]: gethostbyname error for ^X���^X���^Z���^Z���%8x%8x%8x%8x%8x%8x%8x%8x%8x%62716x%hn%51859x%hn\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220
+Sep 28 09:11:04 combo kernel: lp0: console ready
+Jun 10 11:32:00 combo xinetd: xinetd startup succeeded
+Nov 22 09:31:19 combo kernel: Call Trace:
+Oct 25 10:08:49 combo apmd[1717]: Version 3.0.2 (APM BIOS 1.2, Linux driver 1.16ac)
+Sep 28 09:10:52 combo smartd[1758]: smartd version 5.21 Copyright (C) 2002-3 Bruce Allen
+Jun  9 06:07:19 combo ntpd[2296]: kernel time sync status 0040
+Sep 28 09:10:52 combo apmd[1720]: Charge: * * * (-1% unknown)
+Jun  9 06:06:49 combo canna:  succeeded
+Sep 19 05:57:37 combo kernel: Failure registering capabilities with the kernel
+Jun  9 06:06:44 combo privoxy: Jun 09 06:06:44 Privoxy(-150093696) Info: loading configuration file '/etc/privoxy/config':
+Jul 27 14:42:00 combo kernel: Linux agpgart interface v0.100 (c) Dave Jones
+Jan 26 12:22:11 combo kernel: md: Autodetecting RAID arrays.
+Dec  6 12:23:35 combo canna:  succeeded
+Jan 26 12:22:07 combo kernel: Using tsc for high-res timesource
+Sep 19 05:57:46 combo kernel: Bluetooth: Core ver 2.4
+Dec  6 12:22:57 combo kernel: Kernel command line: ro root=LABEL=/ rhgb quiet
+[Thu Jun 09 06:07:05 2005] [notice] Digest: generating secret for digest authentication ...
+Sep 28 09:11:52 combo httpd: httpd startup succeeded
+Jan 26 12:22:10 combo kernel: mice: PS/2 mouse device common for all mice
+Oct 25 10:08:59 combo kernel: microcode: No suitable data for cpu 0
+Dec 10 09:32:20 LabSZ sshd[24680]: pam_unix(sshd:session): session opened for user fztu by (uid=0)
+Dec  6 12:21:16 combo crond: crond shutdown succeeded
+Jun  9 06:06:20 combo syslog: klogd startup succeeded
+[Sun Jul 10 04:04:42 2005] [notice] Digest: generating secret for digest authentication ...
+Oct 25 10:08:48 combo kernel: ACPI: Interpreter disabled.
+Jun 10 11:32:37 combo ntpd[2327]: ntpd 4.2.0@1.1161-r Thu Mar 11 11:46:39 EST 2004 (1)
+Oct 25 10:09:04 combo kernel: lp0: console ready
+Jan 26 12:22:09 combo kernel: Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+Nov 21 12:41:10 combo kernel: httpd: page allocation failure. order:0, mode:0xd2
+Jun 13 05:27:31 combo gdm-binary[2803]: Couldn't authenticate user
+Jan 26 12:22:08 combo bluetooth: hcid startup succeeded
+Oct 25 14:07:01 combo named[2281]: shutting down
+[Thu Jun 09 19:23:32 2005] [error] jk2_init() Can't find child 4058 in scoreboard
+Sep 28 09:10:55 combo kernel: parport0: PC-style at 0x378 (0x778) [PCSPP,TRISTATE,EPP]
+Jun  9 06:06:22 combo bluetooth: hcid startup succeeded
+Sep 28 09:03:14 combo  -- root[2417]: ROOT LOGIN ON tty2
+Jun 10 11:31:46 combo kernel: ICH: IDE controller at PCI slot 0000:00:1f.1
+Oct 25 10:08:51 combo kernel: hdc: ATAPI 24X CD-ROM drive, 128kB Cache
+Sep 29 12:32:48 combo login(pam_unix)[2402]: session closed for user root
+Jun  9 06:06:22 combo kernel: agpgart: AGP aperture is 64M @ 0xf4000000
+Jul 27 14:42:05 combo kernel: parport0: PC-style at 0x378 (0x778) [PCSPP,TRISTATE,EPP]
+Oct 25 10:08:47 combo kernel: Using tsc for high-res timesource
+Jul 17 04:08:16 combo cups: cupsd startup succeeded
+[Sun Jun 26 04:04:27 2005] [notice] Digest: generating secret for digest authentication ...
+Oct 25 10:08:49 combo apmd: apmd startup succeeded
+[Fri Jun 17 15:05:40 2005] [error] [client 218.65.235.56] request failed: error reading the headers
+Aug  2 07:41:10 combo sshd(pam_unix)[24658]: session opened for user root by (uid=0)
+Sep 28 09:09:08 combo named: named shutdown succeeded
+Jun 10 11:31:45 combo kernel: NET: Registered protocol family 16
+Jul 27 14:41:57 combo kernel:  BIOS-e820: 00000000ffb00000 - 0000000100000000 (reserved)
+Nov 22 07:36:23 combo kernel: httpd: page allocation failure. order:0, mode:0xd2
+Jul 27 14:41:58 combo kernel: usbcore: registered new driver hub
+Oct 23 12:39:50 combo in.rexecd[22511]: connect from 88-213-181-81-cable.canals.ro
+Dec  6 12:22:59 combo kernel: Transparent bridge - 0000:00:1e.0
+Jun 10 11:31:46 combo kernel:     ide0: BM-DMA at 0xffa0-0xffa7, BIOS settings: hda:DMA, hdb:pio
+Jun  9 06:06:20 combo kernel: Using tsc for high-res timesource
+Dec  6 12:20:45 combo squid: ^[[60G[  ^[[0;32mOK
+Dec  9 09:45:49 combo login(pam_unix)[2419]: session closed for user root
+Sep 19 05:57:37 combo kernel:  BIOS-e820: 00000000000f0000 - 0000000000100000 (reserved)
+Jul 27 14:42:01 combo kernel: md: autorun ...
+Oct 25 10:08:43 combo network: Setting network parameters:  succeeded
+Sep 19 05:57:39 combo bluetooth: hcid startup succeeded
+Jan 26 12:22:44 combo PAM-rootok[2089]: pam_check_access failed, user does not have proper access: system_u:system_r:kernel_t
+Jun  9 06:06:37 combo cups: cupsd startup succeeded
+Sep 19 05:57:54 combo sendmail: sendmail startup succeeded
+Jun  9 06:06:21 combo kernel: CPU: L2 cache: 256K
+Jan 26 12:22:08 combo kernel: pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+Jul 27 14:42:00 combo kernel: ttyS1 at I/O 0x2f8 (irq = 3) is a 16550A
+Jun  9 06:06:28 combo kernel: SELinux:  Unregistering netfilter hooks
+[Sun Jul 10 04:04:45 2005] [notice] Apache/2.0.49 (Fedora) configured -- resuming normal operations
+Sep 28 09:10:50 combo kernel: Real Time Clock Driver v1.12
+Jul 27 14:41:57 combo kernel:   DMA zone: 4096 pages, LIFO batch:1
+Dec 10 09:45:06 LabSZ sshd[24680]: pam_unix(sshd:session): session closed for user fztu
+Jun 10 11:31:44 combo kernel: CPU 0 irqstacks, hard=02345000 soft=02344000
+Jul 27 14:41:57 combo kernel: zapping low mappings.
+Jul 27 14:42:06 combo kernel: 3c59x: Donald Becker and others. www.scyld.com/network/vortex.html
+[Sat Jun 11 03:03:06 2005] [error] mod_jk child init 1 -2
+Jan 26 12:22:18 combo kernel: audit(1138296102.617:183467): avc:  denied  { getattr } for  pid=635 exe=/bin/bash path=/sys/devices/pci0000:00/0000:00:1f.2/usb1/bNumConfigurations dev= ino=1290 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysfs_t tclass=file
+Jun  9 06:06:20 combo kernel:  BIOS-e820: 00000000ffb00000 - 0000000100000000 (reserved)
+Jul 27 14:42:13 combo cups: cupsd startup succeeded
+Jun  9 06:06:30 combo kernel: kjournald starting.  Commit interval 5 seconds
+Jan 26 12:22:08 combo kernel: Transparent bridge - 0000:00:1e.0
+[Tue Nov 29 06:12:12 2005] [error] uriMap.mapUri() uri must start with /
+Oct 25 10:07:11 combo portmap: portmap shutdown succeeded
+Sep 19 05:57:38 combo random: Initializing random number generator:  succeeded
+Jun  9 06:06:21 combo kernel: PCI: Probing PCI hardware
+Jul 27 14:42:10 combo kernel: Bluetooth: L2CAP socket layer initialized
+[Wed Jun 15 14:14:02 2005] [error] [client 150.161.187.25] request failed: URI too long (longer than 8190)
+Jun  9 06:06:21 combo kernel: usbcore: registered new driver hub
+Jul 27 14:42:20 combo gpm: gpm startup succeeded
+[Fri Jun 10 04:15:02 2005] [error] [client 62.221.237.83] Invalid method in request get /scripts/..%35c../winnt/system32/cmd.exe?/c+dir
+Sep 19 05:57:41 combo kernel: Disabled Privacy Extensions on device 022db720(lo)
+Jun  9 06:06:20 combo kernel: 0MB HIGHMEM available.
+Sep 28 09:10:51 combo kernel: mice: PS/2 mouse device common for all mice
+Jun 10 11:32:06 combo gpm[2094]: Started gpm successfully. Entered daemon mode.
+Jun 10 11:31:45 combo kernel: CPU: L1 I cache: 16K, L1 D cache: 16K
+Sep 19 05:57:37 combo kernel:  BIOS-e820: 0000000007eae000 - 0000000008000000 (reserved)
+Nov 22 09:26:02 combo kernel: VM: killing process httpd
+Oct 23 12:39:49 combo cups-lpd[22514]: Connection from 88-213-181-81-cable.canals.ro (81.181.213.88)
+Jan 26 12:22:10 combo apmd[1727]: Charge: * * * (-1% unknown)
+Dec 26 10:55:32 LabSZ sshd[1155]: Server listening on :: port 22.
+[Thu Jun 09 06:07:05 2005] [error] env.createBean2(): Factory error creating worker.jni:onStartup ( worker.jni, onStartup)
+Dec  9 09:41:52 combo  -- root[2419]: ROOT LOGIN ON tty2
+[Sun Jun 12 04:04:29 2005] [error] config.update(): Can't create vm:
+Jun 10 11:31:45 combo kernel: Linux Plug and Play Support v0.97 (c) Adam Belay
+Jan 26 12:22:09 combo kernel: Using cfq io scheduler
+Nov 22 17:26:06 combo kernel: VM: killing process httpd
+Nov 21 12:41:13 combo kernel: Call Trace:
+Dec 10 17:04:15 LabSZ sshd[15139]: pam_unix(sshd:session): session closed for user jmzhu
+Jun  9 10:07:13 combo named[2275]: listening on IPv4 interface eth0:5, 63.126.79.73#53
+Dec 13 19:09:15 LabSZ sshd[6395]: Received disconnect from 119.137.63.195: 11: disconnected by user
+Jun  9 06:06:27 combo kernel: EXT3-fs: mounted filesystem with ordered data mode.
+Jun 19 04:09:02 combo cups: cupsd startup succeeded
+Sep 28 09:10:55 combo kernel: hub 1-0:1.0: USB hub found
+Jun 10 11:31:45 combo kernel: isapnp: Scanning for PnP cards...
+Sep 28 09:09:12 combo snmpd: snmpd shutdown succeeded
+Sep 28 09:10:49 combo portmap: portmap startup succeeded
+Jun 10 11:31:48 combo smartd[1786]: Device: /dev/hda, is SMART capable. Adding to "monitor" list.
+Oct 25 10:08:49 combo kernel: agpgart: AGP aperture is 64M @ 0xf4000000
+Oct 25 10:08:46 combo syslog: klogd startup succeeded
+[Thu Jun 09 06:07:05 2005] [error] env.createBean2(): Factory error creating channel.jni:jni ( channel.jni, jni)
+[Thu Jul 21 03:37:32 2005] [error] [client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/
+Oct 25 10:09:54 combo ntpd[2304]: frequency initialized 0.000 PPM from /var/lib/ntp/drift
+Jun 10 11:31:44 combo kernel: Built 1 zonelists
+Jun 10 11:31:44 combo kernel: SELinux:  Initializing.
+Dec  9 09:43:25 combo syslog: klogd startup succeeded
+Jun 10 11:31:47 combo smartd[1786]: Opened configuration file /etc/smartd.conf
+[Sun Jun 26 04:04:29 2005] [notice] mod_security/1.9dev2 configured
+Dec  6 12:23:12 combo kernel: process `syslogd' is using obsolete setsockopt SO_BSDCOMPAT
+Jun 10 11:32:47 combo mdmpd: mdmpd failed
+Oct 25 10:06:09 combo messagebus: messagebus -TERM succeeded
+Jul 27 14:42:00 combo kernel: ICH: IDE controller at PCI slot 0000:00:1f.1
+Nov 22 14:32:34 combo kernel: VM: killing process sendmail
+Jun  9 06:06:24 combo kernel: hdc: ATAPI 24X CD-ROM drive, 128kB Cache
+Jun  9 06:06:21 combo kernel: PCI: Using IRQ router PIIX/ICH [8086/2410] at 0000:00:1f.0
+Sep 28 09:10:49 combo kernel: You can enable it with acpi=force
+Sep 19 05:58:29 combo snmpd[2317]: NET-SNMP version 5.1.1
+Jun 10 11:31:47 combo kernel: hda: max request size: 128KiB
+Jun  9 06:06:21 combo kernel: isapnp: No Plug & Play device found
+Jun  9 06:06:26 combo kernel: md: ... autorun DONE.
+Jul 24 04:20:21 combo cups: cupsd shutdown succeeded
+Sep 19 05:57:42 combo kernel: microcode: CPU0 already at revision 0x8 (current=0x8)
+Dec  6 12:22:57 combo kernel: 126MB LOWMEM available.
+[Fri Jan 27 11:55:15 2006] [error] [client 202.143.128.18] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /
+Dec  6 12:24:23 combo ntpd: ntpd startup succeeded
+[Fri Jan 27 11:55:15 2006] [error] [client 202.143.128.18] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /
+[Thu Jun 09 06:07:19 2005] [notice] mod_security/1.9dev2 configured
+[Thu Jun 09 06:07:20 2005] [notice] workerEnv.init() ok /etc/httpd/conf/workers2.properties
+Jul 27 14:42:09 combo kernel: Bluetooth: HCI device and connection manager initialized
+Sep 19 05:57:37 combo kernel: 0MB HIGHMEM available.
+[Sun Jun 26 04:04:27 2005] [notice] Digest: done
+Oct 25 10:09:02 combo kernel: process `syslogd' is using obsolete setsockopt SO_BSDCOMPAT
+Dec 10 07:51:09 LabSZ sshd[24323]: Did not receive identification string from 195.154.37.122
+Jun  9 06:06:20 combo kernel: Calibrating delay loop... 1441.79 BogoMIPS
+Oct 25 10:09:10 combo xinetd[2003]: Started working: 30 available services
+Jan 26 12:22:41 combo xinetd[2013]: Service telnet failed to start and is deactivated.
+Jan 26 12:20:28 combo crond: crond shutdown succeeded
+Dec  6 12:24:08 combo httpd: httpd startup succeeded
+Jun  9 06:06:26 combo kernel: md: autorun ...
+Sep 28 09:10:50 combo kernel: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Jun 10 11:32:46 combo rsyncd[2394]: rsyncd version 2.6.2 starting, listening on port 873
+Jan 26 12:22:09 combo kernel: hda: max request size: 128KiB
+Sep 28 09:10:49 combo kernel:  BIOS-e820: 00000000ffb00000 - 0000000100000000 (reserved)
+Jun 10 11:31:52 combo kernel: 0000:01:0c.0: 3Com PCI 3c905C Tornado at 0xec80. Vers LK1.1.19
+[Tue Nov 29 06:12:12 2005] [error] uriMap.mapUri() uri must start with /
+Jan 26 12:22:08 combo kernel: Real Time Clock Driver v1.12
+Jan 26 12:22:06 combo kernel: Built 1 zonelists
+[Sat Jun 18 11:25:21 2005] [error] mod_jk child workerEnv in error state 1
+Sep 28 09:10:50 combo kernel: PCI: Using IRQ router PIIX/ICH [8086/2410] at 0000:00:1f.0
+Jun  9 06:06:26 combo kernel: kjournald starting.  Commit interval 5 seconds
+Dec  6 12:24:34 combo mdmonitor: mdadm succeeded
+Jul 27 14:42:20 combo gpm[2076]: Started gpm successfully. Entered daemon mode.
+Sep 19 05:57:37 combo kernel: Enabling fast FPU save and restore... done.
+Dec  6 12:20:23 combo atd: atd shutdown succeeded
+Jul 27 14:42:00 combo autofs: automount startup succeeded
+Jan 26 12:22:22 combo kernel: audit(1138296104.661:225142): avc:  denied  { unlink } for  pid=717 exe=/bin/rm name=control dev=hda2 ino=1154199 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=chr_file
+Jul 27 14:41:59 combo hcid[1690]: HCI daemon ver 2.4 started
+Sep 28 09:08:42 combo cannaserver[2133]: irw_killserver:cannaserver end
+[Sat Jun 25 04:04:30 2005] [notice] Digest: generating secret for digest authentication ...
+Sep 28 09:10:49 combo kernel: 0MB HIGHMEM available.
+Sep 19 05:57:38 combo kernel: apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)
+Dec 10 15:47:29 LabSZ sshd[4772]: pam_unix(sshd:session): session closed for user fztu
+Jun  9 06:06:34 combo kernel: process `syslogd' is using obsolete setsockopt SO_BSDCOMPAT
+Nov 22 09:25:56 combo kernel: httpd: page allocation failure. order:0, mode:0xd2
+[Wed Sep 28 09:08:45 2005] [warn] child process 18802 still did not exit, sending a SIGTERM
+Dec  6 12:20:29 combo xfs: xfs shutdown failed
+[Sun Jul 03 04:07:59 2005] [notice] Digest: done
+Feb 12 13:11:15 combo ftpd[4766]: setsockopt (IP_TOS): Operation not supported
+Dec  6 12:20:31 combo canna: Stopping Canna server: succeeded
+Nov 22 14:32:16 combo kernel: VM: killing process httpd
+Dec  6 12:24:29 combo ntpd[2319]: frequency initialized 0.000 PPM from /var/lib/ntp/drift
+[Sat Jun 11 03:03:05 2005] [error] mod_jk child init 1 -2
+Jul 27 14:42:19 combo privoxy: Jul 27 14:42:19 Privoxy(-150806400) Info: loading configuration file '/etc/privoxy/config':
+[Fri Jun 17 04:03:42 2005] [notice] LDAP: Built with OpenLDAP LDAP SDK
+Jan 12 02:01:21 combo xinetd[17168]: warning: can't get client address: Connection reset by peer
+Sep 19 05:57:37 combo kernel: Intel machine check architecture supported.
+Sep 28 09:15:33 combo ntpd[2310]: synchronized to LOCAL(0), stratum=10
+Oct 25 10:09:51 combo snmpd[2287]: NET-SNMP version 5.1.1
+Dec  9 09:48:07 combo login(pam_unix)[2420]: session closed for user root
+Jul 25 13:41:34 combo named[2306]: notify question section contains no SOA
+[Fri Jun 10 11:32:27 2005] [error] config.update(): Can't create vm:
+Sep 19 05:57:37 combo kernel: Intel machine check reporting enabled on CPU#0.
+Jan 26 12:20:28 combo xinetd: xinetd shutdown succeeded
+Dec  6 12:23:28 combo privoxy: Dec 06 12:23:28 Privoxy(-150085504) Info: loading configuration file '/etc/privoxy/config':
+Sep 28 09:03:10 combo gdm-binary[2799]: Couldn't authenticate user
+Oct 25 10:08:47 combo kernel: SELinux:  Starting in permissive mode
+Oct 25 10:09:09 combo sendmail: sendmail startup succeeded
+Nov 22 07:36:42 combo kernel: VM: killing process httpd
+Jun  9 06:06:29 combo kernel: EXT3 FS on hda2, internal journal
+Jan 26 12:20:31 combo kernel: Kernel logging (proc) stopped.
+[Sat Jun 11 03:03:20 2005] [notice] mod_jk2 Shutting down
+Oct 25 10:06:14 combo cannaserver[2105]: irw_killserver:cannaserver end
+Jun  9 06:06:20 combo kernel:   DMA zone: 4096 pages, LIFO batch:1
+Sep 28 09:08:35 combo messagebus: messagebus -TERM succeeded
+[Tue Nov 29 06:11:57 2005] [error] uriMap.mapUri() uri must start with /
+Jan 26 12:22:41 combo xinetd[2013]: xinetd Version 2.3.13 started with libwrap loadavg options compiled in.
+Jun 10 11:31:45 combo kernel: ACPI: Interpreter disabled.
+Jun 10 11:31:44 combo kernel:  BIOS-e820: 00000000ffb00000 - 0000000100000000 (reserved)
+Dec  6 12:22:57 combo kernel: Built 1 zonelists
+Jul 27 14:41:59 combo bluetooth: hcid startup succeeded
+Jan 26 12:23:22 combo snmpd[2300]: NET-SNMP version 5.1.1
+Jun  9 06:06:45 combo privoxy: privoxy startup succeeded
+Jan 26 12:22:06 combo kernel:  BIOS-e820: 00000000000f0000 - 0000000000100000 (reserved)
+Sep 29 12:27:59 combo gdm-binary[2813]: Couldn't authenticate user
+Jun  9 06:06:21 combo kernel: isapnp: Scanning for PnP cards...
+Sep 28 09:10:49 combo kernel: Built 1 zonelists
+Oct 25 10:06:54 combo rc: Stopping squid:  succeeded
+Sep 28 13:09:04 combo named[2305]: shutting down
+[Wed Jul 27 14:42:39 2005] [notice] suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+Jun 10 11:31:53 combo kernel: 0000:01:0c.0: 3Com PCI 3c905C Tornado at 0xec80. Vers LK1.1.19
+Sep 19 05:57:58 combo privoxy: Sep 19 05:57:58 Privoxy(-150429568) Info: loading configuration file '/etc/privoxy/config':
+Jul 27 14:41:57 combo kernel: Kernel command line: ro root=LABEL=/ rhgb quiet
+Jan 26 12:22:10 combo kernel: input: AT Translated Set 2 keyboard on isa0060/serio0
+Jun  9 06:06:30 combo kernel: EXT3 FS on hda1, internal journal
+Sep 19 05:58:38 combo mdmonitor: mdadm succeeded
+Sep 19 05:57:37 combo irqbalance: irqbalance startup succeeded
+Jun 13 05:27:11 combo gdm(pam_unix)[2803]: bad username [;;]
+Oct 25 10:06:14 combo FreeWnn: jserver shutdown succeeded
+Oct 25 10:09:37 combo httpd: httpd startup succeeded
+[Sat Jun 25 04:04:32 2005] [notice] Apache/2.0.49 (Fedora) configured -- resuming normal operations
+Jun  9 06:06:34 combo kernel: ip_tables: (C) 2000-2002 Netfilter core team
+Jun  9 06:06:34 combo kernel: 0000:01:0c.0: 3Com PCI 3c905C Tornado at 0xec80. Vers LK1.1.19
+Oct 25 10:09:02 combo kernel: Bluetooth: Core ver 2.4
+Jun 10 11:31:44 combo syslog: syslogd startup succeeded
+Jun 10 11:31:44 combo kernel: ACPI disabled because your bios is from 2000 and too old
+Jul 27 14:42:02 combo kernel: EXT3-fs: mounted filesystem with ordered data mode.
+Oct 25 10:08:49 combo kernel: Real Time Clock Driver v1.12
+Dec  6 12:20:31 combo mysqld: Stopping MySQL:  failed
+Sep 28 09:10:49 combo kernel: ACPI disabled because your bios is from 2000 and too old
+[Thu Jun 09 06:07:20 2005] [notice] workerEnv.init() ok /etc/httpd/conf/workers2.properties
+Jul 27 14:46:13 combo ntpd[2317]: synchronized to LOCAL(0), stratum=10
+Oct 25 10:08:48 combo kernel: PCI: Invalid ACPI-PCI IRQ routing table
+Sep 19 05:57:38 combo kernel: Linux agpgart interface v0.100 (c) Dave Jones
+Jun  9 06:07:26 combo udev[2575]: removing device node '/udev/vcs1'
+Jul 27 14:41:57 combo kernel: BIOS-provided physical RAM map:
+Jun  9 06:06:20 combo kernel:   HighMem zone: 0 pages, LIFO batch:1
+Oct 25 10:08:47 combo kernel: Built 1 zonelists
+Jun  9 10:07:13 combo named[2275]: listening on IPv4 interface eth0:6, 63.126.79.75#53
+Oct 25 10:07:11 combo kernel: Kernel logging (proc) stopped.
+Feb 12 13:11:15 combo ftpd[4767]: setsockopt (IP_TOS): Operation not supported
+Jun  9 06:06:21 combo kernel: Intel machine check architecture supported.
+Jul 27 14:42:07 combo kernel: 0000:01:0c.0: 3Com PCI 3c905C Tornado at 0xec80. Vers LK1.1.19
+Dec  6 12:23:00 combo kernel: ICH: IDE controller at PCI slot 0000:00:1f.1
+Oct 25 10:08:53 combo kernel: checking if image is initramfs...it isn't (no cpio magic); looks like an initrd
+Oct 25 10:07:09 combo dd: 1+0 records out
+[Sat Jun 25 04:04:30 2005] [notice] Digest: done
+Dec  6 12:20:29 combo FreeWnn: jserver shutdown failed
+Sep 19 05:57:37 combo kernel:  BIOS-e820: 0000000000100000 - 0000000007eae000 (usable)
+Jun  9 06:07:20 combo ntpd[2296]: frequency initialized 0.000 PPM from /var/lib/ntp/drift
+Oct 25 10:08:50 combo kernel: Using cfq io scheduler
+Jun 10 11:31:47 combo autofs: automount startup succeeded
+[Tue Nov 29 06:12:12 2005] [error] uriMap.mapUri() uri must start with /
+Sep 28 13:12:21 combo named[2281]: running
+Sep 19 05:57:38 combo kernel: agpgart: detected 4MB dedicated video ram.
+[Wed Sep 28 09:08:45 2005] [warn] child process 18805 still did not exit, sending a SIGTERM
+Nov 21 12:41:10 combo kernel: Call Trace:
+Jul 27 14:41:57 combo kernel: ACPI disabled because your bios is from 2000 and too old
+Jun 10 11:32:10 combo canna:  succeeded
+Jun  9 06:06:24 combo smartd[1755]: Device: /dev/hda, opened
+Jun 13 05:27:30 combo gdm(pam_unix)[2803]: bad username []
+Jun  9 06:07:24 combo mdmpd: mdmpd failed
+Jan 26 12:22:44 combo gpm[2080]: Started gpm successfully. Entered daemon mode.
+[Tue Nov 29 06:09:51 2005] [error] uriMap.mapUri() uri must start with /
+Jul 27 14:42:00 combo kernel: mice: PS/2 mouse device common for all mice
+Jun 10 11:31:46 combo bluetooth: hcid startup succeeded
+Jun 10 11:31:48 combo kernel: SELinux:  Unregistering netfilter hooks
+Sep 19 05:57:38 combo kernel: Initializing Cryptographic API
+Jan 26 12:22:08 combo kernel: Initializing Cryptographic API
+Jun 10 11:31:55 combo kernel: Bluetooth: L2CAP ver 2.1
+Dec  6 12:23:05 combo kernel: Disabled Privacy Extensions on device 022db720(lo)
+Dec  6 12:22:57 combo kernel:  BIOS-e820: 00000000ffb00000 - 0000000100000000 (reserved)
+Sep 28 09:08:40 combo xfs: xfs shutdown succeeded
+Dec  6 12:22:59 combo kernel: Initializing Cryptographic API
+[Tue Nov 29 06:11:10 2005] [error] uriMap.mapUri() uri must start with /
+Oct 25 10:08:50 combo smartd[1755]: smartd version 5.21 Copyright (C) 2002-3 Bruce Allen
+Jun 10 11:31:45 combo kernel: pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+Jan 26 12:23:28 combo mysqld: Starting MySQL:  succeeded
+Jan 26 12:22:06 combo kernel:  BIOS-e820: 00000000ffb00000 - 0000000100000000 (reserved)
+Jun  9 06:06:20 combo kernel: ACPI disabled because your bios is from 2000 and too old
+Dec 10 11:40:46 LabSZ sshd[27962]: Accepted password for fztu from 113.118.187.34 port 31938 ssh2
+Sep 28 09:10:49 combo kernel: 126MB LOWMEM available.
+Oct 25 10:09:01 combo kernel: Floppy drive(s): fd0 is 1.44M
+Oct 25 10:08:46 combo kernel:   DMA zone: 4096 pages, LIFO batch:1
+Oct 25 10:08:54 combo kernel: md: ... autorun DONE.
+Oct 25 10:09:18 combo IIim: htt startup succeeded
+Aug  1 09:33:45 combo gdm(pam_unix)[2782]: bad username []
+Dec  6 12:22:59 combo kernel: ACPI: Interpreter disabled.
+Jul 27 14:41:58 combo kernel: ACPI: ACPI tables contain no PCI IRQ routing entries
+[Thu Jun 09 06:07:19 2005] [notice] jk2_init() Found child 2335 in scoreboard slot 5
+Jun 10 11:31:44 combo kernel:   Normal zone: 28334 pages, LIFO batch:6
+Sep 19 05:57:38 combo kernel: agpgart: AGP aperture is 64M @ 0xf4000000
+Jan 26 12:22:22 combo kernel: audit(1138296104.703:225182): avc:  denied  { read } for  pid=716 exe=/sbin/udev name=device-mapper dev= ino=1424 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysfs_t tclass=dir
+Dec  6 12:23:03 combo kernel: md: ... autorun DONE.
+Jan 26 12:55:20 combo sendmail: sendmail shutdown succeeded
+Dec  6 12:21:21 combo portmap: portmap shutdown failed
+Sep 19 05:58:38 combo mdmpd: mdmpd failed
+Sep 19 05:57:38 combo kernel: isapnp: Scanning for PnP cards...
+Aug  2 07:40:04 combo sshd(pam_unix)[24613]: session opened for user root by (uid=0)
+[Sat Jun 11 12:00:08 2005] [error] [client 202.118.167.71] Invalid method in request get /scripts/root.exe?/c+dir
+Dec  6 12:22:57 combo kernel: CPU 0 irqstacks, hard=02345000 soft=02344000
+Jul 27 14:42:17 combo xinetd[2016]: Started working: 30 available services
+Jun 10 11:31:46 combo kernel: agpgart: Detected an Intel i810 E Chipset.
+Oct 25 10:08:49 combo netfs: Mounting other filesystems:  succeeded
+Sep 19 05:57:56 combo xinetd[2034]: xinetd Version 2.3.13 started with libwrap loadavg options compiled in.
+Jan 26 12:22:42 combo xinetd[2013]: Started working: 30 available services
+Sep 19 05:57:38 combo kernel: Checking 'hlt' instruction... OK.
+[Sun Jul 10 04:04:42 2005] [notice] Digest: done
+Jun  9 06:06:21 combo kernel: PCI: Using configuration type 1
+Jun 10 11:32:37 combo snmpd[2318]: NET-SNMP version 5.1.1
+Oct 25 10:08:47 combo kernel: Detected 731.217 MHz processor.
+Sep 28 09:10:49 combo kernel: Intel machine check reporting enabled on CPU#0.
+Dec 10 16:17:52 LabSZ sshd[15139]: Accepted password for jmzhu from 183.62.156.108 port 18507 ssh2
+Jul 27 14:42:48 combo named: named startup succeeded
+Jun 10 11:32:01 combo sendmail: sendmail startup succeeded
+[Fri Jun 10 11:32:26 2005] [notice] Digest: done
+Dec  6 12:23:04 combo kernel: SELinux:  Disabled at runtime.
+Dec 10 20:48:47 LabSZ sshd[19864]: Accepted password for curi from 137.189.241.19 port 5256 ssh2
+Jun  9 06:06:22 combo kernel: agpgart: detected 4MB dedicated video ram.
+Jun  9 06:07:15 combo snmpd: snmpd startup succeeded
+Jan 26 12:22:28 combo sshd:  succeeded
+Sep 28 09:10:51 combo kernel: hdc: SAMSUNG CD-ROM SN-124, ATAPI CD/DVD-ROM drive
+Jun  9 06:06:21 combo kernel: Linux Plug and Play Support v0.97 (c) Adam Belay
+Jun 10 11:31:41 combo sysctl: kernel.core_uses_pid = 1
+Sep 19 05:57:38 combo kernel: pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+Jan 26 12:22:07 combo portmap: portmap startup succeeded
+Jul  3 04:07:55 combo cups: cupsd startup succeeded
+Oct 25 10:09:22 combo anacron: anacron startup succeeded
+Dec 10 07:35:15 LabSZ sshd[24303]: Did not receive identification string from 177.79.82.136
+Dec  6 12:22:59 combo kernel: isapnp: Scanning for PnP cards...
+Oct 25 10:06:54 combo squid: ^[[60G[  ^[[0;32m
+Jun 10 11:31:46 combo kernel: ICH: chipset revision 2
+Sep 28 09:10:49 combo kernel:   DMA zone: 4096 pages, LIFO batch:1
+Jun 10 11:31:47 combo kernel: hda: 29336832 sectors (15020 MB) w/1916KiB Cache, CHS=29104/16/63, UDMA(66)
+Jul 27 14:41:57 combo syslog: syslogd startup succeeded
+Jul 27 14:42:13 combo sshd:  succeeded
+Jan 26 12:22:20 combo kernel: audit(1138296102.652:185394): avc:  denied  { getattr } for  pid=647 exe=/usr/bin/readlink path=/sys dev= ino=1 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysfs_t tclass=dir
+Oct 25 10:08:50 combo smartd[1755]: Opened configuration file /etc/smartd.conf
+Sep 28 09:11:30 combo atd: atd startup succeeded
+Oct 25 10:08:50 combo kernel: hda: 29336832 sectors (15020 MB) w/1916KiB Cache, CHS=29104/16/63, UDMA(66)
+Nov 22 09:31:19 combo kernel: httpd: page allocation failure. order:0, mode:0xd2
+Nov 22 14:31:40 combo kernel: VM: killing process httpd
+Dec 10 16:17:52 LabSZ sshd[15139]: pam_unix(sshd:session): session opened for user jmzhu by (uid=0)
+Jun  9 06:07:26 combo udev[2590]: removing device node '/udev/vcs2'
+Jun 10 11:32:01 combo sendmail: sm-client startup succeeded
+Nov 22 09:26:05 combo kernel: httpd: page allocation failure. order:0, mode:0xd2
+Sep 28 09:10:52 combo kernel: checking if image is initramfs...it isn't (no cpio magic); looks like an initrd
+Aug  2 08:06:03 combo login(pam_unix)[24997]: session closed for user root
+Oct 25 10:06:14 combo canna: Stopping Canna server: succeeded
+Jan 26 12:22:06 combo syslog: klogd startup succeeded
+Oct 25 10:08:47 combo kernel: SELinux:  Initializing.
+Sep 28 09:10:55 combo kernel: kjournald starting.  Commit interval 5 seconds
+Sep 29 12:28:13 combo  -- root[2402]: ROOT LOGIN ON tty2
+Jun 10 11:31:47 combo kernel: drivers/usb/input/hid-core.c: v2.0:USB HID core driver
+Jun 10 11:32:06 combo privoxy: privoxy startup succeeded
+Jul 27 14:41:57 combo kernel:   HighMem zone: 0 pages, LIFO batch:1
+Oct 25 10:08:43 combo sysctl: kernel.core_uses_pid = 1
+Jun  9 06:06:31 combo kernel: EXT3-fs: mounted filesystem with ordered data mode.
+[Fri Jun 10 01:23:50 2005] [error] [client 63.203.254.140] Invalid method in request get /scripts/.%252e/.%252e/winnt/system32/cmd.exe?/c+dir
+Jul 27 14:42:04 combo kernel: EXT3 FS on hda1, internal journal
+Sep 28 09:10:49 combo kernel: BIOS-provided physical RAM map:
+[Wed Sep 28 09:08:45 2005] [warn] child process 18807 still did not exit, sending a SIGTERM
+Jan 26 12:22:08 combo kernel: Enabling fast FPU save and restore... done.
+[Fri Jun 10 11:32:26 2005] [notice] suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+Sep 28 09:10:50 combo kernel: pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+Sep 28 09:10:55 combo kernel: EXT3 FS on hda2, internal journal
+Oct 25 10:09:21 combo canna:  succeeded
+Jun 10 11:31:47 combo smartd[1786]: Device: /dev/hda, found in smartd database.
+Jan 26 12:22:08 combo kernel: Linux Plug and Play Support v0.97 (c) Adam Belay
+Sep 28 09:08:57 combo rc: Stopping squid:  succeeded
+Jun  9 06:06:24 combo kernel: Using cfq io scheduler
+Dec  6 12:21:14 combo snmpd: snmpd shutdown succeeded
+Jul  7 08:06:15 combo  -- root[2421]: ROOT LOGIN ON tty2
+Dec  6 12:22:54 combo network: Bringing up loopback interface:  succeeded
+Jun 10 11:31:44 combo portmap: portmap startup succeeded
+Sep 28 09:10:49 combo kernel: Using tsc for high-res timesource
+Dec  6 12:24:32 combo mysqld: Starting MySQL:  succeeded
+Dec  6 12:24:35 combo mdmpd: mdmpd failed
+Jan 26 12:22:42 combo privoxy: Jan 26 12:22:42 Privoxy(-150327168) Info: loading configuration file '/etc/privoxy/config':
+Sep 19 05:57:40 combo smartd[1786]: Opened configuration file /etc/smartd.conf
+Jul 27 14:42:00 combo smartd[1768]: smartd version 5.21 Copyright (C) 2002-3 Bruce Allen
+Jun  9 06:06:51 combo atd: atd startup succeeded
+Oct 25 10:06:02 combo init: Switching to runlevel: 6
+Dec  6 17:24:20 combo named[2298]: loading configuration from '/etc/named.conf'
+Dec  6 12:23:30 combo IIim: htt startup succeeded
+Jun  9 06:06:21 combo kernel: Enabling fast FPU save and restore... done.
+[Tue Nov 29 06:12:12 2005] [error] uriMap.mapUri() uri must start with /
+Oct 25 10:08:50 combo kernel: ICH: chipset revision 2
+Jan 26 12:22:06 combo kernel: 0MB HIGHMEM available.
+Jan 26 12:22:08 combo random: Initializing random number generator:  succeeded
+Sep 19 05:57:37 combo kernel: Using tsc for high-res timesource
+Sep 28 09:10:50 combo kernel: agpgart: AGP aperture is 64M @ 0xf4000000
+[Tue Oct 25 10:09:36 2005] [notice] suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Sat Jun 11 03:03:06 2005] [error] jk2_init() Can't find child 4215 in scoreboard
+Sep 29 12:28:40 combo sendmail: sendmail shutdown failed
+Jul 27 14:42:00 combo kernel: drivers/usb/input/hid-core.c: v2.0:USB HID core driver
+[Thu Jun 09 06:07:19 2005] [notice] jk2_init() Found child 2336 in scoreboard slot 6
+Sep 19 05:57:40 combo kernel: EXT3-fs: mounted filesystem with ordered data mode.
+Jan 26 12:19:56 combo init: Switching to runlevel: 6
+Sep 19 05:57:37 combo kernel: Security Scaffold v1.0.0 initialized
+Jun  9 06:07:17 combo ntpd: ntpd startup succeeded
+Oct 25 10:08:48 combo kernel: Transparent bridge - 0000:00:1e.0
+Dec  6 12:23:04 combo kernel: SELinux:  Unregistering netfilter hooks
+Oct 25 10:13:09 combo ntpd[2304]: synchronized to LOCAL(0), stratum=10
+Sep 28 09:03:45 combo sendmail: sendmail shutdown failed
+[Thu Jun 09 06:07:05 2005] [error] config.update(): Can't create worker.jni:onStartup
+Jun  9 06:06:28 combo kernel: NET: Registered protocol family 10
+Jul 25 12:27:05 combo named[2306]: notify question section contains no SOA
+Jun 10 11:31:44 combo kernel: Failure registering capabilities with the kernel
+Sep 19 05:57:43 combo kernel: parport0: PC-style at 0x378 (0x778) [PCSPP,TRISTATE,EPP]
+Jun  9 06:06:20 combo kernel: CPU 0 irqstacks, hard=02345000 soft=02344000
+Jun  9 06:06:21 combo kernel: ACPI: Interpreter disabled.
+Jun  9 06:06:31 combo kernel: parport0: PC-style at 0x378 (0x778) [PCSPP,TRISTATE,EPP]
+Oct 25 10:07:15 combo exiting on signal 15
+Dec 12 08:33:27 LabSZ sshd[25335]: Bad protocol version identification 'GET / HTTP/1.0' from 182.48.105.210 port 30762
+Sep 28 09:10:51 combo kernel: drivers/usb/input/hid-core.c: v2.0:USB HID core driver
+[Fri Jun 17 04:03:46 2005] [notice] mod_security/1.9dev2 configured
+Jul 25 12:54:46 combo named[2306]: notify question section contains no SOA
+Dec  6 12:23:03 combo rc: Starting hpoj:  succeeded
+Jul 27 14:41:58 combo kernel: Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Jul 27 14:42:00 combo kernel: isapnp: No Plug & Play device found
+Sep 28 09:10:51 combo kernel: input: AT Translated Set 2 keyboard on isa0060/serio0
+Dec  6 12:23:08 combo kernel: IA-32 Microcode Update Driver: v1.13 <tigran@veritas.com>
+Feb 12 13:11:15 combo ftpd[4763]: setsockopt (IP_TOS): Operation not supported
+Dec  6 12:22:57 combo syslog: syslogd startup succeeded
+Jul 25 14:08:28 combo named[2306]: notify question section contains no SOA
+Jun  9 06:06:26 combo kernel: checking if image is initramfs...it isn't (no cpio magic); looks like an initrd
+Jan 26 12:23:27 combo ntpd[2309]: frequency initialized 0.000 PPM from /var/lib/ntp/drift
+[Sun Jun 12 04:04:29 2005] [notice] LDAP: Built with OpenLDAP LDAP SDK
+Aug 14 04:03:39 combo cups: cupsd shutdown succeeded
+Jan 26 12:22:36 combo kernel: Floppy drive(s): fd0 is 1.44M
+Sep 28 09:10:58 combo kernel: process `syslogd' is using obsolete setsockopt SO_BSDCOMPAT
+Dec  6 12:22:57 combo kernel: zapping low mappings.
+Jan 26 12:20:27 combo xinetd[2006]: Exiting...
+Dec  6 12:23:01 combo apmd[1720]: Charge: * * * (-1% unknown)
+Dec 26 10:55:32 LabSZ sshd[1155]: Server listening on :: port 447.
+Jun 10 11:31:54 combo kernel: Bluetooth: Core ver 2.4
+Dec  6 12:24:22 combo snmpd: snmpd startup succeeded
+Oct 25 10:08:47 combo kernel: You can enable it with acpi=force
+[Fri Jun 10 01:24:12 2005] [error] [client 213.61.135.6] Invalid method in request get /scripts/.%252e/.%252e/winnt/system32/cmd.exe?/c+dir
+Sep 19 05:57:37 combo kernel: SELinux:  Starting in permissive mode
+Sep 19 05:57:38 combo rc: Starting pcmcia:  succeeded
+Jun  9 06:06:29 combo kernel: hub 1-0:1.0: 2 ports detected
+Sep 19 05:57:40 combo kernel: kjournald starting.  Commit interval 5 seconds
+Dec 11 02:52:20 LabSZ sshd[20414]: Accepted password for jmzhu from 222.125.40.98 port 55048 ssh2
+Jun  9 06:06:20 combo kernel: Kernel command line: ro root=LABEL=/ rhgb quiet
+Jun  9 06:06:21 combo kernel: Linux agpgart interface v0.100 (c) Dave Jones
+[Fri Jun 10 11:32:39 2005] [error] mod_jk child init 1 0
+Jun  9 06:06:21 combo random: Initializing random number generator:  succeeded
+Sep 19 05:57:40 combo kernel: md: Autodetecting RAID arrays.
+Oct 25 10:08:52 combo kernel: mice: PS/2 mouse device common for all mice
+[Sat Jun 11 03:03:21 2005] [notice] mod_jk2 Shutting down
+Jul 27 14:42:25 combo atd: atd startup succeeded
+Sep 28 09:10:49 combo kernel: Calibrating delay loop... 1441.79 BogoMIPS
+Jun 10 11:31:51 combo kernel: parport0: PC-style at 0x378 (0x778) [PCSPP,TRISTATE,EPP]
+Dec 10 19:22:22 LabSZ sshd[19465]: Accepted password for curi from 137.189.241.19 port 4300 ssh2
+Sep 28 09:10:48 combo syslog: syslogd startup succeeded
+Jul 27 14:42:01 combo kernel: checking if image is initramfs...it isn't (no cpio magic); looks like an initrd
+Oct 23 12:40:19 combo rlogind[22512]: Connection from 81.181.213.88 on illegal port
+Dec  6 12:24:33 combo rsyncd[2386]: rsyncd version 2.6.2 starting, listening on port 873
+Jun  9 06:06:21 combo kernel: Enabling unmasked SIMD FPU exception support... done.
+Jul 24 04:20:26 combo cups: cupsd startup succeeded
+Jun  9 06:06:41 combo xinetd[2003]: Started working: 30 available services
+[Thu Jun 09 06:07:20 2005] [notice] workerEnv.init() ok /etc/httpd/conf/workers2.properties
+Dec 19 05:04:45 LabSZ sshd[9593]: Bad protocol version identification '' from 185.35.63.106 port 36186
+Oct 25 10:07:09 combo ntpd: ntpd shutdown succeeded
+Jan 26 12:22:21 combo kernel: audit(1138296102.679:186228): avc:  denied  { read } for  pid=658 exe=/bin/grep name=devices dev= ino=1268 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:usbdevfs_t tclass=file
+Jan 12 02:01:15 combo xinetd[17166]: warning: can't get client address: Connection reset by peer
+Dec  6 12:23:01 combo kernel: input: AT Translated Set 2 keyboard on isa0060/serio0
+Sep 28 09:12:22 combo mdmpd: mdmpd failed
+Jan 26 17:23:30 combo named[2288]: running
+Sep 19 05:57:42 combo kernel: EXT3 FS on hda1, internal journal
+Sep 28 09:11:20 combo gpm[2071]: imps2: Auto-detected intellimouse PS/2
+Oct 25 10:06:02 combo shutdown: shutting down for system reboot
+Jan 26 12:22:43 combo kernel: Bluetooth: Core ver 2.4
+[Sat Jun 25 04:04:32 2005] [notice] mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.
+Jun  9 06:06:24 combo kernel: drivers/usb/input/hid-core.c: v2.0:USB HID core driver
+Dec  6 12:22:57 combo kernel:   HighMem zone: 0 pages, LIFO batch:1
+[Sun Jun 12 04:04:33 2005] [notice] mod_security/1.9dev2 configured
+Jul 27 14:42:00 combo kernel: isapnp: Scanning for PnP cards...
+[Sun Jul 03 04:08:01 2005] [notice] mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.
+Sep 19 05:57:40 combo apmd: apmd startup succeeded
+Jun 10 11:31:45 combo random: Initializing random number generator:  succeeded
+Jan 26 12:22:08 combo kernel: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Jan 26 12:23:20 combo snmpd: snmpd startup succeeded
+Nov 22 14:32:07 combo kernel: VM: killing process httpd
+Sep 28 09:10:52 combo kernel: md: Autodetecting RAID arrays.
+Jan 26 12:23:31 combo mdmpd: mdmpd failed
+Dec  6 12:22:59 combo rc: Starting pcmcia:  succeeded
+Sep 19 05:58:29 combo ntpd[2326]: ntpd 4.2.0@1.1161-r Thu Mar 11 11:46:39 EST 2004 (1)
+Jun  9 06:06:23 combo apmd: apmd startup succeeded
+Jun 10 11:31:49 combo kernel: EXT3 FS on hda2, internal journal
+Jun 10 11:31:45 combo kernel: PCI: Probing PCI hardware
+Jun  9 06:06:20 combo kernel: You can enable it with acpi=force
+[Wed Sep 28 09:08:45 2005] [warn] child process 18804 still did not exit, sending a SIGTERM
+Jul 31 04:08:42 combo cups: cupsd shutdown succeeded
+Jul 27 14:42:00 combo kernel:     ide0: BM-DMA at 0xffa0-0xffa7, BIOS settings: hda:DMA, hdb:pio
+[Sun Jun 26 04:04:27 2005] [notice] LDAP: Built with OpenLDAP LDAP SDK
+[Fri Jan 27 11:55:16 2006] [error] [client 202.143.128.18] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /
+Sep 19 05:57:46 combo kernel: Bluetooth: HCI device and connection manager initialized
+Dec  9 09:43:13 combo syslog: klogd shutdown succeeded
+Sep 28 09:10:50 combo kernel: ICH: chipset revision 2
+Jul 27 14:42:02 combo kernel: SELinux:  Unregistering netfilter hooks
+Dec  6 12:22:59 combo random: Initializing random number generator:  succeeded
+Jul 27 14:41:59 combo kernel: PCI: Probing PCI hardware
+Aug  1 09:33:47 combo gdm-binary[2782]: Couldn't authenticate user
+Sep 28 09:10:50 combo kernel: agpgart: detected 4MB dedicated video ram.
+Dec  6 12:24:19 combo named: named startup succeeded
+Sep 28 09:11:18 combo privoxy: Sep 28 09:11:18 Privoxy(-150880128) Info: loading configuration file '/etc/privoxy/config':
+Nov 22 07:36:43 combo kernel: httpd: page allocation failure. order:0, mode:0x50
+Jul 10 04:04:39 combo cups: cupsd startup succeeded
+Dec 10 09:04:46 LabSZ sshd[24414]: Did not receive identification string from 188.132.244.89
+Sep 19 05:57:38 combo kernel: ttyS1 at I/O 0x2f8 (irq = 3) is a 16550A
+Jun 13 04:03:07 combo su(pam_unix)[14659]: session opened for user cyrus by (uid=0)
+Oct 25 10:08:47 combo kernel: Calibrating delay loop... 1441.79 BogoMIPS
+Jan 26 12:22:09 combo kernel: hda: 29336832 sectors (15020 MB) w/1916KiB Cache, CHS=29104/16/63, UDMA(66)
+Jun 10 11:32:26 combo httpd: httpd startup succeeded
+Sep 28 09:11:10 combo xinetd[2006]: Service telnet failed to start and is deactivated.
+Sep 28 09:08:28 combo init: Switching to runlevel: 6
+Sep 28 09:10:55 combo rc: Starting hpoj:  succeeded
+Sep 28 09:10:50 combo kernel: PCI: Probing PCI hardware (bus 00)
+Jun  9 06:11:41 combo ntpd[2296]: kernel time sync enabled 0001
+Jun  9 06:06:22 combo kernel: ttyS1 at I/O 0x2f8 (irq = 3) is a 16550A
+Sep 28 09:10:57 combo kernel: 3c59x: Donald Becker and others. www.scyld.com/network/vortex.html
+Jun  9 06:06:20 combo irqbalance: irqbalance startup succeeded
+Jun  9 10:07:13 combo named[2275]: loading configuration from '/etc/named.conf'
+Dec  6 12:23:46 combo atd: atd startup succeeded
+Sep 28 09:10:49 combo kernel: zapping low mappings.
+Jul 27 14:42:05 combo kernel: Floppy drive(s): fd0 is 1.44M
+Jun 10 11:32:00 combo cups: cupsd startup succeeded
+Jul 27 14:41:58 combo kernel: Enabling fast FPU save and restore... done.
+[Sat Jun 18 11:25:22 2005] [error] mod_jk child workerEnv in error state 1
+Dec 14 11:46:18 LabSZ sshd[9447]: Received disconnect from 119.137.63.195: 11: disconnected by user
+Sep 28 09:10:49 combo kernel: SELinux:  Initializing.
+Jul 27 14:41:58 combo rc: Starting pcmcia:  succeeded
+[Thu Sep 22 12:48:47 2005] [error] [client 210.245.151.81] Attempt to serve directory: /var/www/html/
+Jun 10 11:31:44 combo kernel: 126MB LOWMEM available.
+[Sat Jun 11 11:56:28 2005] [error] [client 12.216.230.125] Invalid method in request get /scripts/..%c0%af../..%c0%af../..%c0%af../winnt/system32/cmd.exe?/c+dir
+[Sun Jul 10 04:04:44 2005] [notice] mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.
+Jun  9 10:07:13 combo named[2275]: listening on IPv4 interface eth0:1, 63.126.79.69#53
+[Wed Sep 28 09:08:45 2005] [warn] child process 18801 still did not exit, sending a SIGTERM
+Jun  9 06:06:41 combo sendmail: sm-client startup succeeded
+[Thu Jul 21 03:37:32 2005] [error] [client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/
+Jan 26 12:22:09 combo kernel: ide-floppy driver 0.99.newide
+Jul 27 14:42:59 combo mdmonitor: mdadm succeeded
+Jun  9 06:06:24 combo kernel: hdc: SAMSUNG CD-ROM SN-124, ATAPI CD/DVD-ROM drive
+Jul 27 14:42:07 combo kernel: ip_tables: (C) 2000-2002 Netfilter core team
+Jan 26 12:20:17 combo sendmail: sendmail shutdown failed
+[Sat Jun 11 17:35:30 2005] [error] [client 202.118.167.71] Invalid method in request get /scripts/root.exe?/c+dir
+Jun  9 06:07:23 combo rsyncd[2360]: rsyncd version 2.6.2 starting, listening on port 873
+Jul 27 14:41:57 combo kernel: Using tsc for high-res timesource
+Jun  9 06:06:21 combo kernel: CPU: Intel Pentium III (Coppermine) stepping 06
+Jun  9 06:06:34 combo kernel: ip_tables: (C) 2000-2002 Netfilter core team
+Sep 28 09:09:15 combo dd: 1+0 records out
+Sep 28 09:10:51 combo netfs: Mounting other filesystems:  succeeded
+Jun 10 11:31:46 combo kernel: Real Time Clock Driver v1.12
+Jan 26 12:23:22 combo ntpd[2309]: ntpd 4.2.0@1.1161-r Thu Mar 11 11:46:39 EST 2004 (1)
+Sep 19 05:57:42 combo kernel: IA-32 Microcode Update Driver: v1.13 <tigran@veritas.com>
+Jan 26 12:22:13 combo kernel: Disabled Privacy Extensions on device 022db720(lo)
+Jul 27 14:42:57 combo ntpd[2317]: frequency initialized 0.000 PPM from /var/lib/ntp/drift
+Sep 19 05:57:40 combo smartd[1786]: smartd version 5.21 Copyright (C) 2002-3 Bruce Allen
+Jan 26 12:23:17 combo named: named startup succeeded
+Jan 26 12:20:09 combo gpm: gpm shutdown succeeded
+Dec  6 12:23:00 combo netfs: Mounting other filesystems:  succeeded
+Jul 27 14:42:00 combo smartd[1768]: Device: /dev/hda, opened
+Aug 30 10:58:42 combo sshd(pam_unix)[4071]: session opened for user root by (uid=0)
+Jan 26 12:22:29 combo kernel: microcode: CPU0 already at revision 0x8 (current=0x8)
+Sep 28 09:10:51 combo kernel:     ide0: BM-DMA at 0xffa0-0xffa7, BIOS settings: hda:DMA, hdb:pio
+Nov 10 16:00:31 combo kernel: hda: drive not ready for command
+Jun 10 11:31:44 combo kernel: You can enable it with acpi=force
+Dec  6 12:24:24 combo snmpd[2310]: NET-SNMP version 5.1.1
+Jun 10 11:31:51 combo kernel: microcode: No suitable data for cpu 0
+Dec  6 12:23:01 combo kernel: drivers/usb/input/hid-core.c: v2.0:USB HID core driver
+Jun  9 06:06:46 combo gpm: gpm startup succeeded
+[Sat Jun 25 04:04:32 2005] [error] mod_jk child workerEnv in error state 3
+Dec  6 12:23:19 combo xinetd[2006]: xinetd Version 2.3.13 started with libwrap loadavg options compiled in.
+Jan 26 12:22:28 combo xinetd: xinetd startup succeeded
+Jun 10 11:32:45 combo mysqld: Starting MySQL:  succeeded
+Jun  9 06:06:20 combo portmap: portmap startup succeeded
+Jan 26 12:20:30 combo ntpd: ntpd shutdown succeeded
+Jun  9 06:06:21 combo kernel: usbcore: registered new driver usbfs
+Jul 27 14:42:25 combo anacron: anacron startup succeeded
+Jul 27 14:41:57 combo kernel: 0MB HIGHMEM available.
+Sep 19 05:58:25 combo named: named startup succeeded
+Aug  7 04:03:39 combo cups: cupsd shutdown succeeded
+Jun  9 10:07:22 combo named[2275]: running
+Aug  1 11:23:37 combo gdm-binary[2782]: Couldn't authenticate user
+[Thu Jun 16 10:31:48 2005] [error] [client 63.168.147.250] request failed: URI too long (longer than 8190)
+Jun  9 06:06:20 combo kernel: Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Dec 20 11:57:47 LabSZ sshd[15517]: Bad protocol version identification 'GET / HTTP/1.1' from 121.51.32.144 port 47195
+Jan 26 12:22:12 combo kernel: SELinux:  Completing initialization.
+Oct 25 10:09:22 combo atd: atd startup succeeded
+Jul 27 14:42:03 combo kernel: hub 1-0:1.0: USB hub found
+Jun 10 11:32:07 combo gpm: gpm startup succeeded
+Oct 25 10:08:47 combo kernel: Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Dec  6 12:22:59 combo kernel: PCI: Invalid ACPI-PCI IRQ routing table
+Dec 10 19:44:35 LabSZ sshd[19708]: Received disconnect from 119.137.60.156: 11: disconnected by user
+Oct 25 10:07:15 combo syslog: klogd shutdown succeeded
+Jul 27 14:42:00 combo kernel: agpgart: AGP aperture is 64M @ 0xf4000000
+Jan 26 12:22:08 combo kernel: ACPI: Interpreter disabled.
+Jul 27 14:42:02 combo rc: Starting hpoj:  succeeded
+Jul 27 14:42:15 combo sendmail: sm-client startup succeeded
+[Sun Jun 19 12:05:58 2005] [error] mod_jk child workerEnv in error state 2
+[Thu Jun 09 06:07:20 2005] [notice] workerEnv.init() ok /etc/httpd/conf/workers2.properties
+Jun  9 06:06:25 combo kernel: input: AT Translated Set 2 keyboard on isa0060/serio0
+Dec 26 10:55:32 LabSZ sshd[1155]: Server listening on :: port 902.
+Jan 26 17:23:18 combo named[2288]: loading configuration from '/etc/named.conf'
+[Sat Jun 11 03:03:06 2005] [error] jk2_init() Can't find child 4213 in scoreboard
+Oct 25 10:06:55 combo sendmail: sm-client shutdown succeeded
+Jun 10 11:31:45 combo kernel: Enabling unmasked SIMD FPU exception support... done.
+Dec 10 11:41:22 LabSZ sshd[28042]: Received disconnect from 113.118.187.34: 11: disconnected by user
+Sep 28 09:10:49 combo kernel: CPU 0 irqstacks, hard=02345000 soft=02344000
+Dec  6 12:20:08 combo shutdown: shutting down for system reboot
+Jun  9 06:06:22 combo hcid[1677]: HCI daemon ver 2.4 started
+Sep 19 05:57:38 combo kernel: ACPI: Interpreter disabled.
+Jul 27 14:42:00 combo smartd[1768]: Device: /dev/hda, found in smartd database.
+Jul 27 14:41:58 combo kernel: CPU: Intel Pentium III (Coppermine) stepping 06
+[Sun Jul 03 04:07:59 2005] [notice] Digest: generating secret for digest authentication ...
+[Thu Jun 09 06:07:20 2005] [notice] workerEnv.init() ok /etc/httpd/conf/workers2.properties
+[Thu Jun 09 06:07:05 2005] [notice] LDAP: Built with OpenLDAP LDAP SDK
+Jun 10 11:31:44 combo kernel:   DMA zone: 4096 pages, LIFO batch:1
+Jul 25 23:23:13 combo xinetd[26484]: warning: can't get client address: Connection reset by peer
+Sep 19 05:57:39 combo netfs: Mounting other filesystems:  succeeded
+[Thu Jul 21 03:37:31 2005] [error] [client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/
+Jan 26 12:22:19 combo kernel: audit(1138296102.645:185219): avc:  denied  { mounton } for  pid=655 exe=/bin/mount path=/proc/bus/usb dev= ino=-268435218 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:proc_t tclass=dir
+Sep 28 09:10:50 combo kernel: isapnp: No Plug & Play device found
+Jan 26 12:20:32 combo syslog: klogd shutdown succeeded
+Jun 10 11:32:41 combo ntpd[2327]: frequency initialized 0.000 PPM from /var/lib/ntp/drift
+Feb 12 13:11:14 combo xinetd[4760]: warning: can't get client address: Connection reset by peer
+Oct 25 10:06:24 combo squid: .
+Sep 28 09:09:17 combo kernel: Kernel logging (proc) stopped.
+Jul 27 14:42:05 combo kernel: microcode: No suitable data for cpu 0
+Dec 17 09:12:54 LabSZ sshd[29921]: Bad protocol version identification 'GET /manager/html HTTP/1.1' from 183.131.83.223 port 3282
+Jun  9 06:06:34 combo kernel: 3c59x: Donald Becker and others. www.scyld.com/network/vortex.html
+Jun 10 11:31:52 combo kernel: 3c59x: Donald Becker and others. www.scyld.com/network/vortex.html
+Sep 28 09:10:55 combo kernel: EXT3 FS on hda1, internal journal
+Oct 25 10:08:48 combo kernel: Enabling fast FPU save and restore... done.
+[Thu Jun 09 19:23:32 2005] [error] mod_jk child init 1 -2
+Dec  6 12:22:59 combo hcid[1680]: HCI daemon ver 2.4 started
+Dec  6 12:23:09 combo kernel: Floppy drive(s): fd0 is 1.44M
+[Sat Jun 11 03:03:05 2005] [error] jk2_init() Can't find child 4211 in scoreboard
+[Fri Jun 17 04:03:42 2005] [notice] Digest: generating secret for digest authentication ...
+Dec 10 13:46:40 LabSZ sshd[4772]: pam_unix(sshd:session): session opened for user fztu by (uid=0)
+Sep 28 09:10:49 combo kernel: Enabling unmasked SIMD FPU exception support... done.
+Aug  2 07:46:32 combo mysqld: Starting MySQL:  succeeded
+Jun  9 06:06:31 combo kernel: IA-32 Microcode Update Driver: v1.13 <tigran@veritas.com>
+Oct 25 10:08:46 combo syslog: syslogd startup succeeded
+Dec  6 12:22:59 combo kernel: ACPI: ACPI tables contain no PCI IRQ routing entries
+Sep 28 09:10:50 combo kernel: PCI: Invalid ACPI-PCI IRQ routing table
+[Tue Dec 06 12:24:06 2005] [notice] suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+Jun  9 06:06:22 combo kernel: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+Nov 22 07:35:50 combo kernel: httpd: page allocation failure. order:0, mode:0x1d2
+Sep 19 05:57:44 combo kernel: 3c59x: Donald Becker and others. www.scyld.com/network/vortex.html
+[Sun Jun 19 04:09:10 2005] [error] mod_jk child workerEnv in error state 2
+Jul 27 14:41:57 combo kernel:  BIOS-e820: 0000000007eae000 - 0000000008000000 (reserved)
+Oct 25 10:08:46 combo kernel:  BIOS-e820: 00000000ffb00000 - 0000000100000000 (reserved)
+Oct 25 10:09:06 combo xinetd: xinetd startup succeeded
+Oct 25 10:08:49 combo kernel: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Sep 19 05:57:39 combo kernel: drivers/usb/input/hid-core.c: v2.0:USB HID core driver
+Jul 27 14:43:00 combo mdmpd: mdmpd failed
+Dec 14 05:41:05 LabSZ sshd[8116]: Received disconnect from 67.160.100.130: 11:
+Dec  6 12:20:45 combo squid: .
+Sep 28 09:08:42 combo mysqld: Stopping MySQL:  succeeded
+Oct 25 10:07:08 combo crond: crond shutdown succeeded
+Oct 25 10:07:09 combo dd: 1+0 records in
+Jul 27 14:42:04 combo kernel: kjournald starting.  Commit interval 5 seconds
+Sep 28 09:03:08 combo gpm[2094]: imps2: Auto-detected intellimouse PS/2
+[Wed Jun 22 11:53:13 2005] [error] [client 85.204.240.91] request failed: URI too long (longer than 8190)
+Nov 22 09:25:55 combo kernel: httpd: page allocation failure. order:0, mode:0xd2
+Aug  2 08:01:22 combo gdm(pam_unix)[2782]: bad username []
+Jan 26 12:22:09 combo apmd: apmd startup succeeded
+Sep 28 09:11:25 combo canna:  succeeded
+[Sat Jun 11 03:03:14 2005] [notice] mod_jk2 Shutting down
+Jun  9 06:06:24 combo smartd[1755]: Device: /dev/hda, is SMART capable. Adding to "monitor" list.
+Jul 27 14:42:08 combo kernel: process `syslogd' is using obsolete setsockopt SO_BSDCOMPAT
+Jun 10 11:31:47 combo kernel: mice: PS/2 mouse device common for all mice
+Sep 28 09:09:15 combo ntpd: ntpd shutdown succeeded
+Jan 26 12:22:43 combo kernel: process `syslogd' is using obsolete setsockopt SO_BSDCOMPAT
+Jan 26 12:20:31 combo portmap: portmap shutdown succeeded
+Jul 27 14:42:17 combo xinetd[2016]: Service telnet failed to start and is deactivated.
+Jun 10 11:31:45 combo kernel: PCI: Using configuration type 1
+Dec 26 10:55:32 LabSZ sshd[1155]: Server listening on 0.0.0.0 port 447.
+Sep 19 05:57:40 combo kernel: md: autorun ...
+Sep 28 09:10:49 combo kernel: Security Scaffold v1.0.0 initialized
+[Thu Jun 09 06:07:05 2005] [error] env.createBean2(): Factory error creating vm: ( vm, )
+Sep 19 05:57:47 combo kernel: Bluetooth: L2CAP socket layer initialized
+Jul 25 13:50:24 combo named[2306]: notify question section contains no SOA
+Sep 28 09:09:03 combo spamassassin: spamd shutdown succeeded
+[Thu Jun 09 19:23:32 2005] [notice] workerEnv.init() ok /etc/httpd/conf/workers2.properties
+Jul 27 14:41:58 combo kernel: Failure registering capabilities with the kernel
+Jul 27 14:41:57 combo kernel: Detected 731.219 MHz processor.
+[Thu Jun 09 06:07:19 2005] [notice] jk2_init() Found child 2330 in scoreboard slot 0
+[Thu Jun 09 19:23:32 2005] [notice] jk2_init() Found child 4056 in scoreboard slot 8
+Sep 19 05:57:37 combo kernel: Enabling unmasked SIMD FPU exception support... done.
+[Thu Jun 09 06:07:04 2005] [notice] suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+Sep 28 09:03:07 combo gdm(pam_unix)[2799]: bad username []
+Dec  9 09:40:20 combo login(pam_unix)[2420]: session opened for user root by LOGIN(uid=0)
+Sep 28 09:10:49 combo kernel: Intel machine check architecture supported.
+Dec  6 12:23:19 combo xinetd[2006]: Service telnet failed to start and is deactivated.
+Dec  6 12:22:58 combo kernel: Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Jun 10 11:31:47 combo kernel: NET: Registered protocol family 17
+[Sun Jun 19 12:05:56 2005] [error] mod_jk child workerEnv in error state 2
+Sep 29 12:28:13 combo login(pam_unix)[2402]: session opened for user root by LOGIN(uid=0)
+Dec  4 03:48:54 combo kernel: printk: 185 messages suppressed.
+Jul 27 14:41:58 combo random: Initializing random number generator:  succeeded
+Dec  6 12:21:22 combo kernel: Kernel logging (proc) stopped.
+Jun 10 11:31:45 combo kernel: Enabling fast FPU save and restore... done.
+Jan 26 12:22:08 combo kernel: agpgart: detected 4MB dedicated video ram.
+Dec  9 09:48:33 combo login(pam_unix)[2418]: session closed for user root
+Oct 25 10:09:51 combo ntpd: ntpd startup succeeded
+Jun 10 11:31:47 combo kernel: checking if image is initramfs...it isn't (no cpio magic); looks like an initrd
+Jul 27 14:42:08 combo kernel: ip_tables: (C) 2000-2002 Netfilter core team
+[Thu Jun 09 06:07:20 2005] [notice] workerEnv.init() ok /etc/httpd/conf/workers2.properties
+Jun 10 11:31:45 combo rc: Starting pcmcia:  succeeded
+Sep 19 05:57:34 combo network: Bringing up loopback interface:  succeeded
+Sep 28 09:10:49 combo kernel:   HighMem zone: 0 pages, LIFO batch:1
+Sep 19 05:57:38 combo kernel: ACPI: ACPI tables contain no PCI IRQ routing entries
+Jun  9 06:06:25 combo kernel: mice: PS/2 mouse device common for all mice
+Sep 28 09:10:55 combo kernel: EXT3-fs: mounted filesystem with ordered data mode.
+Jan 26 12:22:44 combo gpm: gpm startup succeeded
+Jul 25 12:35:24 combo named[2306]: notify question section contains no SOA
+Jul  7 08:09:10 combo login(pam_unix)[2421]: session closed for user root
+Jul 27 14:41:58 combo kernel: Security Scaffold v1.0.0 initialized
+[Thu Jan 26 12:23:05 2006] [notice] suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+Sep 28 09:11:30 combo anacron: anacron startup succeeded
+Jan 26 12:22:09 combo kernel: ICH: IDE controller at PCI slot 0000:00:1f.1
+[Fri Jun 10 11:32:27 2005] [error] config.update(): Can't create worker.jni:onStartup
+Jun 19 04:08:57 combo cups: cupsd shutdown succeeded
+Sep 28 09:12:20 combo rsyncd[2369]: rsyncd version 2.6.2 starting, listening on port 873
+Sep 28 09:10:50 combo kernel: ACPI: ACPI tables contain no PCI IRQ routing entries
+Sep 19 05:58:19 combo httpd: httpd startup succeeded
+Dec 12 22:57:08 LabSZ sshd[31832]: Received disconnect from 119.137.63.195: 11: disconnected by user
+Jan 16 11:23:38 combo xinetd[2736]: warning: can't get client address: Connection reset by peer
+Jun 10 11:31:50 combo kernel: microcode: CPU0 already at revision 0x8 (current=0x8)
+Dec  6 12:22:59 combo kernel: apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)
+Jul 27 14:42:00 combo kernel: agpgart: Detected an Intel i810 E Chipset.
+Jan 26 12:22:11 combo kernel: checking if image is initramfs...it isn't (no cpio magic); looks like an initrd
+[Fri Jun 10 11:32:27 2005] [error] env.createBean2(): Factory error creating worker.jni:onShutdown ( worker.jni, onShutdown)
+[Wed Sep 28 09:08:45 2005] [warn] child process 29766 still did not exit, sending a SIGTERM
+Jul 27 14:42:53 combo ntpd: ntpd startup succeeded
+[Thu Jun 09 19:23:32 2005] [notice] workerEnv.init() ok /etc/httpd/conf/workers2.properties
+Jun 10 11:31:45 combo kernel: PCI: Using IRQ router PIIX/ICH [8086/2410] at 0000:00:1f.0
+Sep 28 09:09:14 combo xinetd: xinetd shutdown succeeded
+Dec  6 12:23:00 combo kernel: hdc: ATAPI 24X CD-ROM drive, 128kB Cache
+Jan 26 12:22:30 combo sendmail: sm-client startup succeeded
+Jun  9 06:06:23 combo kernel: ICH: IDE controller at PCI slot 0000:00:1f.1
+[Fri Jun 10 11:32:39 2005] [notice] Apache/2.0.49 (Fedora) configured -- resuming normal operations
+Jun 25 09:11:48 combo rpc.statd[1636]: gethostbyname error for ^X���^X���^Z���^Z���%8x%8x%8x%8x%8x%8x%8x%8x%8x%62716x%hn%51859x%hn\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220
+Sep 19 05:57:37 combo kernel: Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Sep 19 05:57:39 combo kernel: ide-floppy driver 0.99.newide
+Sep 19 05:57:38 combo kernel: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Sep 28 09:10:59 combo kernel: Bluetooth: L2CAP socket layer initialized
+Sep 19 05:57:41 combo kernel: SELinux:  Unregistering netfilter hooks
+[Sat Jun 11 03:03:06 2005] [error] mod_jk child init 1 -2
+Jul 27 14:42:03 combo kernel: EXT3 FS on hda2, internal journal
+Dec  6 12:22:58 combo kernel: Using tsc for high-res timesource
+Oct 25 10:06:55 combo sendmail: sendmail shutdown succeeded
+Dec  6 12:23:30 combo gpm: gpm startup succeeded
+Jan 26 12:22:07 combo kernel: CPU 0 irqstacks, hard=02345000 soft=02344000
+Dec  9 09:43:13 combo exiting on signal 15
+Jun 10 11:31:45 combo kernel: usbcore: registered new driver hub
+[Sat Jun 11 03:03:06 2005] [error] mod_jk child init 1 -2
+Dec  9 09:40:22 combo  -- root[2420]: ROOT LOGIN ON tty3
+Jul 27 14:41:59 combo kernel: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Sep 19 06:01:48 combo ntpd[2326]: synchronized to LOCAL(0), stratum=10
+[Fri Jun 24 09:36:25 2005] [error] [client 65.199.19.164] request failed: URI too long (longer than 8190)
+Jun  9 06:06:17 combo network: Setting network parameters:  succeeded
+Oct 25 10:08:55 combo kernel: SELinux:  Unregistering netfilter hooks
+Oct 25 14:09:47 combo named[2275]: loading configuration from '/etc/named.conf'
+Jan 26 12:55:20 combo sendmail: sm-client shutdown succeeded
+Aug  2 08:05:44 combo login(pam_unix)[24997]: session opened for user root by LOGIN(uid=0)
+Jun  9 06:06:27 combo kernel: EXT3-fs: hda2: 4 orphan inodes deleted
+[Sat Jun 11 03:03:12 2005] [notice] mod_jk2 Shutting down
+Jun  9 06:06:26 combo kernel: NET: Registered protocol family 1
+Jun  9 06:06:26 combo rc: Starting hpoj:  succeeded
+Aug  2 08:04:10 combo login(pam_unix)[2400]: session closed for user root
+Jun  9 06:07:22 combo mysqld: Starting MySQL:  succeeded
+Jun 10 11:32:36 combo snmpd: snmpd startup succeeded
+Sep 19 05:57:59 combo gpm[2094]: Started gpm successfully. Entered daemon mode.
+Dec  6 12:22:57 combo kernel: 0MB HIGHMEM available.
+Jun  9 06:06:24 combo kernel: hda: max request size: 128KiB
+Jan 26 12:20:17 combo rc: Stopping squid:  succeeded
+Oct 25 08:09:06 combo sshd(pam_unix)[28540]: session opened for user root by (uid=0)
+[Mon Jun 27 04:02:53 2005] [notice] Digest: done
+Jun  9 06:06:21 combo kernel: Real Time Clock Driver v1.12
+Jan 26 12:22:29 combo kernel: IA-32 Microcode Update Driver: v1.13 <tigran@veritas.com>
+Jun 10 15:32:46 combo named[2306]: running
+Jun  9 06:06:23 combo kernel: ICH: chipset revision 2
+Jul 27 14:42:02 combo kernel: EXT3-fs: write access will be enabled during recovery.
+Jan 26 12:22:07 combo kernel: Calibrating delay loop... 1441.79 BogoMIPS
+Jan 26 12:20:30 combo dd: 1+0 records in
+Jun  9 06:07:28 combo udev[2752]: removing device node '/udev/vcs3'
+Sep 19 05:57:56 combo xinetd[2034]: Started working: 30 available services
+Jun 10 11:31:44 combo kernel:  BIOS-e820: 0000000000000000 - 00000000000a0000 (usable)
+Sep 28 09:11:20 combo gpm: gpm startup succeeded
+Jun 10 11:31:47 combo kernel: EXT3-fs: write access will be enabled during recovery.
+Dec 12 01:28:08 LabSZ sshd[5612]: Bad protocol version identification 'SSH-2.0_CoreLab-1.0' from 193.201.224.232 port 8864
+Sep 19 05:58:05 combo atd: atd startup succeeded
+Jun 10 11:31:45 combo kernel: Transparent bridge - 0000:00:1e.0
+Dec 10 19:43:52 LabSZ sshd[19659]: pam_unix(sshd:session): session opened for user fztu by (uid=0)
+Jun 10 11:31:47 combo kernel: ide-floppy driver 0.99.newide
+[Thu Jun 09 06:07:05 2005] [error] config.update(): Can't create channel.jni:jni
+Nov 21 12:41:12 combo kernel: httpd: page allocation failure. order:0, mode:0xd2
+Oct 25 10:08:47 combo kernel:   HighMem zone: 0 pages, LIFO batch:1
+Sep 28 09:09:14 combo apmd[1748]: Exiting
+Jun 13 11:55:09 combo rpc.statd[1636]: gethostbyname error for ^X���^X���^Z���^Z���%8x%8x%8x%8x%8x%8x%8x%8x%8x%62716x%hn%51859x%hn\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220
+[Sun Jun 19 04:09:06 2005] [notice] Digest: generating secret for digest authentication ...
+Jun  9 06:06:20 combo kernel:  BIOS-e820: 0000000007eae000 - 0000000008000000 (reserved)
+Jan 26 12:22:08 combo kernel: Enabling unmasked SIMD FPU exception support... done.
+Jul 27 14:41:58 combo kernel: CPU: L2 cache: 256K
+Jan 26 12:22:09 combo apmd[1727]: Version 3.0.2 (APM BIOS 1.2, Linux driver 1.16ac)
+Dec  6 12:22:59 combo kernel: Linux Plug and Play Support v0.97 (c) Adam Belay
+Jun 10 11:31:41 combo network: Bringing up loopback interface:  succeeded
+Jul 27 14:42:23 combo canna:  succeeded
+Dec  6 12:20:45 combo rc: Stopping squid:  succeeded
+Sep 28 09:10:49 combo kernel:  BIOS-e820: 0000000000000000 - 00000000000a0000 (usable)
+Jun 10 11:32:07 combo IIim: htt startup succeeded
+Jun  9 06:07:16 combo snmpd[2287]: NET-SNMP version 5.1.1
+Dec  6 12:23:29 combo privoxy: privoxy startup succeeded
+Dec  6 12:20:50 combo sendmail: sendmail shutdown succeeded
+Jun  9 06:06:20 combo kernel: Detected 731.214 MHz processor.
+Jun 10 11:32:47 combo mdmonitor: mdadm succeeded
+Oct 25 10:08:49 combo kernel: Linux agpgart interface v0.100 (c) Dave Jones
+Jun 10 11:31:46 combo kernel: Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+Jun 10 11:31:46 combo kernel: Linux agpgart interface v0.100 (c) Dave Jones
+Oct 25 10:08:48 combo kernel: Linux Plug and Play Support v0.97 (c) Adam Belay
+Jan 26 12:22:22 combo kernel: audit(1138296102.679:186229): avc:  denied  { getattr } for  pid=658 exe=/bin/grep path=/proc/bus/usb/devices dev= ino=1268 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:usbdevfs_t tclass=file
+Sep 28 09:10:57 combo kernel: 0000:01:0c.0: 3Com PCI 3c905C Tornado at 0xec80. Vers LK1.1.19
+Sep 19 05:57:43 combo kernel: microcode: No suitable data for cpu 0
+Jun  9 06:06:34 combo kernel: Bluetooth: HCI device and connection manager initialized
+Jan 26 12:20:22 combo smartd[1760]: smartd is exiting (exit status 0)
+Jul 27 14:41:59 combo kernel: PCI: Probing PCI hardware (bus 00)
+[Sun Jun 19 04:09:10 2005] [notice] mod_security/1.9dev2 configured
+Jun  9 06:07:26 combo udev[2455]: removing device node '/udev/vcs8'
+Jan 26 12:22:08 combo kernel: apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)
+Jul 27 14:41:58 combo kernel: usbcore: registered new driver usbfs
+Jan 26 12:22:07 combo kernel: Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Jul 27 14:42:00 combo kernel: ICH: chipset revision 2
+[Thu Jun 09 06:07:05 2005] [error] config.update(): Can't create vm:
+Oct 25 10:08:52 combo rc: Starting hpoj:  succeeded
+Jul 27 14:41:57 combo kernel:   Normal zone: 28334 pages, LIFO batch:6
+Jun 10 11:31:45 combo kernel: Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Dec  6 12:22:59 combo kernel: agpgart: detected 4MB dedicated video ram.
+Jul 27 14:42:00 combo kernel: Real Time Clock Driver v1.12
+Sep 28 09:10:53 combo kernel: SELinux:  Disabled at runtime.
+Jan 26 12:22:08 combo kernel: isapnp: No Plug & Play device found
+Jun  9 06:06:20 combo kernel:  BIOS-e820: 0000000000000000 - 00000000000a0000 (usable)
+Jun  9 06:07:28 combo udev[2743]: removing device node '/udev/vcsa3'
+Jan 26 12:22:07 combo kernel: Failure registering capabilities with the kernel
+Sep 19 05:57:39 combo hcid[1708]: HCI daemon ver 2.4 started
+Oct 25 10:08:50 combo kernel: hda: max request size: 128KiB
+Jun 10 11:32:07 combo su(pam_unix)[2103]: session opened for user htt by (uid=0)
+Sep 19 05:58:00 combo IIim: htt startup succeeded
+Jun 10 11:31:47 combo smartd[1786]: Device: /dev/hda, opened
+Jun 10 11:31:47 combo apmd: apmd startup succeeded
+[Sun Jun 12 04:04:32 2005] [notice] mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.
+[Fri Jun 10 11:32:25 2005] [notice] LDAP: Built with OpenLDAP LDAP SDK
+Jun  9 06:06:20 combo syslog: syslogd startup succeeded
+[Sat Jun 25 04:04:30 2005] [notice] LDAP: Built with OpenLDAP LDAP SDK
+Sep 19 05:57:37 combo kernel: SELinux:  Initializing.
+Jul 27 14:41:58 combo kernel: Intel machine check architecture supported.
+Jul 27 14:41:58 combo kernel: Intel machine check reporting enabled on CPU#0.
+Dec  9 09:40:59 combo gdm(pam_unix)[2828]: bad username [\]
+Dec  6 12:22:54 combo sysctl: kernel.core_uses_pid = 1
+Jan 26 12:22:08 combo hcid[1687]: HCI daemon ver 2.4 started
+Jan 26 12:22:10 combo smartd[1765]: smartd version 5.21 Copyright (C) 2002-3 Bruce Allen
+Jun  9 06:06:20 combo kernel: 126MB LOWMEM available.
+Sep 28 09:10:50 combo rc: Starting pcmcia:  succeeded
+Jun  9 06:06:20 combo kernel: Security Scaffold v1.0.0 initialized
+Nov 22 07:35:50 combo kernel: Call Trace:
+[Sat Jun 11 03:03:07 2005] [error] jk2_init() Can't find child 4218 in scoreboard
+Jul 27 14:42:58 combo rsyncd[2373]: rsyncd version 2.6.2 starting, listening on port 873
+Sep 19 09:58:26 combo named[2305]: loading configuration from '/etc/named.conf'
+[Fri Jun 10 11:32:39 2005] [notice] jk2_init() Found child 2337 in scoreboard slot 1
+[Wed Jun 15 08:53:53 2005] [error] [client 211.211.14.224] request failed: URI too long (longer than 8190)
+Jun  9 06:06:34 combo kernel: 0000:01:0c.0: 3Com PCI 3c905C Tornado at 0xec80. Vers LK1.1.19
+Nov 22 09:26:05 combo kernel: Call Trace:
+Jan 26 12:22:30 combo sendmail: sendmail startup succeeded
+[Fri Jun 17 04:03:46 2005] [notice] Apache/2.0.49 (Fedora) configured -- resuming normal operations
+Jun 10 11:31:58 combo kernel: lp0: console ready
+Sep 28 09:09:17 combo portmap: portmap shutdown succeeded
+Sep 19 05:57:42 combo kernel: EXT3-fs: mounted filesystem with ordered data mode.
+Jul 25 13:33:41 combo named[2306]: notify question section contains no SOA
+Jun 10 11:31:47 combo kernel: NET: Registered protocol family 2
+Sep 19 05:57:40 combo kernel: md: ... autorun DONE.
+[Sat Jun 11 03:03:13 2005] [notice] mod_jk2 Shutting down
+Sep 19 05:57:37 combo kernel: 126MB LOWMEM available.
+[Fri Jun 10 11:40:14 2005] [error] [client 213.205.73.192] Invalid method in request get /scripts/..%e0%80%af../..%e0%80%af../..%e0%80%af../winnt/system32/cmd.exe?/c+dir
+Oct 25 10:09:18 combo gpm: gpm startup succeeded
+Jan 26 12:20:27 combo snmpd: snmpd shutdown succeeded
+Sep 28 09:11:10 combo xinetd[2006]: Started working: 30 available services
+Jun 10 11:31:45 combo kernel: usbcore: registered new driver usbfs
+Dec  6 12:23:00 combo kernel: hda: max request size: 128KiB
+Jul 27 14:42:50 combo snmpd: snmpd startup succeeded
+Oct 10 03:40:15 combo passwd(pam_unix)[16110]: password changed for test
+[Wed Sep 28 09:08:45 2005] [warn] child process 18803 still did not exit, sending a SIGTERM
+Jun 10 04:03:01 combo su(pam_unix)[5120]: session opened for user cyrus by (uid=0)
+[Sun Jul 03 00:13:26 2005] [error] [client 63.233.95.41] request failed: error reading the headers
+Sep 28 09:09:13 combo xinetd[2034]: Exiting...
+Sep 19 05:57:42 combo kernel: kjournald starting.  Commit interval 5 seconds
+Jun  9 06:07:26 combo udev[2611]: removing device node '/udev/vcsa5'
+Jul 27 14:42:01 combo kernel: md: ... autorun DONE.
+Sep 28 09:10:51 combo kernel:     ide1: BM-DMA at 0xffa8-0xffaf, BIOS settings: hdc:DMA, hdd:pio
+Jun  9 06:06:45 combo gpm[2068]: Started gpm successfully. Entered daemon mode.
+Jun  9 06:06:21 combo kernel: NET: Registered protocol family 16
+Jun  9 06:06:33 combo kernel: 3c59x: Donald Becker and others. www.scyld.com/network/vortex.html
+Oct 25 10:06:14 combo xfs: xfs shutdown succeeded
+Oct 25 10:09:58 combo mdmonitor: mdadm succeeded
+Aug  2 08:01:28 combo gpm[2076]: imps2: Auto-detected intellimouse PS/2
+Sep 28 09:10:50 combo kernel: apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)
+Jun  9 10:07:13 combo named[2275]: listening on IPv4 interface eth0:4, 63.126.79.72#53
+Jun 10 11:31:51 combo kernel: Floppy drive(s): fd0 is 1.44M
+Dec  6 12:22:57 combo kernel:  BIOS-e820: 0000000007eae000 - 0000000008000000 (reserved)
+Jun 10 11:31:44 combo kernel: Calibrating delay loop... 1445.88 BogoMIPS
+Jul 25 12:09:06 combo named[2306]: notify question section contains no SOA
+Aug 30 11:38:28 combo sshd(pam_unix)[4193]: session opened for user root by (uid=0)
+Dec  6 12:23:19 combo sendmail: sendmail startup succeeded
+Jul 27 14:41:58 combo kernel: CPU: L1 I cache: 16K, L1 D cache: 16K
+Nov 22 09:31:32 combo kernel: VM: killing process httpd
+Dec 10 09:13:22 LabSZ sshd[24511]: Did not receive identification string from 185.190.58.151
+Dec  6 12:23:00 combo kernel: hda: 29336832 sectors (15020 MB) w/1916KiB Cache, CHS=29104/16/63, UDMA(66)
+Jun  9 06:06:17 combo network: Bringing up loopback interface:  succeeded
+[Wed Sep 28 09:08:45 2005] [warn] child process 29765 still did not exit, sending a SIGTERM
+Jul 27 14:41:54 combo network: Bringing up loopback interface:  succeeded
+Jun 10 11:31:46 combo kernel: agpgart: detected 4MB dedicated video ram.
+Jul 27 18:42:58 combo named[2288]: running
+Sep 29 12:27:57 combo gdm(pam_unix)[2813]: bad username []
+[Thu Jul 21 03:37:31 2005] [error] [client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/
+Jun 10 11:31:44 combo kernel: Security Scaffold v1.0.0 initialized
+[Fri Jun 10 11:32:27 2005] [error] config.update(): Can't create worker.jni:onShutdown
+Dec  6 12:23:02 combo kernel: md: autorun ...
+Dec  6 12:23:02 combo kernel: checking if image is initramfs...it isn't (no cpio magic); looks like an initrd
+Sep 28 09:10:52 combo smartd[1758]: Opened configuration file /etc/smartd.conf
+Sep 19 05:57:38 combo kernel: Transparent bridge - 0000:00:1e.0
+Oct 25 10:06:59 combo smartd[1760]: smartd is exiting (exit status 0)
+Jan 26 12:20:32 combo exiting on signal 15
+Sep 28 09:10:49 combo kernel:  BIOS-e820: 00000000000f0000 - 0000000000100000 (reserved)
+Dec  6 12:22:57 combo kernel:   Normal zone: 28334 pages, LIFO batch:6
+Jan 26 12:22:12 combo kernel: security:  30 classes, 303377 rules
+Jul 27 14:42:03 combo kernel: hub 1-0:1.0: 2 ports detected
+Dec  6 12:23:08 combo kernel: microcode: No suitable data for cpu 0
+Jun  9 06:07:26 combo udev[2587]: removing device node '/udev/vcsa1'
+Oct 25 10:08:55 combo kernel: SELinux:  Disabled at runtime.
+[Thu Jun 09 19:23:32 2005] [error] mod_jk child init 1 -2
+[Mon Jul 04 04:19:02 2005] [error] [client 201.17.145.38] request failed: URI too long (longer than 8190)
+Jul 27 14:42:01 combo smartd[1768]: Device: /dev/hda, is SMART capable. Adding to "monitor" list.
+Oct 25 10:08:47 combo kernel: Failure registering capabilities with the kernel
+Jun  9 06:06:26 combo kernel: md: Autodetecting RAID arrays.
+Jan 26 12:22:09 combo kernel: hdc: SAMSUNG CD-ROM SN-124, ATAPI CD/DVD-ROM drive
+Jun 10 11:31:46 combo kernel: Using cfq io scheduler
+Sep 19 05:57:37 combo kernel:   DMA zone: 4096 pages, LIFO batch:1
+Dec  6 12:20:31 combo cannaserver[2102]: irw_killserver:cannaserver end
+Jun 10 11:32:03 combo xinetd[2034]: xinetd Version 2.3.13 started with libwrap loadavg options compiled in.
+Jan 26 12:22:09 combo kernel: hdc: ATAPI 24X CD-ROM drive, 128kB Cache
+Jun 10 11:31:54 combo kernel: ip_tables: (C) 2000-2002 Netfilter core team
+Oct 25 10:06:59 combo spamassassin: spamd shutdown succeeded
+Jun  9 06:07:26 combo udev[2456]: removing device node '/udev/vcsa8'
+Sep 19 05:57:37 combo kernel: zapping low mappings.
+Sep 28 13:12:05 combo named[2281]: loading configuration from '/etc/named.conf'
+Sep 19 05:58:00 combo gpm: gpm startup succeeded
+Jul 27 14:42:52 combo snmpd[2300]: NET-SNMP version 5.1.1
+[Thu Jun 09 06:07:19 2005] [notice] jk2_init() Found child 2334 in scoreboard slot 4
+Sep 29 12:28:06 combo gdm(pam_unix)[2813]: bad username []
+Jun  9 06:06:24 combo kernel: hda: 29336832 sectors (15020 MB) w/1916KiB Cache, CHS=29104/16/63, UDMA(66)
+Jun 10 11:32:07 combo gpm[2094]: imps2: Auto-detected intellimouse PS/2
+Oct 25 10:06:54 combo squid: .
+Jan 26 12:22:13 combo kernel: audit(1138278089.855:0): avc:  denied  { read write } for  pid=1 exe=/sbin/init name=initctl dev=hda2 ino=1031635 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=fifo_file
+Oct 25 10:08:43 combo network: Bringing up loopback interface:  succeeded
+Jan 26 12:22:08 combo rc: Starting pcmcia:  succeeded
+Sep 28 09:10:58 combo kernel: ip_tables: (C) 2000-2002 Netfilter core team
+Dec  6 12:23:01 combo smartd[1758]: smartd version 5.21 Copyright (C) 2002-3 Bruce Allen
+Oct 25 10:08:46 combo kernel: 0MB HIGHMEM available.
+Sep 19 05:57:53 combo sshd:  succeeded
+Sep 28 09:11:09 combo sendmail: sendmail startup succeeded
+Jun 10 11:31:41 combo network: Setting network parameters:  succeeded
+Oct 25 10:08:48 combo random: Initializing random number generator:  succeeded
+Nov 22 09:25:55 combo kernel: Call Trace:
+Oct 25 10:08:50 combo kernel: hdc: SAMSUNG CD-ROM SN-124, ATAPI CD/DVD-ROM drive
+Oct 25 10:07:07 combo xinetd: xinetd shutdown succeeded
+Sep 28 09:10:55 combo kernel: microcode: CPU0 already at revision 0x8 (current=0x8)
+Jul 27 14:41:57 combo syslog: klogd startup succeeded
+Jul 27 14:42:10 combo kernel: Bluetooth: L2CAP ver 2.1
+Jun 13 11:55:05 combo rpc.statd[1636]: gethostbyname error for ^X���^X���^Z���^Z���%8x%8x%8x%8x%8x%8x%8x%8x%8x%62716x%hn%51859x%hn\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220
+Jul 27 14:42:00 combo kernel: hda: max request size: 128KiB
+Sep 19 05:57:37 combo kernel: BIOS-provided physical RAM map:
+Jan 26 12:22:45 combo IIim: htt startup succeeded
+Sep 19 05:57:39 combo kernel: hdc: ATAPI 24X CD-ROM drive, 128kB Cache
+Nov 10 16:00:31 combo kernel: ide0: reset: success
+Jun 13 11:55:08 combo rpc.statd[1636]: gethostbyname error for ^X���^X���^Z���^Z���%8x%8x%8x%8x%8x%8x%8x%8x%8x%62716x%hn%51859x%hn\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220
+Sep 19 05:57:59 combo privoxy: privoxy startup succeeded
+Jul 27 14:42:01 combo apmd[1730]: Charge: * * * (-1% unknown)
+Dec  6 12:23:20 combo xinetd[2006]: Started working: 30 available services
+Sep 28 09:09:14 combo crond: crond shutdown succeeded
+Jul 27 14:41:58 combo kernel: PCI: Using configuration type 1
+Feb 10 21:52:19 combo xinetd[4600]: warning: can't get client address: Connection reset by peer
+Sep 19 05:57:40 combo smartd[1786]: Device: /dev/hda, opened
+Oct 25 10:08:48 combo kernel: CPU: Intel Pentium III (Coppermine) stepping 06
+Jul 27 14:42:02 combo kernel: Disabled Privacy Extensions on device 022db720(lo)
+Jun 13 11:55:09 combo rpc.statd[1636]: gethostbyname error for ^X���^X���^Z���^Z���%8x%8x%8x%8x%8x%8x%8x%8x%8x%62716x%hn%51859x%hn\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220
+Jan 26 12:26:42 combo ntpd[2309]: synchronized to LOCAL(0), stratum=10
+Oct 25 10:07:06 combo snmpd: snmpd shutdown succeeded
+Dec  6 12:22:57 combo kernel: Detected 731.217 MHz processor.
+Dec  6 12:20:43 combo squid: .
+Dec  6 12:22:57 combo irqbalance: irqbalance startup succeeded
+Sep 19 05:57:38 combo kernel: agpgart: Detected an Intel i810 E Chipset.
+Jun 10 11:31:45 combo kernel: Initializing Cryptographic API
+Jan 26 12:19:56 combo shutdown: shutting down for system reboot
+Dec  6 12:21:10 combo named: named shutdown failed
+Jan 26 12:22:07 combo kernel: Security Scaffold v1.0.0 initialized
+Jun 11 04:09:52 combo su(pam_unix)[5961]: session opened for user news by (uid=0)
+Jul 27 14:46:13 combo ntpd[2317]: kernel time sync disabled 0041
+Sep 29 12:32:04 combo sendmail: sm-client startup succeeded
+Jul 27 14:41:59 combo kernel: Transparent bridge - 0000:00:1e.0
+Aug  2 08:01:23 combo gdm-binary[2782]: Couldn't authenticate user
+Jan 26 12:22:03 combo network: Bringing up loopback interface:  succeeded
+Dec 10 07:34:33 LabSZ sshd[24301]: Did not receive identification string from 123.235.32.19
+Aug 12 10:01:21 combo /sbin/mingetty[20388]: tty2: invalid character 0x1b in login name
+Oct 25 10:08:50 combo kernel: ICH: IDE controller at PCI slot 0000:00:1f.1
+Dec  6 12:21:21 combo dd: 1+0 records in
+Dec 10 19:22:22 LabSZ sshd[19465]: pam_unix(sshd:session): session opened for user curi by (uid=0)
+Jan 26 12:22:09 combo netfs: Mounting other filesystems:  succeeded
+Jul 27 14:42:00 combo kernel: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+Jan 26 12:22:51 combo atd: atd startup succeeded
+Oct 25 10:09:17 combo gpm[2068]: Started gpm successfully. Entered daemon mode.
+Oct 12 01:42:34 combo passwd(pam_unix)[26078]: password changed for test
+Oct 25 10:08:48 combo rc: Starting pcmcia:  succeeded
+Oct 25 10:08:48 combo kernel: ACPI: ACPI tables contain no PCI IRQ routing entries
+Jun 10 11:31:45 combo kernel: CPU: Intel Pentium III (Coppermine) stepping 06
+Jun 10 11:31:47 combo kernel: usbcore: registered new driver hid
+[Fri Jan 27 11:55:15 2006] [error] [client 202.143.128.18] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /
+Jun  9 06:07:26 combo udev[2596]: removing device node '/udev/vcs5'
+Dec  6 12:23:00 combo kernel: ICH: chipset revision 2
+Sep 28 09:08:52 combo squid: .
+Sep 28 09:03:14 combo login(pam_unix)[2417]: session opened for user root by LOGIN(uid=0)
+Jun 10 11:31:44 combo kernel: Kernel command line: ro root=LABEL=/ rhgb quiet
+Jun  9 06:06:26 combo kernel: NET: Registered protocol family 17
+[Fri Jun 10 11:32:26 2005] [notice] LDAP: Built with OpenLDAP LDAP SDK
+Jan 26 12:22:06 combo kernel: Kernel command line: ro root=LABEL=/ rhgb quiet audit=1
+[Wed Sep 28 09:08:45 2005] [warn] child process 18808 still did not exit, sending a SIGTERM
+Jul 27 14:42:00 combo netfs: Mounting other filesystems:  succeeded
+Sep 19 05:57:37 combo kernel: You can enable it with acpi=force
+Jun 10 11:32:12 combo atd: atd startup succeeded
+Jun 10 11:32:00 combo sshd:  succeeded
+Oct 25 10:07:08 combo apmd[1720]: Exiting
+Jul 27 14:41:57 combo kernel: CPU 0 irqstacks, hard=02345000 soft=02344000
+Sep 19 05:57:51 combo kernel: parport0: PC-style at 0x378 (0x778) [PCSPP,TRISTATE,EPP]
+Dec  6 12:22:59 combo kernel: Real Time Clock Driver v1.12
+Sep 28 09:11:10 combo xinetd[2006]: xinetd Version 2.3.13 started with libwrap loadavg options compiled in.
+Jun 10 11:31:44 combo syslog: klogd startup succeeded
+Jun 10 11:32:03 combo xinetd[2034]: Service telnet failed to start and is deactivated.
+Jan 26 12:22:06 combo kernel: You can enable it with acpi=force
+[Mon Jun 27 04:02:53 2005] [notice] LDAP: Built with OpenLDAP LDAP SDK
+Jun 10 11:31:46 combo netfs: Mounting other filesystems:  succeeded
+Dec 14 15:00:08 LabSZ sshd[10222]: Received disconnect from 119.137.63.195: 11: disconnected by user
+Jun  9 06:06:21 combo kernel: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Sep 19 05:57:37 combo kernel: Kernel command line: ro root=LABEL=/ rhgb quiet
+Sep 19 05:57:45 combo kernel: ip_tables: (C) 2000-2002 Netfilter core team
+Jun  9 06:06:21 combo kernel: pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+Dec  9 11:45:50 combo sshd(pam_unix)[16349]: session opened for user root by (uid=0)
+Jul 27 14:42:09 combo kernel: Bluetooth: HCI socket layer initialized
+Dec  6 12:22:57 combo kernel: ACPI disabled because your bios is from 2000 and too old
+Sep 28 09:10:59 combo kernel: Bluetooth: L2CAP ver 2.1
+[Thu Jun 09 06:07:19 2005] [notice] jk2_init() Found child 2333 in scoreboard slot 3
+Jan 26 12:22:12 combo kernel: md: autorun ...
+[Thu Jun 09 06:07:05 2005] [notice] Digest: done
+Dec  6 12:23:02 combo kernel: md: Autodetecting RAID arrays.
+Jul 27 14:41:58 combo kernel: Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Oct 25 14:09:57 combo named[2275]: running
+Oct 25 10:06:10 combo gpm[2071]: imps2: Auto-detected intellimouse PS/2
+Jul 27 14:42:40 combo httpd: httpd startup succeeded
+[Mon Jun 27 04:02:55 2005] [notice] mod_security/1.9dev2 configured
+Oct 25 10:08:46 combo kernel:  BIOS-e820: 00000000000f0000 - 0000000000100000 (reserved)
+Dec  6 12:22:58 combo kernel: SELinux:  Initializing.
+Sep 28 09:12:20 combo mysqld: Starting MySQL:  succeeded
+Sep 19 05:57:40 combo kernel: checking if image is initramfs...it isn't (no cpio magic); looks like an initrd
+Dec 26 10:55:32 LabSZ sshd[1155]: Server listening on 0.0.0.0 port 22.
+Jan 26 12:20:03 combo messagebus: messagebus -TERM succeeded
+Jul 27 14:41:57 combo kernel:  BIOS-e820: 0000000000000000 - 00000000000a0000 (usable)
+Jul 25 23:23:13 combo xinetd[26482]: warning: can't get client address: Connection reset by peer
+Jan 26 12:20:08 combo canna: Stopping Canna server: succeeded
+Jun  9 06:06:23 combo kernel:     ide0: BM-DMA at 0xffa0-0xffa7, BIOS settings: hda:DMA, hdb:pio
+Jun 10 11:35:57 combo ntpd[2327]: synchronized to LOCAL(0), stratum=10
+Dec  6 12:23:00 combo apmd: apmd startup succeeded
+Sep 28 09:10:56 combo kernel: Floppy drive(s): fd0 is 1.44M
+[Mon Sep 19 05:58:18 2005] [notice] suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Sun Jun 12 04:04:29 2005] [error] env.createBean2(): Factory error creating vm: ( vm, )
+Jun 10 11:32:03 combo xinetd[2034]: Started working: 30 available services
+Jun  9 06:06:34 combo kernel: Bluetooth: L2CAP socket layer initialized
+Jan 26 12:20:08 combo FreeWnn: jserver shutdown succeeded
+Aug 30 11:49:48 combo sshd(pam_unix)[4215]: session opened for user root by (uid=0)
+Sep 19 05:57:38 combo kernel: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+Dec  6 12:22:59 combo kernel: agpgart: Detected an Intel i810 E Chipset.
+Jun  9 06:06:20 combo kernel: CPU: L1 I cache: 16K, L1 D cache: 16K
+Jun 26 04:04:19 combo cups: cupsd shutdown succeeded
+Sep 28 09:08:58 combo sendmail: sendmail shutdown failed
+Jun 10 11:32:37 combo ntpd: ntpd startup succeeded
+[Sun Jun 12 04:04:29 2005] [error] env.createBean2(): Factory error creating channel.jni:jni ( channel.jni, jni)
+Oct 25 10:07:06 combo xinetd[2006]: Exiting...
+Dec  6 12:22:58 combo kernel: Security Scaffold v1.0.0 initialized
+Jun  9 06:10:35 combo ntpd[2296]: synchronized to LOCAL(0), stratum=10
+Oct 25 10:08:47 combo kernel: Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+[Tue Jun 21 22:16:01 2005] [error] mod_jk child workerEnv in error state 2
+Dec  6 12:27:44 combo ntpd[2319]: synchronized to LOCAL(0), stratum=10
+Jan 11 22:10:31 combo xinetd[16823]: warning: can't get client address: Connection reset by peer
+Sep 28 09:10:49 combo kernel:  BIOS-e820: 0000000000100000 - 0000000007eae000 (usable)
+Jun 10 11:31:44 combo kernel: Using tsc for high-res timesource
+[Fri Jan 27 11:55:15 2006] [error] [client 202.143.128.18] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /
+Jun 10 11:32:40 combo ntpd[2327]: kernel time sync status 0040
+[Thu Jul 21 03:37:32 2005] [error] [client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/
+Sep 19 05:57:53 combo xinetd: xinetd startup succeeded
+Jun 10 11:31:54 combo kernel: Bluetooth: HCI device and connection manager initialized
+Oct 25 10:09:10 combo sendmail: sm-client startup succeeded
+Jun 10 11:35:57 combo ntpd[2327]: kernel time sync disabled 0041
+[Sun Jul 10 04:04:45 2005] [notice] mod_security/1.9dev2 configured
+Dec 15 03:49:13 LabSZ sshd[11815]: Bad protocol version identification '\026\003\001\001"\001' from 123.59.60.110 port 56667
+Jan 26 12:20:06 combo xfs[2168]: terminating
+Sep 19 05:57:45 combo kernel: process `syslogd' is using obsolete setsockopt SO_BSDCOMPAT
+[Tue Nov 29 06:12:12 2005] [error] uriMap.mapUri() uri must start with /
+[Wed Sep 28 09:11:50 2005] [notice] suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+Sep 19 05:57:37 combo syslog: klogd startup succeeded
+Oct 25 10:08:48 combo bluetooth: hcid startup succeeded
+Jul 27 14:42:20 combo gpm[2076]: imps2: Auto-detected intellimouse PS/2
+Dec  6 12:21:26 combo syslog: klogd shutdown succeeded
+Sep 28 09:12:09 combo snmpd[2293]: NET-SNMP version 5.1.1
+Oct 25 10:08:51 combo kernel: ide-floppy driver 0.99.newide
+Dec  6 12:20:50 combo sendmail: sm-client shutdown failed
+Jun  9 06:07:23 combo mdmonitor: mdadm succeeded
+Jun 10 11:31:47 combo kernel: md: autorun ...
+Jan 26 12:22:08 combo kernel: CPU: Intel Pentium III (Coppermine) stepping 06
+Sep 19 05:57:42 combo kernel: hub 1-0:1.0: 2 ports detected
+Jan 26 12:20:17 combo squid: .
+Dec 13 08:33:10 LabSZ sshd[5066]: Received disconnect from 119.137.63.195: 11: disconnected by user
+[Mon Jun 27 04:02:55 2005] [notice] Apache/2.0.49 (Fedora) configured -- resuming normal operations
+Jun 12 04:04:15 combo cups: cupsd startup succeeded
+Jan 26 12:22:06 combo kernel:   HighMem zone: 0 pages, LIFO batch:1
+Jul 27 14:41:58 combo kernel: Calibrating delay loop... 1445.88 BogoMIPS
+Jun 10 11:31:44 combo kernel: Detected 731.221 MHz processor.
+[Thu Jun 09 06:07:20 2005] [notice] workerEnv.init() ok /etc/httpd/conf/workers2.properties
+Sep 19 05:57:38 combo kernel: PCI: Invalid ACPI-PCI IRQ routing table
+[Thu Jul 21 03:37:32 2005] [error] [client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/
+Jul 27 14:41:58 combo kernel: SELinux:  Initializing.
+Jan 26 12:23:29 combo rsyncd[2373]: rsyncd version 2.6.2 starting, listening on port 873
+[Sat Jun 11 03:03:05 2005] [error] mod_jk child init 1 -2
+Sep 28 09:10:50 combo kernel: agpgart: Detected an Intel i810 E Chipset.
+Dec  6 12:20:03 combo gdm[2402]: Master rebooting...
+Jan 26 12:22:07 combo kernel: Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+[Sat Jun 11 03:03:18 2005] [notice] mod_jk2 Shutting down
+Dec  6 12:22:59 combo kernel: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Jul 27 14:41:58 combo kernel: Linux Plug and Play Support v0.97 (c) Adam Belay
+Jun 10 11:31:46 combo kernel:     ide1: BM-DMA at 0xffa8-0xffaf, BIOS settings: hdc:DMA, hdd:pio
+Jun  9 06:06:24 combo smartd[1755]: Device: /dev/hda, found in smartd database.
+Sep 12 16:39:42 combo xinetd[25297]: warning: can't get client address: Connection reset by peer
+Jun 10 11:31:47 combo apmd[1748]: Version 3.0.2 (APM BIOS 1.2, Linux driver 1.16ac)
+Jan 26 11:53:05 combo sendmail: sendmail shutdown failed
+Jun 10 11:31:45 combo kernel: Intel machine check reporting enabled on CPU#0.
+Sep 28 09:10:50 combo kernel: Initializing Cryptographic API
+Feb 12 13:11:15 combo ftpd[4764]: setsockopt (IP_TOS): Operation not supported
+Jul 27 18:42:48 combo named[2288]: loading configuration from '/etc/named.conf'
+Jun  9 06:06:31 combo kernel: microcode: No suitable data for cpu 0
+Jun  9 10:07:13 combo named[2275]: listening on IPv4 interface eth0:3, 63.126.79.71#53
+[Thu Jun 09 06:07:20 2005] [notice] workerEnv.init() ok /etc/httpd/conf/workers2.properties
+[Sat Jun 11 11:45:09 2005] [error] [client 64.147.69.59] Invalid method in request get /scripts/..%c0%af../..%c0%af../..%c0%af../winnt/system32/cmd.exe?/c+dir
+Sep 28 09:10:54 combo kernel: Disabled Privacy Extensions on device 022db720(lo)
+Sep 28 09:10:50 combo kernel: Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+Jun  9 06:06:20 combo kernel:   Normal zone: 28334 pages, LIFO batch:6
+[Sun Jun 12 05:05:35 2005] [error] [client 210.91.137.35] request failed: URI too long (longer than 8190)
+Dec 13 20:41:57 LabSZ sshd[7133]: Received disconnect from 119.137.63.195: 11: disconnected by user
+Jun 10 15:32:34 combo named[2306]: loading configuration from '/etc/named.conf'
+Sep 28 09:11:20 combo gpm[2071]: Started gpm successfully. Entered daemon mode.
+Sep 28 09:10:52 combo kernel: md: autorun ...
+Sep 28 09:09:19 combo syslog: klogd shutdown succeeded
+Jul 27 14:41:57 combo kernel: Built 1 zonelists
+[Tue Nov 29 06:12:12 2005] [error] uriMap.mapUri() uri must start with /
+Dec  6 12:22:59 combo kernel: Enabling fast FPU save and restore... done.
+Dec  6 12:20:33 combo gpm: gpm shutdown succeeded
+Sep 28 09:12:22 combo mdmonitor: mdadm succeeded
+Sep 28 09:08:29 combo login(pam_unix)[2417]: session closed for user root
+Dec 10 20:34:36 LabSZ sshd[19757]: Accepted password for jmzhu from 222.125.40.98 port 52148 ssh2
+Jul 27 14:42:00 combo kernel: input: AT Translated Set 2 keyboard on isa0060/serio0
+Jul 27 14:41:57 combo kernel: 126MB LOWMEM available.
+Oct 25 10:08:49 combo kernel: agpgart: detected 4MB dedicated video ram.
+Jun  9 06:06:21 combo rc: Starting pcmcia:  succeeded
+Sep 19 05:57:38 combo kernel: PCI: Probing PCI hardware (bus 00)
+Jun 10 11:31:46 combo hcid[1708]: HCI daemon ver 2.4 started
+Jun  9 06:06:34 combo kernel: NET: Registered protocol family 31
+Jan 26 12:22:43 combo privoxy: privoxy startup succeeded
+Jan 26 12:20:30 combo dd: 1+0 records out
+Sep 19 05:57:37 combo kernel: Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Dec 10 11:40:46 LabSZ sshd[27962]: pam_unix(sshd:session): session opened for user fztu by (uid=0)
+Jun  9 10:07:13 combo named[2275]: listening on IPv4 interface eth0:7, 63.126.79.80#53
+Oct 25 10:06:11 combo atd: atd shutdown succeeded
+Jul 27 14:42:07 combo kernel: 0000:01:0c.0: 3Com PCI 3c905C Tornado at 0xec80. Vers LK1.1.19
+Sep 28 09:11:06 combo sshd:  succeeded
+Jun 10 11:31:44 combo kernel: BIOS-provided physical RAM map:
+Jun  9 06:06:38 combo xinetd: xinetd startup succeeded
+Oct 25 10:08:46 combo kernel:  BIOS-e820: 0000000007eae000 - 0000000008000000 (reserved)
+Jul 27 14:42:15 combo sendmail: sendmail startup succeeded
+Jun 13 05:27:12 combo gdm-binary[2803]: Couldn't authenticate user
+Jan  6 12:52:23 LabSZ sshd[22942]: syslogin_perform_logout: logout() returned an error
+Jul 27 14:41:59 combo kernel: PCI: Using IRQ router PIIX/ICH [8086/2410] at 0000:00:1f.0
+Jul 27 14:41:58 combo kernel: SELinux:  Starting in permissive mode
+Jul 27 14:41:57 combo kernel:  BIOS-e820: 0000000000100000 - 0000000007eae000 (usable)
+Sep 28 09:10:51 combo apmd: apmd startup succeeded
+Sep 28 09:10:52 combo autofs: automount startup succeeded
+Jun 10 11:31:45 combo kernel: CPU: L2 cache: 256K
+Jun  9 06:06:35 combo kernel: lp0: console ready
+Sep 28 09:10:55 combo kernel: microcode: No suitable data for cpu 0
+[Fri Jun 17 04:03:42 2005] [notice] Digest: done
+[Sat Jun 25 22:33:28 2005] [error] [client 62.118.19.122] request failed: URI too long (longer than 8190)
+Jun  9 06:06:24 combo kernel: ide-floppy driver 0.99.newide
+Jun  9 06:06:20 combo kernel: SELinux:  Initializing.
+Oct 25 10:08:47 combo portmap: portmap startup succeeded
+Dec  6 12:23:19 combo sendmail: sm-client startup succeeded
+Jun 10 11:31:49 combo kernel: hub 1-0:1.0: USB hub found
+Dec 10 11:41:22 LabSZ sshd[27962]: pam_unix(sshd:session): session closed for user fztu
+Jun  9 06:06:21 combo kernel: Initializing Cryptographic API
+Jun  9 06:06:24 combo autofs: automount startup succeeded
+[Sun Jul 03 04:08:02 2005] [notice] Apache/2.0.49 (Fedora) configured -- resuming normal operations
+Sep 28 09:11:19 combo privoxy: privoxy startup succeeded
+Oct  7 18:53:39 combo passwd(pam_unix)[3275]: password changed for test
+[Sun Jun 12 04:04:29 2005] [notice] Digest: generating secret for digest authentication ...
+Jun 10 11:31:49 combo kernel: hub 1-0:1.0: 2 ports detected
+Jun  9 06:06:21 combo kernel: Checking 'hlt' instruction... OK.
+Sep 28 09:08:44 combo gpm: gpm shutdown succeeded
+Jan 26 12:22:08 combo kernel: Checking 'hlt' instruction... OK.
+Sep 19 05:57:39 combo kernel: hda: max request size: 128KiB
+Dec  6 12:23:00 combo kernel: agpgart: AGP aperture is 64M @ 0xf4000000
+Jan 26 12:22:06 combo kernel: zapping low mappings.
+Jun 10 11:32:34 combo named: named startup succeeded
+Jun 10 11:31:46 combo kernel: hdc: SAMSUNG CD-ROM SN-124, ATAPI CD/DVD-ROM drive
+Dec  9 09:43:25 combo syslog: syslogd startup succeeded
+Dec  9 09:41:51 combo login(pam_unix)[2419]: session opened for user root by LOGIN(uid=0)
+Sep 28 09:10:49 combo kernel: CPU: L1 I cache: 16K, L1 D cache: 16K
+[Fri Jun 17 04:03:46 2005] [error] mod_jk child workerEnv in error state 1
+Jun  9 06:06:21 combo kernel: Transparent bridge - 0000:00:1e.0
+Sep 28 09:10:49 combo kernel: Kernel command line: ro root=LABEL=/ rhgb quiet
+Dec  6 12:21:15 combo xinetd[2003]: Exiting...
+Dec  6 12:22:57 combo syslog: klogd startup succeeded
+Jul 11 11:33:17 combo gdm-binary[2803]: Couldn't authenticate user
+Sep 19 05:57:37 combo kernel: CPU: L1 I cache: 16K, L1 D cache: 16K
+Dec  6 12:23:01 combo kernel: ide-floppy driver 0.99.newide
+Jun 10 11:31:47 combo kernel: hdc: ATAPI 24X CD-ROM drive, 128kB Cache
+[Thu Jun 09 06:07:04 2005] [notice] LDAP: Built with OpenLDAP LDAP SDK
+Jun  9 06:06:20 combo kernel: Failure registering capabilities with the kernel
+Aug  2 08:01:32 combo login(pam_unix)[2400]: session opened for user root by LOGIN(uid=0)
+Sep 19 05:57:47 combo kernel: Bluetooth: L2CAP ver 2.1
+Jun 10 11:31:45 combo kernel: ACPI: ACPI tables contain no PCI IRQ routing entries
+Sep 19 05:57:37 combo kernel: Calibrating delay loop... 1441.79 BogoMIPS
+Sep 28 09:10:49 combo kernel: SELinux:  Starting in permissive mode
+Jun 10 11:31:47 combo kernel: input: AT Translated Set 2 keyboard on isa0060/serio0
+Sep 19 05:57:34 combo network: Setting network parameters:  succeeded
+Sep 28 09:08:28 combo shutdown: shutting down for system reboot
+Sep 28 09:08:36 combo atd: atd shutdown succeeded
+Dec  6 12:22:59 combo kernel: pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+Dec  6 12:21:16 combo xinetd: xinetd shutdown succeeded
+Jun  9 06:06:20 combo kernel:  BIOS-e820: 00000000000f0000 - 0000000000100000 (reserved)
+Sep 28 09:10:49 combo kernel: Detected 730.921 MHz processor.
+Jun  9 06:06:24 combo kernel: usbcore: registered new driver hiddev
+Sep 19 05:58:05 combo anacron: anacron startup succeeded
+Dec  6 12:23:29 combo gpm[2072]: Started gpm successfully. Entered daemon mode.
+Dec  6 12:21:21 combo ntpd: ntpd shutdown succeeded
+Sep 28 09:11:04 combo kernel: parport0: PC-style at 0x378 (0x778) [PCSPP,TRISTATE,EPP]
+Dec  6 12:23:00 combo kernel: hdc: SAMSUNG CD-ROM SN-124, ATAPI CD/DVD-ROM drive
+Sep 19 05:58:34 combo ntpd[2326]: frequency initialized 0.000 PPM from /var/lib/ntp/drift
+[Mon Jun 27 04:02:53 2005] [notice] Digest: generating secret for digest authentication ...
+Sep 28 09:10:51 combo kernel: hda: max request size: 128KiB
+Dec 10 09:48:32 LabSZ sshd[24808]: Did not receive identification string from 181.214.87.4
+[Fri Jun 10 11:32:27 2005] [error] env.createBean2(): Factory error creating channel.jni:jni ( channel.jni, jni)
+Jan 26 12:22:08 combo kernel: isapnp: Scanning for PnP cards...
+Jun  9 06:06:31 combo kernel: microcode: CPU0 already at revision 0x8 (current=0x8)
+Jun  9 06:06:21 combo kernel: PCI: Probing PCI hardware (bus 00)
+Jun  9 06:06:41 combo xinetd[2003]: Service telnet failed to start and is deactivated.
+[Sun Jun 26 04:04:29 2005] [notice] mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.
+Dec  6 12:22:57 combo kernel: You can enable it with acpi=force
+Sep 28 09:10:50 combo hcid[1680]: HCI daemon ver 2.4 started
+Oct 25 10:08:47 combo kernel: Security Scaffold v1.0.0 initialized
+Dec  6 12:24:23 combo ntpd[2319]: ntpd 4.2.0@1.1161-r Thu Mar 11 11:46:39 EST 2004 (1)
+Jun  9 06:06:34 combo kernel: parport0: PC-style at 0x378 (0x778) [PCSPP,TRISTATE,EPP]
+Sep 19 05:57:40 combo autofs: automount startup succeeded
+Sep 28 09:10:50 combo kernel: Linux Plug and Play Support v0.97 (c) Adam Belay
+Dec  6 12:23:08 combo kernel: microcode: CPU0 already at revision 0x8 (current=0x8)
+[Thu Jul 21 03:37:32 2005] [error] [client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/
+Jul  3 04:07:49 combo cups: cupsd shutdown succeeded
+Jan 26 12:20:08 combo cannaserver[2106]: irw_killserver:cannaserver end
+Jun 10 11:31:44 combo kernel: 0MB HIGHMEM available.
+Jan 26 11:53:06 combo sendmail: sm-client shutdown failed
+Jun 12 04:10:11 combo su(pam_unix)[9084]: session opened for user news by (uid=0)
+[Sat Jun 11 03:03:05 2005] [error] jk2_init() Can't find child 4212 in scoreboard
+Jan 26 12:22:08 combo kernel: PCI: Invalid ACPI-PCI IRQ routing table
+Sep 28 09:09:15 combo dd: 1+0 records in
+Jun 12 04:04:06 combo su(pam_unix)[8486]: session opened for user cyrus by (uid=0)
+Jun  9 06:06:32 combo kernel: Floppy drive(s): fd0 is 1.44M
+Dec 10 13:46:40 LabSZ sshd[4772]: Accepted password for fztu from 113.118.187.34 port 30950 ssh2
+Sep 19 05:57:41 combo kernel: SELinux:  Disabled at runtime.
+Jun  9 06:06:27 combo kernel: SELinux:  Disabled at runtime.
+Nov 21 12:41:20 combo kernel: VM: killing process httpd
+Sep 28 09:10:50 combo kernel: isapnp: Scanning for PnP cards...
+Jun 10 11:31:46 combo kernel: agpgart: AGP aperture is 64M @ 0xf4000000
+Sep 28 09:10:57 combo kernel: ip_tables: (C) 2000-2002 Netfilter core team
+Oct 25 10:08:46 combo kernel: 126MB LOWMEM available.
+Oct 25 10:08:59 combo kernel: microcode: CPU0 already at revision 0x8 (current=0x8)
+Oct 25 10:08:49 combo kernel: agpgart: Detected an Intel i810 E Chipset.
+Jun 10 11:31:52 combo kernel: ip_tables: (C) 2000-2002 Netfilter core team
+Sep 19 05:57:39 combo kernel: Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+Sep 19 05:57:54 combo sendmail: sm-client startup succeeded
+Jan 26 12:22:06 combo kernel: BIOS-provided physical RAM map:
+Jun  9 06:06:46 combo IIim: htt startup succeeded
+[Thu Jun 09 06:07:19 2005] [notice] jk2_init() Found child 2331 in scoreboard slot 1
+Jun  9 06:06:38 combo sshd:  succeeded
+Dec 26 10:55:32 LabSZ sshd[1155]: Server listening on 0.0.0.0 port 902.
+[Sun Jun 19 04:09:11 2005] [error] mod_jk child workerEnv in error state 2
+[Sun Jun 19 04:09:09 2005] [notice] mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.
+Sep 19 05:57:42 combo kernel: EXT3 FS on hda2, internal journal
+Dec 10 08:33:23 LabSZ sshd[24384]: Did not receive identification string from 103.207.39.212
+Jun 10 11:31:50 combo kernel: EXT3 FS on hda1, internal journal
+Dec  6 12:23:13 combo kernel: lp0: console ready
+Dec  6 12:22:59 combo bluetooth: hcid startup succeeded
+[Sat Jun 11 03:03:19 2005] [notice] mod_jk2 Shutting down
+Sep 19 05:58:36 combo mysqld: Starting MySQL:  succeeded
+[Thu Jun 09 06:07:19 2005] [notice] jk2_init() Found child 2337 in scoreboard slot 7
+Oct 25 10:06:15 combo mysqld: Stopping MySQL:  succeeded
+[Thu Jun 09 06:07:19 2005] [notice] Apache/2.0.49 (Fedora) configured -- resuming normal operations
+Dec  6 12:22:58 combo kernel: Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Dec  6 12:21:26 combo exiting on signal 15
+Sep 28 09:10:49 combo kernel: Checking 'hlt' instruction... OK.
+Jul 27 14:41:57 combo irqbalance: irqbalance startup succeeded
+Oct 25 10:08:49 combo kernel: apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)
+Sep 19 05:57:39 combo kernel: Using cfq io scheduler
+Sep 19 05:57:44 combo kernel: 0000:01:0c.0: 3Com PCI 3c905C Tornado at 0xec80. Vers LK1.1.19
+Jun  9 06:07:13 combo named: named startup succeeded
+Sep 28 09:10:51 combo kernel: Using cfq io scheduler
+Jul 27 14:42:00 combo kernel: agpgart: detected 4MB dedicated video ram.
+Jun 10 11:32:05 combo privoxy: Jun 10 11:32:05 Privoxy(-150769536) Info: loading configuration file '/etc/privoxy/config':
+Oct 25 10:09:49 combo snmpd: snmpd startup succeeded
+Jun 10 11:31:45 combo kernel: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Jun 10 11:31:47 combo kernel: usbcore: registered new driver hiddev
+Dec  6 12:23:12 combo kernel: Bluetooth: Core ver 2.4
+Jul  7 08:06:12 combo gpm[2094]: imps2: Auto-detected intellimouse PS/2
+Dec  6 17:24:34 combo named[2298]: running
+[Sun Jun 19 04:09:10 2005] [notice] Apache/2.0.49 (Fedora) configured -- resuming normal operations
+Dec  6 12:20:20 combo messagebus: messagebus shutdown failed
+Dec  6 12:22:58 combo kernel: SELinux:  Starting in permissive mode
+Jul 27 14:41:57 combo kernel: You can enable it with acpi=force
+Jun  9 06:06:21 combo kernel: ACPI: ACPI tables contain no PCI IRQ routing entries
+Sep 28 09:10:53 combo kernel: SELinux:  Unregistering netfilter hooks
+[Sat Jun 11 03:03:06 2005] [error] jk2_init() Can't find child 4216 in scoreboard
+Jun 10 11:31:45 combo kernel: PCI: Probing PCI hardware (bus 00)
+Jul 27 14:42:21 combo IIim: htt startup succeeded
+Jan 26 12:23:07 combo httpd: httpd startup succeeded
+Sep 28 09:10:53 combo kernel: EXT3-fs: mounted filesystem with ordered data mode.
+Sep 19 05:57:43 combo kernel: Floppy drive(s): fd0 is 1.44M
+Jan 26 12:22:09 combo kernel: ICH: chipset revision 2
+Sep 28 09:10:49 combo irqbalance: irqbalance startup succeeded
+Jan 26 12:22:06 combo kernel: ACPI disabled because your bios is from 2000 and too old
+Jul 27 14:41:59 combo kernel: apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)
+Jul 27 14:42:00 combo kernel: hda: 29336832 sectors (15020 MB) w/1916KiB Cache, CHS=29104/16/63, UDMA(66)
+[Sat Jun 18 07:35:44 2005] [error] mod_jk child workerEnv in error state 1
+Oct 25 10:08:52 combo kernel: input: AT Translated Set 2 keyboard on isa0060/serio0
+Jun 10 11:31:44 combo kernel:  BIOS-e820: 00000000000f0000 - 0000000000100000 (reserved)
+Jun 10 11:31:48 combo kernel: Disabled Privacy Extensions on device 022db720(lo)
+Sep 28 09:09:03 combo smartd[1788]: smartd is exiting (exit status 0)
+Jul 27 14:42:00 combo kernel: hdc: SAMSUNG CD-ROM SN-124, ATAPI CD/DVD-ROM drive
+Dec  6 12:21:03 combo smartd[1757]: smartd is exiting (exit status 0)
+Sep 19 05:57:40 combo kernel: mice: PS/2 mouse device common for all mice
+Sep 28 09:10:50 combo kernel: ttyS1 at I/O 0x2f8 (irq = 3) is a 16550A
+Jul 27 14:42:02 combo kernel: kjournald starting.  Commit interval 5 seconds
+Oct 25 10:08:51 combo kernel: drivers/usb/input/hid-core.c: v2.0:USB HID core driver
+Sep 28 09:10:51 combo kernel: hda: 29336832 sectors (15020 MB) w/1916KiB Cache, CHS=29104/16/63, UDMA(66)
+Jun  9 06:07:17 combo ntpd[2296]: ntpd 4.2.0@1.1161-r Thu Mar 11 11:46:39 EST 2004 (1)
+Jun 10 11:31:44 combo kernel: zapping low mappings.
+[Fri Jun 10 11:32:27 2005] [error] config.update(): Can't create channel.jni:jni
+Dec  6 12:22:57 combo portmap: portmap startup succeeded
+Sep 28 09:10:53 combo kernel: md: ... autorun DONE.
+Jun 10 11:31:45 combo kernel: PCI: Invalid ACPI-PCI IRQ routing table
+[Thu Jun 09 06:07:19 2005] [notice] jk2_init() Found child 2332 in scoreboard slot 2
+Dec  6 12:22:54 combo network: Setting network parameters:  succeeded
+Jun  9 06:06:23 combo netfs: Mounting other filesystems:  succeeded
+Sep 19 05:57:39 combo kernel: hda: 29336832 sectors (15020 MB) w/1916KiB Cache, CHS=29104/16/63, UDMA(66)
+Jan 26 12:22:10 combo kernel: drivers/usb/input/hid-core.c: v2.0:USB HID core driver
+Jun 10 11:31:54 combo kernel: process `syslogd' is using obsolete setsockopt SO_BSDCOMPAT
+[Thu Jun 09 06:07:20 2005] [error] mod_jk child init 1 0
+Dec  6 12:22:58 combo kernel: CPU: Intel Pentium III (Coppermine) stepping 06
+Jul 27 14:42:04 combo kernel: EXT3-fs: mounted filesystem with ordered data mode.
+Jun 10 11:31:46 combo kernel: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+Jan 26 12:20:28 combo apmd[1720]: Exiting
+Oct 25 10:07:05 combo named: named shutdown succeeded
+Sep 28 09:10:49 combo kernel: CPU: Intel Pentium III (Coppermine) stepping 06
+[Sat Jun 11 03:03:04 2005] [error] mod_jk child init 1 -2
+Oct 25 10:09:47 combo named: named startup succeeded
+Dec  6 12:22:57 combo kernel: BIOS-provided physical RAM map:
+Sep 19 05:57:37 combo kernel: Detected 731.217 MHz processor.
+Jul 27 14:41:54 combo network: Setting network parameters:  succeeded
+Jun 10 11:31:48 combo apmd[1748]: Charge: * * * (-1% unknown)
+Sep 28 09:10:49 combo kernel: Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Jan 26 12:55:50 combo sshd[3128]: Warning!  Could not relabel  with system_u:object_r:devpts_t, not relabeling.
+Nov 22 07:35:55 combo kernel: httpd: page allocation failure. order:0, mode:0xd2
+[Sun Jul 03 04:08:02 2005] [notice] mod_security/1.9dev2 configured
+Oct 25 10:09:57 combo mysqld: Starting MySQL:  succeeded
+Sep 19 05:57:38 combo kernel: Real Time Clock Driver v1.12
+Jun 10 11:31:45 combo kernel: apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)
+Jan 26 12:20:05 combo atd: atd shutdown succeeded
+Sep 19 05:58:29 combo ntpd: ntpd startup succeeded
+Sep 28 09:10:51 combo apmd[1720]: Version 3.0.2 (APM BIOS 1.2, Linux driver 1.16ac)
+[Fri Jun 10 11:32:39 2005] [notice] mod_security/1.9dev2 configured
+Jun  9 06:06:24 combo kernel:     ide1: BM-DMA at 0xffa8-0xffaf, BIOS settings: hdc:DMA, hdd:pio
+Oct 25 10:08:56 combo kernel: Disabled Privacy Extensions on device 022db720(lo)
+Sep 28 09:11:09 combo sendmail: sm-client startup succeeded
+Sep 19 05:57:38 combo kernel: Linux Plug and Play Support v0.97 (c) Adam Belay
+Sep 19 05:57:40 combo kernel: input: AT Translated Set 2 keyboard on isa0060/serio0
+Oct 25 10:08:49 combo kernel: pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+Jul 27 14:41:58 combo kernel: Checking 'hlt' instruction... OK.
+Jan 26 12:22:50 combo anacron: anacron startup succeeded
+Sep 28 09:10:49 combo kernel: Failure registering capabilities with the kernel
+Jan 26 12:22:08 combo kernel: agpgart: AGP aperture is 64M @ 0xf4000000
+Sep 28 09:10:51 combo kernel: ide-floppy driver 0.99.newide
+Jul 27 14:41:57 combo portmap: portmap startup succeeded
+Jul 27 14:47:17 combo ntpd[2317]: kernel time sync enabled 0001
+Sep 28 09:10:50 combo random: Initializing random number generator:  succeeded
+Jun 26 04:04:24 combo cups: cupsd startup succeeded
+Jan 26 12:22:06 combo kernel:  BIOS-e820: 0000000007eae000 - 0000000008000000 (reserved)
+Sep 28 09:10:50 combo kernel: Linux agpgart interface v0.100 (c) Dave Jones
+Jun 10 11:31:47 combo kernel: kjournald starting.  Commit interval 5 seconds
+Jun  9 10:07:13 combo named[2275]: listening on IPv4 interface eth0:2, 63.126.79.70#53
+Sep 19 05:57:39 combo kernel:     ide1: BM-DMA at 0xffa8-0xffaf, BIOS settings: hdc:DMA, hdd:pio
+Jun 10 11:31:47 combo kernel: NET: Registered protocol family 1
+Jan 26 12:22:08 combo kernel: ACPI: ACPI tables contain no PCI IRQ routing entries
+Sep 28 09:10:55 combo kernel: hub 1-0:1.0: 2 ports detected
+Oct 25 10:08:49 combo kernel: isapnp: No Plug & Play device found
+Dec 10 09:45:06 LabSZ sshd[24761]: Received disconnect from 119.137.62.142: 11: disconnected by user
+Dec  9 09:41:01 combo gdm-binary[2828]: Couldn't authenticate user
+Jul 27 14:42:08 combo kernel: Bluetooth: Core ver 2.4
+Sep 28 09:10:58 combo kernel: 0000:01:0c.0: 3Com PCI 3c905C Tornado at 0xec80. Vers LK1.1.19
+Oct 25 10:08:48 combo hcid[1677]: HCI daemon ver 2.4 started
+Jun  9 06:06:20 combo kernel: Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Sep 19 05:57:42 combo kernel: hub 1-0:1.0: USB hub found
+[Sat Jun 11 03:03:15 2005] [notice] mod_jk2 Shutting down
+Jun 10 11:31:48 combo kernel: EXT3-fs: mounted filesystem with ordered data mode.
+Oct 10 07:43:11 combo passwd(pam_unix)[17573]: password changed for test
+Jan 26 12:22:03 combo network: Setting network parameters:  succeeded
+Sep 19 05:57:47 combo kernel: Bluetooth: HCI socket layer initialized
+Jan 26 12:22:06 combo kernel: 126MB LOWMEM available.
+Sep 28 09:10:49 combo kernel:  BIOS-e820: 0000000007eae000 - 0000000008000000 (reserved)
+Jun 10 11:31:50 combo kernel: IA-32 Microcode Update Driver: v1.13 <tigran@veritas.com>
+[Thu Jun 09 06:07:05 2005] [error] config.update(): Can't create worker.jni:onShutdown
+Oct 25 10:08:47 combo kernel:   Normal zone: 28334 pages, LIFO batch:6
+Oct 25 10:08:54 combo kernel: md: Autodetecting RAID arrays.
+Nov 22 07:36:25 combo kernel: Call Trace:
+Oct 25 10:08:50 combo autofs: automount startup succeeded
+Jan 26 12:22:06 combo syslog: syslogd startup succeeded
+Jan 26 12:22:07 combo kernel: SELinux:  Initializing.
+Sep 19 05:57:41 combo apmd[1748]: Charge: * * * (-1% unknown)
+Sep 28 09:03:55 combo sendmail: sm-client shutdown succeeded
+Jul 27 14:42:07 combo kernel: 3c59x: Donald Becker and others. www.scyld.com/network/vortex.html
+Sep 19 05:57:37 combo kernel: Built 1 zonelists
+Jun  9 06:06:21 combo kernel: PCI: Invalid ACPI-PCI IRQ routing table
+Jul 25 12:18:50 combo named[2306]: notify question section contains no SOA
+Sep 19 05:57:37 combo kernel: CPU: Intel Pentium III (Coppermine) stepping 06
+Sep 19 05:57:45 combo kernel: 0000:01:0c.0: 3Com PCI 3c905C Tornado at 0xec80. Vers LK1.1.19
+[Thu Jul 21 03:37:31 2005] [error] [client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/
+Jun  9 10:07:13 combo named[2275]: listening on IPv4 interface lo, 127.0.0.1#53
+Sep 19 05:57:37 combo portmap: portmap startup succeeded
+Jan 26 12:22:10 combo autofs: automount startup succeeded
+[Sat Jun 11 11:46:25 2005] [error] [client 207.181.126.3] Invalid method in request get /scripts/..%c0%af../..%c0%af../..%c0%af../winnt/system32/cmd.exe?/c+dir
+Dec  6 12:23:16 combo sshd:  succeeded
+Nov 22 07:35:55 combo kernel: Call Trace:
+Jul 10 04:04:33 combo cups: cupsd shutdown succeeded
+Jan 26 12:22:44 combo kernel: lp0: console ready
+Jun 11 04:03:18 combo su(pam_unix)[4718]: session opened for user cyrus by (uid=0)
+Jan 26 12:22:13 combo rc: Starting hpoj:  succeeded
+Sep 28 09:12:10 combo ntpd: ntpd startup succeeded
+[Sun Jun 19 04:09:06 2005] [notice] Digest: done
+Jun  9 06:06:21 combo kernel: apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)
+Feb 12 13:11:15 combo ftpd[4765]: setsockopt (IP_TOS): Operation not supported
+Jul 25 14:00:03 combo named[2306]: notify question section contains no SOA
+Sep 28 09:09:16 combo rpc.statd[1636]: Caught signal 15, un-registering and exiting.
+Jun  9 06:07:26 combo udev[2578]: removing device node '/udev/vcsa2'
+Jun  9 06:06:23 combo apmd[1717]: Version 3.0.2 (APM BIOS 1.2, Linux driver 1.16ac)
+[Sun Jun 26 04:04:29 2005] [notice] Apache/2.0.49 (Fedora) configured -- resuming normal operations
+Dec  9 09:43:06 combo kernel: Kernel logging (proc) stopped.
+Nov 22 09:36:06 combo kernel: VM: killing process httpd
+Sep 28 09:10:49 combo kernel: CPU: L2 cache: 256K
+Aug  2 08:03:37 combo gpm[2076]: Request on 6 (console 2)
+Jul 20 13:59:42 combo rpc.statd[1636]: gethostbyname error for ^X���^X���^Z���^Z���%8x%8x%8x%8x%8x%8x%8x%8x%8x%62716x%hn%51859x%hn\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220
+Sep 28 09:12:04 combo named: named startup succeeded
+Oct 25 10:08:47 combo kernel: Kernel command line: ro root=LABEL=/ rhgb quiet
+Sep 19 05:57:39 combo kernel:     ide0: BM-DMA at 0xffa0-0xffa7, BIOS settings: hda:DMA, hdb:pio
+Sep 19 05:58:03 combo canna:  succeeded
+Jun 10 11:31:50 combo kernel: EXT3-fs: mounted filesystem with ordered data mode.
+Jul  7 08:06:15 combo login(pam_unix)[2421]: session opened for user root by LOGIN(uid=0)
+Jul 27 14:42:01 combo kernel: md: Autodetecting RAID arrays.
+Jul 27 14:42:02 combo kernel: SELinux:  Disabled at runtime.
+Jun  9 06:06:20 combo kernel:  BIOS-e820: 0000000000100000 - 0000000007eae000 (usable)
+Sep 28 09:08:41 combo FreeWnn: jserver shutdown succeeded
+Jun  9 06:07:06 combo httpd: httpd startup succeeded
+Dec  6 12:23:00 combo apmd[1720]: Version 3.0.2 (APM BIOS 1.2, Linux driver 1.16ac)
+Sep 19 05:57:40 combo kernel: EXT3-fs: write access will be enabled during recovery.
+[Fri Jan 27 11:55:15 2006] [error] [client 202.143.128.18] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /
+Sep 19 05:57:37 combo kernel:  BIOS-e820: 00000000ffb00000 - 0000000100000000 (reserved)
+Dec  6 12:21:01 combo spamassassin: spamd shutdown succeeded
+Oct 25 10:09:51 combo ntpd[2304]: ntpd 4.2.0@1.1161-r Thu Mar 11 11:46:39 EST 2004 (1)
+Sep 28 09:10:48 combo syslog: klogd startup succeeded
+Jun  9 10:07:13 combo named[2275]: listening on IPv4 interface eth0:8, 63.126.79.81#53
+Jun 10 11:31:54 combo kernel: Bluetooth: HCI socket layer initialized
+Sep 19 05:57:38 combo kernel: PCI: Using configuration type 1
+Jun 10 11:31:44 combo irqbalance: irqbalance startup succeeded
+Jun 10 11:31:47 combo kernel: md: ... autorun DONE.
+Jan 26 12:20:30 combo rpc.statd[1608]: Caught signal 15, un-registering and exiting.
+Sep 28 09:09:19 combo exiting on signal 15
+Oct 25 10:09:17 combo privoxy: privoxy startup succeeded
+Oct 25 10:08:49 combo kernel: Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+Dec 19 21:45:54 LabSZ sshd[12329]: Bad protocol version identification 'GET /manager/html HTTP/1.1' from 183.131.83.229 port 4710
+Jan 26 12:22:29 combo kernel: microcode: No suitable data for cpu 0
+Sep 29 12:28:40 combo sendmail: sm-client shutdown failed
+Sep 19 05:57:39 combo kernel: ICH: chipset revision 2
+Jul 27 14:42:00 combo kernel: Using cfq io scheduler
+Jan 26 12:20:22 combo named: named shutdown failed
+Oct 25 10:08:49 combo kernel: Initializing Cryptographic API
+Jun 10 04:09:15 combo su(pam_unix)[5493]: session opened for user news by (uid=0)
+Jun 13 11:55:04 combo rpc.statd[1636]: gethostbyname error for ^X���^X���^Z���^Z���%8x%8x%8x%8x%8x%8x%8x%8x%8x%62716x%hn%51859x%hn\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220
+Sep 28 09:12:10 combo ntpd[2310]: ntpd 4.2.0@1.1161-r Thu Mar 11 11:46:39 EST 2004 (1)
+Sep 28 09:10:57 combo kernel: 3c59x: Donald Becker and others. www.scyld.com/network/vortex.html
+Jun  9 06:06:22 combo kernel: Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+Dec 17 16:06:01 LabSZ sshd[4840]: Bad protocol version identification 'GET /manager/html HTTP/1.1' from 183.131.83.223 port 59370
+Sep 28 09:12:07 combo snmpd: snmpd startup succeeded
+Sep 28 09:11:21 combo IIim: htt startup succeeded
+Dec  6 12:21:17 combo apmd[1717]: Exiting
+Oct 25 10:07:10 combo rpc.statd[1608]: Caught signal 15, un-registering and exiting.
+[Fri Jun 10 11:32:27 2005] [error] env.createBean2(): Factory error creating worker.jni:onStartup ( worker.jni, onStartup)
+Sep 29 12:28:10 combo gpm[2071]: imps2: Auto-detected intellimouse PS/2
+Aug  2 08:01:32 combo  -- root[2400]: ROOT LOGIN ON tty2
+Jun 12 04:04:09 combo cups: cupsd shutdown succeeded
+Sep 19 05:57:42 combo rc: Starting hpoj:  succeeded
+Jun 10 11:31:47 combo smartd[1786]: smartd version 5.21 Copyright (C) 2002-3 Bruce Allen
+Aug  2 07:51:46 combo sshd(pam_unix)[24860]: session opened for user root by (uid=0)
+Sep 19 05:57:45 combo kernel: 3c59x: Donald Becker and others. www.scyld.com/network/vortex.html
+Sep 19 05:57:37 combo kernel:   Normal zone: 28334 pages, LIFO batch:6
+Jul 27 14:42:58 combo mysqld: Starting MySQL:  succeeded
+Jul 27 14:41:59 combo kernel: pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+[Fri Jan 27 11:55:15 2006] [error] [client 202.143.128.18] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /
+Sep 19 05:58:27 combo snmpd: snmpd startup succeeded
+Jan 26 12:22:18 combo kernel: audit(1138296102.620:183525): avc:  denied  { read } for  pid=651 exe=/bin/cat name=bNumConfigurations dev= ino=1290 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysfs_t tclass=file
+Dec 10 19:43:52 LabSZ sshd[19659]: Accepted password for fztu from 119.137.60.156 port 56474 ssh2
+Dec  6 12:20:14 combo init: Switching to runlevel: 6
+Jul 27 14:42:20 combo privoxy: privoxy startup succeeded
+Jul 27 14:41:59 combo kernel: PCI: Invalid ACPI-PCI IRQ routing table
+Oct 25 10:08:50 combo apmd[1717]: Charge: * * * (-1% unknown)
+Sep 19 05:57:37 combo syslog: syslogd startup succeeded
+Sep 28 13:38:11 combo rpc.statd[1608]: gethostbyname error for ^X���^X���^Z���^Z���%8x%8x%8x%8x%8x%8x%8x%8x%8x%62716x%hn%51859x%hn\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220
+Jun 10 11:31:48 combo kernel: SELinux:  Disabled at runtime.
+Jul 27 14:41:57 combo kernel:  BIOS-e820: 00000000000f0000 - 0000000000100000 (reserved)
+Jun  9 06:06:25 combo kernel: NET: Registered protocol family 2
+Sep 29 12:28:07 combo gdm-binary[2813]: Couldn't authenticate user
+Sep 29 12:32:04 combo sendmail: sendmail startup succeeded
+Jan 26 12:22:12 combo kernel: security:  5 users, 7 roles, 1244 types, 1 bools
+Oct 25 10:06:16 combo gpm: gpm shutdown succeeded
+Oct 25 10:08:59 combo kernel: IA-32 Microcode Update Driver: v1.13 <tigran@veritas.com>
+[Thu Jun 09 06:07:16 2005] [notice] mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.
+Dec 10 09:18:27 LabSZ sshd[24636]: Did not receive identification string from 103.207.39.16
+Jun 10 11:31:44 combo kernel:  BIOS-e820: 0000000000100000 - 0000000007eae000 (usable)
+Jul 27 14:41:58 combo kernel: ACPI: Interpreter disabled.
+Jun  9 06:06:24 combo smartd[1755]: Opened configuration file /etc/smartd.conf
+Dec 12 19:59:54 LabSZ sshd[31507]: Bad protocol version identification '' from 185.35.63.117 port 35985
+[Sat Jun 11 03:03:07 2005] [error] jk2_init() Can't find child 4217 in scoreboard
+Jun  9 06:06:41 combo xinetd[2003]: xinetd Version 2.3.13 started with libwrap loadavg options compiled in.
+Sep 28 09:10:50 combo kernel: PCI: Probing PCI hardware
+Oct 25 10:08:46 combo irqbalance: irqbalance startup succeeded
+Oct 25 10:09:57 combo rsyncd[2360]: rsyncd version 2.6.2 starting, listening on port 873
+Jun 13 11:55:10 combo rpc.statd[1636]: gethostbyname error for ^X���^X���^Z���^Z���%8x%8x%8x%8x%8x%8x%8x%8x%8x%62716x%hn%51859x%hn\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220
+Sep 19 09:58:36 combo named[2305]: running
+Jun  9 06:06:20 combo kernel: zapping low mappings.
+Dec  6 12:22:59 combo kernel: Checking 'hlt' instruction... OK.
+Jul 27 14:41:58 combo kernel: Enabling unmasked SIMD FPU exception support... done.
+[Fri Jun 10 11:32:27 2005] [error] env.createBean2(): Factory error creating vm: ( vm, )
+Oct 25 10:08:48 combo kernel: Checking 'hlt' instruction... OK.
+Dec  6 12:23:00 combo kernel: Using cfq io scheduler
+Sep 19 05:58:37 combo rsyncd[2390]: rsyncd version 2.6.2 starting, listening on port 873
+Jun  9 06:06:20 combo kernel: Built 1 zonelists
+Jun  9 06:06:20 combo kernel: SELinux:  Starting in permissive mode
+[Thu Jun 09 19:23:32 2005] [error] jk2_init() Can't find child 4057 in scoreboard
+Sep 19 05:57:51 combo kernel: lp0: console ready
+Oct 25 10:08:54 combo kernel: md: autorun ...
+Jul 27 14:42:00 combo kernel: hdc: ATAPI 24X CD-ROM drive, 128kB Cache
+Jul 27 14:42:00 combo apmd: apmd startup succeeded
+Oct 25 10:09:10 combo xinetd[2003]: Service telnet failed to start and is deactivated.
+Jun  9 06:06:24 combo kernel: usbcore: registered new driver hid
+Jul 17 04:08:10 combo cups: cupsd shutdown succeeded
+Jul 27 14:42:11 combo kernel: lp0: console ready
+Jan 11 22:10:33 combo xinetd[16825]: warning: can't get client address: Connection reset by peer
+[Fri Jun 10 11:32:35 2005] [notice] mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.
+Jun  9 06:06:24 combo apmd[1717]: Charge: * * * (-1% unknown)
+Sep 28 09:10:55 combo kernel: IA-32 Microcode Update Driver: v1.13 <tigran@veritas.com>
+Sep 28 09:12:15 combo ntpd[2310]: frequency initialized 0.000 PPM from /var/lib/ntp/drift
+Jul 27 14:41:54 combo sysctl: kernel.core_uses_pid = 1
+Sep 19 05:58:33 combo ntpd[2326]: kernel time sync status 0040
+Jun 10 11:31:55 combo kernel: Bluetooth: L2CAP socket layer initialized
+Dec  6 12:22:58 combo kernel: Failure registering capabilities with the kernel
+Sep 19 05:57:37 combo kernel: CPU: L2 cache: 256K
+Jun 10 11:31:49 combo rc: Starting hpoj:  succeeded
+Aug  2 07:46:28 combo mysqld: Stopping MySQL:  succeeded
+Dec  6 12:22:57 combo kernel:   DMA zone: 4096 pages, LIFO batch:1
+Jan 26 12:20:07 combo xfs: xfs shutdown succeeded
+Jul 27 14:42:17 combo xinetd[2016]: xinetd Version 2.3.13 started with libwrap loadavg options compiled in.
+Jun  9 06:06:24 combo smartd[1755]: smartd version 5.21 Copyright (C) 2002-3 Bruce Allen
+Sep 28 09:10:50 combo kernel: ACPI: Interpreter disabled.
+[Sat Jun 11 03:03:04 2005] [error] jk2_init() Can't find child 4210 in scoreboard
+Jan 26 12:22:06 combo kernel:   DMA zone: 4096 pages, LIFO batch:1
+Sep 28 09:10:59 combo kernel: Bluetooth: HCI socket layer initialized
+Oct 25 10:09:06 combo sshd:  succeeded
+Sep 28 09:10:50 combo bluetooth: hcid startup succeeded
+Oct 25 10:08:47 combo kernel: CPU 0 irqstacks, hard=02345000 soft=02344000
+Jan 26 12:23:22 combo ntpd: ntpd startup succeeded
+Jan 26 12:22:07 combo kernel: Detected 731.214 MHz processor.
+Sep 28 09:10:50 combo kernel: PCI: Using configuration type 1
+Feb 12 13:11:15 combo ftpd[4768]: setsockopt (IP_TOS): Operation not supported
+Jan 26 12:20:22 combo spamassassin: spamd shutdown succeeded
+Jun 10 11:31:44 combo kernel:   HighMem zone: 0 pages, LIFO batch:1
+Sep 28 09:10:53 combo kernel: kjournald starting.  Commit interval 5 seconds
+Oct 25 10:08:46 combo kernel: zapping low mappings.
+Jun 10 11:31:58 combo kernel: parport0: PC-style at 0x378 (0x778) [PCSPP,TRISTATE,EPP]
+Sep 19 05:57:37 combo kernel: ACPI disabled because your bios is from 2000 and too old
+Jun 10 11:31:45 combo kernel: Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Jul 27 14:42:05 combo kernel: microcode: CPU0 already at revision 0x8 (current=0x8)
+Sep 28 09:08:39 combo xfs[2183]: terminating
+Oct 25 10:09:58 combo mdmpd: mdmpd failed
+[Fri Jun 17 04:03:45 2005] [notice] mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.
+Sep 28 09:10:51 combo kernel: hdc: ATAPI 24X CD-ROM drive, 128kB Cache
+Aug  2 08:05:44 combo  -- root[24997]: ROOT LOGIN ON tty2
+Jun  9 06:06:46 combo su(pam_unix)[2077]: session opened for user htt by (uid=0)
+[Mon Jun 27 04:02:54 2005] [notice] mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.
+Dec  6 12:23:00 combo kernel: Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+Sep 19 05:57:59 combo gpm[2094]: imps2: Auto-detected intellimouse PS/2
+Nov 22 07:36:43 combo kernel: Call Trace:
+Sep 28 09:11:06 combo xinetd: xinetd startup succeeded
+Sep 19 05:57:37 combo kernel:  BIOS-e820: 0000000000000000 - 00000000000a0000 (usable)
+Dec 10 07:56:13 LabSZ sshd[24333]: Did not receive identification string from 103.207.39.165
+[Wed Sep 28 09:08:45 2005] [warn] child process 18806 still did not exit, sending a SIGTERM
+Sep 28 09:10:50 combo kernel: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+Nov 22 09:25:57 combo kernel: Call Trace:
+Sep 28 09:10:50 combo kernel: Transparent bridge - 0000:00:1e.0
+[Thu Jul 21 03:37:32 2005] [error] [client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/
+Jun  9 06:06:21 combo kernel: agpgart: Detected an Intel i810 E Chipset.
+[Fri Jun 10 11:32:26 2005] [notice] Digest: generating secret for digest authentication ...
+Sep 19 05:57:37 combo kernel:   HighMem zone: 0 pages, LIFO batch:1
+Jun  9 06:06:46 combo gpm[2068]: imps2: Auto-detected intellimouse PS/2
+Oct 25 10:08:46 combo kernel: BIOS-provided physical RAM map:
+Jul 27 14:42:13 combo xinetd: xinetd startup succeeded
+Jul 27 14:42:00 combo kernel:     ide1: BM-DMA at 0xffa8-0xffaf, BIOS settings: hdc:DMA, hdd:pio
+Aug  2 07:42:10 combo sshd(pam_unix)[24667]: session opened for user root by (uid=0)
+Sep 19 05:57:37 combo kernel: CPU 0 irqstacks, hard=02345000 soft=02344000
+Jul 27 14:42:00 combo smartd[1768]: Opened configuration file /etc/smartd.conf
+Dec  6 12:23:45 combo anacron: anacron startup succeeded
+Sep 28 09:10:50 combo kernel: ICH: IDE controller at PCI slot 0000:00:1f.1
+Jun  9 06:06:26 combo kernel: EXT3-fs: hda2: orphan cleanup on readonly fs
+Oct 25 10:09:10 combo xinetd[2003]: xinetd Version 2.3.13 started with libwrap loadavg options compiled in.
+[Fri Jan 27 11:55:16 2006] [error] [client 202.143.128.18] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /
+[Fri Jun 10 01:24:32 2005] [error] [client 201.252.246.11] Invalid method in request get /scripts/.%252e/.%252e/winnt/system32/cmd.exe?/c+dir
+Jun 10 11:31:45 combo kernel: Checking 'hlt' instruction... OK.
+Dec  6 12:22:58 combo kernel: Calibrating delay loop... 1441.79 BogoMIPS
+Jun 10 11:31:44 combo kernel:  BIOS-e820: 0000000007eae000 - 0000000008000000 (reserved)
+Jun 10 11:32:12 combo anacron: anacron startup succeeded
+[Sun Jun 12 04:04:29 2005] [notice] Digest: done
+[Sat Jun 11 03:03:17 2005] [notice] mod_jk2 Shutting down
+Sep 28 09:10:49 combo kernel: Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Sep 19 05:57:39 combo kernel: hdc: SAMSUNG CD-ROM SN-124, ATAPI CD/DVD-ROM drive
+Dec  6 12:22:59 combo kernel: Linux agpgart interface v0.100 (c) Dave Jones
+Dec  6 12:23:01 combo smartd[1758]: Opened configuration file /etc/smartd.conf
+Jun  9 06:06:51 combo anacron: anacron startup succeeded
+Sep 28 09:10:49 combo kernel:   Normal zone: 28334 pages, LIFO batch:6
+Aug  1 11:23:36 combo gdm(pam_unix)[2782]: bad username []
+Jun  9 06:06:40 combo sendmail: sendmail startup succeeded
+Jun 10 11:31:53 combo kernel: 3c59x: Donald Becker and others. www.scyld.com/network/vortex.html
+Oct 25 10:06:13 combo xfs[2155]: terminating
+Dec  6 12:23:01 combo kernel: mice: PS/2 mouse device common for all mice
+Sep 28 09:10:49 combo kernel: Enabling fast FPU save and restore... done.
+Jun  9 06:06:28 combo kernel: Disabled Privacy Extensions on device 022db720(lo)
+Jun  9 06:10:35 combo ntpd[2296]: kernel time sync disabled 0041
+Dec  6 12:23:16 combo xinetd: xinetd startup succeeded
+Aug  2 07:53:08 combo sshd(pam_unix)[24869]: session opened for user root by (uid=0)
+Jul 27 14:42:04 combo kernel: IA-32 Microcode Update Driver: v1.13 <tigran@veritas.com>
+Jan 26 12:22:08 combo kernel: agpgart: Detected an Intel i810 E Chipset.
+Jan 26 12:22:10 combo smartd[1765]: Opened configuration file /etc/smartd.conf
+Sep 28 09:10:58 combo kernel: Bluetooth: Core ver 2.4
+Jul 27 14:42:11 combo kernel: parport0: PC-style at 0x378 (0x778) [PCSPP,TRISTATE,EPP]
+Jan 26 12:22:07 combo kernel: SELinux:  Starting in permissive mode
+Jul 27 14:42:53 combo ntpd[2317]: ntpd 4.2.0@1.1161-r Thu Mar 11 11:46:39 EST 2004 (1)
+Jun  9 06:06:29 combo kernel: hub 1-0:1.0: USB hub found
+Jul 27 14:41:59 combo kernel: Initializing Cryptographic API
+Oct 25 10:08:47 combo kernel: ACPI disabled because your bios is from 2000 and too old
+[Sun Jun 12 04:04:29 2005] [error] config.update(): Can't create channel.jni:jni
+Jun 10 11:31:46 combo kernel: isapnp: No Plug & Play device found
+Jun 10 11:31:47 combo kernel: md: Autodetecting RAID arrays.
+Dec  6 12:21:21 combo dd: 1+0 records out
+Jun  9 10:07:13 combo named[2275]: listening on IPv4 interface eth0, 63.126.79.67#53
+Jun  9 06:06:26 combo kernel: EXT3-fs: write access will be enabled during recovery.
+Jun  9 06:06:20 combo kernel: BIOS-provided physical RAM map:
+Jun 10 11:31:46 combo kernel: ttyS1 at I/O 0x2f8 (irq = 3) is a 16550A
+Dec 10 09:32:20 LabSZ sshd[24680]: Accepted password for fztu from 119.137.62.142 port 49116 ssh2
+Dec  6 12:22:57 combo kernel:  BIOS-e820: 00000000000f0000 - 0000000000100000 (reserved)
+Jul 27 14:42:56 combo ntpd[2317]: kernel time sync status 0040
+Jul 27 14:42:00 combo apmd[1730]: Version 3.0.2 (APM BIOS 1.2, Linux driver 1.16ac)
+Oct 25 10:08:49 combo kernel: isapnp: Scanning for PnP cards...
+Dec  6 12:23:01 combo autofs: automount startup succeeded
+[Thu Jun 09 06:07:05 2005] [error] env.createBean2(): Factory error creating worker.jni:onShutdown ( worker.jni, onShutdown)
+Sep 19 05:57:56 combo xinetd[2034]: Service telnet failed to start and is deactivated.
+Jun  9 06:06:34 combo kernel: Bluetooth: Core ver 2.4
+Jun  9 06:06:34 combo kernel: Bluetooth: L2CAP ver 2.1
+Jan 26 12:22:08 combo kernel: Linux agpgart interface v0.100 (c) Dave Jones

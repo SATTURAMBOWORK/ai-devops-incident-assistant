@@ -19,6 +19,7 @@ from pathlib import Path
 import joblib
 from fastapi import FastAPI, HTTPException
 
+from predict import UNKNOWN_LABEL, classify
 from schemas import HealthResponse, PredictRequest, PredictResponse, Prediction
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
@@ -30,10 +31,10 @@ MODEL_PATH = Path(__file__).parent / "model.joblib"
 # retrieval service, so both halves of the app speak about incidents the same way.
 TOP_K = 3
 
-# Below this, the model is guessing rather than recognising. Predictions weaker
-# than this are dropped instead of being dressed up as an answer - a confident
-# wrong label is worse for an on-call engineer than no label at all.
-MIN_CONFIDENCE = 0.10
+# Bump whenever the algorithm, the categories or the way predictions are made
+# changes. Incidents store it (Incident.classification.modelVersion), so without
+# a bump, answers from the old 8-category model and this one look identical.
+MODEL_VERSION = "tfidf-logreg-windowed-2.0.0"
 
 # Filled in at startup by the lifespan handler below.
 state = {"model": None}
@@ -86,7 +87,11 @@ def health():
     return HealthResponse(
         status="ok" if model else "degraded",
         model_loaded=model is not None,
-        categories=list(model.named_steps["clf"].classes_) if model else [],
+        # "unknown" is how the model says "no incident", not a category anyone
+        # can be told about, so it is left out.
+        categories=[str(c) for c in model.named_steps["clf"].classes_ if c != UNKNOWN_LABEL]
+        if model
+        else [],
     )
 
 
@@ -107,22 +112,13 @@ def predict(request: PredictRequest):
             detail="Model not loaded. Run train.py to generate model.joblib.",
         )
 
-    # predict_proba gives a probability for every class, not just the winner.
-    # That is the whole reason we can return confidences and runners-up.
-    # [0] because we passed a batch of one document.
-    probabilities = model.predict_proba([request.logs])[0]
-    labels = model.named_steps["clf"].classes_
-
-    ranked = sorted(
-        zip(labels, probabilities),
-        key=lambda pair: pair[1],
-        reverse=True,
-    )
-
+    # Scores the log window by window and applies the confidence floor - the
+    # exact function train.py measured, so the accuracy it printed is the
+    # accuracy served here. An empty list means healthy or unsure; the backend
+    # already treats that as "no prediction".
     predictions = [
-        Prediction(label=label, confidence=round(float(score), 4))
-        for label, score in ranked[:TOP_K]
-        if score >= MIN_CONFIDENCE
+        Prediction(label=label, confidence=round(confidence, 4))
+        for label, confidence in classify(model, request.logs, top_k=TOP_K)
     ]
 
     logger.info(
@@ -133,7 +129,5 @@ def predict(request: PredictRequest):
 
     return PredictResponse(
         predictions=predictions,
-        # Identifies the algorithm, so a later switch is visible in the response
-        # and in the Node logs without redeploying the backend.
-        model_version="tfidf-logreg-1.0.0",
+        model_version=MODEL_VERSION,
     )

@@ -54,7 +54,10 @@ class PredictResponse(BaseModel):
     """
 
     predictions: list[Prediction] = Field(
-        description="Candidate categories, highest confidence first."
+        description=(
+            "Candidate categories, highest confidence first. Empty when the logs "
+            "look healthy or the model is not confident enough to name a category."
+        )
     )
     model_version: str = Field(
         description="Which trained model produced this, for debugging and audits."

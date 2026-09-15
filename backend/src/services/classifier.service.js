@@ -22,9 +22,10 @@ import logger from '../utils/logger.js';
 // we would rather drop the extra signal than hold up the whole analysis.
 const TIMEOUT_MS = 2000;
 
-// Below this the model is guessing rather than recognising. ml/main.py already
-// drops anything under 0.10; this higher bar is the level at which we are
-// willing to show the prediction to a user at all.
+// Below this the model is guessing rather than recognising. ml/predict.py
+// already returns no predictions when its best guess is under 0.40, so today
+// this is a second safety net: it keeps the backend's own bar in place if the
+// ML service's floor is ever lowered.
 const MIN_CONFIDENCE = 0.25;
 
 /**

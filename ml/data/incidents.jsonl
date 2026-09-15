@@ -46,7 +46,7 @@
 {"label": "db-connection-refused", "text": "FATAL: sorry, too many clients already"}
 {"label": "db-connection-refused", "text": "MongoServerError: Authentication failed. bad auth : authentication failed"}
 {"label": "db-connection-refused", "text": "connection refused on port 27017, retrying in 5s (attempt 7)"}
-{"label": "db-connection-refused", "text": "Error: getaddrinfo ENOTFOUND db.internal\n  at GetAddrInfoReqWrap.onlookup"}
+{"label": "dns-resolution-failure", "text": "Error: getaddrinfo ENOTFOUND db.internal\n  at GetAddrInfoReqWrap.onlookup"}
 {"label": "db-connection-refused", "text": "pool exhausted: could not acquire connection within 30000ms, 100/100 connections in use"}
 {"label": "db-connection-refused", "text": "MongoNetworkTimeoutError while reading from the primary replica"}
 {"label": "db-connection-refused", "text": "MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. IP not whitelisted."}
@@ -58,7 +58,7 @@
 {"label": "db-connection-refused", "text": "MongoServerSelectionError: Server selection timed out after 30000 ms\n  topology: ReplicaSetNoPrimary"}
 {"label": "db-connection-refused", "text": "ERROR 2003 (HY000): Can't connect to MySQL server on 'db' (111)"}
 {"label": "db-connection-refused", "text": "org.postgresql.util.PSQLException: FATAL: remaining connection slots are reserved"}
-{"label": "db-connection-refused", "text": "Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.mongodb.net"}
+{"label": "dns-resolution-failure", "text": "Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.mongodb.net"}
 {"label": "db-connection-refused", "text": "dial tcp 10.2.0.9:5432: connect: connection refused"}
 {"label": "db-connection-refused", "text": "MongoParseError: Password contains unescaped characters, authentication cannot proceed"}
 {"label": "db-connection-refused", "text": "connection to database lost, reconnect attempt 12 failed with ECONNREFUSED"}
@@ -77,7 +77,7 @@
 {"label": "db-connection-refused", "text": "mongosh: MongoNetworkError: connect ECONNREFUSED ::1:27017, ensure mongod is running"}
 {"label": "db-connection-refused", "text": "database connection lost mid-transaction: server closed the connection unexpectedly"}
 {"label": "db-connection-refused", "text": "Error: SASL authentication failed for user app against admin database"}
-{"label": "db-connection-refused", "text": "could not translate host name \"postgres\" to address: Name or service not known"}
+{"label": "dns-resolution-failure", "text": "could not translate host name \"postgres\" to address: Name or service not known"}
 {"label": "disk-full", "text": "Error: ENOSPC: no space left on device, write"}
 {"label": "disk-full", "text": "df -h\n/dev/sda1  50G  50G  0  100%  /var"}
 {"label": "disk-full", "text": "PANIC: could not write to file pg_wal/xlogtemp.123: No space left on device"}
@@ -160,44 +160,44 @@
 {"label": "port-in-use", "text": "sshd: error: Bind to port 22 on 0.0.0.0 failed: Address already in use."}
 {"label": "crash-loop", "text": "Back-off restarting failed container api in pod api-7f9"}
 {"label": "crash-loop", "text": "pod status CrashLoopBackOff, restartCount: 12"}
-{"label": "crash-loop", "text": "Error: Cannot find module 'express'\n  at Function.Module._resolveFilename\nnpm ERR! exited with code 1"}
-{"label": "crash-loop", "text": "Config validation error: MONGO_URI is required. Process exited with code 1"}
+{"label": "missing-config", "text": "Error: Cannot find module 'express'\n  at Function.Module._resolveFilename\nnpm ERR! exited with code 1"}
+{"label": "missing-config", "text": "Config validation error: MONGO_URI is required. Process exited with code 1"}
 {"label": "crash-loop", "text": "container exited with code 1 six times in two minutes"}
-{"label": "crash-loop", "text": "TypeError: Cannot read properties of undefined (reading 'apiKey')\n  at file:///app/src/config/env.js:12"}
+{"label": "missing-config", "text": "TypeError: Cannot read properties of undefined (reading 'apiKey')\n  at file:///app/src/config/env.js:12"}
 {"label": "crash-loop", "text": "CrashLoopBackOff, last state terminated with exit code 1, began right after deploy"}
 {"label": "crash-loop", "text": "SyntaxError: Unexpected token in JSON at position 0 while loading config on startup"}
 {"label": "crash-loop", "text": "systemd[1]: api.service: Scheduled restart job, restart counter is at 9."}
 {"label": "crash-loop", "text": "docker logs --previous: ReferenceError: fetch is not defined, then process exits"}
-{"label": "crash-loop", "text": "ImportError: No module named app.main, container restarting"}
-{"label": "crash-loop", "text": "Startup failed: missing secret VOYAGE_API_KEY, exiting(1), kubelet will restart pod"}
+{"label": "missing-config", "text": "ImportError: No module named app.main, container restarting"}
+{"label": "missing-config", "text": "Startup failed: missing secret VOYAGE_API_KEY, exiting(1), kubelet will restart pod"}
 {"label": "crash-loop", "text": "restarting container after failure, 5 attempts so far, backoff now 80s"}
-{"label": "crash-loop", "text": "Error: ENOENT: no such file or directory, open '/app/dist/index.js' - exits on boot"}
+{"label": "missing-config", "text": "Error: ENOENT: no such file or directory, open '/app/dist/index.js' - exits on boot"}
 {"label": "crash-loop", "text": "Warning  BackOff  kubelet  Back-off restarting failed container"}
 {"label": "crash-loop", "text": "State: Waiting\n  Reason: CrashLoopBackOff\nLast State: Terminated\n  Exit Code: 1"}
-{"label": "crash-loop", "text": "ModuleNotFoundError: No module named 'fastapi'\nContainer exited, restarting in 10s"}
+{"label": "missing-config", "text": "ModuleNotFoundError: No module named 'fastapi'\nContainer exited, restarting in 10s"}
 {"label": "crash-loop", "text": "panic: runtime error: invalid memory address or nil pointer dereference\n[signal SIGSEGV]\nexit status 2"}
 {"label": "crash-loop", "text": "Error: connect ECONNREFUSED at startup, process.exit(1) called from bootstrap"}
 {"label": "crash-loop", "text": "pm2: App [worker:2] exited with code [1], restarting (restart #38)"}
-{"label": "crash-loop", "text": "npm ERR! Missing script: \"start\"\ncontainer exits immediately, docker restart policy retrying"}
+{"label": "missing-config", "text": "npm ERR! Missing script: \"start\"\ncontainer exits immediately, docker restart policy retrying"}
 {"label": "crash-loop", "text": "Error: Invalid DATABASE_URL format, cannot boot. Exiting with status 1."}
 {"label": "crash-loop", "text": "exec /usr/local/bin/docker-entrypoint.sh: exec format error\ncontainer restarting repeatedly"}
 {"label": "crash-loop", "text": "AssertionError at import time in settings.py, uvicorn never reached serving state"}
 {"label": "crash-loop", "text": "restart backoff 10s, 20s, 40s, 80s - container has never stayed up longer than 3 seconds"}
-{"label": "crash-loop", "text": "Error: listen EACCES: permission denied 0.0.0.0:80, process exits, supervisor restarts it"}
+{"label": "permission-denied", "text": "Error: listen EACCES: permission denied 0.0.0.0:80, process exits, supervisor restarts it"}
 {"label": "crash-loop", "text": "nodemon: app crashed - waiting for file changes before starting..."}
 {"label": "crash-loop", "text": "standard_init_linux.go:228: exec user process caused: no such file or directory"}
-{"label": "crash-loop", "text": "Unhandled exception during startup: KeyError: 'REDIS_URL'\nProcess exited with code 1"}
+{"label": "missing-config", "text": "Unhandled exception during startup: KeyError: 'REDIS_URL'\nProcess exited with code 1"}
 {"label": "crash-loop", "text": "systemd: api.service: Start request repeated too quickly. Failed with result 'exit-code'."}
 {"label": "crash-loop", "text": "Error: The server has not been started or is already stopped, exit 1 immediately after boot"}
 {"label": "crash-loop", "text": "docker inspect: RestartCount 41, State.Status restarting, State.ExitCode 1"}
 {"label": "crash-loop", "text": "prisma: Schema engine error, migrate deploy failed at startup, container terminated"}
-{"label": "crash-loop", "text": "Traceback (most recent call last):\n  File \"/app/main.py\", line 3, in <module>\n    from app.db import engine\nModuleNotFoundError"}
+{"label": "missing-config", "text": "Traceback (most recent call last):\n  File \"/app/main.py\", line 3, in <module>\n    from app.db import engine\nModuleNotFoundError"}
 {"label": "crash-loop", "text": "Liveness probe failed, container api restarted 15 times in the last hour"}
-{"label": "crash-loop", "text": "Error: Must supply api_key\n  at new OpenAI (/app/node_modules/openai/index.js:41)\nprocess exited 1"}
+{"label": "missing-config", "text": "Error: Must supply api_key\n  at new OpenAI (/app/node_modules/openai/index.js:41)\nprocess exited 1"}
 {"label": "crash-loop", "text": "exited with code 1\nrestarting container (attempt 22), no successful startup yet"}
 {"label": "crash-loop", "text": "FATAL: could not load server config, aborting startup, systemd restarting unit"}
 {"label": "crash-loop", "text": "kubectl get pods: api-7f9  0/1  CrashLoopBackOff  23  14m"}
-{"label": "crash-loop", "text": "Error: Cannot find module '/app/server.js' at startup, container restart policy always"}
+{"label": "missing-config", "text": "Error: Cannot find module '/app/server.js' at startup, container restart policy always"}
 {"label": "ssl-cert-expired", "text": "Error: certificate has expired (CERT_HAS_EXPIRED)"}
 {"label": "ssl-cert-expired", "text": "x509: certificate has expired or is not yet valid"}
 {"label": "ssl-cert-expired", "text": "UNABLE_TO_VERIFY_LEAF_SIGNATURE while calling the payments API"}
@@ -319,3 +319,178 @@
 {"label": "error-rate-spike", "text": "server returned 500 for /api/incidents, stack: TypeError: incidents.map is not a function"}
 {"label": "error-rate-spike", "text": "grafana: 5xx panel jumped from flat baseline to 38% immediately following deploy marker"}
 {"label": "error-rate-spike", "text": "Internal Server Error 500 - unhandled exception in request handler, 4100 occurrences in 6 minutes"}
+{"label": "crash-loop", "text": "Back-off restarting failed container worker in pod worker-5c8d, restartCount 17"}
+{"label": "crash-loop", "text": "Error: Uncaught exception in main loop\n  at Server.start (/app/src/server.js:88)\nprocess exited with code 1, restarting"}
+{"label": "crash-loop", "text": "kubelet: Container web failed liveness probe, will be restarted (restart 9)"}
+{"label": "crash-loop", "text": "Segmentation fault (core dumped)\ncontainer exited with code 139, restart policy on-failure"}
+{"label": "crash-loop", "text": "supervisord: exited: gunicorn (exit status 3; not expected), spawned again"}
+{"label": "crash-loop", "text": "java.lang.IllegalStateException: Failed to load ApplicationContext\nApplication run failed\ncontainer restarting"}
+{"label": "crash-loop", "text": "docker ps: api-1   Restarting (1) 4 seconds ago"}
+{"label": "crash-loop", "text": "UnhandledPromiseRejection: This error originated inside of an async function without a catch block. Node process exiting with code 1, restarted by pm2"}
+{"label": "crash-loop", "text": "gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>, container restarting"}
+{"label": "crash-loop", "text": "Pod api-6d4 status Error -> Running -> Error, restarts: 31 in 45m"}
+{"label": "crash-loop", "text": "exit code 2 on startup after upgrading to the new base image, container keeps restarting"}
+{"label": "crash-loop", "text": "fatal error: concurrent map writes\ngoroutine 42 [running]\ncontainer restarted by orchestrator"}
+{"label": "crash-loop", "text": "Terminated with exit code 1 before readiness probe passed, back-off 5m0s restarting failed container"}
+{"label": "db-connection-refused", "text": "Error: connect ECONNREFUSED 10.0.1.7:27017 - MongoDB replica not accepting connections"}
+{"label": "db-connection-refused", "text": "mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on 'mysql:3306' (111 Connection refused)"}
+{"label": "db-connection-refused", "text": "Error: Connection terminated unexpectedly\n  at Connection.<anonymous> (/app/node_modules/pg/lib/client.js:132)"}
+{"label": "dns-resolution-failure", "text": "Error: getaddrinfo ENOTFOUND api.payments.internal\n  at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26)"}
+{"label": "dns-resolution-failure", "text": "Error: getaddrinfo EAI_AGAIN redis\n  at GetAddrInfoReqWrap.onlookup (node:dns:107:26)"}
+{"label": "dns-resolution-failure", "text": "curl: (6) Could not resolve host: registry.internal.example.com"}
+{"label": "dns-resolution-failure", "text": "socket.gaierror: [Errno -2] Name or service not known"}
+{"label": "dns-resolution-failure", "text": "socket.gaierror: [Errno -3] Temporary failure in name resolution"}
+{"label": "dns-resolution-failure", "text": "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.stripe.com', port=443): Max retries exceeded (Caused by NameResolutionError: Failed to resolve 'api.stripe.com')"}
+{"label": "dns-resolution-failure", "text": "dial tcp: lookup mongo on 127.0.0.11:53: no such host"}
+{"label": "dns-resolution-failure", "text": "java.net.UnknownHostException: auth-service: Name or service not known"}
+{"label": "dns-resolution-failure", "text": "nginx: [emerg] host not found in upstream \"backend:5000\" in /etc/nginx/conf.d/default.conf:12"}
+{"label": "dns-resolution-failure", "text": "MongoServerSelectionError: getaddrinfo ENOTFOUND mongo-primary.cluster.local"}
+{"label": "dns-resolution-failure", "text": "Error: querySrv ENOTFOUND _mongodb._tcp.cluster1.abcde.mongodb.net"}
+{"label": "dns-resolution-failure", "text": "dig api.internal returned status: NXDOMAIN"}
+{"label": "dns-resolution-failure", "text": "wget: unable to resolve host address 'deb.debian.org'"}
+{"label": "dns-resolution-failure", "text": "Temporary failure resolving 'archive.ubuntu.com'\nE: Unable to fetch some archives"}
+{"label": "dns-resolution-failure", "text": "psql: error: could not translate host name \"db\" to address: Temporary failure in name resolution"}
+{"label": "dns-resolution-failure", "text": "redis: Error: getaddrinfo ENOTFOUND redis-cache, reconnecting in 500ms"}
+{"label": "dns-resolution-failure", "text": "lookup elasticsearch on 10.96.0.10:53: server misbehaving"}
+{"label": "dns-resolution-failure", "text": "CoreDNS: [ERROR] plugin/errors: 2 api.default.svc.cluster.local. A: no such host"}
+{"label": "dns-resolution-failure", "text": "TypeError: fetch failed\n  cause: Error: getaddrinfo ENOTFOUND hooks.slack.com"}
+{"label": "dns-resolution-failure", "text": "urllib3.exceptions.NameResolutionError: Failed to resolve 'api.voyageai.com' ([Errno -3] Temporary failure in name resolution)"}
+{"label": "dns-resolution-failure", "text": "Error response from daemon: Get \"https://registry-1.docker.io/v2/\": dial tcp: lookup registry-1.docker.io: no such host"}
+{"label": "dns-resolution-failure", "text": "System.Net.Http.HttpRequestException: No such host is known. (orders-api:8080)"}
+{"label": "dns-resolution-failure", "text": "php_network_getaddresses: getaddrinfo failed: Name or service not known"}
+{"label": "dns-resolution-failure", "text": "EAI_AGAIN while resolving smtp.mailgun.org, email job will retry"}
+{"label": "dns-resolution-failure", "text": "ssh: Could not resolve hostname bastion.prod: nodename nor servname provided, or not known"}
+{"label": "dns-resolution-failure", "text": "pymongo.errors.ConfigurationError: The DNS query name does not exist: _mongodb._tcp.cluster0.mongodb.net."}
+{"label": "dns-resolution-failure", "text": "dns lookup failed for kafka-0.kafka-headless.default.svc.cluster.local: NXDOMAIN"}
+{"label": "dns-resolution-failure", "text": "getaddrinfo ENOTFOUND user-svc - api and user-svc containers are on different docker networks"}
+{"label": "dns-resolution-failure", "text": "java.net.UnknownHostException: s3.amazonaws.com\n  at java.base/java.net.InetAddress.getAllByName0"}
+{"label": "dns-resolution-failure", "text": "ERROR: failed to resolve source metadata for docker.io/library/node:20: no such host"}
+{"label": "dns-resolution-failure", "text": "Resolving api.github.com... failed: Temporary failure in name resolution."}
+{"label": "dns-resolution-failure", "text": "grpc: addrConn.createTransport failed: name resolver error: produced zero addresses"}
+{"label": "dns-resolution-failure", "text": "ping: bad address 'postgres'"}
+{"label": "dns-resolution-failure", "text": "Error: getaddrinfo EAI_AGAIN api.groq.com, retrying (3/5)"}
+{"label": "dns-resolution-failure", "text": "reqwest::Error: failed to lookup address information: Name or service not known"}
+{"label": "dns-resolution-failure", "text": "nslookup mongo: ** server can't find mongo: NXDOMAIN"}
+{"label": "dns-resolution-failure", "text": "UnknownHostException: payments-db.prod.internal, DNS record was deleted during migration"}
+{"label": "permission-denied", "text": "Error: EACCES: permission denied, open '/app/logs/app.log'"}
+{"label": "permission-denied", "text": "Error: listen EACCES: permission denied 0.0.0.0:443"}
+{"label": "permission-denied", "text": "PermissionError: [Errno 13] Permission denied: '/data/uploads/report.csv'"}
+{"label": "permission-denied", "text": "mkdir: cannot create directory '/var/lib/app': Permission denied"}
+{"label": "permission-denied", "text": "npm ERR! code EACCES\nnpm ERR! syscall mkdir\nnpm ERR! path /usr/local/lib/node_modules"}
+{"label": "permission-denied", "text": "mongod: Unable to create/open lock file: /data/db/mongod.lock errno:13 Permission denied"}
+{"label": "permission-denied", "text": "postgres: could not open file \"postgresql.conf\": Permission denied, data directory owned by root"}
+{"label": "permission-denied", "text": "nginx: [emerg] open() \"/var/run/nginx.pid\" failed (13: Permission denied)"}
+{"label": "permission-denied", "text": "Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock"}
+{"label": "permission-denied", "text": "chown: changing ownership of '/app/data': Operation not permitted"}
+{"label": "permission-denied", "text": "Error: EPERM: operation not permitted, rename '/app/tmp/cache.json'"}
+{"label": "permission-denied", "text": "java.nio.file.AccessDeniedException: /opt/app/config/application.yml"}
+{"label": "permission-denied", "text": "sh: ./entrypoint.sh: Permission denied"}
+{"label": "permission-denied", "text": "open /etc/app/secrets/token: permission denied"}
+{"label": "permission-denied", "text": "redis: Can't open the append-only file: Permission denied"}
+{"label": "permission-denied", "text": "ERROR: permission denied for table incidents"}
+{"label": "permission-denied", "text": "MongoServerError: not authorized on incidents to execute command { insert: \"logs\" }"}
+{"label": "permission-denied", "text": "touch: cannot touch '/app/.cache/ready': Permission denied (container runs as uid 1000, volume owned by 0)"}
+{"label": "permission-denied", "text": "npm ERR! EACCES: permission denied, scandir '/root/.npm/_logs'"}
+{"label": "permission-denied", "text": "Error: EACCES: permission denied, mkdir '/home/node/app/node_modules/.vite'"}
+{"label": "permission-denied", "text": "fatal: could not create work tree dir 'repo': Permission denied"}
+{"label": "permission-denied", "text": "cp: cannot create regular file '/usr/share/nginx/html/index.html': Permission denied"}
+{"label": "permission-denied", "text": "PermissionError: [Errno 1] Operation not permitted: '/sys/fs/cgroup/cpu.max'"}
+{"label": "permission-denied", "text": "nginx: [emerg] bind() to 0.0.0.0:80 failed (13: Permission denied)"}
+{"label": "permission-denied", "text": "An error occurred (AccessDenied) when calling the PutObject operation: Access Denied (bucket app-uploads)"}
+{"label": "permission-denied", "text": "An error occurred (AccessDeniedException) when calling the GetSecretValue operation: User arn:aws:iam::123:role/api is not authorized"}
+{"label": "permission-denied", "text": "Error from server (Forbidden): pods is forbidden: User \"system:serviceaccount:default:api\" cannot list resource \"pods\""}
+{"label": "permission-denied", "text": "sqlite3.OperationalError: attempt to write a readonly database"}
+{"label": "permission-denied", "text": "Error: EROFS: read-only file system, open '/app/data/state.json'"}
+{"label": "permission-denied", "text": "logrotate: error: skipping \"/var/log/app/*.log\" because parent directory has insecure permissions"}
+{"label": "permission-denied", "text": "crond: can't create /var/log/cron.log: Permission denied, exiting"}
+{"label": "permission-denied", "text": "Error: EACCES: permission denied, unlink '/app/uploads/tmp-1234'"}
+{"label": "permission-denied", "text": "java.io.IOException: Permission denied writing /var/app/output.txt"}
+{"label": "permission-denied", "text": "open /var/lib/grafana/grafana.db: permission denied, check volume ownership (grafana runs as uid 472)"}
+{"label": "permission-denied", "text": "gunicorn: [Errno 13] Permission denied: '/run/gunicorn.sock'"}
+{"label": "permission-denied", "text": "useradd: Permission denied.\nuseradd: cannot lock /etc/passwd; try again later."}
+{"label": "permission-denied", "text": "mysqld: Can't create/write to file '/var/lib/mysql/is_writable' (OS errno 13 - Permission denied)"}
+{"label": "permission-denied", "text": "npm install -g as node user: EACCES: permission denied, access '/usr/local/lib/node_modules'"}
+{"label": "permission-denied", "text": "PermissionError: [Errno 13] Permission denied: '/app/model.joblib'"}
+{"label": "missing-config", "text": "Error: Missing required environment variable: GROQ_API_KEY"}
+{"label": "missing-config", "text": "ValueError: DATABASE_URL is not set"}
+{"label": "missing-config", "text": "pydantic_core._pydantic_core.ValidationError: 1 validation error for Settings\nMONGO_URI\n  Field required"}
+{"label": "missing-config", "text": "Error: Cannot find module 'dotenv'\nRequire stack:\n- /app/src/config/env.js"}
+{"label": "missing-config", "text": "Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'mongoose' imported from /app/src/config/db.js"}
+{"label": "missing-config", "text": "ModuleNotFoundError: No module named 'sklearn'"}
+{"label": "missing-config", "text": "Error: ENOENT: no such file or directory, open '/app/config/production.json'"}
+{"label": "missing-config", "text": "FileNotFoundError: [Errno 2] No such file or directory: 'model.joblib'"}
+{"label": "missing-config", "text": "JWT_SECRET is undefined - refusing to start"}
+{"label": "missing-config", "text": "KeyError: 'SECRET_KEY'\n  File \"/app/settings.py\", line 12"}
+{"label": "missing-config", "text": "Error: secret \"api-credentials\" not found\nkubelet: CreateContainerConfigError"}
+{"label": "missing-config", "text": "Error: couldn't find key MONGO_URI in ConfigMap default/api-config"}
+{"label": "missing-config", "text": "sh: 1: vite: not found\nnpm ERR! Lifecycle script `build` failed"}
+{"label": "missing-config", "text": "exec: \"uvicorn\": executable file not found in $PATH"}
+{"label": "missing-config", "text": "Error: Could not locate the bindings file. Tried: /app/node_modules/bcrypt/build/Release/bcrypt_lib.node"}
+{"label": "missing-config", "text": "[dotenv] .env file not found, required variables PORT, MONGO_URI, VOYAGE_API_KEY are undefined"}
+{"label": "missing-config", "text": "TypeError [ERR_INVALID_ARG_TYPE]: The \"url\" argument must be of type string. Received undefined (process.env.REDIS_URL)"}
+{"label": "missing-config", "text": "OSError: libgomp.so.1: cannot open shared object file: No such file or directory"}
+{"label": "missing-config", "text": "java.lang.ClassNotFoundException: org.postgresql.Driver"}
+{"label": "missing-config", "text": "Error: Environment variable not found: DATABASE_URL.\n  -->  schema.prisma:7"}
+{"label": "missing-config", "text": "panic: required env var STRIPE_KEY is empty"}
+{"label": "missing-config", "text": "ImportError: cannot import name 'BaseSettings' from 'pydantic' - pydantic-settings package not installed"}
+{"label": "missing-config", "text": "configuration file /etc/app/config.yaml does not exist, exiting"}
+{"label": "missing-config", "text": "Error: Cannot find module './routes/incident.routes.js' - file missing from build output"}
+{"label": "missing-config", "text": "error: failed to read config: open .env: no such file or directory"}
+{"label": "missing-config", "text": "npm ERR! enoent ENOENT: no such file or directory, open '/app/package.json'"}
+{"label": "missing-config", "text": "MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\" - MONGO_URI not provided"}
+{"label": "missing-config", "text": "Error: OPENAI_API_KEY environment variable is missing or empty"}
+{"label": "too-many-open-files", "text": "Error: EMFILE: too many open files, open '/app/uploads/1234.log'"}
+{"label": "too-many-open-files", "text": "accept4: too many open files; retrying in 1s"}
+{"label": "too-many-open-files", "text": "OSError: [Errno 24] Too many open files"}
+{"label": "too-many-open-files", "text": "java.io.IOException: Too many open files\n  at sun.nio.ch.ServerSocketChannelImpl.accept0"}
+{"label": "too-many-open-files", "text": "Error: EMFILE: too many open files, watch '/app/src'"}
+{"label": "too-many-open-files", "text": "nginx: [crit] accept4() failed (24: Too many open files)"}
+{"label": "too-many-open-files", "text": "http: Accept error: accept tcp [::]:8080: accept4: too many open files; retrying in 5ms"}
+{"label": "too-many-open-files", "text": "socket: too many open files (EMFILE) while dialing upstream"}
+{"label": "too-many-open-files", "text": "Error: spawn EMFILE\n  at ChildProcess.spawn (node:internal/child_process:413)"}
+{"label": "too-many-open-files", "text": "ulimit -n is 1024, process has 1024 open file descriptors, new connections rejected"}
+{"label": "too-many-open-files", "text": "kernel: VFS: file-max limit 65536 reached"}
+{"label": "too-many-open-files", "text": "ENFILE: file table overflow"}
+{"label": "too-many-open-files", "text": "Too many open files in system"}
+{"label": "too-many-open-files", "text": "redis: Error accepting a client connection: accept: Too many open files"}
+{"label": "too-many-open-files", "text": "mongod: Out of file descriptors. Waiting one second before trying to accept more connections."}
+{"label": "too-many-open-files", "text": "Error: EMFILE: too many open files, scandir '/app/node_modules'"}
+{"label": "too-many-open-files", "text": "lsof -p 4312 | wc -l -> 65535 open files, nofile limit 65536"}
+{"label": "too-many-open-files", "text": "Caused by: java.net.SocketException: Too many open files"}
+{"label": "too-many-open-files", "text": "Error: connect EMFILE 10.0.2.15:443 - Local (undefined:undefined)"}
+{"label": "too-many-open-files", "text": "ls /proc/1/fd | wc -l = 4096 while nofile limit is 4096; sockets not being closed"}
+{"label": "too-many-open-files", "text": "pg: Error: EMFILE, too many open files while creating a new client per request"}
+{"label": "too-many-open-files", "text": "Watchpack Error (watcher): Error: EMFILE: too many open files, watch"}
+{"label": "too-many-open-files", "text": "fs.readFile failed: EMFILE - open file handles leaking from log reader"}
+{"label": "too-many-open-files", "text": "tornado.general: Exception in accept: [Errno 24] Too many open files"}
+{"label": "too-many-open-files", "text": "dockerd: failed to create shim task: too many open files"}
+{"label": "too-many-open-files", "text": "prometheus: process_open_fds 1023 / process_max_fds 1024 on api-1"}
+{"label": "too-many-open-files", "text": "failed to create fsnotify watcher: too many open files"}
+{"label": "too-many-open-files", "text": "gunicorn: [ERROR] Error handling request: [Errno 24] Too many open files"}
+{"label": "too-many-open-files", "text": "Error: EMFILE: too many open files, uv_pipe_open"}
+{"label": "too-many-open-files", "text": "haproxy: [ALERT] accept(): too many open files, maxconn too high for current ulimit"}
+{"label": "too-many-open-files", "text": "kafka.common.KafkaException: java.io.IOException: Too many open files"}
+{"label": "too-many-open-files", "text": "file descriptor count climbing 200 per minute since deploy, EMFILE errors started at 4096"}
+{"label": "too-many-open-files", "text": "OSError: [Errno 24] Too many open files: '/tmp/tmpx8k2'"}
+{"label": "too-many-open-files", "text": "Error: EMFILE, open '/app/data/cache.db'"}
+{"label": "too-many-open-files", "text": "libuv EMFILE when opening sockets to mongo, a new MongoClient is created per request"}
+{"label": "too-many-open-files", "text": "elasticsearch: max file descriptors [4096] for elasticsearch process is too low, increase to at least [65535]"}
+{"label": "too-many-open-files", "text": "sqlite: unable to open database file (errno 24: too many open files)"}
+{"label": "too-many-open-files", "text": "systemd: LimitNOFILE=1024 too low for api.service, EMFILE under load"}
+{"label": "too-many-open-files", "text": "Unhandled 'error' event: Error: EMFILE: too many open files, open '/var/log/app/access.log'"}
+{"label": "too-many-open-files", "text": "open /data/segment-00042: too many open files"}
+{"label": "auth-brute-force", "text": "POST /api/login 401 from 45.33.12.8 - 312 attempts in 5 minutes for users admin, root, test"}
+{"label": "auth-brute-force", "text": "185.220.101.4 - - \"POST /wp-login.php HTTP/1.1\" 401 - repeated 900 times in 10 minutes"}
+{"label": "auth-brute-force", "text": "Too many failed login attempts for user admin from 91.240.118.17, account locked"}
+{"label": "auth-brute-force", "text": "fail2ban.actions: WARNING [sshd] Ban 218.92.0.107"}
+{"label": "auth-brute-force", "text": "express-rate-limit: blocked 103.99.0.12 on /auth/login after 5 failed attempts per minute"}
+{"label": "auth-brute-force", "text": "auth: invalid credentials for user 'administrator' from 5.188.10.3 (attempt 57)"}
+{"label": "auth-brute-force", "text": "Keycloak: type=LOGIN_ERROR error=invalid_user_credentials ipAddress=80.94.95.21 - 400 events in 2 minutes"}
+{"label": "auth-brute-force", "text": "WARN auth-service failed login: username=root ip=193.32.162.30 count=1200/hour"}
+{"label": "auth-brute-force", "text": "Grafana: Invalid username or password, user admin, client 141.98.11.20, repeated 250 times"}
+{"label": "auth-brute-force", "text": "vsftpd: FAIL LOGIN: Client \"45.155.205.2\" - repeated for users ftp, anonymous, test"}
+{"label": "auth-brute-force", "text": "dovecot: auth failed, 14 attempts in 12 secs, rhost=212.70.149.5, user=<info@example.com>"}
+{"label": "auth-brute-force", "text": "CloudTrail: ConsoleLogin Failure for root from 179.43.187.11, 140 events in 15 minutes"}
+{"label": "auth-brute-force", "text": "Login failed for user 'sa'. Reason: Password did not match. [CLIENT: 89.248.165.52] - 5000 occurrences"}
+{"label": "auth-brute-force", "text": "credential stuffing detected: 12000 failed logins across 9000 accounts from 300 IPs in 1 hour"}
+{"label": "auth-brute-force", "text": "sshd: Disconnecting: Too many authentication failures for root from 61.177.172.13 port 22 ssh2"}

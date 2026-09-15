@@ -63,7 +63,7 @@ export const runbook = [
     id: 'crash-loop',
     title: 'Application crash loop on startup',
     symptoms:
-      'Application starts, crashes, and is restarted repeatedly. Logs show CrashLoopBackOff, "Back-off restarting failed container", "exited with code 1", unhandled exceptions or "Cannot find module" right after startup, or missing environment variable errors.',
+      'Application starts, crashes, and is restarted repeatedly with no clearer cause in the logs. Logs show CrashLoopBackOff, "Back-off restarting failed container", "exited with code 1", restart counts climbing, or an unhandled exception right after startup.',
     steps: [
       'Read the logs from the previous run: `kubectl logs <pod> --previous` or `docker logs <container>`.',
       'Look for the first error after startup; later errors are usually consequences of it.',
@@ -105,6 +105,72 @@ export const runbook = [
       'Group errors by endpoint and stack trace to find the single failing code path.',
       'If a deployment is the cause, roll back first and investigate afterwards.',
       'Add a test covering the failure before redeploying the fix.',
+    ],
+  },
+
+  // The five entries below were split out so each names a root cause, not a
+  // symptom. A crash loop CAUSED by a missing env var is 'missing-config', and
+  // 'crash-loop' above is left for restarts with no clearer cause. Keeping the
+  // symptoms of different entries apart matters twice: retrieval embeds this
+  // text, and the classifier in ml/ is trained on the same category ids.
+  {
+    id: 'dns-resolution-failure',
+    title: 'DNS resolution failure',
+    symptoms:
+      'A hostname cannot be resolved to an address, so the connection is never attempted. Logs show ENOTFOUND, EAI_AGAIN, "getaddrinfo ENOTFOUND", "querySrv ENOTFOUND", "Temporary failure in name resolution", "could not resolve host", NXDOMAIN or UnknownHostException.',
+    steps: [
+      'Check the exact hostname in the error for typos and for the wrong environment (for example a staging host in production).',
+      'Resolve it from inside the container, not your laptop: `docker exec <container> nslookup <host>` or `getent hosts <host>`.',
+      'In Docker Compose, use the service name as the hostname and confirm both services are on the same network.',
+      'For EAI_AGAIN (temporary), check the DNS server in /etc/resolv.conf and retry with backoff; for ENOTFOUND, fix the name or the DNS record.',
+    ],
+  },
+  {
+    id: 'permission-denied',
+    title: 'Permission denied',
+    symptoms:
+      'The process is not allowed to read, write or bind to something. Logs show EACCES, EPERM, "Permission denied", "operation not permitted", "listen EACCES" on a port below 1024, or "Access denied" on a file, directory or mounted volume.',
+    steps: [
+      'Find which path or port was denied in the error, and which user the process runs as (`docker exec <container> id`).',
+      'Check ownership and mode of the path: `ls -ld <path>`; for mounted volumes, the host directory owner must match the container user.',
+      'For ports below 1024, run on a higher port (e.g. 3000) and map it, instead of running the container as root.',
+      'Fix ownership in the Dockerfile (`COPY --chown`, `chown` before `USER`) rather than making files world-writable.',
+    ],
+  },
+  {
+    id: 'missing-config',
+    title: 'Missing configuration or dependency',
+    symptoms:
+      'The application fails because something it expects at startup is absent. Logs show a required environment variable "is not set" or "undefined", "Cannot find module", ModuleNotFoundError, "No such file or directory" for a config file, "Missing script: start", or a missing secret.',
+    steps: [
+      'Read the first error after startup: it names the missing variable, file or module.',
+      'Compare the environment with .env.example: `docker exec <container> env` or `kubectl describe pod` for env and secrets.',
+      'For a missing module, check it is in dependencies (not devDependencies) and that the image runs `npm ci` or `pip install`.',
+      'Validate required configuration at startup and fail with a clear message listing what is missing.',
+    ],
+  },
+  {
+    id: 'too-many-open-files',
+    title: 'Too many open files',
+    symptoms:
+      'The process has used up its file descriptor limit, so new files and sockets cannot be opened. Logs show EMFILE, "too many open files", "Too many open files in system", "accept: too many open files", or ENFILE, often while under load.',
+    steps: [
+      'Check the limit and current usage: `ulimit -n` and `ls /proc/<pid>/fd | wc -l` inside the container.',
+      'Look for leaks - sockets, file streams or HTTP clients created per request and never closed.',
+      'Reuse connections: one database pool and one HTTP agent with keep-alive, not a new one per request.',
+      'Raise the limit only after fixing leaks: Docker `--ulimit nofile=65536:65536` or `ulimits` in Compose.',
+    ],
+  },
+  {
+    id: 'auth-brute-force',
+    title: 'Brute-force login attempts',
+    symptoms:
+      'Many failed logins in a short time, usually from a few IP addresses trying common user names. Logs show repeated "Failed password for", "Invalid user", "authentication failure", "Too many authentication failures", "POSSIBLE BREAK-IN ATTEMPT", or HTTP 401 responses on a login endpoint.',
+    steps: [
+      'Group failures by source IP and user name to confirm it is an attack and not one user with a wrong password.',
+      'Check whether any attempt succeeded ("Accepted password" from the same IP) - if so, treat it as a breach.',
+      'Block the offending IPs and add rate limiting or fail2ban for the login endpoint or SSH.',
+      'Disable SSH password login in favour of keys, and require strong passwords or MFA for application logins.',
     ],
   },
 ];
