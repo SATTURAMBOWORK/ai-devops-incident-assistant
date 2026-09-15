@@ -1,8 +1,12 @@
 # CI/CD pipeline. GitHub reads this file and runs the jobs on its own machines.
 #
-# Now:          backend tests and ML tests on every push and pull request.
-# Step 9:       + frontend build, + build and push Docker images (needs: tests).
-# Step 10:      + deploy the pushed images (needs: build, main branch only).
+#   backend-test ─┐
+#   ml-test ──────┼─▶ docker (build all 3 images; push to GHCR only from main)
+#   frontend-build┘
+#
+# Every push and pull request runs all of it. Images are only PUSHED for a push
+# to main, so a pull request proves the images build without publishing them.
+# Step 10: + deploy the pushed images (needs: docker, main branch only).
 
 name: CI/CD
 
@@ -102,6 +106,106 @@ jobs:
       - name: Train the model
         run: python train.py
 
-  # TODO (Step 9): frontend job - npm ci + npm run build in frontend/
-  # TODO (Step 9): build job - build both Docker images, push to registry (needs: backend-test)
-  # TODO (Step 10): deploy job - deploy the pushed images (needs: build, main branch only)
+  # The frontend has no tests, so "does it build" is its check: a broken import
+  # or JSX syntax error fails here instead of inside the Docker build.
+  frontend-build:
+    name: Frontend build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    defaults:
+      run:
+        working-directory: frontend
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v7
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+  # Builds the three images and, for main only, pushes them to GitHub Container
+  # Registry (ghcr.io). This is the "delivery" half of CD: every green commit on
+  # main becomes a ready-to-run image that a deploy step (or a person) can pull.
+  docker:
+    name: Docker image (${{ matrix.image }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    # The gate: no image is built unless every test and build job passed.
+    needs: [backend-test, ml-test, frontend-build]
+
+    # GITHUB_TOKEN is read-only by default. Pushing to ghcr.io needs packages:write.
+    # Nothing else is granted - least privilege.
+    permissions:
+      contents: read
+      packages: write
+
+    # One job definition, run three times in parallel - once per image. The
+    # three blocks would otherwise be identical except for two names.
+    strategy:
+      # If the ML image fails, still finish the others so every failure shows up
+      # in one run instead of one per push.
+      fail-fast: false
+      matrix:
+        image: [backend, frontend, ml]
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v7
+
+      # Buildx is Docker's newer builder; it is what enables the layer cache below.
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # Skipped on pull requests: a PR (possibly from a fork) must never be able
+      # to publish images.
+      - name: Log in to GitHub Container Registry
+        if: github.event_name == 'push'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          # Created by GitHub for each run and expires with it - no secret to manage.
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # Works out image names and tags. It also lowercases the name, which ghcr
+      # requires (the repo owner has capitals).
+      #   sha-<short commit>  - exact, never changes: what a deploy should use,
+      #                         and what you roll back to.
+      #   latest              - moves with main: handy for `docker pull` in a demo.
+      - name: Image names and tags
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/${{ github.repository }}-${{ matrix.image }}
+          tags: |
+            type=sha,prefix=sha-
+            type=raw,value=latest,enable={{is_default_branch}}
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          # Repo root as context, same as docker-compose.yml.
+          context: .
+          file: docker/Dockerfile.${{ matrix.image }}
+          push: ${{ github.event_name == 'push' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          # Reuse unchanged layers from the previous run (npm ci, pip install),
+          # stored in GitHub's cache. A separate scope per image, so the three
+          # builds do not overwrite each other's cache.
+          cache-from: type=gha,scope=${{ matrix.image }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.image }}
+
+  # TODO (Step 10): deploy job - deploy the sha- tagged images
+  #   (needs: docker, if: github.ref == 'refs/heads/main' && github.event_name == 'push')
