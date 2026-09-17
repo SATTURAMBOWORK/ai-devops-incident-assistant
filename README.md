@@ -154,6 +154,7 @@ category exists in the training data, the runbook and the frontend.
 | [`ml/data/incidents.jsonl`](ml/data/incidents.jsonl) | 576 | Hand-written, ~40 per category (60 for the four hardest), varied across Node, Python, Go, Java, nginx, Docker, Kubernetes |
 | [`ml/data/loghub_incidents.jsonl`](ml/data/loghub_incidents.jsonl) | 80 | **Real** incidents from [Loghub](https://github.com/logpai/loghub): 40 kernel OOM kills (Linux) and 40 SSH brute-force attacks |
 | [`ml/data/noise_lines.txt`](ml/data/noise_lines.txt) | 1,764 lines | Real healthy log lines from Loghub Apache, Linux and SSH logs, with every line mentioning any category filtered out |
+| [`ml/data/noise_lines_modern.txt`](ml/data/noise_lines_modern.txt) | 160 lines | Hand-written healthy lines from today's stacks (Spring Boot, Node, Vite, nginx, Mongo, Postgres, Redis, Docker, Kubernetes, FastAPI, CI), filtered the same way - a test enforces it |
 | [`ml/data/real_eval.jsonl`](ml/data/real_eval.jsonl) | 44 | **Evaluation only, never trained on.** Log snippets copied verbatim from public GitHub issues, each with its source URL: 38 incidents across 12 categories and 6 healthy startup logs |
 
 The Loghub files are distilled once by `prepare_loghub.py` (raw logs go in
@@ -205,6 +206,13 @@ here, because adding data changes which incidents land in the test set:
 | + 60 examples for 3 weak classes, 2 mislabels fixed (v2.1) | 75.6% | 0.75 | 0.85 | 0.78 | 0.45 | 0.83 |
 | + `slowduration` token | 76.0% | 0.75 | - | - | 0.57 | 0.83 |
 | + 20 high-latency examples (v2.2) | **77.2%** | 0.72 | 0.82 | 0.79 | **0.83** | 0.88 |
+| + 160 modern healthy lines in the noise pool (v2.3) | 75.6% | 0.75 | 0.82 | 0.76 | 0.77 | 0.81 |
+
+v2.3 is the one version whose CV accuracy went **down** on purpose. Burying
+incidents in modern application logs instead of 2005 syslog is simply a harder
+test - and on real logs it is the biggest improvement so far (healthy logs left
+alone: 3/6 to 5/6, incidents still 38/38). The old 77.2% was measuring an
+easier problem.
 
 **Real logs** ([`real_eval.jsonl`](ml/data/real_eval.jsonl), printed at the end
 of every `train.py` run):
@@ -214,6 +222,7 @@ of every `train.py` run):
 | v2.0 | 38/38 | 5/6 |
 | v2.1 | 38/38 | 4/6 |
 | v2.2 | 38/38 | 3/6 |
+| v2.3 | 38/38 | **5/6** |
 
 Read these honestly. The incidents were found by searching GitHub for their
 error text (`EADDRINUSE`, `ENOTFOUND`, ...), so they are textbook cases - too
@@ -240,13 +249,13 @@ category: precision is 0.8-1.0 for most categories.
 - 11 of 13 categories rely on hand-written examples; only `oom-killed` and
   `auth-brute-force` have real data. Accuracy on real production logs will be
   lower than the numbers above.
-- **False alarms on modern healthy logs** (3 of 6 real startup logs got a
-  category). The healthy examples the model learns from are all Loghub lines
-  from Apache, Linux and SSH around 2005 - it has never seen a normal Spring
-  Boot, Node or Uvicorn log. Adding modern healthy lines to the noise pool is
-  the next fix.
-- `db-connection-refused` and `error-rate-spike` have the lowest recall in
-  cross-validation (0.63).
+- A healthy log that merely *mentions* a category's vocabulary still trips the
+  model: the one real startup log it still flags is a Spring Boot log whose
+  Tomcat line says `TLS virtual host ... certificate`, and it reads that as
+  `ssl-cert-expired`. The noise pool cannot teach the difference, because every
+  noise line containing category vocabulary is filtered out by design.
+- `db-connection-refused` (0.59) and `error-rate-spike` (0.62) have the lowest
+  recall in cross-validation - the next categories needing more examples.
 - The real-log incident set is keyword-selected and too easy; it has no
   `error-rate-spike` logs, because a spike of 5xx responses across many
   requests is rarely pasted into a GitHub issue.

@@ -1,0 +1,160 @@
+2026-03-04T08:12:44.120Z INFO  [main] Starting Application v1.4.2 using Java 21 with PID 1 (/app/app.jar started by appuser in /app)
+2026-03-04T08:12:44.131Z INFO  [main] The following 1 profile is active: "prod"
+2026-03-04T08:12:46.902Z INFO  [main] Tomcat initialized with port 8080 (http)
+2026-03-04T08:12:46.918Z INFO  [main] Starting service [Tomcat]
+2026-03-04T08:12:46.919Z INFO  [main] Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-03-04T08:12:47.480Z INFO  [main] Initializing Spring embedded WebApplicationContext
+2026-03-04T08:12:47.481Z INFO  [main] Root WebApplicationContext: initialization completed in 2103 ms
+2026-03-04T08:12:48.774Z INFO  [main] HikariPool-1 - Starting...
+2026-03-04T08:12:49.201Z INFO  [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5f2a1b
+2026-03-04T08:12:49.204Z INFO  [main] HikariPool-1 - Start completed.
+2026-03-04T08:12:50.663Z INFO  [main] Liquibase: Update has been successful, 3 changesets applied
+2026-03-04T08:12:51.117Z INFO  [main] Exposing 3 endpoints beneath base path '/actuator'
+2026-03-04T08:12:51.930Z INFO  [main] Tomcat started on port 8080 (http) with context path '/'
+2026-03-04T08:12:51.948Z INFO  [main] Started Application in 8.214 seconds (process running for 9.017)
+2026-03-04T08:13:02.551Z INFO  [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-04T08:13:02.552Z INFO  [http-nio-8080-exec-1] Completed initialization in 1 ms
+2026-03-04T08:13:10.884Z INFO  [scheduling-1] Nightly report job picked up 0 pending rows
+2026-03-04T09:00:00.004Z INFO  [scheduling-1] Cache refresh finished, 812 entries loaded
+2026-03-04T09:15:22.310Z DEBUG [http-nio-8080-exec-4] Mapped [GET /api/orders] to OrderController#list
+2026-03-04T09:15:22.318Z INFO  [http-nio-8080-exec-4] GET /api/orders 200 in 18 ms
+> incident-assistant-backend@1.0.0 start
+> node src/server.js
+[server] NODE_ENV=production, listening on port 5000
+[server] MongoDB connected: cluster0-shard-00-01.mongodb.net
+[server] Runbook index ready: 13 entries embedded (612 tokens)
+[server] Graceful shutdown handler registered for SIGTERM
+{"level":"info","time":"2026-03-04T10:02:11.004Z","msg":"server listening","port":5000}
+{"level":"info","time":"2026-03-04T10:02:11.120Z","msg":"mongo pool opened","size":10}
+{"level":"info","time":"2026-03-04T10:02:19.771Z","req":{"method":"GET","url":"/api/health"},"res":{"statusCode":200},"responseTime":3}
+{"level":"info","time":"2026-03-04T10:02:24.017Z","req":{"method":"GET","url":"/api/incidents?page=1"},"res":{"statusCode":200},"responseTime":41}
+{"level":"info","time":"2026-03-04T10:03:02.884Z","msg":"analysis stored","incidentId":"66f0c2","durationMs":2140}
+{"level":"info","time":"2026-03-04T10:05:40.612Z","msg":"classifier agreed with retrieval"}
+{"level":"debug","time":"2026-03-04T10:06:01.339Z","msg":"cache hit","key":"runbook-index"}
+GET /api/incidents 200 12.443 ms - 2841
+GET /api/incidents/66f0c2ab19de4471a2c7d310 200 8.221 ms - 5120
+POST /api/incidents 201 2104.882 ms - 4096
+GET /api/health 200 1.004 ms - 61
+GET /assets/index-BN12deti.js 200 4.118 ms - 148221
+GET / 200 2.118 ms - 1204
+[nodemon] watching path(s): src/**/*
+[nodemon] starting `node src/server.js`
+[vite] dev server running at http://localhost:5173/
+[vite] ready in 412 ms
+[vite] page reload src/pages/AnalyzePage.jsx
+vite v8.3.0 building for production...
+transforming...
+✓ 148 modules transformed.
+dist/index.html                   0.62 kB │ gzip:  0.38 kB
+dist/assets/index-BN12deti.css   14.20 kB │ gzip:  3.41 kB
+dist/assets/index-DtqP0m2f.js   198.44 kB │ gzip: 64.02 kB
+✓ built in 3.71s
+npm notice run `npm audit` for details
+added 214 packages, and audited 215 packages in 9s
+up to date, audited 215 packages in 2s
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO     Model loaded: 14 categories, vocabulary 15695 features
+INFO:     172.19.0.4:52344 - "POST /predict HTTP/1.1" 200 OK
+INFO:     172.19.0.4:52350 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41288 - "GET /docs HTTP/1.1" 200 OK
+INFO     predicted nothing for 214 chars of logs
+INFO     served a prediction for 812 chars of logs
+INFO:     Shutting down
+INFO:     Application shutdown complete.
+2026-03-04 11:02:44,118 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-03-04 11:02:44,120 INFO sqlalchemy.engine.Engine SELECT incidents.id FROM incidents LIMIT %(param_1)s
+2026-03-04 11:02:44,121 INFO sqlalchemy.engine.Engine COMMIT
+2026-03-04 11:04:09,118 INFO werkzeug 172.18.0.1 - - "GET /api/status HTTP/1.1" 200 -
+172.19.0.1 - - [04/Mar/2026:11:20:31 +0000] "GET /api/incidents?page=2 HTTP/1.1" 200 2841 "-" "Mozilla/5.0"
+172.19.0.1 - - [04/Mar/2026:11:20:33 +0000] "GET /assets/index-BN12deti.js HTTP/1.1" 200 148221 "-" "Mozilla/5.0"
+172.19.0.1 - - [04/Mar/2026:11:20:33 +0000] "GET /favicon.ico HTTP/1.1" 304 0 "-" "Mozilla/5.0"
+172.19.0.1 - - [04/Mar/2026:11:21:02 +0000] "POST /api/incidents HTTP/1.1" 201 4096 "-" "Mozilla/5.0"
+172.19.0.1 - - [04/Mar/2026:11:22:18 +0000] "GET /incidents/66f0c2ab19de4471a2c7d310 HTTP/1.1" 200 1204 "-" "Mozilla/5.0"
+2026/03/04 11:19:58 [notice] 1#1: using the "epoll" event method
+2026/03/04 11:19:58 [notice] 1#1: nginx/1.27.4
+2026/03/04 11:19:58 [notice] 1#1: OS: Linux 6.8.0-45-generic
+2026/03/04 11:19:58 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2026/03/04 11:19:58 [notice] 1#1: start worker processes
+2026/03/04 11:19:58 [notice] 1#1: start worker process 29
+2026/03/04 11:19:58 [notice] 1#1: start worker process 30
+2026/03/04 11:19:58 [notice] 1#1: signal process started
+2026/03/04 12:00:01 [notice] 1#1: reopening logs
+{"t":{"$date":"2026-03-04T12:10:02.118+00:00"},"s":"I","c":"NETWORK","msg":"Waiting for connections","attr":{"port":27017}}
+{"t":{"$date":"2026-03-04T12:10:02.120+00:00"},"s":"I","c":"STORAGE","msg":"WiredTiger opened","attr":{"durationMillis":802}}
+{"t":{"$date":"2026-03-04T12:10:44.218+00:00"},"s":"I","c":"NETWORK","msg":"Connection accepted","attr":{"remote":"172.19.0.5:48122","connectionCount":3}}
+{"t":{"$date":"2026-03-04T12:11:02.901+00:00"},"s":"I","c":"COMMAND","msg":"Index build finished","attr":{"ns":"app.incidents"}}
+{"t":{"$date":"2026-03-04T12:30:00.010+00:00"},"s":"I","c":"CONTROL","msg":"Checkpoint finished"}
+2026-03-04 12:40:11.004 UTC [1] LOG:  starting PostgreSQL 16.2 on x86_64-pc-linux-gnu
+2026-03-04 12:40:11.010 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-03-04 12:40:11.221 UTC [29] LOG:  database system was shut down at 2026-03-04 12:39:58 UTC
+2026-03-04 12:40:11.244 UTC [1] LOG:  database system is ready to accept connections
+2026-03-04 12:45:00.118 UTC [88] LOG:  checkpoint starting: time
+2026-03-04 12:45:12.667 UTC [88] LOG:  checkpoint complete: wrote 412 buffers (2.5%)
+2026-03-04 12:50:02.114 UTC [102] LOG:  automatic vacuum of table "public.incidents": index scans: 1
+1:M 04 Mar 2026 13:01:02.118 * Ready to accept connections tcp
+1:M 04 Mar 2026 13:01:02.119 * Running mode=standalone, port=6379
+1:M 04 Mar 2026 13:05:00.004 * Background saving started by pid 42
+1:M 04 Mar 2026 13:05:00.812 * Background saving terminated with success
+1:M 04 Mar 2026 13:05:00.813 * Snapshot written to storage
+Attaching to incident-assistant-mongo-1, incident-assistant-backend-1, incident-assistant-frontend-1
+incident-assistant-mongo-1      | MongoDB init process complete; ready for start up.
+incident-assistant-backend-1    | [server] listening on port 5000
+incident-assistant-frontend-1   | /docker-entrypoint.sh: Configuration complete; ready for start up
+Container incident-assistant-mongo-1  Healthy
+Container incident-assistant-backend-1  Started
+Container incident-assistant-ml-service-1  Started
+Network incident-assistant_default  Created
+Volume "incident-assistant_mongo-data"  Created
+#8 [backend 4/6] RUN npm ci --omit=dev
+#8 DONE 14.2s
+#12 exporting to image
+#12 writing image sha256:9f2b1c4d8e0a done
+#12 naming to ghcr.io/example/incident-assistant-backend:latest done
+Successfully tagged incident-assistant-ml:latest
+docker: pulling from library/node:22-alpine
+Digest: sha256:0d4f2c7a1b93e5f6a8c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3
+Status: Image is up to date for mongo:8
+time="2026-03-04T14:02:11Z" level=info msg="API listen on /var/run/docker.sock"
+time="2026-03-04T14:02:12Z" level=info msg="Daemon has completed initialization"
+Normal   Scheduled  12m   default-scheduler  Successfully assigned default/api-7f9 to node-2
+Normal   Pulled     12m   kubelet            Container image "ghcr.io/example/api:sha-abc1234" already present on machine
+Normal   Created    12m   kubelet            Created container api
+Normal   Started    12m   kubelet            Started container api
+NAME                     READY   STATUS    AGE
+api-7f9d8c6b5-2xqzp      1/1     Running   12m
+frontend-5c8d7f6b9-lq4nn 1/1     Running   12m
+deployment "api" successfully rolled out
+Waiting for deployment "api" rollout to finish: 1 of 2 updated replicas are available...
+service/api created
+configmap/api-config unchanged
+horizontalpodautoscaler.autoscaling/api scaled from 2 to 3 replicas
+Run npm ci
+npm ci: added 215 packages in 11s
+Run npm test
+tests 44
+pass 44
+duration_ms 9841.221
+Run python -m unittest discover -s tests -t .
+Ran 42 tests in 0.143s
+OK
+Run docker/build-push-action@v6
+#1 [internal] load build definition from Dockerfile.backend
+Post job cleanup.
+Cleaning up orphan processes
+Job succeeded
+Set up job: Runner name 'GitHub Actions 4'
+Checkout: Fetching the repository
+Cache saved with key: npm-cache-linux-9f2b1c
+Cache restored from key: mongodb-binaries-Linux-0d4f2c
+2026-03-04T15:00:01.118Z INFO  worker picked up job report.generate id=8812
+2026-03-04T15:00:04.882Z INFO  worker completed job report.generate in 3764 ms
+2026-03-04T15:10:00.001Z INFO  cron tick: cleanup old sessions
+2026-03-04T15:10:00.118Z INFO  cleanup removed 42 stale sessions
+2026-03-04T15:20:11.554Z INFO  user signed in id=8812 method=password
+2026-03-04T15:20:31.002Z INFO  incident analysis requested chars=1841
+2026-03-04T15:20:33.118Z INFO  groq responded model=openai/gpt-oss-120b tokens=1142
+2026-03-04T15:20:33.120Z INFO  voyage embeddings ok texts=1 tokens=214
+2026-03-04T15:21:02.884Z INFO  history page served page=1 limit=10 total=42

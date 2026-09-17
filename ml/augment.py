@@ -31,21 +31,31 @@ from pathlib import Path
 
 from predict import UNKNOWN_LABEL
 
-NOISE_PATH = Path(__file__).parent / "data" / "noise_lines.txt"
+DATA = Path(__file__).parent / "data"
+# Real 2005-era lines from Loghub (Apache, Linux, SSH), written by prepare_loghub.py.
+NOISE_PATH = DATA / "noise_lines.txt"
+# Hand-written lines from today's stacks: Spring Boot, Node, Vite, nginx, Mongo,
+# Postgres, Redis, Docker, Kubernetes, FastAPI, GitHub Actions. Loghub alone left
+# the model with no idea what a NORMAL modern log looks like, and it called 3 of
+# 6 real startup logs an incident. Both files are filtered the same way: no line
+# may contain any category's vocabulary (see prepare_loghub.SIGNAL_WORDS).
+MODERN_NOISE_PATH = DATA / "noise_lines_modern.txt"
 
 
-def load_noise_lines(path=NOISE_PATH):
+def load_noise_lines(paths=(NOISE_PATH, MODERN_NOISE_PATH)):
     """
-    The real, signal-free log lines to bury examples in.
+    The signal-free log lines to bury examples in.
 
     Fails loudly instead of silently training without noise: a model trained on
     clean snippets would still "work", just worse, and nobody would notice.
     """
-    if not path.exists():
-        raise SystemExit(f"{path} not found. Run prepare_loghub.py first.")
-    lines = [line for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+    lines = []
+    for path in paths:
+        if not path.exists():
+            raise SystemExit(f"{path} not found. Run prepare_loghub.py first.")
+        lines += [line for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
     if not lines:
-        raise SystemExit(f"{path} is empty. Run prepare_loghub.py first.")
+        raise SystemExit(f"No noise lines in {', '.join(p.name for p in paths)}.")
     return lines
 
 

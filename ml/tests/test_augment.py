@@ -48,7 +48,21 @@ class LoadNoiseLinesTest(unittest.TestCase):
     def test_missing_file_stops_training_loudly(self):
         # Silently training without noise would ship a worse model unnoticed.
         with self.assertRaises(SystemExit):
-            load_noise_lines(Path("does/not/exist.txt"))
+            load_noise_lines([Path("does/not/exist.txt")])
+
+    def test_loads_both_loghub_and_modern_lines(self):
+        # A missing modern file would quietly bring back the false alarms on
+        # normal Spring Boot / Node / Uvicorn startup logs.
+        pool = load_noise_lines()
+        self.assertTrue(any("Tomcat started on port" in line for line in pool))
+        self.assertTrue(any("combo" in line for line in pool))
+
+    def test_no_noise_line_mentions_an_incident(self):
+        # One "killed process" line in the noise and every category would carry
+        # OOM evidence, teaching the model to ignore it.
+        from prepare_loghub import SIGNAL_WORDS
+        offenders = [line for line in load_noise_lines() if SIGNAL_WORDS.search(line)]
+        self.assertEqual(offenders, [])
 
 
 if __name__ == "__main__":

@@ -81,21 +81,25 @@ export default function ClassifierPrediction({ classification, retrievedDocs }) 
         </p>
       )}
 
+      {/* The model returns one answer, but real incidents often have two true
+          causes - a crash loop caused by missing config is both. The runner-up
+          is worth reading, so it is labelled rather than left as a bare list. */}
       {classification.alternatives?.length > 0 && (
-        <ul className="matches" style={{ marginTop: '0.75rem' }}>
-          {classification.alternatives.map((alt) => (
-            <li key={alt.label} className="match">
-              <span>{categoryTitle(alt.label)}</span>
-              <span className="match-score">{toPercent(alt.confidence)}%</span>
-            </li>
-          ))}
-        </ul>
+        <div className="alternatives">
+          <h3 className="alternatives-title">Also possible</h3>
+          <ul className="matches">
+            {classification.alternatives.map((alt) => (
+              <li key={alt.label} className="match">
+                <span>{categoryTitle(alt.label)}</span>
+                <span className="match-score">{toPercent(alt.confidence)}%</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
 
       {classification.modelVersion && (
-        <p className="aside-note" style={{ marginTop: '0.5rem' }}>
-          Model {classification.modelVersion}
-        </p>
+        <p className="aside-note model-version">Model {classification.modelVersion}</p>
       )}
     </section>
   );

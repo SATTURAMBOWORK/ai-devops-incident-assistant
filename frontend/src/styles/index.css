@@ -664,6 +664,32 @@ a {
   white-space: nowrap;
 }
 
+/* Runner-up categories under the ML prediction. Incidents often have two
+   truthful answers - a crash loop caused by missing config is both - so the
+   second guess is information, not clutter. Set apart from the main
+   prediction, and lighter, so it cannot be mistaken for the answer. */
+.alternatives {
+  margin-top: 0.875rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line);
+}
+
+.alternatives-title {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.alternatives .match {
+  color: var(--muted);
+}
+
+.model-version {
+  margin-top: 0.5rem;
+}
+
 .facts {
   display: grid;
   grid-template-columns: auto 1fr;
