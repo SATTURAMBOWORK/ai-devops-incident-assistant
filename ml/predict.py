@@ -68,11 +68,38 @@ MEANINGFUL_NUMBERS = frozenset(
 )
 NUMBER = re.compile(r"\d+")
 
+# A duration of a second or more becomes the word "slowduration"; shorter ones
+# are masked like any number. Masking alone turned "took 8400ms" and "took 12ms"
+# into the same "took ms", so high-latency logs - whose only clue is often a big
+# number - looked healthy: recall was 0.45, mostly lost to "unknown". The one
+# token raised it to 0.57, and to 0.83 together with more examples. One second
+# is the line; 2s scored slightly worse, and a "fastduration" token added nothing.
+DURATION_UNITS = {
+    "ms": 0.001, "msec": 0.001, "millisecond": 0.001, "milliseconds": 0.001,
+    "s": 1, "sec": 1, "secs": 1, "second": 1, "seconds": 1,
+    "min": 60, "mins": 60, "minute": 60, "minutes": 60,
+    "hour": 3600, "hours": 3600,
+}
+# Longest units first, so "ms" is not read as "m" + "s". No bare "m" or "h":
+# "3.2m documents" is not minutes, and in `kubectl get pods` the AGE column
+# ("24h", "3h25m") turned a crash-loop pod list into a latency incident on a
+# real log from GitHub.
+DURATION = re.compile(
+    r"(\d+(?:\.\d+)?) ?(" + "|".join(sorted(DURATION_UNITS, key=len, reverse=True)) + r")\b"
+)
+SLOW_SECONDS = 1.0
+
+
+def _duration_word(match):
+    seconds = float(match.group(1)) * DURATION_UNITS[match.group(2)]
+    return " slowduration " if seconds >= SLOW_SECONDS else " "
+
 
 def normalize(text):
     """
     Clean a log for the vectorizer: lower-case, drop timestamp/host prefixes,
-    mask IPs, and replace every number with a space except MEANINGFUL_NUMBERS.
+    mask IPs, turn long durations into "slowduration", and replace every other
+    number with a space except MEANINGFUL_NUMBERS.
 
     Timestamps, PIDs, ports and IPs are different in every log, so as features
     they only let the model memorise individual training examples.
@@ -83,6 +110,7 @@ def normalize(text):
     """
     text = LINE_PREFIX.sub("", text.lower())
     text = IP_ADDRESS.sub(" ", text)
+    text = DURATION.sub(_duration_word, text)
     return NUMBER.sub(lambda m: m.group() if m.group() in MEANINGFUL_NUMBERS else " ", text)
 
 

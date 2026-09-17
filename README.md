@@ -151,9 +151,10 @@ category exists in the training data, the runbook and the frontend.
 
 | Source | Rows | Notes |
 |---|---|---|
-| [`ml/data/incidents.jsonl`](ml/data/incidents.jsonl) | 556 | Hand-written, ~40 per category (60 for the three hardest), varied across Node, Python, Go, Java, nginx, Docker, Kubernetes |
+| [`ml/data/incidents.jsonl`](ml/data/incidents.jsonl) | 576 | Hand-written, ~40 per category (60 for the four hardest), varied across Node, Python, Go, Java, nginx, Docker, Kubernetes |
 | [`ml/data/loghub_incidents.jsonl`](ml/data/loghub_incidents.jsonl) | 80 | **Real** incidents from [Loghub](https://github.com/logpai/loghub): 40 kernel OOM kills (Linux) and 40 SSH brute-force attacks |
 | [`ml/data/noise_lines.txt`](ml/data/noise_lines.txt) | 1,764 lines | Real healthy log lines from Loghub Apache, Linux and SSH logs, with every line mentioning any category filtered out |
+| [`ml/data/real_eval.jsonl`](ml/data/real_eval.jsonl) | 44 | **Evaluation only, never trained on.** Log snippets copied verbatim from public GitHub issues, each with its source URL: 38 incidents across 12 categories and 6 healthy startup logs |
 
 The Loghub files are distilled once by `prepare_loghub.py` (raw logs go in
 `ml/data/loghub/`, gitignored). Only the small outputs are committed, so training
@@ -163,8 +164,12 @@ and the Docker build never need the ~80MB raw files.
 
 [`augment.py`](ml/augment.py) buries each incident among real noise lines (3 noisy
 copies per incident) and generates an `unknown` class of healthy logs.
-[`train.py`](ml/train.py) **splits before augmenting**, so noisy copies of one
-incident never land on both sides of the train/test split.
+[`train.py`](ml/train.py) evaluates with **5-fold cross-validation only**: five
+models, each tested on a different fifth of the incidents, with every report
+(per-category precision/recall, accuracy by kind of log, confusion matrix)
+pooled across all five. Each fold **splits before augmenting**, so noisy copies
+of one incident never land on both sides. The shipped model is then trained on
+all the data - 6 models per run in total.
 
 Classifying a whole log as one bag of words let a few error lines be diluted by
 dozens of normal ones. [`predict.py`](ml/predict.py) instead scores every 3-line
@@ -175,6 +180,8 @@ reported accuracy is the accuracy served.
 Before vectorizing, `normalize()` lower-cases the log, drops timestamp and
 hostname prefixes, masks IPs, and masks numbers **except** meaningful codes
 (`137`/`139`/`143` exit codes, `401`/`403`/`404`/`429`/`5xx` HTTP statuses).
+Any duration of a second or more (`8400ms`, `9.1s`, `60 seconds`) becomes the
+word `slowduration`, so a slow request no longer looks like a fast one.
 
 ### Results
 
@@ -187,15 +194,38 @@ hostname prefixes, masks IPs, and masks numbers **except** meaningful codes
 | Clean error snippet | 83% | 78% |
 | 5-fold cross-validation | 56% | **70%** |
 
-**Accuracy fixes** (v2.1, shipped). Each change measured on its own with the
-same 5 cross-validation folds - a single test split was misleading here, because
-adding data changes which incidents land in the test set:
+**Accuracy fixes** (v2.1 and v2.2, shipped). Each change measured on its own
+with the same 5 cross-validation folds - a single test split was misleading
+here, because adding data changes which incidents land in the test set:
 
-| | CV accuracy | crash-loop | dns | missing-config | oom-killed |
-|---|---|---|---|---|---|
-| v2.0 | 70.2% | 0.51 | 0.74 | 0.53 | 0.87 |
-| + keep meaningful numbers, drop hostnames | 72.3% | 0.52 | 0.74 | 0.57 | 0.88 |
-| + 60 examples for the 3 weakest classes, 2 mislabels fixed | **75.6%** | **0.75** | **0.85** | **0.78** | 0.87 |
+| | CV accuracy | crash-loop | dns | missing-config | high-latency | healthy |
+|---|---|---|---|---|---|---|
+| v2.0 | 70.2% | 0.51 | 0.74 | 0.53 | - | 0.91 |
+| + keep meaningful numbers, drop hostnames | 72.3% | 0.52 | 0.74 | 0.57 | - | 0.91 |
+| + 60 examples for 3 weak classes, 2 mislabels fixed (v2.1) | 75.6% | 0.75 | 0.85 | 0.78 | 0.45 | 0.83 |
+| + `slowduration` token | 76.0% | 0.75 | - | - | 0.57 | 0.83 |
+| + 20 high-latency examples (v2.2) | **77.2%** | 0.72 | 0.82 | 0.79 | **0.83** | 0.88 |
+
+**Real logs** ([`real_eval.jsonl`](ml/data/real_eval.jsonl), printed at the end
+of every `train.py` run):
+
+| | Real incidents categorised correctly | Real healthy logs left alone |
+|---|---|---|
+| v2.0 | 38/38 | 5/6 |
+| v2.1 | 38/38 | 4/6 |
+| v2.2 | 38/38 | 3/6 |
+
+Read these honestly. The incidents were found by searching GitHub for their
+error text (`EADDRINUSE`, `ENOTFOUND`, ...), so they are textbook cases - too
+easy to tell versions apart. The healthy logs are the useful part, and they
+disagree with cross-validation: CV says false alarms went down in v2.2, real
+startup logs say up. CV's healthy logs are built from 2005-era Loghub lines;
+these are modern Spring Boot and Uvicorn logs, which the model has never seen
+as healthy. `Started App in 4.083 seconds` now reads as `slowduration` and gets
+called `high-latency`. With 6 logs each miss is 17%, so this is a warning sign,
+not a measurement - but it points at the real weakness. The set also caught a
+bug: a `kubectl get pods` table's AGE column (`24h`) was read as a slow
+duration, fixed before shipping.
 
 The hostname fix mattered beyond the score: the top features for `unknown` were
 the noise server's hostname (`combo`) and month names - the model was partly
@@ -210,13 +240,16 @@ category: precision is 0.8-1.0 for most categories.
 - 11 of 13 categories rely on hand-written examples; only `oom-killed` and
   `auth-brute-force` have real data. Accuracy on real production logs will be
   lower than the numbers above.
-- `high-latency` has the lowest recall (0.45), then `db-connection-refused` and
-  `error-rate-spike` (0.65) - the next candidates for more examples.
-- Healthy logs correctly get no prediction 83% of the time in cross-validation,
-  down from 91%. The drop came with the new data, not the normalize change -
-  likely because generic crash-loop lines such as "exited with code 1" make it
-  quicker to call ordinary logs an incident.
-- 85% of noise lines still come from one Linux server's kinds of messages.
+- **False alarms on modern healthy logs** (3 of 6 real startup logs got a
+  category). The healthy examples the model learns from are all Loghub lines
+  from Apache, Linux and SSH around 2005 - it has never seen a normal Spring
+  Boot, Node or Uvicorn log. Adding modern healthy lines to the noise pool is
+  the next fix.
+- `db-connection-refused` and `error-rate-spike` have the lowest recall in
+  cross-validation (0.63).
+- The real-log incident set is keyword-selected and too easy; it has no
+  `error-rate-spike` logs, because a spike of 5xx responses across many
+  requests is rarely pasted into a GitHub issue.
 
 ## Build progress
 

@@ -33,6 +33,15 @@ class NormalizeTest(unittest.TestCase):
             "kernel: out of memory\nsshd[ ]: ok",
         )
 
+    def test_long_durations_become_one_word_and_short_ones_vanish(self):
+        self.assertEqual(normalize("took 8400ms"), "took  slowduration ")
+        self.assertEqual(normalize("took 9.1 s"), "took  slowduration ")
+        self.assertEqual(normalize("took 12ms"), "took  ")
+
+    def test_pod_ages_are_not_slow_durations(self):
+        # `kubectl get pods` AGE column - not a response time.
+        self.assertNotIn("slowduration", normalize("api-7f9  0/1  CrashLoopBackOff  65  24h"))
+
     def test_drops_apache_and_iso_timestamps(self):
         self.assertEqual(normalize("[Sat Jun 25 04:04:32 2005] [notice] up"), "[notice] up")
         self.assertEqual(normalize("2026-09-10T10:02:09Z api 504"), "api 504")

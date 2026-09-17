@@ -22,7 +22,7 @@ import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
-from sklearn.model_selection import StratifiedKFold, train_test_split
+from sklearn.model_selection import StratifiedKFold
 from sklearn.pipeline import Pipeline
 
 from augment import augment, load_noise_lines
@@ -36,15 +36,17 @@ DATA_PATHS = [
     HERE / "data" / "loghub_incidents.jsonl",  # real incidents, from prepare_loghub.py
 ]
 MODEL_PATH = HERE / "model.joblib"
+# Real logs for evaluation only - deliberately not in DATA_PATHS.
+REAL_EVAL_PATH = HERE / "data" / "real_eval.jsonl"
 
-# Fixing the random seed makes the train/test split identical on every run.
-# Without it, your accuracy would jump around between runs and you could never
-# tell whether a change to the model helped or you just got a luckier split.
+# Fixing the random seed makes the cross-validation folds identical on every
+# run. Without it, your accuracy would jump around between runs and you could
+# never tell whether a change to the model helped or you just got luckier folds.
 RANDOM_SEED = 42
 
-# Fraction of the data held back for testing. 0.2 of ~640 rows is ~130
-# incidents - still small, which is why we also cross-validate further down.
-TEST_SIZE = 0.2
+# 5 folds: each model trains on 80% and is tested on the other 20%, and every
+# incident is tested exactly once across the five.
+FOLDS = 5
 
 
 def load_dataset(paths):
@@ -158,25 +160,43 @@ def print_confusion_matrix(y_true, y_pred, labels):
         print(f"  {label:24}" + "".join(f"{v:>7}" for v in row))
 
 
-def cross_validate(texts, labels, noise_pool, folds=5):
+def cross_validate(texts, labels, noise_pool, folds=FOLDS):
     """
-    Accuracy over `folds` different train/test splits.
+    Train and test `folds` models, each holding out a different fifth of the data.
+
+    Every report in main() comes from here. There used to be a separate single
+    80/20 split as well, but its ~130 test incidents were too few: adding 60
+    rows of data once changed which incidents landed in it and made oom-killed
+    recall appear to fall from 0.97 to 0.67, when cross-validation showed it
+    unchanged. Pooling all folds tests every incident exactly once.
 
     sklearn's cross_val_score cannot be used here: it would split data that is
     already augmented, putting noisy copies of the same incident on both sides.
-    So each fold splits the ORIGINAL incidents first and augments each half on
-    its own - exactly what main() does for the single split.
+    So each fold splits the ORIGINAL incidents first (stratified, so every
+    category is in every fold) and augments each side on its own, with its own
+    seed, so the test side's noise and "unknown" logs are unseen too.
+
+    Returns per-fold accuracy, plus every test sample's true label, predicted
+    label and kind ("clean", "noisy" or "healthy") pooled across all folds.
     """
     splitter = StratifiedKFold(n_splits=folds, shuffle=True, random_state=RANDOM_SEED)
-    scores = []
+    scores, y_true, y_pred, kinds = [], [], [], []
     for fold, (train_idx, test_idx) in enumerate(splitter.split(texts, labels)):
         X_tr, y_tr = augment([texts[i] for i in train_idx], [labels[i] for i in train_idx],
                              noise_pool, seed=RANDOM_SEED + fold)
-        X_te, y_te = augment([texts[i] for i in test_idx], [labels[i] for i in test_idx],
+        originals = [texts[i] for i in test_idx]
+        X_te, y_te = augment(originals, [labels[i] for i in test_idx],
                              noise_pool, seed=RANDOM_SEED + 100 + fold)
         model = build_model().fit(X_tr, y_tr)
-        scores.append(accuracy_score(y_te, predict_all(model, X_te)))
-    return scores
+        predictions = predict_all(model, X_te)
+
+        scores.append(accuracy_score(y_te, predictions))
+        clean = set(originals)
+        y_true += y_te
+        y_pred += predictions
+        kinds += ["healthy" if y == UNKNOWN_LABEL else "clean" if x in clean else "noisy"
+                  for x, y in zip(X_te, y_te)]
+    return {"scores": scores, "y_true": y_true, "y_pred": y_pred, "kinds": kinds}
 
 
 def predict_all(model, texts):
@@ -195,79 +215,77 @@ def main():
     print(f"Loaded {len(texts)} incidents across {len(set(labels))} categories, "
           f"{len(noise_pool)} noise lines")
 
-    # Split the ORIGINAL incidents, before any augmentation. stratify=labels
-    # keeps the class proportions identical in both halves, so no category ends
-    # up with zero test samples.
-    X_train, X_test, y_train, y_test = train_test_split(
-        texts,
-        labels,
-        test_size=TEST_SIZE,
-        random_state=RANDOM_SEED,
-        stratify=labels,
-    )
+    cv = cross_validate(texts, labels, noise_pool)
+    scores, y_true, y_pred, kinds = cv["scores"], cv["y_true"], cv["y_pred"], cv["kinds"]
 
-    # Augment each side on its own, with different seeds, so the test set's
-    # noise and "unknown" samples are ones the model has never seen either.
-    X_train_aug, y_train_aug = augment(X_train, y_train, noise_pool, seed=RANDOM_SEED)
-    X_test_aug, y_test_aug = augment(X_test, y_test, noise_pool, seed=RANDOM_SEED + 1)
-    print(f"Split: {len(X_train)} training incidents -> {len(X_train_aug)} samples after augmentation, "
-          f"{len(X_test)} test incidents -> {len(X_test_aug)} samples")
-
-    model = build_model()
-    model.fit(X_train_aug, y_train_aug)
-
-    vocab_size = len(model.named_steps["tfidf"].get_feature_names_out())
-    print(f"Vocabulary learned: {vocab_size} features (words and word pairs)")
-
-    # The real score: predictions on samples the model has never seen.
-    y_pred = predict_all(model, X_test_aug)
-
-    print("\nHeld-out test set results (clean + noisy + unknown)")
-    print("-" * 64)
-    # zero_division=0 keeps the report readable when a tiny test set happens to
-    # give some class no predictions at all.
-    print(classification_report(y_test_aug, y_pred, zero_division=0))
-
-    # The same test incidents, split by kind. A model can look fine overall
-    # while failing badly on exactly the noisy logs real users paste.
-    clean_acc = accuracy_score(y_test, predict_all(model, X_test))
-    clean_set = set(X_test)
-    noisy = [(x, y) for x, y in zip(X_test_aug, y_test_aug) if y != UNKNOWN_LABEL and x not in clean_set]
-    noisy_acc = accuracy_score([y for _, y in noisy], predict_all(model, [x for x, _ in noisy]))
-    unknown = [x for x, y in zip(X_test_aug, y_test_aug) if y == UNKNOWN_LABEL]
-    unknown_acc = accuracy_score([UNKNOWN_LABEL] * len(unknown), predict_all(model, unknown))
-    print("Accuracy by kind of log")
-    print(f"  clean snippets        {clean_acc:.3f}  ({len(X_test)})")
-    print(f"  buried in noise       {noisy_acc:.3f}  ({len(noisy)})")
-    print(f"  healthy (unknown)     {unknown_acc:.3f}  ({len(unknown)})")
-
-    print_confusion_matrix(y_test_aug, y_pred, sorted(set(y_test_aug)))
-
-    # A ~130-incident test set is small enough that one lucky or unlucky split
-    # can move accuracy by several points. 5-fold cross-validation retrains the
-    # model five times, each time holding out a different fifth, so every
-    # incident gets tested exactly once. The spread across folds tells you how
-    # much to trust the single number above.
-    scores = cross_validate(texts, labels, noise_pool)
-    mean = sum(scores) / len(scores)
-    spread = max(scores) - min(scores)
-    print("\n5-fold cross-validation")
+    # The spread across folds says how much to trust the mean: a wide range
+    # means the score depends heavily on which incidents were held out.
+    print(f"\n{FOLDS}-fold cross-validation ({len(y_true)} test samples, every incident tested once)")
     print("-" * 64)
     print("  per-fold accuracy: " + ", ".join(f"{s:.3f}" for s in scores))
-    print(f"  mean {mean:.3f}  (range {spread:.3f})")
+    print(f"  mean {sum(scores) / len(scores):.3f}  (range {max(scores) - min(scores):.3f})")
 
-    show_top_features(model)
+    print("\nPer-category results, all folds pooled")
+    print("-" * 64)
+    print(classification_report(y_true, y_pred, zero_division=0))
 
-    # Retrain on ALL the data before saving. The split existed to measure the
-    # model honestly; now that we have our number, throwing away 20% of a small
-    # dataset would only make the shipped model worse. This is standard practice
-    # - evaluate on a split, ship a model trained on everything.
+    # The same test samples, split by kind. A model can look fine overall
+    # while failing badly on exactly the noisy logs real users paste.
+    print("Accuracy by kind of log")
+    for kind, description in [("clean", "clean snippets"), ("noisy", "buried in noise"),
+                              ("healthy", "healthy (unknown)")]:
+        picked = [(t, p) for t, p, k in zip(y_true, y_pred, kinds) if k == kind]
+        accuracy = accuracy_score([t for t, _ in picked], [p for _, p in picked])
+        print(f"  {description:20}  {accuracy:.3f}  ({len(picked)})")
+
+    print_confusion_matrix(y_true, y_pred, sorted(set(y_true)))
+
+    # Retrain on ALL the data before saving. The folds existed to measure the
+    # model honestly; now that we have our numbers, holding data back would
+    # only make the shipped model worse. This is standard practice - evaluate
+    # with cross-validation, ship a model trained on everything.
     all_texts, all_labels = augment(texts, labels, noise_pool, seed=RANDOM_SEED)
     final_model = build_model()
     final_model.fit(all_texts, all_labels)
+
+    vocab_size = len(final_model.named_steps["tfidf"].get_feature_names_out())
+    print(f"\nVocabulary learned: {vocab_size} features (words and word pairs)")
+    show_top_features(final_model)
+
     joblib.dump(final_model, MODEL_PATH)
     print(f"\nSaved model -> {MODEL_PATH.name} (trained on {len(all_texts)} samples, "
           f"{len(final_model.named_steps['clf'].classes_)} categories)")
+
+    evaluate_real_logs(final_model)
+
+
+def evaluate_real_logs(model):
+    """
+    Score the shipped model on real logs it has never seen.
+
+    Every number above comes from our own data - mostly hand-written, and noise
+    added by our own code - so it can flatter the model. data/real_eval.jsonl
+    holds log snippets copied verbatim from public GitHub issues, each with its
+    source URL. They are NEVER used for training (not in DATA_PATHS), which is
+    what makes this the closest thing we have to "how it does in production".
+    """
+    if not REAL_EVAL_PATH.exists():
+        return
+    rows = [json.loads(line) for line in REAL_EVAL_PATH.read_text(encoding="utf-8").splitlines() if line.strip()]
+    predictions = [predict_label(model, row["text"]) for row in rows]
+    pairs = list(zip(predictions, rows))
+    incidents = [(p, row) for p, row in pairs if row["label"] != UNKNOWN_LABEL]
+    healthy = [(p, row) for p, row in pairs if row["label"] == UNKNOWN_LABEL]
+
+    # Reported separately: an incident set this easy (found by searching for
+    # the error text) would otherwise hide false alarms on healthy logs.
+    print(f"\nReal logs from GitHub issues (never trained on)")
+    print("-" * 64)
+    print(f"  incidents correctly categorised   {sum(p == row['label'] for p, row in incidents)}/{len(incidents)}")
+    print(f"  healthy logs with no prediction   {sum(p == UNKNOWN_LABEL for p, _ in healthy)}/{len(healthy)}")
+    for p, row in pairs:
+        if p != row["label"]:
+            print(f"  {row['label']:24} -> {p:24} {row['source']}")
 
 
 if __name__ == "__main__":

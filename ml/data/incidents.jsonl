@@ -554,3 +554,23 @@
 {"label": "missing-config", "text": "Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/app/src/utils/logger.js' imported from /app/src/server.js"}
 {"label": "missing-config", "text": "MountVolume.SetUp failed for volume \"api-keys\": secret \"api-keys\" not found"}
 {"label": "missing-config", "text": "Invalid environment variables: { GROQ_API_KEY: [ 'Required' ] }"}
+{"label": "high-latency", "text": "GET /api/orders 200 7832ms"}
+{"label": "high-latency", "text": "slow request: POST /api/search took 5.6 seconds (threshold 1s)"}
+{"label": "high-latency", "text": "nginx: upstream timed out (110: Connection timed out) while connecting to upstream, upstream: \"http://api:8080/report\""}
+{"label": "high-latency", "text": "HikariPool-1 - Connection is not available, request timed out after 30000ms"}
+{"label": "high-latency", "text": "SequelizeConnectionAcquireTimeoutError: Operation timeout"}
+{"label": "high-latency", "text": "requests.exceptions.ReadTimeout: HTTPConnectionPool(host='ml-service', port=8000): Read timed out. (read timeout=2)"}
+{"label": "high-latency", "text": "slow request: /reports/export/ took 14.2s, 312 SQL queries"}
+{"label": "high-latency", "text": "pg_stat_statements: mean_exec_time 6120 ms for SELECT on events, sequential scan"}
+{"label": "high-latency", "text": "Kong: upstream latency 9870ms, proxy latency 3ms, status 200"}
+{"label": "high-latency", "text": "HPA at max replicas 10, cpu 96% of target, response times still climbing"}
+{"label": "high-latency", "text": "GC pause: stop-the-world 3.4 seconds, request threads stalled"}
+{"label": "high-latency", "text": "envoy: upstream request timeout, response flags UT, duration 15001"}
+{"label": "high-latency", "text": "Redis command GET took 950ms, server blocked during BGSAVE fork"}
+{"label": "high-latency", "text": "ELB 504: backend did not respond within the idle timeout of 60 seconds"}
+{"label": "high-latency", "text": "TimeoutError: Navigation timeout of 30000 ms exceeded"}
+{"label": "high-latency", "text": "Sidekiq job ReportJob ran for 380s, queue latency 12 minutes"}
+{"label": "high-latency", "text": "[WARN] http request to payments-api took 6.3s (budget 800ms)"}
+{"label": "high-latency", "text": "p50 1.2s, p99 14s on /api/search after deploy, database waiting on locks"}
+{"label": "high-latency", "text": "Celery task exceeded soft time limit (300s) while generating report"}
+{"label": "high-latency", "text": "SLOW LOG: 4.87 sec for UPDATE orders SET status = 'paid', waiting for row lock"}
