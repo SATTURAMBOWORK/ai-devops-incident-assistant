@@ -45,9 +45,16 @@ const METRIC_LABELS = {
 
 // Keep only the last MAX_LOG_CHARS characters, and say so, so the model knows
 // it is not seeing the whole picture.
+export const TRUNCATION_NOTE = '[... earlier log lines truncated ...]';
+
 export function trimLogs(logs) {
+  // Idempotent: incident.service trims once (the same text goes to Voyage and
+  // Groq) and buildUserPrompt below trims again for callers that did not.
+  // Without this check the second call would cut another 40 characters off an
+  // already trimmed log and stack a second truncation note on top.
+  if (logs.startsWith(TRUNCATION_NOTE)) return logs;
   if (logs.length <= MAX_LOG_CHARS) return logs;
-  return `[... earlier log lines truncated ...]\n${logs.slice(-MAX_LOG_CHARS)}`;
+  return `${TRUNCATION_NOTE}\n${logs.slice(-MAX_LOG_CHARS)}`;
 }
 
 function buildUserPrompt(logs, metrics, matches) {

@@ -36,6 +36,14 @@ describe('trimLogs', () => {
     assert.ok(trimmed.endsWith('x'.repeat(MAX_LOG_CHARS)));
     assert.ok(!trimmed.includes('old'));
   });
+
+  it('is idempotent: trimming twice changes nothing', () => {
+    // incident.service trims, then buildUserPrompt trims again. A second cut
+    // would drop more log lines and repeat the truncation note.
+    const trimmed = trimLogs('old'.repeat(5000) + 'x'.repeat(MAX_LOG_CHARS));
+
+    assert.equal(trimLogs(trimmed), trimmed);
+  });
 });
 
 describe('analyzeIncident', () => {

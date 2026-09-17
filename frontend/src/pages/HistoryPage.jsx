@@ -79,7 +79,18 @@ export default function HistoryPage() {
               </thead>
               <tbody>
                 {result.items.map((incident) => (
-                  <tr key={incident._id}>
+                  // The sev-* class sets --sev-color, which colours the strip
+                  // down the left of the row (see .table tbody td:first-child).
+                  <tr
+                    key={incident._id}
+                    className={
+                      incident.status === 'failed'
+                        ? 'sev-failed'
+                        : incident.analysis?.severity
+                          ? `sev-${incident.analysis.severity.toLowerCase()}`
+                          : ''
+                    }
+                  >
                     <td>
                       <SeverityBadge severity={incident.analysis?.severity} />
                     </td>

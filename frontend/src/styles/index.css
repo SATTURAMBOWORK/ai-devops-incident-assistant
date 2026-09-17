@@ -8,8 +8,12 @@
   --ink: #16202a;
   --muted: #56636e;
   --line: #d3dae1;
-  --accent: #1f5fad;
+  /* Deep teal, not the usual interface blue. Severity owns the warm half of
+     the spectrum (green - amber - orange - red), so the accent stays cool and
+     cannot be read as a warning. */
+  --accent: #0b6a70;
   --accent-ink: #ffffff;
+  --accent-soft: #daecee;
 
   --sev-low: #2f6e48;
   --sev-low-bg: #e1f0e6;
@@ -38,8 +42,9 @@
     --ink: #e4e9ee;
     --muted: #95a3af;
     --line: #2a3540;
-    --accent: #78aeef;
+    --accent: #5fc6cd;
     --accent-ink: #0f151b;
+    --accent-soft: #10323a;
 
     --sev-low: #7bc596;
     --sev-low-bg: #16301f;
@@ -96,6 +101,17 @@ a {
   outline: 3px solid var(--accent);
   outline-offset: 2px;
 }
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+/* Measurements - timestamps, durations, scores, token counts - are set in the
+   mono face with tabular figures wherever they appear (.cell-date, .meta dd,
+   .facts dd, .match-score, .confidence-value), so digits line up in a column
+   and can be compared down the page. The logs themselves are monospace; the
+   numbers describing them read the same way. */
 
 /* ---------- App frame ---------- */
 
@@ -161,6 +177,21 @@ a {
   border-radius: var(--radius-sm);
   padding: 0.6875rem 1.25rem;
   cursor: pointer;
+}
+
+.button:hover:not(:disabled):not(.button-quiet) {
+  background: color-mix(in oklab, var(--accent) 88%, var(--ink));
+}
+
+.button-quiet:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* A press that moves: on a page where the primary action costs seconds of
+   waiting, it should be obvious the click registered. */
+.button:active:not(:disabled) {
+  transform: translateY(1px);
 }
 
 .button:disabled {
@@ -426,6 +457,17 @@ a {
   border-bottom: 0;
 }
 
+/* The severity strip: the incident page's hazard band, shrunk to a rule down
+   the left of each row, so the list can be scanned by colour before it is
+   read. Failed analyses take the danger colour through the same token. */
+.table tbody td:first-child {
+  border-left: 4px solid var(--sev-color, transparent);
+}
+
+.table tbody tr:hover td {
+  background: var(--field);
+}
+
 .incident-link {
   color: var(--ink);
   font-weight: 600;
@@ -462,7 +504,9 @@ a {
 
 .cell-date {
   color: var(--muted);
-  font-size: 0.875rem;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.8125rem;
   white-space: nowrap;
 }
 
@@ -531,6 +575,8 @@ a {
 .meta dd {
   margin: 0;
   font-weight: 600;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
 }
 
 .lead {
@@ -625,6 +671,8 @@ a {
 }
 
 .confidence-value {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
   font-size: 2.25rem;
   font-weight: 700;
   line-height: 1;
@@ -661,6 +709,8 @@ a {
 
 .match-score {
   color: var(--muted);
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
 
@@ -702,11 +752,16 @@ a {
   color: var(--muted);
 }
 
+/* Values are measurements (durations, token counts, model ids), so they take
+   the mono face and line up on the right edge, column-style. */
 .facts dd {
   margin: 0;
   text-align: right;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
   overflow-wrap: anywhere;
 }
+
 
 .logs {
   margin-top: 0.5rem;
