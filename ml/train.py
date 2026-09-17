@@ -42,7 +42,7 @@ MODEL_PATH = HERE / "model.joblib"
 # tell whether a change to the model helped or you just got a luckier split.
 RANDOM_SEED = 42
 
-# Fraction of the data held back for testing. 0.2 of ~570 rows is ~115
+# Fraction of the data held back for testing. 0.2 of ~640 rows is ~130
 # incidents - still small, which is why we also cross-validate further down.
 TEST_SIZE = 0.2
 
@@ -76,9 +76,10 @@ def build_model():
     API cannot accidentally use different preprocessing than training did.
     """
     vectorizer = TfidfVectorizer(
-        # Lower-cases (OOMKilled, oomkilled -> one feature, not two rare ones)
-        # and masks numbers, so timestamps and PIDs are not features. It lives
-        # in predict.py because the saved model needs to import it again.
+        # Lower-cases (OOMKilled, oomkilled -> one feature, not two rare ones),
+        # drops timestamp/hostname prefixes and masks numbers except meaningful
+        # codes like 137 and 503 - see normalize(). It lives in predict.py
+        # because the saved model needs to import it again.
         preprocessor=normalize,
         # Unigrams alone lose word order: "no space left" and "space" mean
         # different things. Adding bigrams keeps pairs like "address already",
@@ -242,7 +243,7 @@ def main():
 
     print_confusion_matrix(y_test_aug, y_pred, sorted(set(y_test_aug)))
 
-    # A ~115-incident test set is small enough that one lucky or unlucky split
+    # A ~130-incident test set is small enough that one lucky or unlucky split
     # can move accuracy by several points. 5-fold cross-validation retrains the
     # model five times, each time holding out a different fifth, so every
     # incident gets tested exactly once. The spread across folds tells you how

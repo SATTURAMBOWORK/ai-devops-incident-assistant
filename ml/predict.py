@@ -38,19 +38,52 @@ MIN_CONFIDENCE = 0.40
 MIN_ALTERNATIVE_CONFIDENCE = 0.10
 
 
+# Log line prefixes that say WHEN and WHERE, never WHAT went wrong. Left in,
+# they become features: the training noise is 85% from one Linux server, so
+# its hostname "combo" and month names were the top words for "unknown" - the
+# model was partly learning "this server = healthy". Removed per line (re.M),
+# after lower-casing:
+#   syslog   "jun 10 11:31:45 combo kernel: ..."      -> "kernel: ..."
+#   apache   "[sat jun 25 04:04:32 2005] [notice] ..." -> "[notice] ..."
+#   iso      "2026-09-10t10:02:09z api-1 ..."          -> "api-1 ..."
+LINE_PREFIX = re.compile(
+    r"^\s*(?:"
+    r"[a-z]{3} +\d{1,2} \d\d:\d\d:\d\d \S+ +"                  # syslog: date, time, host
+    r"|\[[a-z]{3} [a-z]{3} +\d{1,2} [\d:]+ \d{4}\] +"            # apache: [day month dd time yyyy]
+    r"|\d{4}-\d\d-\d\dt[\d:.]+(?:z|[+-]\d\d:?\d\d)? +"        # iso 8601
+    r")",
+    re.MULTILINE,
+)
+
+# IPs (with an optional port) go before the number rule, so "137.189.90.232"
+# cannot leave a "137" behind that looks like the OOM exit code.
+IP_ADDRESS = re.compile(r"\b\d{1,3}(?:\.\d{1,3}){3}(?::\d+)?\b")
+
+# The few numbers that MEAN something, kept as words. Masking every number hid
+# the strongest clue some categories have:
+#   137 SIGKILL (usually the OOM killer), 139 SIGSEGV, 143 SIGTERM
+#   HTTP status codes: 401/403 auth, 404 missing, 429 rate limit, 5xx server errors
+MEANINGFUL_NUMBERS = frozenset(
+    {"137", "139", "143", "401", "403", "404", "429", "500", "502", "503", "504"}
+)
+NUMBER = re.compile(r"\d+")
+
+
 def normalize(text):
     """
-    Lower-case and replace every number with a space. Used by the vectorizer.
+    Clean a log for the vectorizer: lower-case, drop timestamp/host prefixes,
+    mask IPs, and replace every number with a space except MEANINGFUL_NUMBERS.
 
     Timestamps, PIDs, ports and IPs are different in every log, so as features
-    they only let the model memorise individual training examples. Masking them
-    made the model score better on logs it had never seen.
+    they only let the model memorise individual training examples.
 
     It is a named module-level function, not a lambda, because the vectorizer is
     saved inside model.joblib and pickle can only store functions it can import
     again by name - which is also why main.py must be able to import this file.
     """
-    return re.sub(r"\d+", " ", text.lower())
+    text = LINE_PREFIX.sub("", text.lower())
+    text = IP_ADDRESS.sub(" ", text)
+    return NUMBER.sub(lambda m: m.group() if m.group() in MEANINGFUL_NUMBERS else " ", text)
 
 
 def windows(text, size=WINDOW_LINES):

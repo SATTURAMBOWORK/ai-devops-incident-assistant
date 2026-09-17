@@ -18,6 +18,25 @@ class NormalizeTest(unittest.TestCase):
     def test_lowercases_and_masks_numbers(self):
         self.assertEqual(normalize("OOMKilled pid 4312"), "oomkilled pid  ")
 
+    def test_keeps_meaningful_exit_and_status_codes(self):
+        # 137 = killed (usually OOM), 503 = server error: real clues, not noise.
+        self.assertEqual(normalize("exited with code 137, then 503"), "exited with code 137, then 503")
+
+    def test_masks_ips_whole_so_no_fake_status_code_is_left(self):
+        # Without IP masking first, "137.189.90.232" would leave a "137" behind.
+        self.assertEqual(normalize("from 137.189.90.232:22 ok"), "from   ok")
+
+    def test_drops_syslog_timestamp_and_hostname(self):
+        # The hostname was a top feature for "unknown" before this was removed.
+        self.assertEqual(
+            normalize("Jun 10 11:31:45 combo kernel: Out of Memory\nDec  1 04:02:01 LabSZ sshd[42]: ok"),
+            "kernel: out of memory\nsshd[ ]: ok",
+        )
+
+    def test_drops_apache_and_iso_timestamps(self):
+        self.assertEqual(normalize("[Sat Jun 25 04:04:32 2005] [notice] up"), "[notice] up")
+        self.assertEqual(normalize("2026-09-10T10:02:09Z api 504"), "api 504")
+
     def test_can_be_pickled_by_name(self):
         # The vectorizer inside model.joblib stores this function by reference.
         # A lambda here would make joblib.dump fail during training.

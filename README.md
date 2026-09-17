@@ -151,7 +151,7 @@ category exists in the training data, the runbook and the frontend.
 
 | Source | Rows | Notes |
 |---|---|---|
-| [`ml/data/incidents.jsonl`](ml/data/incidents.jsonl) | 496 | Hand-written, ~40 per category, varied across Node, Python, Go, Java, nginx, Docker, Kubernetes |
+| [`ml/data/incidents.jsonl`](ml/data/incidents.jsonl) | 556 | Hand-written, ~40 per category (60 for the three hardest), varied across Node, Python, Go, Java, nginx, Docker, Kubernetes |
 | [`ml/data/loghub_incidents.jsonl`](ml/data/loghub_incidents.jsonl) | 80 | **Real** incidents from [Loghub](https://github.com/logpai/loghub): 40 kernel OOM kills (Linux) and 40 SSH brute-force attacks |
 | [`ml/data/noise_lines.txt`](ml/data/noise_lines.txt) | 1,764 lines | Real healthy log lines from Loghub Apache, Linux and SSH logs, with every line mentioning any category filtered out |
 
@@ -172,14 +172,35 @@ window and keeps the strongest incident signal, answering "no prediction" when
 nothing reaches 40% confidence. Training and the API both use this file, so the
 reported accuracy is the accuracy served.
 
-### Results (held-out test set)
+Before vectorizing, `normalize()` lower-cases the log, drops timestamp and
+hostname prefixes, masks IPs, and masks numbers **except** meaningful codes
+(`137`/`139`/`143` exit codes, `401`/`403`/`404`/`429`/`5xx` HTTP statuses).
 
-| Kind of log | Whole-log model | Windowed model (shipped) |
+### Results
+
+**Windowing** (v2.0, held-out test set on the original 576 incidents):
+
+| Kind of log | Whole-log model | Windowed model |
 |---|---|---|
 | Error buried in noise | 46% | **69%** |
 | Healthy log → no prediction | 53% | **86%** |
 | Clean error snippet | 83% | 78% |
 | 5-fold cross-validation | 56% | **70%** |
+
+**Accuracy fixes** (v2.1, shipped). Each change measured on its own with the
+same 5 cross-validation folds - a single test split was misleading here, because
+adding data changes which incidents land in the test set:
+
+| | CV accuracy | crash-loop | dns | missing-config | oom-killed |
+|---|---|---|---|---|---|
+| v2.0 | 70.2% | 0.51 | 0.74 | 0.53 | 0.87 |
+| + keep meaningful numbers, drop hostnames | 72.3% | 0.52 | 0.74 | 0.57 | 0.88 |
+| + 60 examples for the 3 weakest classes, 2 mislabels fixed | **75.6%** | **0.75** | **0.85** | **0.78** | 0.87 |
+
+The hostname fix mattered beyond the score: the top features for `unknown` were
+the noise server's hostname (`combo`) and month names - the model was partly
+learning "this server means healthy". They are now ordinary log words, and
+`137` is a top feature for `oom-killed`.
 
 When the model is wrong it mostly returns *no prediction* rather than a wrong
 category: precision is 0.8-1.0 for most categories.
@@ -189,12 +210,13 @@ category: precision is 0.8-1.0 for most categories.
 - 11 of 13 categories rely on hand-written examples; only `oom-killed` and
   `auth-brute-force` have real data. Accuracy on real production logs will be
   lower than the numbers above.
-- `crash-loop`, `dns-resolution-failure` and `missing-config` have the lowest
-  recall (~50%).
-- Numbers are masked during training, which also hides useful codes such as
-  `500`, `504` and exit code `137`.
-- 85% of noise comes from one Linux server, so the `unknown` class partly keys
-  on that server's hostname.
+- `high-latency` has the lowest recall (0.45), then `db-connection-refused` and
+  `error-rate-spike` (0.65) - the next candidates for more examples.
+- Healthy logs correctly get no prediction 83% of the time in cross-validation,
+  down from 91%. The drop came with the new data, not the normalize change -
+  likely because generic crash-loop lines such as "exited with code 1" make it
+  quicker to call ordinary logs an incident.
+- 85% of noise lines still come from one Linux server's kinds of messages.
 
 ## Build progress
 

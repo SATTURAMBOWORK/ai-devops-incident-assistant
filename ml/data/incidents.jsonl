@@ -176,10 +176,10 @@
 {"label": "crash-loop", "text": "State: Waiting\n  Reason: CrashLoopBackOff\nLast State: Terminated\n  Exit Code: 1"}
 {"label": "missing-config", "text": "ModuleNotFoundError: No module named 'fastapi'\nContainer exited, restarting in 10s"}
 {"label": "crash-loop", "text": "panic: runtime error: invalid memory address or nil pointer dereference\n[signal SIGSEGV]\nexit status 2"}
-{"label": "crash-loop", "text": "Error: connect ECONNREFUSED at startup, process.exit(1) called from bootstrap"}
+{"label": "db-connection-refused", "text": "Error: connect ECONNREFUSED at startup, process.exit(1) called from bootstrap"}
 {"label": "crash-loop", "text": "pm2: App [worker:2] exited with code [1], restarting (restart #38)"}
 {"label": "missing-config", "text": "npm ERR! Missing script: \"start\"\ncontainer exits immediately, docker restart policy retrying"}
-{"label": "crash-loop", "text": "Error: Invalid DATABASE_URL format, cannot boot. Exiting with status 1."}
+{"label": "missing-config", "text": "Error: Invalid DATABASE_URL format, cannot boot. Exiting with status 1."}
 {"label": "crash-loop", "text": "exec /usr/local/bin/docker-entrypoint.sh: exec format error\ncontainer restarting repeatedly"}
 {"label": "crash-loop", "text": "AssertionError at import time in settings.py, uvicorn never reached serving state"}
 {"label": "crash-loop", "text": "restart backoff 10s, 20s, 40s, 80s - container has never stayed up longer than 3 seconds"}
@@ -494,3 +494,63 @@
 {"label": "auth-brute-force", "text": "Login failed for user 'sa'. Reason: Password did not match. [CLIENT: 89.248.165.52] - 5000 occurrences"}
 {"label": "auth-brute-force", "text": "credential stuffing detected: 12000 failed logins across 9000 accounts from 300 IPs in 1 hour"}
 {"label": "auth-brute-force", "text": "sshd: Disconnecting: Too many authentication failures for root from 61.177.172.13 port 22 ssh2"}
+{"label": "crash-loop", "text": "Warning  BackOff  3m (x41 over 13m)  kubelet  Back-off restarting failed container app in pod app-5d9c"}
+{"label": "crash-loop", "text": "api-1 exited with code 1\napi-1 exited with code 1\napi-1 exited with code 1"}
+{"label": "crash-loop", "text": "docker compose ps: worker   restarting   Restarting (2) 9 seconds ago"}
+{"label": "crash-loop", "text": "kubectl describe pod web-6b7: Last State: Terminated, Reason: Error, Exit Code: 2, Restart Count: 27"}
+{"label": "crash-loop", "text": "systemd[1]: worker.service: Main process exited, code=exited, status=1/FAILURE\nsystemd[1]: worker.service: Scheduled restart job, restart counter is at 14."}
+{"label": "crash-loop", "text": "ECS: Essential container in task exited. Service scheduler starting replacement task (attempt 18)"}
+{"label": "crash-loop", "text": "Container restarted 52 times in 1 hour, never passed readiness probe"}
+{"label": "crash-loop", "text": "Traceback (most recent call last):\n  File \"/app/worker.py\", line 88, in run\nRuntimeError: event loop is closed\nworker exited, supervisor respawning"}
+{"label": "crash-loop", "text": "pm2: App [api:0] exited with code [255]\npm2: App [api:0] starting in -fork mode-\npm2: App [api:0] exited with code [255]"}
+{"label": "crash-loop", "text": "Readiness probe failed, container keeps cycling: Running -> Error -> CrashLoopBackOff"}
+{"label": "crash-loop", "text": "Unhandled exception: System.NullReferenceException at Program.Main\nApplication exited with code 134, restarting"}
+{"label": "crash-loop", "text": "celery worker died unexpectedly (exitcode 1), restarting worker process, 9th restart this hour"}
+{"label": "crash-loop", "text": "Nomad: task \"api\" failed, restarting in 15s (restart 6 of 10)"}
+{"label": "crash-loop", "text": "pod payments-7c9 BackOff, container terminated with exit code 1 after 2 seconds"}
+{"label": "crash-loop", "text": "docker events: container die exitCode=1, container start, container die exitCode=1"}
+{"label": "crash-loop", "text": "thread 'main' panicked at 'called Option::unwrap() on a None value', src/main.rs:42\ncontainer restarting"}
+{"label": "crash-loop", "text": "Heroku: State changed from starting to crashed\nProcess exited with status 1\nState changed from crashed to starting"}
+{"label": "crash-loop", "text": "Error: Application failed to start, exiting. [restart 11, back-off 2m40s]"}
+{"label": "crash-loop", "text": "OpenShift: pod api-3 CrashLoopBackOff, 0/1 ready, 19 restarts"}
+{"label": "crash-loop", "text": "worker keeps dying right after boot: started -> exited(1) -> started -> exited(1), restart policy unless-stopped"}
+{"label": "dns-resolution-failure", "text": "Error: getaddrinfo ENOTFOUND auth-db\n    at GetAddrInfoReqWrap.onlookup [as oncomplete]"}
+{"label": "dns-resolution-failure", "text": "Warning: DNS lookup for inventory-api.default.svc.cluster.local failed"}
+{"label": "dns-resolution-failure", "text": "dial tcp: lookup payments.internal on 10.96.0.10:53: no such host"}
+{"label": "dns-resolution-failure", "text": "failed to resolve 'rabbitmq': Name does not resolve"}
+{"label": "dns-resolution-failure", "text": "java.net.UnknownHostException: kafka-broker-1: Temporary failure in name resolution"}
+{"label": "dns-resolution-failure", "text": "psycopg2.OperationalError: could not translate host name \"db-primary\" to address: Name or service not known"}
+{"label": "dns-resolution-failure", "text": "npm ERR! code EAI_AGAIN\nnpm ERR! request to https://registry.npmjs.org/express failed, reason: getaddrinfo EAI_AGAIN registry.npmjs.org"}
+{"label": "dns-resolution-failure", "text": "fatal: unable to access 'https://github.com/org/repo.git/': Could not resolve host: github.com"}
+{"label": "dns-resolution-failure", "text": "SocketError: getaddrinfo: nodename nor servname provided, or not known (redis.internal)"}
+{"label": "dns-resolution-failure", "text": "httpx.ConnectError: [Errno -2] Name or service not known (host: search-api)"}
+{"label": "dns-resolution-failure", "text": "coredns: [ERROR] plugin/forward: no healthy upstreams, SERVFAIL for payments.svc.cluster.local"}
+{"label": "dns-resolution-failure", "text": "grpc: name resolution failed for target dns:///orders-service:50051"}
+{"label": "dns-resolution-failure", "text": "UnknownEndpoint: Inaccessible host: `sqs.us-east-1.amazonaws.com'. DNS lookup failed"}
+{"label": "dns-resolution-failure", "text": "nameserver 10.0.0.2 unreachable, all lookups returning SERVFAIL"}
+{"label": "dns-resolution-failure", "text": "MongoServerSelectionError: getaddrinfo ENOTFOUND mongodb - service name not resolvable after docker network rename"}
+{"label": "dns-resolution-failure", "text": "Host mail.internal not found: 3(NXDOMAIN)"}
+{"label": "dns-resolution-failure", "text": "Failed to establish a new connection: [Errno -3] Temporary failure in name resolution (api.partner.com)"}
+{"label": "dns-resolution-failure", "text": "System.Net.Sockets.SocketException (11001): No such host is known."}
+{"label": "dns-resolution-failure", "text": "Kafka: Couldn't resolve server kafka:9092 from bootstrap.servers as DNS resolution failed for kafka"}
+{"label": "dns-resolution-failure", "text": "elasticsearch: lookup es-node-2 on 127.0.0.53:53: no such host, marking node dead"}
+{"label": "missing-config", "text": "Error: Missing environment variable JWT_SECRET. Did you forget to create .env?"}
+{"label": "missing-config", "text": "KeyError: 'AWS_REGION' during settings import\nworker failed to boot"}
+{"label": "missing-config", "text": "config error: required key \"database.host\" not found in config.yaml"}
+{"label": "missing-config", "text": "Error: ENOENT: no such file or directory, open '/run/secrets/db_password'"}
+{"label": "missing-config", "text": "Could not resolve placeholder 'db.password' in value \"${db.password}\""}
+{"label": "missing-config", "text": "Error: STRIPE_SECRET_KEY is not defined in process.env"}
+{"label": "missing-config", "text": "django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty."}
+{"label": "missing-config", "text": "env var PORT not set and no default provided - refusing to start"}
+{"label": "missing-config", "text": "CreateContainerConfigError: configmap \"app-settings\" not found"}
+{"label": "missing-config", "text": "Error: Cannot find module 'bcrypt'\nRequire stack:\n- /app/src/services/auth.service.js"}
+{"label": "missing-config", "text": "ModuleNotFoundError: No module named 'uvicorn'\ncontainer exited with code 1"}
+{"label": "missing-config", "text": "panic: open config/prod.toml: no such file or directory"}
+{"label": "missing-config", "text": "docker compose: env file /app/backend/.env not found"}
+{"label": "missing-config", "text": "No application encryption key has been specified. APP_KEY is missing"}
+{"label": "missing-config", "text": "Error: Could not load the default credentials. GOOGLE_APPLICATION_CREDENTIALS is not set."}
+{"label": "missing-config", "text": "Error: No value for required variable \"db_password\""}
+{"label": "missing-config", "text": "Missing `secret_key_base` for 'production' environment"}
+{"label": "missing-config", "text": "Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/app/src/utils/logger.js' imported from /app/src/server.js"}
+{"label": "missing-config", "text": "MountVolume.SetUp failed for volume \"api-keys\": secret \"api-keys\" not found"}
+{"label": "missing-config", "text": "Invalid environment variables: { GROQ_API_KEY: [ 'Required' ] }"}

@@ -34,7 +34,7 @@ TOP_K = 3
 # Bump whenever the algorithm, the categories or the way predictions are made
 # changes. Incidents store it (Incident.classification.modelVersion), so without
 # a bump, answers from the old 8-category model and this one look identical.
-MODEL_VERSION = "tfidf-logreg-windowed-2.0.0"
+MODEL_VERSION = "tfidf-logreg-windowed-2.1.0"
 
 # Filled in at startup by the lifespan handler below.
 state = {"model": None}
