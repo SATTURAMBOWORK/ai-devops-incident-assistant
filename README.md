@@ -111,9 +111,26 @@ cd backend && npm test                                    # Node test runner, fa
 cd ml && python -m unittest discover -s tests -t . -v    # fake model, no training needed
 ```
 
-CI runs both suites in parallel on every push and pull request, and also trains
-the model end to end so a broken dataset fails CI rather than the Docker build.
-No API keys are needed in CI.
+No API keys are needed to run the tests.
+
+## CI
+
+```mermaid
+flowchart LR
+    BT[Backend tests] --> D[Build 3 Docker images]
+    MT[ML tests + training] --> D
+    FB[Frontend build] --> D
+    D -- push to main only --> P[Push to GHCR<br/>sha- and latest tags]
+```
+
+[`ci-cd.yml`](.github/workflows/ci-cd.yml) runs on every push and pull request:
+backend tests, ML tests plus a full training run, and a frontend build run in
+parallel. Only if all three pass are the backend, frontend and ML images built,
+so a pull request also proves the Dockerfiles still work. For a push to `main`
+the images are pushed to GitHub Container Registry, tagged with the commit
+(`sha-abc1234`) and `latest`.
+
+Deployment is out of scope: the pipeline stops at tested, ready-to-run images.
 
 ## The ML classifier
 
@@ -190,5 +207,4 @@ category: precision is 0.8-1.0 for most categories.
 - [x] Step 7 - React frontend
 - [x] ML classifier service - data, training, windowed prediction, tests
 - [x] Step 8 - Docker + Compose
-- [ ] Step 9 - GitHub Actions (backend + ML tests done; frontend build and image push to do)
-- [ ] Step 10 - Deploy
+- [x] Step 9 - GitHub Actions CI (tests, frontend build, Docker image build and push)

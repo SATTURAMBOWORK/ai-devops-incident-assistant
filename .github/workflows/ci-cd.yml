@@ -6,7 +6,7 @@
 #
 # Every push and pull request runs all of it. Images are only PUSHED for a push
 # to main, so a pull request proves the images build without publishing them.
-# Step 10: + deploy the pushed images (needs: docker, main branch only).
+# There is no deploy job: the project stops at ready-to-run images.
 
 name: CI/CD
 
@@ -135,8 +135,8 @@ jobs:
         run: npm run build
 
   # Builds the three images and, for main only, pushes them to GitHub Container
-  # Registry (ghcr.io). This is the "delivery" half of CD: every green commit on
-  # main becomes a ready-to-run image that a deploy step (or a person) can pull.
+  # Registry (ghcr.io): every green commit on main becomes a ready-to-run image
+  # that anyone can pull, without building it themselves.
   docker:
     name: Docker image (${{ matrix.image }})
     runs-on: ubuntu-latest
@@ -180,8 +180,7 @@ jobs:
 
       # Works out image names and tags. It also lowercases the name, which ghcr
       # requires (the repo owner has capitals).
-      #   sha-<short commit>  - exact, never changes: what a deploy should use,
-      #                         and what you roll back to.
+      #   sha-<short commit>  - exact, never changes: points at one commit.
       #   latest              - moves with main: handy for `docker pull` in a demo.
       - name: Image names and tags
         id: meta
@@ -206,6 +205,3 @@ jobs:
           # builds do not overwrite each other's cache.
           cache-from: type=gha,scope=${{ matrix.image }}
           cache-to: type=gha,mode=max,scope=${{ matrix.image }}
-
-  # TODO (Step 10): deploy job - deploy the sha- tagged images
-  #   (needs: docker, if: github.ref == 'refs/heads/main' && github.event_name == 'push')
