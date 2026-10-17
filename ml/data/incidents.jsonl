@@ -1,6 +1,4 @@
-{"label": "oom-killed", "text": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory\n<--- Last few GCs --->\n[1:0x5a] 41200 ms: Mark-sweep 2043.1 (2077.4) -> 2042.3 MB"}
 {"label": "oom-killed", "text": "container exited with code 137\ndocker inspect api: State.OOMKilled: true"}
-{"label": "oom-killed", "text": "kubectl describe pod api-7f9: Last State: Terminated  Reason: OOMKilled  Exit Code: 137"}
 {"label": "oom-killed", "text": "Killed\nnpm ERR! code ELIFECYCLE\nnpm ERR! errno 137"}
 {"label": "oom-killed", "text": "memory usage 98.7% of limit 512Mi\ncgroup out of memory: Killed process 1 (node)"}
 {"label": "oom-killed", "text": "worker 4 exceeded memory limit and was restarted rss=1.9GB limit=2GB"}
@@ -11,19 +9,14 @@
 {"label": "oom-killed", "text": "ERROR: container api-server terminated reason=OOMKilled exitCode=137 restartCount=3"}
 {"label": "oom-killed", "text": "systemd[1]: api.service: A process of this unit has been killed by the OOM killer."}
 {"label": "oom-killed", "text": "memory_usage_bytes hit the 1024Mi ceiling, container terminated immediately after"}
-{"label": "oom-killed", "text": "java.lang.OutOfMemoryError: GC overhead limit exceeded"}
 {"label": "oom-killed", "text": "java.lang.OutOfMemoryError: Metaspace\n  at java.lang.ClassLoader.defineClass1(Native Method)"}
 {"label": "oom-killed", "text": "MemoryError\n  File \"/app/etl/load.py\", line 55, in read_all\n    rows = f.readlines()"}
 {"label": "oom-killed", "text": "kernel: Memory cgroup out of memory: Kill process 4102 (java) score 1823 or sacrifice child"}
 {"label": "oom-killed", "text": "Warning  OOMKilling  kubelet  Memory cgroup out of memory: Killed process 1 (gunicorn)"}
 {"label": "oom-killed", "text": "exit status 137\nservice api stopped unexpectedly after memory limit exceeded"}
-{"label": "oom-killed", "text": "<--- JS stacktrace --->\nFATAL ERROR: MarkCompactCollector: young object promotion failed Allocation failed"}
-{"label": "oom-killed", "text": "container_memory_working_set_bytes 2.01e9 / limit 2.00e9, OOMKilled shortly after"}
 {"label": "oom-killed", "text": "docker stats: MEM USAGE / LIMIT  1.98GiB / 2GiB   MEM % 99.12%\ncontainer killed"}
-{"label": "oom-killed", "text": "runtime: out of memory: cannot allocate 1073741824-byte block (heap)\nfatal error: out of memory"}
 {"label": "oom-killed", "text": "Last State:     Terminated\n  Reason:       OOMKilled\n  Exit Code:    137\n  Started:      Mon, 08 Sep 2026 04:12:09 +0000"}
 {"label": "oom-killed", "text": "heap used 2038MB of max-old-space-size 2048MB, allocation failed, process aborted"}
-{"label": "oom-killed", "text": "ERROR worker exited with OOM, spawning replacement worker (3rd time this hour)"}
 {"label": "oom-killed", "text": "node --max-old-space-size=4096 still hitting heap limit, container memory limit is 2Gi"}
 {"label": "oom-killed", "text": "Terminating: OOM\nmemory.max exceeded in cgroup /docker/8a2f, killed pid 1"}
 {"label": "oom-killed", "text": "Process finished with exit code 137 (interrupted by signal 9: SIGKILL)"}
@@ -31,30 +24,22 @@
 {"label": "oom-killed", "text": "OOMKilled\nrestartCount: 7\nmemory request 256Mi limit 256Mi"}
 {"label": "oom-killed", "text": "npm ERR! JavaScript heap out of memory during build step, webpack aborted"}
 {"label": "oom-killed", "text": "Redis: OOM command not allowed when used memory > maxmemory"}
-{"label": "oom-killed", "text": "Fatal Python error: Cannot allocate memory\nCurrent thread 0x00007f2a (most recent call first)"}
 {"label": "oom-killed", "text": "free -m shows 120MB available before the crash, swap disabled, process killed by kernel"}
 {"label": "oom-killed", "text": "signal SIGKILL received from kernel oom-killer, container restarting"}
 {"label": "oom-killed", "text": "gunicorn WORKER TIMEOUT then Killed, memory grew to the cgroup ceiling before each kill"}
 {"label": "oom-killed", "text": "Exception in thread main java.lang.OutOfMemoryError: unable to create new native thread"}
-{"label": "oom-killed", "text": "ERR OOM: allocation of 512MB failed, current usage 3.9GB of 4GB limit"}
 {"label": "oom-killed", "text": "Reason: OOMKilled | ExitCode: 137 | Message: container was killed due to memory usage"}
 {"label": "db-connection-refused", "text": "MongoServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017"}
 {"label": "db-connection-refused", "text": "MongoNetworkError: failed to connect to server [cluster0.mongodb.net:27017] on first connect"}
 {"label": "db-connection-refused", "text": "Error: connect ETIMEDOUT 10.0.3.12:5432\n  at Connection._handleConnectError"}
 {"label": "db-connection-refused", "text": "psql: FATAL: password authentication failed for user \"app\""}
 {"label": "db-connection-refused", "text": "com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure to 3306"}
-{"label": "db-connection-refused", "text": "FATAL: sorry, too many clients already"}
 {"label": "db-connection-refused", "text": "MongoServerError: Authentication failed. bad auth : authentication failed"}
 {"label": "db-connection-refused", "text": "connection refused on port 27017, retrying in 5s (attempt 7)"}
 {"label": "dns-resolution-failure", "text": "Error: getaddrinfo ENOTFOUND db.internal\n  at GetAddrInfoReqWrap.onlookup"}
 {"label": "db-connection-refused", "text": "pool exhausted: could not acquire connection within 30000ms, 100/100 connections in use"}
 {"label": "db-connection-refused", "text": "MongoNetworkTimeoutError while reading from the primary replica"}
-{"label": "db-connection-refused", "text": "MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. IP not whitelisted."}
-{"label": "db-connection-refused", "text": "PG::ConnectionBad: could not connect to server: Connection refused. Is the server running on host db (172.18.0.2) and accepting TCP/IP connections on port 5432?"}
-{"label": "db-connection-refused", "text": "readiness probe failing: ECONNREFUSED to database host on every attempt"}
-{"label": "db-connection-refused", "text": "sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not connect to server"}
 {"label": "db-connection-refused", "text": "redis.exceptions.ConnectionError: Error 111 connecting to redis:6379. Connection refused."}
-{"label": "db-connection-refused", "text": "ECONNRESET reading from socket to mysql:3306, connection lost during query"}
 {"label": "db-connection-refused", "text": "MongoServerSelectionError: Server selection timed out after 30000 ms\n  topology: ReplicaSetNoPrimary"}
 {"label": "db-connection-refused", "text": "ERROR 2003 (HY000): Can't connect to MySQL server on 'db' (111)"}
 {"label": "db-connection-refused", "text": "org.postgresql.util.PSQLException: FATAL: remaining connection slots are reserved"}
@@ -73,7 +58,6 @@
 {"label": "db-connection-refused", "text": "Too many connections\nmax_connections=151 reached on mysql instance"}
 {"label": "db-connection-refused", "text": "MongoTimeoutError: Server selection timed out, no primary available in replica set rs0"}
 {"label": "db-connection-refused", "text": "Connection pool for db:5432 is full, waiting clients 84, acquire timeout exceeded"}
-{"label": "db-connection-refused", "text": "ECONNREFUSED while running migrations against the database, aborting"}
 {"label": "db-connection-refused", "text": "mongosh: MongoNetworkError: connect ECONNREFUSED ::1:27017, ensure mongod is running"}
 {"label": "db-connection-refused", "text": "database connection lost mid-transaction: server closed the connection unexpectedly"}
 {"label": "db-connection-refused", "text": "Error: SASL authentication failed for user app against admin database"}
@@ -83,14 +67,10 @@
 {"label": "disk-full", "text": "PANIC: could not write to file pg_wal/xlogtemp.123: No space left on device"}
 {"label": "disk-full", "text": "docker: failed to create image: disk quota exceeded"}
 {"label": "disk-full", "text": "MongoDB: Insufficient free space for journal files, shutting down"}
-{"label": "disk-full", "text": "nginx: [emerg] open() /var/log/nginx/access.log failed (28: No space left on device)"}
 {"label": "disk-full", "text": "write ENOSPC while rotating logs, log volume at 100% capacity"}
 {"label": "disk-full", "text": "Filesystem /var/lib/docker at 97%, image pull failed: no space left on device"}
-{"label": "disk-full", "text": "Error response from daemon: mkdir /var/lib/docker/overlay2: no space left on device"}
 {"label": "disk-full", "text": "elasticsearch flood stage disk watermark [95%] exceeded, index set to read-only"}
-{"label": "disk-full", "text": "Cannot save upload: ENOSPC, 0 bytes available on /data"}
 {"label": "disk-full", "text": "du -sh /var/log/*\n41G /var/log/app.log\nlog rotation not configured"}
-{"label": "disk-full", "text": "sqlite3.OperationalError: database or disk is full"}
 {"label": "disk-full", "text": "backup job failed: tar: write error: No space left on device"}
 {"label": "disk-full", "text": "OSError: [Errno 28] No space left on device\n  File \"/app/export.py\", line 31, in write_csv"}
 {"label": "disk-full", "text": "IOError: cannot write file, filesystem /data mounted read-only after ENOSPC"}
@@ -98,24 +78,19 @@
 {"label": "disk-full", "text": "Evicted: The node was low on resource: ephemeral-storage"}
 {"label": "disk-full", "text": "java.io.IOException: No space left on device\n  at java.io.FileOutputStream.writeBytes(Native Method)"}
 {"label": "disk-full", "text": "df -i\n/dev/sda1  3.2M  3.2M  0  100% IUSE  /var\ninodes exhausted, cannot create files"}
-{"label": "disk-full", "text": "docker system df shows 68GB reclaimable in dangling images, host volume full"}
 {"label": "disk-full", "text": "ERROR: could not extend file \"base/16384/2601\": No space left on device"}
 {"label": "disk-full", "text": "mongod: Assertion failure, insufficient disk space to allocate new datafile"}
 {"label": "disk-full", "text": "npm ERR! ENOSPC: no space left on device, mkdir '/root/.npm/_cacache'"}
-{"label": "disk-full", "text": "failed to write core dump: disk full, /var/crash unavailable"}
 {"label": "disk-full", "text": "ENOSPC: System limit for number of file watchers reached, /app not writable"}
 {"label": "disk-full", "text": "prometheus: opening storage failed: write /data/wal: no space left on device"}
 {"label": "disk-full", "text": "jenkins workspace cleanup failed, /var/jenkins_home at 100%, builds queued"}
 {"label": "disk-full", "text": "Error writing to file: quota exceeded for volume pvc-8812 (10Gi limit)"}
-{"label": "disk-full", "text": "logrotate: error creating output file /var/log/app.log.1: No space left on device"}
 {"label": "disk-full", "text": "S3 sync to local cache aborted, target filesystem reports 0 blocks free"}
 {"label": "disk-full", "text": "cp: error writing '/backup/dump.sql': No space left on device"}
 {"label": "disk-full", "text": "InfluxDB shard write failed: engine: no space left on device"}
 {"label": "disk-full", "text": "apt-get install failed: You don't have enough free space in /var/cache/apt/archives/"}
 {"label": "disk-full", "text": "overlay filesystem full: 100% used on /var/lib/containerd, pod creation failing"}
-{"label": "disk-full", "text": "rsync: write failed on \"/mnt/data/archive.tar\": No space left on device (28)"}
 {"label": "disk-full", "text": "ENOSPC on /tmp, multipart upload could not buffer the incoming file"}
-{"label": "disk-full", "text": "Disk pressure detected on node worker-3, kubelet evicting pods to reclaim ephemeral storage"}
 {"label": "disk-full", "text": "mysqld: Disk is full writing './binlog.000042'. Waiting for someone to free some space"}
 {"label": "disk-full", "text": "fluentd buffer overflow: total buffer size limit reached, disk buffer path full"}
 {"label": "port-in-use", "text": "Error: listen EADDRINUSE: address already in use :::5000"}
@@ -133,7 +108,6 @@
 {"label": "port-in-use", "text": "Uvicorn error: [Errno 48] Address already in use"}
 {"label": "port-in-use", "text": "web server aborted at boot: address already in use, no requests served"}
 {"label": "port-in-use", "text": "Error: listen EADDRINUSE: address already in use 0.0.0.0:8000\n  at Server.setupListenHandle"}
-{"label": "port-in-use", "text": "netstat -ano | findstr :5000\n  TCP  0.0.0.0:5000  LISTENING  14822"}
 {"label": "port-in-use", "text": "Ports are not available: exposing port TCP 0.0.0.0:3306 -> 0.0.0.0:0: listen tcp 0.0.0.0:3306: bind: An attempt was made to access a socket in a way forbidden by its access permissions."}
 {"label": "port-in-use", "text": "socket.error: [Errno 48] Address already in use, Flask dev server could not start"}
 {"label": "port-in-use", "text": "Web server failed to start. Port 8080 was already in use."}
@@ -143,28 +117,18 @@
 {"label": "port-in-use", "text": "Address already in use - bind(2) for \"0.0.0.0\" port 3000 (Errno::EADDRINUSE)"}
 {"label": "port-in-use", "text": "vite: Port 5173 is in use, trying another one..."}
 {"label": "port-in-use", "text": "error: bind EADDRINUSE null:6379, redis-server shutting down"}
-{"label": "port-in-use", "text": "Failed to bind to address http://0.0.0.0:5001: address already in use."}
 {"label": "port-in-use", "text": "kill -9 14822 freed port 5000, the previous run had never released the socket"}
-{"label": "port-in-use", "text": "Error: EADDRINUSE, another process is listening on the port defined in PORT env var"}
-{"label": "port-in-use", "text": "gunicorn: Connection in use: ('0.0.0.0', 8000)\nRetrying in 1 second."}
 {"label": "port-in-use", "text": "systemd: api.service: Failed to listen on socket: Address already in use"}
 {"label": "port-in-use", "text": "Cannot start service backend: Ports are not available: port is already allocated"}
-{"label": "port-in-use", "text": "listen tcp 127.0.0.1:9090: bind: address already in use, prometheus exited"}
 {"label": "port-in-use", "text": "ERROR: for frontend  Cannot start service frontend: driver failed programming external connectivity on endpoint"}
-{"label": "port-in-use", "text": "bind() to [::]:8443 failed (98: Address already in use), configuration reload aborted"}
 {"label": "port-in-use", "text": "process 8812 already holds the listening socket, new instance refused to bind"}
 {"label": "port-in-use", "text": "npm start: Something is already running on port 3000."}
 {"label": "port-in-use", "text": "EADDRINUSE :::5000 raised during server.listen(), stack shows listenInCluster"}
 {"label": "port-in-use", "text": "docker ps shows two containers publishing host port 8080, second failed to start"}
 {"label": "port-in-use", "text": "Fatal error: unable to bind listening socket, address already in use"}
-{"label": "port-in-use", "text": "sshd: error: Bind to port 22 on 0.0.0.0 failed: Address already in use."}
-{"label": "crash-loop", "text": "Back-off restarting failed container api in pod api-7f9"}
 {"label": "crash-loop", "text": "pod status CrashLoopBackOff, restartCount: 12"}
-{"label": "missing-config", "text": "Error: Cannot find module 'express'\n  at Function.Module._resolveFilename\nnpm ERR! exited with code 1"}
-{"label": "missing-config", "text": "Config validation error: MONGO_URI is required. Process exited with code 1"}
 {"label": "crash-loop", "text": "container exited with code 1 six times in two minutes"}
 {"label": "missing-config", "text": "TypeError: Cannot read properties of undefined (reading 'apiKey')\n  at file:///app/src/config/env.js:12"}
-{"label": "crash-loop", "text": "CrashLoopBackOff, last state terminated with exit code 1, began right after deploy"}
 {"label": "crash-loop", "text": "SyntaxError: Unexpected token in JSON at position 0 while loading config on startup"}
 {"label": "crash-loop", "text": "systemd[1]: api.service: Scheduled restart job, restart counter is at 9."}
 {"label": "crash-loop", "text": "docker logs --previous: ReferenceError: fetch is not defined, then process exits"}
@@ -176,7 +140,6 @@
 {"label": "crash-loop", "text": "State: Waiting\n  Reason: CrashLoopBackOff\nLast State: Terminated\n  Exit Code: 1"}
 {"label": "missing-config", "text": "ModuleNotFoundError: No module named 'fastapi'\nContainer exited, restarting in 10s"}
 {"label": "crash-loop", "text": "panic: runtime error: invalid memory address or nil pointer dereference\n[signal SIGSEGV]\nexit status 2"}
-{"label": "db-connection-refused", "text": "Error: connect ECONNREFUSED at startup, process.exit(1) called from bootstrap"}
 {"label": "crash-loop", "text": "pm2: App [worker:2] exited with code [1], restarting (restart #38)"}
 {"label": "missing-config", "text": "npm ERR! Missing script: \"start\"\ncontainer exits immediately, docker restart policy retrying"}
 {"label": "missing-config", "text": "Error: Invalid DATABASE_URL format, cannot boot. Exiting with status 1."}
@@ -189,8 +152,6 @@
 {"label": "missing-config", "text": "Unhandled exception during startup: KeyError: 'REDIS_URL'\nProcess exited with code 1"}
 {"label": "crash-loop", "text": "systemd: api.service: Start request repeated too quickly. Failed with result 'exit-code'."}
 {"label": "crash-loop", "text": "Error: The server has not been started or is already stopped, exit 1 immediately after boot"}
-{"label": "crash-loop", "text": "docker inspect: RestartCount 41, State.Status restarting, State.ExitCode 1"}
-{"label": "crash-loop", "text": "prisma: Schema engine error, migrate deploy failed at startup, container terminated"}
 {"label": "missing-config", "text": "Traceback (most recent call last):\n  File \"/app/main.py\", line 3, in <module>\n    from app.db import engine\nModuleNotFoundError"}
 {"label": "crash-loop", "text": "Liveness probe failed, container api restarted 15 times in the last hour"}
 {"label": "missing-config", "text": "Error: Must supply api_key\n  at new OpenAI (/app/node_modules/openai/index.js:41)\nprocess exited 1"}
@@ -198,16 +159,10 @@
 {"label": "crash-loop", "text": "FATAL: could not load server config, aborting startup, systemd restarting unit"}
 {"label": "crash-loop", "text": "kubectl get pods: api-7f9  0/1  CrashLoopBackOff  23  14m"}
 {"label": "missing-config", "text": "Error: Cannot find module '/app/server.js' at startup, container restart policy always"}
-{"label": "ssl-cert-expired", "text": "Error: certificate has expired (CERT_HAS_EXPIRED)"}
 {"label": "ssl-cert-expired", "text": "x509: certificate has expired or is not yet valid"}
-{"label": "ssl-cert-expired", "text": "UNABLE_TO_VERIFY_LEAF_SIGNATURE while calling the payments API"}
 {"label": "ssl-cert-expired", "text": "SSL handshake failed, alert: certificate expired"}
-{"label": "ssl-cert-expired", "text": "self signed certificate in certificate chain (DEPTH_ZERO_SELF_SIGNED_CERT)"}
 {"label": "ssl-cert-expired", "text": "curl: (60) SSL certificate problem: unable to get local issuer certificate"}
 {"label": "ssl-cert-expired", "text": "NET::ERR_CERT_DATE_INVALID on api.example.com"}
-{"label": "ssl-cert-expired", "text": "openssl s_client: notAfter=Mar 3 00:00:00 2026 GMT, current date past expiry"}
-{"label": "ssl-cert-expired", "text": "certbot renew failed, certificate expires in 0 days, HTTPS requests failing"}
-{"label": "ssl-cert-expired", "text": "x509: certificate signed by unknown authority when calling internal billing service"}
 {"label": "ssl-cert-expired", "text": "requests.exceptions.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed"}
 {"label": "ssl-cert-expired", "text": "nginx reloaded with an expired certificate, clients dropped at the TLS handshake"}
 {"label": "ssl-cert-expired", "text": "Hostname/IP does not match certificate altnames, connection aborted"}
@@ -226,9 +181,6 @@
 {"label": "ssl-cert-expired", "text": "nginx: [emerg] SSL_CTX_use_PrivateKey_file(\"/etc/ssl/key.pem\") failed"}
 {"label": "ssl-cert-expired", "text": "error:0A000086:SSL routines::certificate verify failed"}
 {"label": "ssl-cert-expired", "text": "Java: sun.security.validator.ValidatorException: PKIX path building failed"}
-{"label": "ssl-cert-expired", "text": "Let's Encrypt certificate for api.example.com expired at 2026-09-01T00:00:00Z"}
-{"label": "ssl-cert-expired", "text": "TLS alert 45 certificate_expired sent by peer, connection closed"}
-{"label": "ssl-cert-expired", "text": "wget: ERROR: cannot verify github.com's certificate, issued by unknown authority"}
 {"label": "ssl-cert-expired", "text": "ca-certificates package is stale in the image, outgoing HTTPS calls fail verification"}
 {"label": "ssl-cert-expired", "text": "SSL routines:ssl3_read_bytes:sslv3 alert certificate expired"}
 {"label": "ssl-cert-expired", "text": "Kubernetes ingress TLS secret expired, all HTTPS routes returning handshake failures"}
@@ -244,21 +196,14 @@
 {"label": "high-latency", "text": "slow query: find on incidents took 12400ms, no index on createdAt"}
 {"label": "high-latency", "text": "request timeout after 30000ms on GET /api/incidents"}
 {"label": "high-latency", "text": "ETIMEDOUT calling https://api.voyageai.com, retrying with backoff"}
-{"label": "high-latency", "text": "request count spiked 5x, response times degraded to 6s, no errors yet"}
 {"label": "high-latency", "text": "COLLSCAN detected: query examined 240000 documents and returned 20"}
-{"label": "high-latency", "text": "ALB target response time 9.1s, healthy hosts 2, cpu utilization 97%"}
 {"label": "high-latency", "text": "gateway timeout, worker pool saturated, 200 requests queued"}
 {"label": "high-latency", "text": "Warning: slow operation, planSummary: COLLSCAN, millis: 15230"}
-{"label": "high-latency", "text": "average response time climbed from 180ms to 5s over twenty minutes under load"}
 {"label": "high-latency", "text": "context deadline exceeded when calling the inventory service"}
 {"label": "high-latency", "text": "nginx returned 504 on /analyze, backend still processing after 60s"}
-{"label": "high-latency", "text": "duration: 18234.112 ms  statement: SELECT * FROM incidents ORDER BY created_at DESC"}
 {"label": "high-latency", "text": "Slow query log: Query_time: 22.418  Lock_time: 0.000  Rows_examined: 1840221"}
 {"label": "high-latency", "text": "apdex dropped to 0.42, median latency 3.8s, throughput unchanged"}
-{"label": "high-latency", "text": "AxiosError: timeout of 10000ms exceeded calling the pricing service"}
 {"label": "high-latency", "text": "http.client.ReadTimeout: HTTPSConnectionPool(host='api.internal', port=443): Read timed out. (read timeout=15)"}
-{"label": "high-latency", "text": "thread pool exhausted, 512 active threads, queue depth 3100, responses delayed"}
-{"label": "high-latency", "text": "upstream response time 11.302s, request time 11.310s, status 200"}
 {"label": "high-latency", "text": "Gateway Timeout (504) on 12% of requests, all under /api/analyze"}
 {"label": "high-latency", "text": "event loop lag 4200ms detected, node process blocked on synchronous work"}
 {"label": "high-latency", "text": "cpu throttling: container throttled 88% of periods, cfs_quota reached, requests slow"}
@@ -266,7 +211,6 @@
 {"label": "high-latency", "text": "redis latency spike: 1400ms on GET, slowlog shows KEYS * being run"}
 {"label": "high-latency", "text": "grpc: DeadlineExceeded after 5s calling InventoryService/GetStock"}
 {"label": "high-latency", "text": "response time p95 6.7s (SLO 500ms), error rate still at baseline 0.1%"}
-{"label": "high-latency", "text": "nginx upstream_response_time 30.001 upstream_status 504 request GET /api/incidents"}
 {"label": "high-latency", "text": "connection pool wait time 8s, queries queued behind long running report job"}
 {"label": "high-latency", "text": "lock wait timeout exceeded; try restarting transaction (after 50s wait)"}
 {"label": "high-latency", "text": "Request took 45120ms to complete, client had already disconnected"}
@@ -286,7 +230,6 @@
 {"label": "error-rate-spike", "text": "UnhandledPromiseRejection: This error originated either by throwing inside of an async function\n  at analyze (/app/src/services/analysis.service.js:88)\nHTTP 500 returned"}
 {"label": "error-rate-spike", "text": "Sentry: TypeError: Cannot read properties of null (reading 'id') - 3100 events in 10m"}
 {"label": "error-rate-spike", "text": "canary 5xx 22.4% | stable 5xx 0.1% | rollout halted"}
-{"label": "error-rate-spike", "text": "AssertionError: expected document to exist\n  at save (/app/src/services/incident.service.js:37)\n500 on all write paths"}
 {"label": "error-rate-spike", "text": "POST /api/analyze 500 12ms\nPOST /api/analyze 500 9ms\nPOST /api/analyze 500 11ms\nPOST /api/analyze 500 14ms"}
 {"label": "error-rate-spike", "text": "502 Bad Gateway returned on 41% of requests, upstream connection reset by peer"}
 {"label": "error-rate-spike", "text": "http_requests_total{status=\"500\"} increased 60x since 09:15 release"}
@@ -295,8 +238,6 @@
 {"label": "error-rate-spike", "text": "ERROR 500 /api/incidents/:id ReferenceError: formatDate is not defined"}
 {"label": "error-rate-spike", "text": "error budget 100% consumed in 20m, 5xx ratio sustained above 30%"}
 {"label": "error-rate-spike", "text": "503 Service Unavailable from 6 of 8 pods, readiness flapping since rollout"}
-{"label": "error-rate-spike", "text": "CastError: Cast to ObjectId failed for value \"undefined\"\nreturned 500 on 2200 requests"}
-{"label": "error-rate-spike", "text": "status:500 spike detected, top offender POST /api/analyze with 4800 failures in 4 minutes"}
 {"label": "error-rate-spike", "text": "500 Internal Server Error\nTypeError: res.json is not a function\n  at /app/src/controllers/incident.controller.js:52"}
 {"label": "error-rate-spike", "text": "upstream returned 500 for 39% of proxied requests since 10:41 deployment"}
 {"label": "error-rate-spike", "text": "rollback initiated: 5xx went 0.1% -> 44% within 90 seconds of deploying build 8c12f0"}
@@ -305,43 +246,31 @@
 {"label": "error-rate-spike", "text": "Error: Request failed with status code 500\n  at settle (/app/node_modules/axios/lib/core/settle.js:19)\nrepeated across all clients"}
 {"label": "error-rate-spike", "text": "SyntaxError: Unexpected token < in JSON at position 0 - API returning HTML error pages, 500s"}
 {"label": "error-rate-spike", "text": "alert firing: HighErrorRate - job=api ratio=0.37 for 5m"}
-{"label": "error-rate-spike", "text": "500 Internal Server Error on /api/analyze, cause: TypeError reading 'severity' of undefined"}
 {"label": "error-rate-spike", "text": "nginx access.log: 194.3.1.4 - - [12/Sep/2026:09:22:41] \"POST /api/incidents HTTP/1.1\" 500 84"}
 {"label": "error-rate-spike", "text": "datadog monitor triggered: error rate on service api is 41.2% (threshold 5%)"}
 {"label": "error-rate-spike", "text": "ERR_BAD_RESPONSE 500 from backend on every frontend request since the last deploy"}
-{"label": "error-rate-spike", "text": "Unhandled error: Cannot destructure property 'logs' of 'req.body' as it is undefined. HTTP 500."}
 {"label": "error-rate-spike", "text": "502 Bad Gateway\nconnect() failed (111: Connection refused) while connecting to upstream api:5000"}
-{"label": "error-rate-spike", "text": "response_code:500 count 7210 | response_code:200 count 1180 | last 10 minutes"}
-{"label": "error-rate-spike", "text": "RangeError: Invalid array length\n  at buildEvidence (/app/src/services/analysis.service.js:112)\n500 returned to client"}
 {"label": "error-rate-spike", "text": "five hundred errors per minute on the write path, began exactly at the 09:15 release"}
 {"label": "error-rate-spike", "text": "HTTP 500 ratio 0.46 on api-deployment-7f9, previous revision showed 0.001"}
 {"label": "error-rate-spike", "text": "PayloadTooLargeError: request entity too large\n  at readStream\n500s on 30% of uploads"}
 {"label": "error-rate-spike", "text": "server returned 500 for /api/incidents, stack: TypeError: incidents.map is not a function"}
 {"label": "error-rate-spike", "text": "grafana: 5xx panel jumped from flat baseline to 38% immediately following deploy marker"}
-{"label": "error-rate-spike", "text": "Internal Server Error 500 - unhandled exception in request handler, 4100 occurrences in 6 minutes"}
-{"label": "crash-loop", "text": "Back-off restarting failed container worker in pod worker-5c8d, restartCount 17"}
 {"label": "crash-loop", "text": "Error: Uncaught exception in main loop\n  at Server.start (/app/src/server.js:88)\nprocess exited with code 1, restarting"}
-{"label": "crash-loop", "text": "kubelet: Container web failed liveness probe, will be restarted (restart 9)"}
-{"label": "crash-loop", "text": "Segmentation fault (core dumped)\ncontainer exited with code 139, restart policy on-failure"}
 {"label": "crash-loop", "text": "supervisord: exited: gunicorn (exit status 3; not expected), spawned again"}
 {"label": "crash-loop", "text": "java.lang.IllegalStateException: Failed to load ApplicationContext\nApplication run failed\ncontainer restarting"}
 {"label": "crash-loop", "text": "docker ps: api-1   Restarting (1) 4 seconds ago"}
 {"label": "crash-loop", "text": "UnhandledPromiseRejection: This error originated inside of an async function without a catch block. Node process exiting with code 1, restarted by pm2"}
 {"label": "crash-loop", "text": "gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>, container restarting"}
 {"label": "crash-loop", "text": "Pod api-6d4 status Error -> Running -> Error, restarts: 31 in 45m"}
-{"label": "crash-loop", "text": "exit code 2 on startup after upgrading to the new base image, container keeps restarting"}
 {"label": "crash-loop", "text": "fatal error: concurrent map writes\ngoroutine 42 [running]\ncontainer restarted by orchestrator"}
 {"label": "crash-loop", "text": "Terminated with exit code 1 before readiness probe passed, back-off 5m0s restarting failed container"}
 {"label": "db-connection-refused", "text": "Error: connect ECONNREFUSED 10.0.1.7:27017 - MongoDB replica not accepting connections"}
 {"label": "db-connection-refused", "text": "mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on 'mysql:3306' (111 Connection refused)"}
 {"label": "db-connection-refused", "text": "Error: Connection terminated unexpectedly\n  at Connection.<anonymous> (/app/node_modules/pg/lib/client.js:132)"}
 {"label": "dns-resolution-failure", "text": "Error: getaddrinfo ENOTFOUND api.payments.internal\n  at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26)"}
-{"label": "dns-resolution-failure", "text": "Error: getaddrinfo EAI_AGAIN redis\n  at GetAddrInfoReqWrap.onlookup (node:dns:107:26)"}
 {"label": "dns-resolution-failure", "text": "curl: (6) Could not resolve host: registry.internal.example.com"}
 {"label": "dns-resolution-failure", "text": "socket.gaierror: [Errno -2] Name or service not known"}
-{"label": "dns-resolution-failure", "text": "socket.gaierror: [Errno -3] Temporary failure in name resolution"}
 {"label": "dns-resolution-failure", "text": "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.stripe.com', port=443): Max retries exceeded (Caused by NameResolutionError: Failed to resolve 'api.stripe.com')"}
-{"label": "dns-resolution-failure", "text": "dial tcp: lookup mongo on 127.0.0.11:53: no such host"}
 {"label": "dns-resolution-failure", "text": "java.net.UnknownHostException: auth-service: Name or service not known"}
 {"label": "dns-resolution-failure", "text": "nginx: [emerg] host not found in upstream \"backend:5000\" in /etc/nginx/conf.d/default.conf:12"}
 {"label": "dns-resolution-failure", "text": "MongoServerSelectionError: getaddrinfo ENOTFOUND mongo-primary.cluster.local"}
@@ -352,21 +281,14 @@
 {"label": "dns-resolution-failure", "text": "psql: error: could not translate host name \"db\" to address: Temporary failure in name resolution"}
 {"label": "dns-resolution-failure", "text": "redis: Error: getaddrinfo ENOTFOUND redis-cache, reconnecting in 500ms"}
 {"label": "dns-resolution-failure", "text": "lookup elasticsearch on 10.96.0.10:53: server misbehaving"}
-{"label": "dns-resolution-failure", "text": "CoreDNS: [ERROR] plugin/errors: 2 api.default.svc.cluster.local. A: no such host"}
-{"label": "dns-resolution-failure", "text": "TypeError: fetch failed\n  cause: Error: getaddrinfo ENOTFOUND hooks.slack.com"}
 {"label": "dns-resolution-failure", "text": "urllib3.exceptions.NameResolutionError: Failed to resolve 'api.voyageai.com' ([Errno -3] Temporary failure in name resolution)"}
 {"label": "dns-resolution-failure", "text": "Error response from daemon: Get \"https://registry-1.docker.io/v2/\": dial tcp: lookup registry-1.docker.io: no such host"}
 {"label": "dns-resolution-failure", "text": "System.Net.Http.HttpRequestException: No such host is known. (orders-api:8080)"}
 {"label": "dns-resolution-failure", "text": "php_network_getaddresses: getaddrinfo failed: Name or service not known"}
-{"label": "dns-resolution-failure", "text": "EAI_AGAIN while resolving smtp.mailgun.org, email job will retry"}
 {"label": "dns-resolution-failure", "text": "ssh: Could not resolve hostname bastion.prod: nodename nor servname provided, or not known"}
-{"label": "dns-resolution-failure", "text": "pymongo.errors.ConfigurationError: The DNS query name does not exist: _mongodb._tcp.cluster0.mongodb.net."}
-{"label": "dns-resolution-failure", "text": "dns lookup failed for kafka-0.kafka-headless.default.svc.cluster.local: NXDOMAIN"}
 {"label": "dns-resolution-failure", "text": "getaddrinfo ENOTFOUND user-svc - api and user-svc containers are on different docker networks"}
-{"label": "dns-resolution-failure", "text": "java.net.UnknownHostException: s3.amazonaws.com\n  at java.base/java.net.InetAddress.getAllByName0"}
 {"label": "dns-resolution-failure", "text": "ERROR: failed to resolve source metadata for docker.io/library/node:20: no such host"}
 {"label": "dns-resolution-failure", "text": "Resolving api.github.com... failed: Temporary failure in name resolution."}
-{"label": "dns-resolution-failure", "text": "grpc: addrConn.createTransport failed: name resolver error: produced zero addresses"}
 {"label": "dns-resolution-failure", "text": "ping: bad address 'postgres'"}
 {"label": "dns-resolution-failure", "text": "Error: getaddrinfo EAI_AGAIN api.groq.com, retrying (3/5)"}
 {"label": "dns-resolution-failure", "text": "reqwest::Error: failed to lookup address information: Name or service not known"}
@@ -378,21 +300,15 @@
 {"label": "permission-denied", "text": "mkdir: cannot create directory '/var/lib/app': Permission denied"}
 {"label": "permission-denied", "text": "npm ERR! code EACCES\nnpm ERR! syscall mkdir\nnpm ERR! path /usr/local/lib/node_modules"}
 {"label": "permission-denied", "text": "mongod: Unable to create/open lock file: /data/db/mongod.lock errno:13 Permission denied"}
-{"label": "permission-denied", "text": "postgres: could not open file \"postgresql.conf\": Permission denied, data directory owned by root"}
-{"label": "permission-denied", "text": "nginx: [emerg] open() \"/var/run/nginx.pid\" failed (13: Permission denied)"}
 {"label": "permission-denied", "text": "Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock"}
-{"label": "permission-denied", "text": "chown: changing ownership of '/app/data': Operation not permitted"}
 {"label": "permission-denied", "text": "Error: EPERM: operation not permitted, rename '/app/tmp/cache.json'"}
 {"label": "permission-denied", "text": "java.nio.file.AccessDeniedException: /opt/app/config/application.yml"}
 {"label": "permission-denied", "text": "sh: ./entrypoint.sh: Permission denied"}
-{"label": "permission-denied", "text": "open /etc/app/secrets/token: permission denied"}
 {"label": "permission-denied", "text": "redis: Can't open the append-only file: Permission denied"}
-{"label": "permission-denied", "text": "ERROR: permission denied for table incidents"}
 {"label": "permission-denied", "text": "MongoServerError: not authorized on incidents to execute command { insert: \"logs\" }"}
 {"label": "permission-denied", "text": "touch: cannot touch '/app/.cache/ready': Permission denied (container runs as uid 1000, volume owned by 0)"}
 {"label": "permission-denied", "text": "npm ERR! EACCES: permission denied, scandir '/root/.npm/_logs'"}
 {"label": "permission-denied", "text": "Error: EACCES: permission denied, mkdir '/home/node/app/node_modules/.vite'"}
-{"label": "permission-denied", "text": "fatal: could not create work tree dir 'repo': Permission denied"}
 {"label": "permission-denied", "text": "cp: cannot create regular file '/usr/share/nginx/html/index.html': Permission denied"}
 {"label": "permission-denied", "text": "PermissionError: [Errno 1] Operation not permitted: '/sys/fs/cgroup/cpu.max'"}
 {"label": "permission-denied", "text": "nginx: [emerg] bind() to 0.0.0.0:80 failed (13: Permission denied)"}
@@ -401,7 +317,6 @@
 {"label": "permission-denied", "text": "Error from server (Forbidden): pods is forbidden: User \"system:serviceaccount:default:api\" cannot list resource \"pods\""}
 {"label": "permission-denied", "text": "sqlite3.OperationalError: attempt to write a readonly database"}
 {"label": "permission-denied", "text": "Error: EROFS: read-only file system, open '/app/data/state.json'"}
-{"label": "permission-denied", "text": "logrotate: error: skipping \"/var/log/app/*.log\" because parent directory has insecure permissions"}
 {"label": "permission-denied", "text": "crond: can't create /var/log/cron.log: Permission denied, exiting"}
 {"label": "permission-denied", "text": "Error: EACCES: permission denied, unlink '/app/uploads/tmp-1234'"}
 {"label": "permission-denied", "text": "java.io.IOException: Permission denied writing /var/app/output.txt"}
@@ -410,15 +325,12 @@
 {"label": "permission-denied", "text": "useradd: Permission denied.\nuseradd: cannot lock /etc/passwd; try again later."}
 {"label": "permission-denied", "text": "mysqld: Can't create/write to file '/var/lib/mysql/is_writable' (OS errno 13 - Permission denied)"}
 {"label": "permission-denied", "text": "npm install -g as node user: EACCES: permission denied, access '/usr/local/lib/node_modules'"}
-{"label": "permission-denied", "text": "PermissionError: [Errno 13] Permission denied: '/app/model.joblib'"}
 {"label": "missing-config", "text": "Error: Missing required environment variable: GROQ_API_KEY"}
-{"label": "missing-config", "text": "ValueError: DATABASE_URL is not set"}
 {"label": "missing-config", "text": "pydantic_core._pydantic_core.ValidationError: 1 validation error for Settings\nMONGO_URI\n  Field required"}
 {"label": "missing-config", "text": "Error: Cannot find module 'dotenv'\nRequire stack:\n- /app/src/config/env.js"}
 {"label": "missing-config", "text": "Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'mongoose' imported from /app/src/config/db.js"}
 {"label": "missing-config", "text": "ModuleNotFoundError: No module named 'sklearn'"}
 {"label": "missing-config", "text": "Error: ENOENT: no such file or directory, open '/app/config/production.json'"}
-{"label": "missing-config", "text": "FileNotFoundError: [Errno 2] No such file or directory: 'model.joblib'"}
 {"label": "missing-config", "text": "JWT_SECRET is undefined - refusing to start"}
 {"label": "missing-config", "text": "KeyError: 'SECRET_KEY'\n  File \"/app/settings.py\", line 12"}
 {"label": "missing-config", "text": "Error: secret \"api-credentials\" not found\nkubelet: CreateContainerConfigError"}
@@ -430,12 +342,9 @@
 {"label": "missing-config", "text": "TypeError [ERR_INVALID_ARG_TYPE]: The \"url\" argument must be of type string. Received undefined (process.env.REDIS_URL)"}
 {"label": "missing-config", "text": "OSError: libgomp.so.1: cannot open shared object file: No such file or directory"}
 {"label": "missing-config", "text": "java.lang.ClassNotFoundException: org.postgresql.Driver"}
-{"label": "missing-config", "text": "Error: Environment variable not found: DATABASE_URL.\n  -->  schema.prisma:7"}
 {"label": "missing-config", "text": "panic: required env var STRIPE_KEY is empty"}
-{"label": "missing-config", "text": "ImportError: cannot import name 'BaseSettings' from 'pydantic' - pydantic-settings package not installed"}
 {"label": "missing-config", "text": "configuration file /etc/app/config.yaml does not exist, exiting"}
 {"label": "missing-config", "text": "Error: Cannot find module './routes/incident.routes.js' - file missing from build output"}
-{"label": "missing-config", "text": "error: failed to read config: open .env: no such file or directory"}
 {"label": "missing-config", "text": "npm ERR! enoent ENOENT: no such file or directory, open '/app/package.json'"}
 {"label": "missing-config", "text": "MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\" - MONGO_URI not provided"}
 {"label": "missing-config", "text": "Error: OPENAI_API_KEY environment variable is missing or empty"}
@@ -451,11 +360,9 @@
 {"label": "too-many-open-files", "text": "ulimit -n is 1024, process has 1024 open file descriptors, new connections rejected"}
 {"label": "too-many-open-files", "text": "kernel: VFS: file-max limit 65536 reached"}
 {"label": "too-many-open-files", "text": "ENFILE: file table overflow"}
-{"label": "too-many-open-files", "text": "Too many open files in system"}
 {"label": "too-many-open-files", "text": "redis: Error accepting a client connection: accept: Too many open files"}
 {"label": "too-many-open-files", "text": "mongod: Out of file descriptors. Waiting one second before trying to accept more connections."}
 {"label": "too-many-open-files", "text": "Error: EMFILE: too many open files, scandir '/app/node_modules'"}
-{"label": "too-many-open-files", "text": "lsof -p 4312 | wc -l -> 65535 open files, nofile limit 65536"}
 {"label": "too-many-open-files", "text": "Caused by: java.net.SocketException: Too many open files"}
 {"label": "too-many-open-files", "text": "Error: connect EMFILE 10.0.2.15:443 - Local (undefined:undefined)"}
 {"label": "too-many-open-files", "text": "ls /proc/1/fd | wc -l = 4096 while nofile limit is 4096; sockets not being closed"}
@@ -463,18 +370,14 @@
 {"label": "too-many-open-files", "text": "Watchpack Error (watcher): Error: EMFILE: too many open files, watch"}
 {"label": "too-many-open-files", "text": "fs.readFile failed: EMFILE - open file handles leaking from log reader"}
 {"label": "too-many-open-files", "text": "tornado.general: Exception in accept: [Errno 24] Too many open files"}
-{"label": "too-many-open-files", "text": "dockerd: failed to create shim task: too many open files"}
 {"label": "too-many-open-files", "text": "prometheus: process_open_fds 1023 / process_max_fds 1024 on api-1"}
 {"label": "too-many-open-files", "text": "failed to create fsnotify watcher: too many open files"}
-{"label": "too-many-open-files", "text": "gunicorn: [ERROR] Error handling request: [Errno 24] Too many open files"}
 {"label": "too-many-open-files", "text": "Error: EMFILE: too many open files, uv_pipe_open"}
 {"label": "too-many-open-files", "text": "haproxy: [ALERT] accept(): too many open files, maxconn too high for current ulimit"}
 {"label": "too-many-open-files", "text": "kafka.common.KafkaException: java.io.IOException: Too many open files"}
-{"label": "too-many-open-files", "text": "file descriptor count climbing 200 per minute since deploy, EMFILE errors started at 4096"}
 {"label": "too-many-open-files", "text": "OSError: [Errno 24] Too many open files: '/tmp/tmpx8k2'"}
 {"label": "too-many-open-files", "text": "Error: EMFILE, open '/app/data/cache.db'"}
 {"label": "too-many-open-files", "text": "libuv EMFILE when opening sockets to mongo, a new MongoClient is created per request"}
-{"label": "too-many-open-files", "text": "elasticsearch: max file descriptors [4096] for elasticsearch process is too low, increase to at least [65535]"}
 {"label": "too-many-open-files", "text": "sqlite: unable to open database file (errno 24: too many open files)"}
 {"label": "too-many-open-files", "text": "systemd: LimitNOFILE=1024 too low for api.service, EMFILE under load"}
 {"label": "too-many-open-files", "text": "Unhandled 'error' event: Error: EMFILE: too many open files, open '/var/log/app/access.log'"}
@@ -482,24 +385,18 @@
 {"label": "auth-brute-force", "text": "POST /api/login 401 from 45.33.12.8 - 312 attempts in 5 minutes for users admin, root, test"}
 {"label": "auth-brute-force", "text": "185.220.101.4 - - \"POST /wp-login.php HTTP/1.1\" 401 - repeated 900 times in 10 minutes"}
 {"label": "auth-brute-force", "text": "Too many failed login attempts for user admin from 91.240.118.17, account locked"}
-{"label": "auth-brute-force", "text": "fail2ban.actions: WARNING [sshd] Ban 218.92.0.107"}
-{"label": "auth-brute-force", "text": "express-rate-limit: blocked 103.99.0.12 on /auth/login after 5 failed attempts per minute"}
 {"label": "auth-brute-force", "text": "auth: invalid credentials for user 'administrator' from 5.188.10.3 (attempt 57)"}
 {"label": "auth-brute-force", "text": "Keycloak: type=LOGIN_ERROR error=invalid_user_credentials ipAddress=80.94.95.21 - 400 events in 2 minutes"}
 {"label": "auth-brute-force", "text": "WARN auth-service failed login: username=root ip=193.32.162.30 count=1200/hour"}
 {"label": "auth-brute-force", "text": "Grafana: Invalid username or password, user admin, client 141.98.11.20, repeated 250 times"}
 {"label": "auth-brute-force", "text": "vsftpd: FAIL LOGIN: Client \"45.155.205.2\" - repeated for users ftp, anonymous, test"}
 {"label": "auth-brute-force", "text": "dovecot: auth failed, 14 attempts in 12 secs, rhost=212.70.149.5, user=<info@example.com>"}
-{"label": "auth-brute-force", "text": "CloudTrail: ConsoleLogin Failure for root from 179.43.187.11, 140 events in 15 minutes"}
 {"label": "auth-brute-force", "text": "Login failed for user 'sa'. Reason: Password did not match. [CLIENT: 89.248.165.52] - 5000 occurrences"}
-{"label": "auth-brute-force", "text": "credential stuffing detected: 12000 failed logins across 9000 accounts from 300 IPs in 1 hour"}
-{"label": "auth-brute-force", "text": "sshd: Disconnecting: Too many authentication failures for root from 61.177.172.13 port 22 ssh2"}
 {"label": "crash-loop", "text": "Warning  BackOff  3m (x41 over 13m)  kubelet  Back-off restarting failed container app in pod app-5d9c"}
 {"label": "crash-loop", "text": "api-1 exited with code 1\napi-1 exited with code 1\napi-1 exited with code 1"}
 {"label": "crash-loop", "text": "docker compose ps: worker   restarting   Restarting (2) 9 seconds ago"}
 {"label": "crash-loop", "text": "kubectl describe pod web-6b7: Last State: Terminated, Reason: Error, Exit Code: 2, Restart Count: 27"}
 {"label": "crash-loop", "text": "systemd[1]: worker.service: Main process exited, code=exited, status=1/FAILURE\nsystemd[1]: worker.service: Scheduled restart job, restart counter is at 14."}
-{"label": "crash-loop", "text": "ECS: Essential container in task exited. Service scheduler starting replacement task (attempt 18)"}
 {"label": "crash-loop", "text": "Container restarted 52 times in 1 hour, never passed readiness probe"}
 {"label": "crash-loop", "text": "Traceback (most recent call last):\n  File \"/app/worker.py\", line 88, in run\nRuntimeError: event loop is closed\nworker exited, supervisor respawning"}
 {"label": "crash-loop", "text": "pm2: App [api:0] exited with code [255]\npm2: App [api:0] starting in -fork mode-\npm2: App [api:0] exited with code [255]"}
@@ -509,20 +406,14 @@
 {"label": "crash-loop", "text": "Nomad: task \"api\" failed, restarting in 15s (restart 6 of 10)"}
 {"label": "crash-loop", "text": "pod payments-7c9 BackOff, container terminated with exit code 1 after 2 seconds"}
 {"label": "crash-loop", "text": "docker events: container die exitCode=1, container start, container die exitCode=1"}
-{"label": "crash-loop", "text": "thread 'main' panicked at 'called Option::unwrap() on a None value', src/main.rs:42\ncontainer restarting"}
-{"label": "crash-loop", "text": "Heroku: State changed from starting to crashed\nProcess exited with status 1\nState changed from crashed to starting"}
 {"label": "crash-loop", "text": "Error: Application failed to start, exiting. [restart 11, back-off 2m40s]"}
 {"label": "crash-loop", "text": "OpenShift: pod api-3 CrashLoopBackOff, 0/1 ready, 19 restarts"}
-{"label": "crash-loop", "text": "worker keeps dying right after boot: started -> exited(1) -> started -> exited(1), restart policy unless-stopped"}
-{"label": "dns-resolution-failure", "text": "Error: getaddrinfo ENOTFOUND auth-db\n    at GetAddrInfoReqWrap.onlookup [as oncomplete]"}
-{"label": "dns-resolution-failure", "text": "Warning: DNS lookup for inventory-api.default.svc.cluster.local failed"}
 {"label": "dns-resolution-failure", "text": "dial tcp: lookup payments.internal on 10.96.0.10:53: no such host"}
 {"label": "dns-resolution-failure", "text": "failed to resolve 'rabbitmq': Name does not resolve"}
 {"label": "dns-resolution-failure", "text": "java.net.UnknownHostException: kafka-broker-1: Temporary failure in name resolution"}
 {"label": "dns-resolution-failure", "text": "psycopg2.OperationalError: could not translate host name \"db-primary\" to address: Name or service not known"}
 {"label": "dns-resolution-failure", "text": "npm ERR! code EAI_AGAIN\nnpm ERR! request to https://registry.npmjs.org/express failed, reason: getaddrinfo EAI_AGAIN registry.npmjs.org"}
 {"label": "dns-resolution-failure", "text": "fatal: unable to access 'https://github.com/org/repo.git/': Could not resolve host: github.com"}
-{"label": "dns-resolution-failure", "text": "SocketError: getaddrinfo: nodename nor servname provided, or not known (redis.internal)"}
 {"label": "dns-resolution-failure", "text": "httpx.ConnectError: [Errno -2] Name or service not known (host: search-api)"}
 {"label": "dns-resolution-failure", "text": "coredns: [ERROR] plugin/forward: no healthy upstreams, SERVFAIL for payments.svc.cluster.local"}
 {"label": "dns-resolution-failure", "text": "grpc: name resolution failed for target dns:///orders-service:50051"}
@@ -533,10 +424,8 @@
 {"label": "dns-resolution-failure", "text": "Failed to establish a new connection: [Errno -3] Temporary failure in name resolution (api.partner.com)"}
 {"label": "dns-resolution-failure", "text": "System.Net.Sockets.SocketException (11001): No such host is known."}
 {"label": "dns-resolution-failure", "text": "Kafka: Couldn't resolve server kafka:9092 from bootstrap.servers as DNS resolution failed for kafka"}
-{"label": "dns-resolution-failure", "text": "elasticsearch: lookup es-node-2 on 127.0.0.53:53: no such host, marking node dead"}
 {"label": "missing-config", "text": "Error: Missing environment variable JWT_SECRET. Did you forget to create .env?"}
 {"label": "missing-config", "text": "KeyError: 'AWS_REGION' during settings import\nworker failed to boot"}
-{"label": "missing-config", "text": "config error: required key \"database.host\" not found in config.yaml"}
 {"label": "missing-config", "text": "Error: ENOENT: no such file or directory, open '/run/secrets/db_password'"}
 {"label": "missing-config", "text": "Could not resolve placeholder 'db.password' in value \"${db.password}\""}
 {"label": "missing-config", "text": "Error: STRIPE_SECRET_KEY is not defined in process.env"}
@@ -548,11 +437,8 @@
 {"label": "missing-config", "text": "panic: open config/prod.toml: no such file or directory"}
 {"label": "missing-config", "text": "docker compose: env file /app/backend/.env not found"}
 {"label": "missing-config", "text": "No application encryption key has been specified. APP_KEY is missing"}
-{"label": "missing-config", "text": "Error: Could not load the default credentials. GOOGLE_APPLICATION_CREDENTIALS is not set."}
 {"label": "missing-config", "text": "Error: No value for required variable \"db_password\""}
 {"label": "missing-config", "text": "Missing `secret_key_base` for 'production' environment"}
-{"label": "missing-config", "text": "Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/app/src/utils/logger.js' imported from /app/src/server.js"}
-{"label": "missing-config", "text": "MountVolume.SetUp failed for volume \"api-keys\": secret \"api-keys\" not found"}
 {"label": "missing-config", "text": "Invalid environment variables: { GROQ_API_KEY: [ 'Required' ] }"}
 {"label": "high-latency", "text": "GET /api/orders 200 7832ms"}
 {"label": "high-latency", "text": "slow request: POST /api/search took 5.6 seconds (threshold 1s)"}
@@ -560,17 +446,319 @@
 {"label": "high-latency", "text": "HikariPool-1 - Connection is not available, request timed out after 30000ms"}
 {"label": "high-latency", "text": "SequelizeConnectionAcquireTimeoutError: Operation timeout"}
 {"label": "high-latency", "text": "requests.exceptions.ReadTimeout: HTTPConnectionPool(host='ml-service', port=8000): Read timed out. (read timeout=2)"}
-{"label": "high-latency", "text": "slow request: /reports/export/ took 14.2s, 312 SQL queries"}
 {"label": "high-latency", "text": "pg_stat_statements: mean_exec_time 6120 ms for SELECT on events, sequential scan"}
-{"label": "high-latency", "text": "Kong: upstream latency 9870ms, proxy latency 3ms, status 200"}
-{"label": "high-latency", "text": "HPA at max replicas 10, cpu 96% of target, response times still climbing"}
 {"label": "high-latency", "text": "GC pause: stop-the-world 3.4 seconds, request threads stalled"}
-{"label": "high-latency", "text": "envoy: upstream request timeout, response flags UT, duration 15001"}
 {"label": "high-latency", "text": "Redis command GET took 950ms, server blocked during BGSAVE fork"}
 {"label": "high-latency", "text": "ELB 504: backend did not respond within the idle timeout of 60 seconds"}
-{"label": "high-latency", "text": "TimeoutError: Navigation timeout of 30000 ms exceeded"}
 {"label": "high-latency", "text": "Sidekiq job ReportJob ran for 380s, queue latency 12 minutes"}
 {"label": "high-latency", "text": "[WARN] http request to payments-api took 6.3s (budget 800ms)"}
 {"label": "high-latency", "text": "p50 1.2s, p99 14s on /api/search after deploy, database waiting on locks"}
 {"label": "high-latency", "text": "Celery task exceeded soft time limit (300s) while generating report"}
 {"label": "high-latency", "text": "SLOW LOG: 4.87 sec for UPDATE orders SET status = 'paid', waiting for row lock"}
+{"label": "disk-full", "text": "write /var/lib/docker/overlay2/3f1a/merged/app.log: no space left on device"}
+{"label": "disk-full", "text": "ERROR 1114 (HY000): The table 'events' is full"}
+{"label": "disk-full", "text": "Redis: MISCONF Redis is configured to save RDB snapshots, but it's currently unable to persist to disk.\nFailed opening the temp RDB file temp-1.rdb (in server root dir /data) for saving: No space left on device"}
+{"label": "disk-full", "text": "Docker Desktop: the disk image Docker.raw has reached its 64 GB limit, containers can no longer write"}
+{"label": "disk-full", "text": "kafka.common.KafkaStorageException: I/O exception in append to log 'orders-3'\nCaused by: java.io.IOException: No space left on device"}
+{"label": "disk-full", "text": "ERROR: Could not install packages due to an OSError: [Errno 28] No space left on device"}
+{"label": "disk-full", "text": "The node was low on resource: ephemeral-storage. Container api was using 4Gi, which exceeds its request of 1Gi."}
+{"label": "disk-full", "text": "Warning  Evicted  pod/worker-5d8  The node had condition: [DiskPressure]"}
+{"label": "disk-full", "text": "journald: Failed to write entry (22 items, 812 bytes) despite vacuuming, ignoring: No space left on device"}
+{"label": "disk-full", "text": "failed to register layer: Error processing tar file(exit status 1): write /usr/lib/libicudata.so: no space left on device"}
+{"label": "disk-full", "text": "log4j:ERROR Failed to flush writer,\njava.io.IOException: There is not enough space on the disk"}
+{"label": "disk-full", "text": "IOError: [Errno 28] No space left on device: '/tmp/tmpk3x9a/chunk_0042.parquet'"}
+{"label": "disk-full", "text": "npm ERR! code ENOSPC\nnpm ERR! syscall write\nnpm ERR! nospc ENOSPC: no space left on device, write"}
+{"label": "disk-full", "text": "rabbitmq: Disk free space insufficient. Free bytes: 41203712. Limit: 50000000\nDisk free alarm set. Publishers will be blocked"}
+{"label": "disk-full", "text": "GitHub Actions runner: System.IO.IOException: No space left on device : '/home/runner/runners/2.317.0/_diag/Worker.log'"}
+{"label": "disk-full", "text": "xfs_quota: user appsvc is over block hard limit on /home (20G used of 20G)\nwrite: Disk quota exceeded"}
+{"label": "disk-full", "text": "EDQUOT: disk quota exceeded, open '/shared/exports/report-2026-09.csv'"}
+{"label": "disk-full", "text": "/dev/mapper/vg0-root  30G  30G  20K 100% /\nfilesystem root has 0 bytes available, writes are failing"}
+{"label": "disk-full", "text": "touch: cannot touch '/var/www/cache/x': No space left on device\ndf -i shows IUse% 100% on /dev/sda2 - out of inodes"}
+{"label": "disk-full", "text": "SQLITE_FULL: database or disk is full (better-sqlite3 writing to /data/app.db)"}
+{"label": "disk-full", "text": "mongod: WiredTiger error (28) file:collection-12.wt: __posix_file_write: pwrite: failed to write 4096 bytes at offset 81920: No space left on device"}
+{"label": "disk-full", "text": "Fatal error: Uncaught ErrorException: file_put_contents(): Only 0 of 512 bytes written, possibly out of free disk space in /var/www/html/storage/framework/cache"}
+{"label": "disk-full", "text": "cassandra: ERROR [CompactionExecutor:3] Not enough space for compaction, estimated sstables = 1, expected write size = 21474836480"}
+{"label": "disk-full", "text": "containerd: failed to pull image: failed to extract layer sha256:9b1c: write /var/lib/containerd/snapshots/88/fs/usr/bin/node: no space left on device"}
+{"label": "disk-full", "text": "logrotate: error: error writing to /var/log/syslog.1.gz: No space left on device\n/var/log is at 100%"}
+{"label": "disk-full", "text": "Jenkins: java.io.IOException: No space left on device\nBuild step 'Archive the artifacts' marked build as failure\nworkspace volume /var/jenkins_home at 100%"}
+{"label": "disk-full", "text": "etcdserver: mvcc: database space exceeded\nalarm:NOSPACE raised, cluster is read-only"}
+{"label": "disk-full", "text": "go build: write /tmp/go-build2190/b001/exe/a.out: no space left on device"}
+{"label": "disk-full", "text": "clickhouse: Code: 243. DB::Exception: Cannot reserve 1.00 MiB, not enough space"}
+{"label": "disk-full", "text": "zip I/O error: No space left on device\nzip error: Output file write failure (write error on zip file)"}
+{"label": "disk-full", "text": "minio: Storage reached its minimum free drive threshold. XMinioStorageFull"}
+{"label": "disk-full", "text": "dpkg: error processing archive: cannot copy extracted data for './usr/bin/python3.12' to '/usr/bin/python3.12.dpkg-new': failed to write (No space left on device)"}
+{"label": "disk-full", "text": "Azure App Service: There is not enough space on the disk. : 'D:\\home\\LogFiles\\Application\\diagnostics.txt'"}
+{"label": "permission-denied", "text": "zsh: permission denied: ./deploy.sh"}
+{"label": "permission-denied", "text": "exec /usr/local/bin/docker-entrypoint.sh: permission denied"}
+{"label": "permission-denied", "text": "nginx: [emerg] mkdir() \"/var/cache/nginx/client_temp\" failed (13: Permission denied)"}
+{"label": "permission-denied", "text": "nginx: [alert] could not open error log file: open() \"/var/log/nginx/error.log\" failed (13: Permission denied)"}
+{"label": "permission-denied", "text": "dial unix /var/run/docker.sock: connect: permission denied (the ci user is not in the docker group)"}
+{"label": "permission-denied", "text": "Error: EPERM: operation not permitted, chown '/app/uploads'"}
+{"label": "permission-denied", "text": "Error: EACCES: permission denied, unlink '/app/tmp/session-88.json'\n  at Object.unlinkSync (node:fs:1780:3)"}
+{"label": "permission-denied", "text": "initdb: error: could not change permissions of directory \"/var/lib/postgresql/data\": Operation not permitted"}
+{"label": "permission-denied", "text": "FATAL: data directory \"/var/lib/postgresql/data\" has wrong ownership\nHINT: The server must be started by the user that owns the data directory."}
+{"label": "permission-denied", "text": "redis: Can't chdir to '/var/lib/redis': Permission denied"}
+{"label": "permission-denied", "text": "Failed opening the RDB file dump.rdb (in server root dir /data) for saving: Permission denied"}
+{"label": "permission-denied", "text": "java.nio.file.AccessDeniedException: /tmp/tomcat.8080/work/Tomcat/localhost/ROOT"}
+{"label": "permission-denied", "text": "java.io.FileNotFoundException: /var/log/app/server.log (Permission denied)"}
+{"label": "permission-denied", "text": "open /run/secrets/signing_key: permission denied"}
+{"label": "permission-denied", "text": "panic: open /data/badger/MANIFEST: permission denied\ngoroutine 1 [running]:"}
+{"label": "permission-denied", "text": "listen tcp :443: bind: permission denied"}
+{"label": "permission-denied", "text": "Error: bind EACCES 0.0.0.0:53"}
+{"label": "permission-denied", "text": "PermissionError: [Errno 13] Permission denied: '/usr/local/lib/python3.12/site-packages/__pycache__'"}
+{"label": "permission-denied", "text": "PermissionError: [Errno 13] Permission denied: '/var/run/celery/worker.pid'"}
+{"label": "permission-denied", "text": "cp: cannot create regular file '/etc/nginx/conf.d/default.conf': Permission denied"}
+{"label": "permission-denied", "text": "-bash: /var/log/deploy.log: Permission denied"}
+{"label": "permission-denied", "text": "OCI runtime create failed: starting container process caused: exec: \"/app/start.sh\": permission denied: unknown"}
+{"label": "permission-denied", "text": "npm ERR! Your cache folder contains root-owned files\nnpm ERR! EACCES: permission denied, open '/home/node/.npm/_cacache/index-v5/aa/11'"}
+{"label": "permission-denied", "text": "error: cannot open .git/FETCH_HEAD: Permission denied"}
+{"label": "permission-denied", "text": "apache2: (13)Permission denied: AH00072: make_sock: could not bind to address 0.0.0.0:80"}
+{"label": "permission-denied", "text": "AH00035: access to /index.html denied (filesystem path '/var/www/html/index.html') because search permissions are missing on a component of the path"}
+{"label": "permission-denied", "text": "volume mounted at /mnt/data is owned by root, uid 1000 cannot write\ntouch: cannot touch '/mnt/data/.probe': Permission denied"}
+{"label": "permission-denied", "text": "PHP Warning: fopen(/var/www/html/storage/logs/laravel.log): Failed to open stream: Permission denied"}
+{"label": "permission-denied", "text": "The stream or file \"/var/www/storage/logs/app.log\" could not be opened in append mode: Permission denied"}
+{"label": "permission-denied", "text": "java.nio.file.AccessDeniedException: /usr/share/elasticsearch/data/nodes\nfailed to obtain node locks, tried [[/usr/share/elasticsearch/data]]"}
+{"label": "permission-denied", "text": "mkdir /var/lib/kafka/data/meta.properties.tmp: permission denied (pod runs as uid 1001, volume owned by root)"}
+{"label": "permission-denied", "text": "audit: avc: denied { write } for pid=2131 comm=\"node\" name=\"uploads\" dev=\"sda1\" scontext=system_u:system_r:container_t tclass=dir"}
+{"label": "port-in-use", "text": "node:events:497 throw er; // Unhandled 'error' event\n  code: 'EADDRINUSE', syscall: 'listen', port: 3001"}
+{"label": "port-in-use", "text": "[Errno 98] error while attempting to bind on address ('0.0.0.0', 8000): address already in use"}
+{"label": "port-in-use", "text": "System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted."}
+{"label": "port-in-use", "text": "panic: listen tcp 127.0.0.1:9090: bind: address already in use\ngoroutine 1 [running]:"}
+{"label": "port-in-use", "text": "Web server failed to start. Port 8080 was already in use.\nAction: Identify and stop the process that's listening on port 8080 or configure this application to listen on another port."}
+{"label": "port-in-use", "text": "org.apache.catalina.LifecycleException: Protocol handler initialization failed\nCaused by: java.net.BindException: Address already in use: bind"}
+{"label": "port-in-use", "text": "Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:5432 -> 0.0.0.0:0: listen tcp 0.0.0.0:5432: bind: address already in use"}
+{"label": "port-in-use", "text": "redis: Could not create server TCP listening socket *:6379: bind: Address already in use"}
+{"label": "port-in-use", "text": "mongod: Failed to set up listener: SocketException: Address already in use"}
+{"label": "port-in-use", "text": "LOG: could not bind IPv4 address \"0.0.0.0\": Address already in use\nHINT: Is another postmaster already running on port 5432? If not, wait a few seconds and retry."}
+{"label": "port-in-use", "text": "Errno::EADDRINUSE: Address already in use - listen(2) (sidekiq web on 9292)"}
+{"label": "port-in-use", "text": "Error: That port is already in use."}
+{"label": "port-in-use", "text": "System.IO.IOException: Failed to bind to address http://127.0.0.1:5000: address already in use.\n ---> Microsoft.AspNetCore.Connections.AddressInUseException"}
+{"label": "port-in-use", "text": "error when starting dev server:\nError: Port 5173 is already in use"}
+{"label": "port-in-use", "text": "storybook: Port 6006 is not available. Would you like to run Storybook on port 6007 instead? (non-interactive, exiting)"}
+{"label": "port-in-use", "text": "kube-apiserver: failed to listen on 0.0.0.0:6443: listen tcp 0.0.0.0:6443: bind: address already in use"}
+{"label": "port-in-use", "text": "EADDRINUSE: another instance of the metrics agent is already bound to udp 8125 (statsd)"}
+{"label": "port-in-use", "text": "0/3 nodes are available: 3 node(s) didn't have free ports for the requested pod ports (hostPort 9100)."}
+{"label": "port-in-use", "text": "kafka-ui cannot start: port 8080 is occupied by another container (docker ps shows 0.0.0.0:8080->8080/tcp jenkins)"}
+{"label": "port-in-use", "text": "uWSGI: probably another instance of uWSGI is running on the same address (:8000).\nbind(): Address already in use [core/socket.c line 769]"}
+{"label": "port-in-use", "text": "zookeeper: java.net.BindException: Address already in use\n  at org.apache.zookeeper.server.NIOServerCnxnFactory.configure"}
+{"label": "port-in-use", "text": "rabbitmq: ERROR: could not bind to distribution port 25672, it is in use by another node: rabbit@queue-1"}
+{"label": "port-in-use", "text": "daphne: Listen failure: Couldn't listen on 0.0.0.0:8000: [Errno 98] Address already in use."}
+{"label": "port-in-use", "text": "Address already in use\nPort 5000 is in use by another program. Either identify and stop that program, or start the server with a different port."}
+{"label": "port-in-use", "text": "php -S: Failed to listen on 127.0.0.1:8000 (reason: Address already in use)"}
+{"label": "port-in-use", "text": "caddy: Error: loading initial config: listening on :443: listen tcp :443: bind: address already in use"}
+{"label": "port-in-use", "text": "traefik: error while starting entrypoint web: error opening listener: listen tcp :80: bind: address already in use"}
+{"label": "port-in-use", "text": "netstat -tlnp | grep 5000\ntcp 0 0 0.0.0.0:5000 0.0.0.0:* LISTEN 4412/node\nnew api process cannot start, port taken by stale pid 4412"}
+{"label": "port-in-use", "text": "lsof -i :8080 shows java 1893 still LISTENing, new deploy exits with BindException"}
+{"label": "port-in-use", "text": "Starting inspector on 127.0.0.1:9229 failed: address already in use"}
+{"label": "port-in-use", "text": "docker compose up: driver failed programming external connectivity on endpoint web: Bind for 0.0.0.0:80 failed: port is already allocated"}
+{"label": "ssl-cert-expired", "text": "FetchError: request to https://internal-api/v1/users failed, reason: unable to verify the first certificate"}
+{"label": "ssl-cert-expired", "text": "Error: self-signed certificate\n  code: 'DEPTH_ZERO_SELF_SIGNED_CERT'"}
+{"label": "ssl-cert-expired", "text": "javax.net.ssl.SSLHandshakeException: PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed\nCaused by: java.security.cert.CertificateExpiredException: NotAfter: Sat Aug 30 00:00:00 UTC 2026"}
+{"label": "ssl-cert-expired", "text": "sun.security.validator.ValidatorException: PKIX path building failed: unable to find valid certification path to requested target"}
+{"label": "ssl-cert-expired", "text": "Get \"https://registry.internal/v2/\": tls: failed to verify certificate: x509: certificate signed by unknown authority"}
+{"label": "ssl-cert-expired", "text": "tls: failed to verify certificate: x509: certificate has expired: current time 2026-09-12T03:14:07Z is after 2026-09-11T23:59:59Z"}
+{"label": "ssl-cert-expired", "text": "x509: certificate is valid for *.example.com, not api.internal.example.org"}
+{"label": "ssl-cert-expired", "text": "remote error: tls: expired certificate"}
+{"label": "ssl-cert-expired", "text": "nginx: [emerg] SSL_CTX_use_PrivateKey(\"/etc/nginx/certs/site.key\") failed (SSL: error:0B080074:x509 certificate routines:X509_check_private_key:key values mismatch)"}
+{"label": "ssl-cert-expired", "text": "SSL_do_handshake() failed (SSL: error:14094415:SSL routines:ssl3_read_bytes:sslv3 alert certificate expired) while SSL handshaking to upstream"}
+{"label": "ssl-cert-expired", "text": "curl: (60) SSL certificate problem: certificate has expired\nMore details here: https://curl.se/docs/sslcerts.html"}
+{"label": "ssl-cert-expired", "text": "fatal: unable to access 'https://git.internal/app.git/': SSL certificate problem: self-signed certificate in certificate chain"}
+{"label": "ssl-cert-expired", "text": "npm ERR! code CERT_HAS_EXPIRED\nnpm ERR! reason: certificate has expired"}
+{"label": "ssl-cert-expired", "text": "pip: SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain'))"}
+{"label": "ssl-cert-expired", "text": "docker pull: Error response from daemon: Get \"https://registry.corp.local/v2/\": x509: certificate has expired or is not yet valid"}
+{"label": "ssl-cert-expired", "text": "kubeadm certs check-expiration: apiserver certificate EXPIRED, residual time <invalid>"}
+{"label": "ssl-cert-expired", "text": "kubelet: part of the existing bootstrap client certificate in /etc/kubernetes/kubelet.conf is expired: 2026-07-19 08:12:44 +0000 UTC"}
+{"label": "ssl-cert-expired", "text": "cert-manager: \"msg\"=\"Certificate has expired\" \"certificate\"=\"prod/api-tls\" \"notAfter\"=\"2026-09-01T00:00:00Z\" renewal failed: ACME challenge did not pass"}
+{"label": "ssl-cert-expired", "text": "certbot: Attempting to renew cert (api.example.com) from /etc/letsencrypt/renewal/api.example.com.conf produced an unexpected error\nThe certificate expired on 2026-09-03."}
+{"label": "ssl-cert-expired", "text": "haproxy: SSL handshake failure (error:0A000415:SSL routines::sslv3 alert certificate expired)"}
+{"label": "ssl-cert-expired", "text": "istio-proxy: upstream connect error, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"}
+{"label": "ssl-cert-expired", "text": "psql: error: SSL error: certificate verify failed (server certificate for db.internal is past its notAfter date)"}
+{"label": "ssl-cert-expired", "text": "redis-cli --tls: Error: SSL_connect failed: certificate verify failed"}
+{"label": "ssl-cert-expired", "text": "org.apache.kafka.common.errors.SslAuthenticationException: SSL handshake failed\nCaused by: java.security.cert.CertificateExpiredException: NotAfter: Mon Sep 07 12:00:00 UTC 2026"}
+{"label": "ssl-cert-expired", "text": "System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.\n ---> System.Security.Authentication.AuthenticationException: The remote certificate is invalid because of errors in the certificate chain: NotTimeValid"}
+{"label": "ssl-cert-expired", "text": "OpenSSL::SSL::SSLError: SSL_connect returned=1 errno=0 state=error: certificate verify failed (certificate has expired)"}
+{"label": "ssl-cert-expired", "text": "GuzzleHttp\\Exception\\RequestException: cURL error 60: SSL certificate of the payment gateway has expired"}
+{"label": "ssl-cert-expired", "text": "Chrome: NET::ERR_CERT_AUTHORITY_INVALID - Your connection is not private (issuer internal-ca is not trusted)"}
+{"label": "ssl-cert-expired", "text": "Let's Encrypt renewal cron has been failing for 3 weeks, wildcard cert for *.app.example.com lapsed at midnight, all clients rejecting TLS"}
+{"label": "ssl-cert-expired", "text": "AWS ALB: ClientTLSNegotiationErrorCount spiking, ACM certificate status EXPIRED for listener 443"}
+{"label": "ssl-cert-expired", "text": "vault: error: x509: certificate signed by unknown authority (possibly because of \"crypto/rsa: verification error\" while trying to verify candidate authority certificate \"vault-ca\")"}
+{"label": "ssl-cert-expired", "text": "fluent-bit: [tls] error: unexpected EOF with reason: certificate verify failed, output es.0 cannot flush"}
+{"label": "ssl-cert-expired", "text": "javax.net.ssl.SSLPeerUnverifiedException: Hostname api.example.com not verified: certificate: sha256/AbC= subjectAltNames: [old.example.com]"}
+{"label": "too-many-open-files", "text": "Error: EMFILE: too many open files, open '/app/public/index.html'\n  at Object.openSync (node:fs:603:3)"}
+{"label": "too-many-open-files", "text": "Error: accept EMFILE\n  at TCP.onconnection (node:net:2075:24)"}
+{"label": "too-many-open-files", "text": "Error: spawn EMFILE\n  at ChildProcess._handle.onexit"}
+{"label": "too-many-open-files", "text": "Error: write EMFILE\n  at afterWriteDispatched (node:internal/stream_base_commons:160:15)"}
+{"label": "too-many-open-files", "text": "(node:1) Warning: ENFILE: file table overflow, open '/app/logs/out.log'"}
+{"label": "too-many-open-files", "text": "thread 'tokio-runtime-worker' panicked at 'failed to accept connection: Os { code: 24, kind: Uncategorized, message: \"Too many open files\" }'"}
+{"label": "too-many-open-files", "text": "java.net.SocketException: Too many open files\n  at java.base/sun.nio.ch.Net.accept(Native Method)\n  at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept"}
+{"label": "too-many-open-files", "text": "org.apache.tomcat.util.net.Acceptor: Socket accept failed\njava.io.IOException: Too many open files"}
+{"label": "too-many-open-files", "text": "java.io.FileNotFoundException: /opt/app/data/index/_7.cfs (Too many open files)"}
+{"label": "too-many-open-files", "text": "dial tcp 10.0.1.4:5432: socket: too many open files"}
+{"label": "too-many-open-files", "text": "open /proc/self/fd: too many open files\nfatal error: pipe failed"}
+{"label": "too-many-open-files", "text": "redis: You requested maxclients of 10000 requiring at least 10032 max file descriptors.\nCurrent maximum open files is 4096. maxclients has been reduced to 4064 to compensate for low ulimit."}
+{"label": "too-many-open-files", "text": "mysqld: Out of resources when opening file './shop/items.MYD' (Errcode: 24 - Too many open files)"}
+{"label": "too-many-open-files", "text": "LOG: out of file descriptors: Too many open files in system; release and retry"}
+{"label": "too-many-open-files", "text": "mongod: Error accepting new connection on 0.0.0.0:27017: Too many open files"}
+{"label": "too-many-open-files", "text": "kafka: ERROR Error while rolling log segment for orders-4 in dir /var/lib/kafka\njava.nio.file.FileSystemException: /var/lib/kafka/orders-4/00000000000000412.index: Too many open files"}
+{"label": "too-many-open-files", "text": "haproxy: [ALERT] [haproxy.main()] Cannot raise FD limit to 200035, limit is 4096."}
+{"label": "too-many-open-files", "text": "nginx: [alert] socket() failed (24: Too many open files) while connecting to upstream"}
+{"label": "too-many-open-files", "text": "nginx: [warn] 4096 worker_connections exceed open file resource limit: 1024"}
+{"label": "too-many-open-files", "text": "gunicorn: [ERROR] Socket error processing request.\nOSError: [Errno 24] Too many open files: '/app/templates/base.html'"}
+{"label": "too-many-open-files", "text": "urllib3: Failed to establish a new connection: [Errno 24] Too many open files"}
+{"label": "too-many-open-files", "text": "aiohttp: OSError: [Errno 24] Too many open files, a client session is created per request and never closed"}
+{"label": "too-many-open-files", "text": "systemd: Failed to allocate directory watch: Too many open files"}
+{"label": "too-many-open-files", "text": "error: cannot create pipe for ssh: Too many open files\nfatal: unable to fork"}
+{"label": "too-many-open-files", "text": "rsyslogd: file '/var/log/messages': open error: Too many open files [v8.2102.0]"}
+{"label": "too-many-open-files", "text": "Error response from daemon: failed to create task for container: open /run/containerd/moby/8f/config.json: too many open files"}
+{"label": "too-many-open-files", "text": "promtail: level=error msg=\"error creating tailer\" err=\"failed to add watch: too many open files\""}
+{"label": "too-many-open-files", "text": "prometheus: level=error msg=\"Opening storage failed\" err=\"open /prometheus/01HZ/chunks/000004: too many open files\""}
+{"label": "too-many-open-files", "text": "uvicorn: socket.accept() out of system resource\nOSError: [Errno 24] Too many open files"}
+{"label": "too-many-open-files", "text": "cat /proc/1/limits: Max open files 1024 1024\nls /proc/1/fd | wc -l: 1024\napi is refusing new connections"}
+{"label": "db-connection-refused", "text": "sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at \"db\" (172.18.0.2), port 5432 failed: Connection refused\n  Is the server running on that host and accepting TCP/IP connections?"}
+{"label": "db-connection-refused", "text": "psycopg2.OperationalError: FATAL: remaining connection slots are reserved for non-replication superuser connections"}
+{"label": "db-connection-refused", "text": "SequelizeConnectionError: FATAL: too many connections for role \"app\""}
+{"label": "db-connection-refused", "text": "MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted."}
+{"label": "db-connection-refused", "text": "MongoNetworkError: connection 4 to 10.0.3.5:27017 closed\n  at Connection.onClose"}
+{"label": "db-connection-refused", "text": "pymongo.errors.AutoReconnect: mongo-0.mongo:27017: [Errno 104] Connection reset by peer"}
+{"label": "db-connection-refused", "text": "MongoPoolClearedError: Connection pool for mongo:27017 was cleared because another operation failed with: \"connection <monitor> to 172.18.0.3:27017 closed\""}
+{"label": "db-connection-refused", "text": "typeorm: Unable to connect to the database. Retrying (3)...\nError: connect ECONNREFUSED 172.20.0.2:5432"}
+{"label": "db-connection-refused", "text": "KnexTimeoutError: Knex: Timeout acquiring a connection. The pool is probably full. Are you missing a .transacting(trx) call?"}
+{"label": "db-connection-refused", "text": "HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5f2a (This connection has been closed.)"}
+{"label": "db-connection-refused", "text": "HikariPool-1 - Exception during pool initialization.\njava.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up."}
+{"label": "db-connection-refused", "text": "org.postgresql.util.PSQLException: Connection to db:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections."}
+{"label": "db-connection-refused", "text": "ERROR 1040 (HY000): Too many connections"}
+{"label": "db-connection-refused", "text": "ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)"}
+{"label": "db-connection-refused", "text": "pg_isready: db:5432 - no response\napi: still waiting for the database, attempt 30"}
+{"label": "db-connection-refused", "text": "FATAL: no pg_hba.conf entry for host \"10.0.5.21\", user \"app\", database \"orders\", no encryption"}
+{"label": "db-connection-refused", "text": "FATAL: the database system is starting up"}
+{"label": "db-connection-refused", "text": "FATAL: the database system is shutting down\nserver closed the connection, all queries failing"}
+{"label": "db-connection-refused", "text": "ActiveRecord::ConnectionNotEstablished: connection to server at \"10.0.1.9\", port 5432 failed: Connection refused"}
+{"label": "db-connection-refused", "text": "ActiveRecord::ConnectionTimeoutError: could not obtain a connection from the pool within 5.000 seconds; all pooled connections were in use"}
+{"label": "db-connection-refused", "text": "Mysql2::Error::ConnectionError: Lost connection to MySQL server during query"}
+{"label": "db-connection-refused", "text": "gorm: failed to initialize database, got error failed to connect to host=db user=app database=app: dial error (dial tcp 172.18.0.2:5432: connect: connection refused)"}
+{"label": "db-connection-refused", "text": "dial tcp 10.0.0.12:3306: connect: connection refused\npanic: failed to connect database"}
+{"label": "db-connection-refused", "text": "Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible."}
+{"label": "db-connection-refused", "text": "Npgsql.NpgsqlException: Failed to connect to 10.0.2.5:5432\n ---> System.Net.Sockets.SocketException (111): Connection refused"}
+{"label": "db-connection-refused", "text": "com.datastax.oss.driver.api.core.AllNodesFailedException: Could not reach any contact point, make sure you've provided valid addresses"}
+{"label": "db-connection-refused", "text": "ORA-12541: TNS:no listener"}
+{"label": "db-connection-refused", "text": "ORA-01017: invalid username/password; logon denied"}
+{"label": "db-connection-refused", "text": "asyncpg.exceptions.InvalidPasswordError: password authentication failed for user \"api\""}
+{"label": "db-connection-refused", "text": "pgbouncer: ERROR no more connections allowed (max_client_conn)"}
+{"label": "db-connection-refused", "text": "SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from users limit 1)"}
+{"label": "error-rate-spike", "text": "\"GET /api/orders HTTP/1.1\" 502 157\n\"GET /api/orders HTTP/1.1\" 502 157\n\"POST /api/cart HTTP/1.1\" 502 157"}
+{"label": "error-rate-spike", "text": "ERROR 500 POST /api/checkout - TypeError: Cannot read properties of undefined (reading 'price')\n  at calcTotal (/app/dist/cart.js:71)\nerror count 2300 in the last 5 minutes"}
+{"label": "error-rate-spike", "text": "alert: HighErrorRate firing - job=api 5xx ratio 0.31 (threshold 0.05) since rollout of build 4812"}
+{"label": "error-rate-spike", "text": "Datadog monitor: [Triggered] error rate on service checkout above 20%, started with deploy 2026.09.12-3"}
+{"label": "error-rate-spike", "text": "rollout status: deployment \"api\" updated, new pods returning 500 on /api/users\nReadiness probe failed: HTTP probe failed with statuscode: 500"}
+{"label": "error-rate-spike", "text": "Readiness probe failed: HTTP probe failed with statuscode: 503\nReadiness probe failed: HTTP probe failed with statuscode: 503\n2 of 3 replicas of the new ReplicaSet api-6d4 are failing health checks"}
+{"label": "error-rate-spike", "text": "ALB target group api-tg: HTTPCode_Target_5XX_Count 4120, UnHealthyHostCount 3"}
+{"label": "error-rate-spike", "text": "CloudFront: 502 ERROR The request could not be satisfied. origin returned 5xx for 41% of requests"}
+{"label": "error-rate-spike", "text": "NullPointerException at com.shop.OrderController.create(OrderController.java:58)\nHTTP 500 for POST /orders\nsame trace 1800 times since the 11:42 release"}
+{"label": "error-rate-spike", "text": "KeyError: 'customer_id'\nInternal Server Error: /api/invoices\n[ERROR] 500 responses: 3400 since the last release"}
+{"label": "error-rate-spike", "text": "django.request: Internal Server Error: /api/v2/profile\nTraceback (most recent call last):\nTypeError: get_profile() missing 1 required positional argument: 'tenant'"}
+{"label": "error-rate-spike", "text": "PHP Fatal error: Uncaught Error: Call to undefined method App\\Models\\Order::totalWithTax()\nHTTP 500 on every checkout request since the 16:20 release"}
+{"label": "error-rate-spike", "text": "panic: runtime error: index out of range [3] with length 3\nhttp: panic serving 10.0.0.9:51234 - recovered, returning 500, 700 panics/min"}
+{"label": "error-rate-spike", "text": "System.NullReferenceException: Object reference not set to an instance of an object.\n   at Api.Controllers.CartController.Get()\nHTTP 500 x 2,900 since version 3.8.1 went live"}
+{"label": "error-rate-spike", "text": "Rollbar: 1,150 occurrences of \"TypeError: e.items.map is not a function\", release 91c2f7a"}
+{"label": "error-rate-spike", "text": "bugsnag: error rate for release 2.19.0 is 27%, previous release 0.3%"}
+{"label": "error-rate-spike", "text": "HTTP 502 Bad Gateway - 3,811 responses from ingress-nginx for host api.example.com, upstream pods failing after image update"}
+{"label": "error-rate-spike", "text": "haproxy: backend api/srv2 is DOWN, reason: Layer7 wrong status, code: 500. 1 active servers left."}
+{"label": "error-rate-spike", "text": "istio: response_code=503 count jumped from 0 to 900/min for reviews-v2 after canary shift to 50%"}
+{"label": "error-rate-spike", "text": "canary analysis failed: success rate 71.2% < 99% threshold, rolling back api-canary"}
+{"label": "error-rate-spike", "text": "argo rollouts: Rollout aborted - metric \"error-rate\" assessed Failed due to failed (3) > failureLimit (2)"}
+{"label": "error-rate-spike", "text": "status=500 method=GET path=/api/feed error=\"json: cannot unmarshal string into Go struct field Feed.items of type int\"\nseen 5,000+ times since the 08:30 deploy"}
+{"label": "error-rate-spike", "text": "UnhandledPromiseRejectionWarning: TypeError: res.json is not a function\n500 Internal Server Error returned for /api/reports, 1,900 hits"}
+{"label": "error-rate-spike", "text": "ZodError: invalid_type at \"items[0].sku\" expected string, received number\n  at /app/dist/routes/order.js:31\n500 on 35% of POST /orders since the mobile release"}
+{"label": "error-rate-spike", "text": "uptime check FAILED: https://api.example.com/health returned 500 (3 consecutive), error budget burn rate 14x"}
+{"label": "error-rate-spike", "text": "Lambda: Errors metric 1,240 for function order-handler:42, \"errorType\":\"TypeError\",\"errorMessage\":\"Cannot destructure property 'body' of 'event' as it is undefined.\""}
+{"label": "error-rate-spike", "text": "API Gateway: 5XXError rate 33% on stage prod, integration returned 502 Malformed Lambda proxy response"}
+{"label": "error-rate-spike", "text": "gunicorn access log: 500 on 4 of every 5 requests to /api/v1/quotes since the 10:05 deploy\nValueError: invalid literal for int() with base 10: 'N/A'"}
+{"label": "error-rate-spike", "text": "kibana: status:500 count per interval - 12, 9, 14, 1830, 2210, 2044; spike begins at deploy marker api@1.42.0"}
+{"label": "error-rate-spike", "text": "HTTP 500 {\"error\":\"relation \\\"orders_v2\\\" does not exist\"} on all order endpoints, migration not applied before deploy"}
+{"label": "error-rate-spike", "text": "New Relic: Error rate 18.4% (baseline 0.2%) on WebTransaction/Controller/orders/create, top error: ActiveRecord::StatementInvalid"}
+{"label": "auth-brute-force", "text": "\"POST /login HTTP/1.1\" 401 43\n\"POST /login HTTP/1.1\" 401 43\n\"POST /login HTTP/1.1\" 401 43"}
+{"label": "auth-brute-force", "text": "WARN auth: 1,240 failed login attempts for 310 distinct usernames from 3 source addresses"}
+{"label": "auth-brute-force", "text": "AXES: Locked out {username: \"admin\", ip_address: \"193.32.162.4\"} after 5 failed login attempts"}
+{"label": "auth-brute-force", "text": "Devise: Failed sign in for user root@example.com - 400 failures in a row, account locked (lockable)"}
+{"label": "auth-brute-force", "text": "BadCredentialsException: Bad credentials for principal 'administrator' - 700 failures/min from one subnet"}
+{"label": "auth-brute-force", "text": "wordpress: XML-RPC authentication failure for admin from 45.9.148.3 - 2,000 system.multicall attempts"}
+{"label": "auth-brute-force", "text": "Wordfence: Blocked for login brute force: 185.191.171.12 exceeded the maximum number of login failures (20)"}
+{"label": "auth-brute-force", "text": "Event ID 4625 An account failed to log on. Account Name: Administrator, Failure Reason: Unknown user name or bad password - 3,400 events"}
+{"label": "auth-brute-force", "text": "postfix/smtpd: warning: unknown[45.142.120.9]: SASL LOGIN authentication failed: UGFzc3dvcmQ6 (seen 600 times)"}
+{"label": "auth-brute-force", "text": "proftpd: USER admin (Login failed): Incorrect password - 150 failures from 5.34.207.8"}
+{"label": "auth-brute-force", "text": "Jenkins: WARNING: Login attempt failed for user admin - repeated 420 times from one address"}
+{"label": "auth-brute-force", "text": "GuardDuty: UnauthorizedAccess:EC2/SSHBruteForce - instance i-0ab is the target of an SSH brute force attack from 141.98.10.60"}
+{"label": "auth-brute-force", "text": "asterisk: NOTICE chan_sip.c: Registration from '\"1001\" <sip:1001@pbx>' failed for '62.210.0.4' - Wrong password (x 4,000)"}
+{"label": "auth-brute-force", "text": "Nextcloud: Login failed: 'admin' (Remote IP: '77.247.110.5') - bruteforce protection throttling this address"}
+{"label": "auth-brute-force", "text": "honeypot: 61 password guesses for accounts oracle, ubuntu, pi, git, deploy from one host"}
+{"label": "auth-brute-force", "text": "login audit: user=jsmith result=FAIL x 37, then user=jsmith result=OK from the same unfamiliar address - possible compromised account"}
+{"label": "auth-brute-force", "text": "sshd[2211]: Invalid user oracle from 104.248.3.9 port 40212\nsshd[2211]: Failed password for invalid user oracle from 104.248.3.9 port 40212 ssh2\nsshd[2213]: Invalid user test from 104.248.3.9 port 40290"}
+{"label": "auth-brute-force", "text": "sshd: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=222.186.30.112 user=root\nsshd: maximum authentication attempts exceeded for root from 222.186.30.112 port 31337 ssh2 [preauth]"}
+{"label": "auth-brute-force", "text": "Cloudflare WAF: rule \"login rate limit\" triggered 14,000 times for /account/signin, top source ASN 14061"}
+{"label": "crash-loop", "text": "kubectl rollout status: deployment \"worker\" exceeded its progress deadline, pods keep restarting, 0 of 3 updated replicas are available"}
+{"label": "crash-loop", "text": "NAME READY STATUS RESTARTS\nbilling-6f8 0/1 CrashLoopBackOff 37"}
+{"label": "crash-loop", "text": "containerStatuses: restartCount: 44, state: waiting: reason: CrashLoopBackOff, lastState: terminated: exitCode: 1"}
+{"label": "crash-loop", "text": "systemd[1]: queue.service: Main process exited, code=exited, status=1/FAILURE\nsystemd[1]: queue.service: Service hold-off time over, scheduling restart."}
+{"label": "crash-loop", "text": "pm2: App [api:0] exited with code [1] via signal [SIGINT]\npm2: App [api:0] starting in -fork mode-\npm2: Script /app/server.js had too many unstable restarts (16). Stopped. \"errored\""}
+{"label": "crash-loop", "text": "supervisor: gave up: worker entered FATAL state, too many start retries too quickly"}
+{"label": "crash-loop", "text": "supervisord: exited: api (exit status 1; not expected)\nsupervisord: spawned: 'api' with pid 211\nsupervisord: exited: api (exit status 1; not expected)"}
+{"label": "crash-loop", "text": "ECS service api: task stopped (Essential container in task exited), exit code 1 - 14 tasks started and stopped in a row"}
+{"label": "crash-loop", "text": "Nomad: Task \"web\" is \"dead\" - Exit Code: 1, Exceeded allowed attempts 2 and mode is \"fail\""}
+{"label": "crash-loop", "text": "Fly.io: machine 3d8 exited with exit code 1, restarting (attempt 9 of 10)"}
+{"label": "crash-loop", "text": "==> Exited with status 1\n==> Restarting service, crash count 7"}
+{"label": "crash-loop", "text": "Unhandled exception. System.InvalidOperationException: Sequence contains no elements\n   at Program.Main()\ncontainer restarted 21 times"}
+{"label": "crash-loop", "text": "Exception in thread \"main\" java.lang.ExceptionInInitializerError\n  at com.acme.Boot.main(Boot.java:9)\nContainer restarting, attempt 12"}
+{"label": "crash-loop", "text": "goroutine 1 [running]:\nmain.main()\nexit status 2 - pod restarted 18 times since the rollout"}
+{"label": "crash-loop", "text": "Segmentation fault (core dumped)\ncontainer api exited (139), restarting, 9th time"}
+{"label": "crash-loop", "text": "kubectl get events: Container queue failed liveness probe, will be restarted (x40)"}
+{"label": "crash-loop", "text": "Docker Swarm: service api task failed: \"task: non-zero exit (1)\" - 0/3 replicas running, tasks keep cycling"}
+{"label": "crash-loop", "text": "init container migrate keeps failing: Init:CrashLoopBackOff, restarts 11"}
+{"label": "dns-resolution-failure", "text": "java.net.UnknownHostException: orders-db.internal: Name or service not known\n  at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)"}
+{"label": "dns-resolution-failure", "text": "java.net.UnknownHostException: config-server.platform.svc: Name does not resolve\n  at java.base/java.net.InetAddress$CachedLookup.get"}
+{"label": "dns-resolution-failure", "text": "lookup minio.storage.svc.cluster.local: no such host (ndots:5 search path exhausted)"}
+{"label": "dns-resolution-failure", "text": "dial tcp: lookup api.partner.io on 10.96.0.10:53: read udp 10.244.1.5:41001->10.96.0.10:53: i/o timeout"}
+{"label": "dns-resolution-failure", "text": "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='auth.internal', port=443): Max retries exceeded (Caused by NameResolutionError(\"Failed to resolve 'auth.internal' ([Errno -2] Name or service not known)\"))"}
+{"label": "dns-resolution-failure", "text": "ping: payments.svc.cluster.local: Name or service not known"}
+{"label": "dns-resolution-failure", "text": "nslookup backend\n;; connection timed out; no servers could be reached"}
+{"label": "dns-resolution-failure", "text": "dig db.prod.internal: status: NXDOMAIN, ANSWER: 0"}
+{"label": "dns-resolution-failure", "text": "haproxy: [ALERT] parsing [/usr/local/etc/haproxy/haproxy.cfg:41] : 'server api1' : could not resolve address 'api1.internal'."}
+{"label": "dns-resolution-failure", "text": "nginx: api.internal could not be resolved (3: Host not found) while sending to client"}
+{"label": "dns-resolution-failure", "text": "yarn: error An unexpected error occurred: \"https://registry.yarnpkg.com/lodash: getaddrinfo EAI_AGAIN registry.yarnpkg.com\"."}
+{"label": "dns-resolution-failure", "text": "System.Net.Http.HttpRequestException: Name or service not known (billing-api:8080)\n ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known"}
+{"label": "dns-resolution-failure", "text": "Resolv::ResolvError: no address for cache.internal"}
+{"label": "dns-resolution-failure", "text": "php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution"}
+{"label": "dns-resolution-failure", "text": "mysql: ERROR 2005 (HY000): Unknown MySQL server host 'mysql-primary' (-2)"}
+{"label": "dns-resolution-failure", "text": "ssh: Could not resolve hostname bastion.corp.example: Name or service not known"}
+{"label": "dns-resolution-failure", "text": "apt-get update: Temporary failure resolving 'archive.ubuntu.com'\nErr:1 http://archive.ubuntu.com/ubuntu noble InRelease"}
+{"label": "dns-resolution-failure", "text": "amqp: dial tcp: lookup rabbitmq.messaging.svc: server misbehaving"}
+{"label": "high-latency", "text": "\"GET /api/report HTTP/1.1\" 200 rt=11.482 urt=11.480 - request times above 10 seconds on every call"}
+{"label": "high-latency", "text": "Cloudflare error 524: a timeout occurred, the origin web server did not return a response in time"}
+{"label": "high-latency", "text": "Heroku: at=error code=H12 desc=\"Request timeout\" method=GET path=\"/dashboard\" service=30000ms status=503"}
+{"label": "high-latency", "text": "# Query_time: 23.418  Lock_time: 0.000 Rows_sent: 10  Rows_examined: 4810223"}
+{"label": "high-latency", "text": "redis SLOWLOG: KEYS session:* took 2840 ms, blocking all other clients"}
+{"label": "high-latency", "text": "AxiosError: timeout of 10000ms exceeded (GET /inventory/sku/1881)"}
+{"label": "high-latency", "text": "httpx.ReadTimeout: The read operation timed out (POST http://pricing:8080/quote, waited 15.0s)"}
+{"label": "high-latency", "text": "java.net.SocketTimeoutException: Read timed out\n  at com.acme.client.PricingClient.quote(PricingClient.java:52)\np95 for /quote is now 9.8s"}
+{"label": "high-latency", "text": "context deadline exceeded (Client.Timeout exceeded while awaiting headers) calling http://search:9200/_search"}
+{"label": "high-latency", "text": "rpc error: code = DeadlineExceeded desc = context deadline exceeded, method /catalog.Catalog/List, elapsed 5.001s"}
+{"label": "high-latency", "text": "event loop lag 2300ms detected, requests queueing, average response time 7.4s"}
+{"label": "high-latency", "text": "thread pool exhausted: 200/200 tomcat threads busy, requests waiting 12s in the accept queue"}
+{"label": "high-latency", "text": "Alert: p95 latency for checkout above 3s (current 7.9s), error rate normal"}
+{"label": "high-latency", "text": "kafka consumer lag 1.8M messages on orders-events and growing, processing time per batch 45s (normally 2s)"}
+{"label": "high-latency", "text": "elasticsearch: [search.slowlog.query] took[14.2s], took_millis[14213], total_hits[10000+] index[logs-2026.09]"}
+{"label": "high-latency", "text": "CPU throttling: container api throttled 78% of periods, response time went from 120ms to 4.5s"}
+{"label": "high-latency", "text": "Lambda: Task timed out after 30.03 seconds (function report-export)"}
+{"label": "missing-config", "text": "KeyError: 'DATABASE_URL'\n  File \"/app/settings.py\", line 14, in <module>\n    DATABASE_URL = os.environ['DATABASE_URL']"}
+{"label": "missing-config", "text": "django.core.exceptions.ImproperlyConfigured: Set the SECRET_KEY environment variable"}
+{"label": "missing-config", "text": "pydantic_core.ValidationError: 2 validation errors for Settings\nredis_url\n  Field required [type=missing]"}
+{"label": "missing-config", "text": "Error: Missing required environment variable: STRIPE_SECRET_KEY\n  at assertEnv (/app/dist/config.js:8)"}
+{"label": "missing-config", "text": "panic: required key SMTP_HOST missing value (envconfig)"}
+{"label": "missing-config", "text": "java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.datasource.url' in value \"${spring.datasource.url}\""}
+{"label": "missing-config", "text": "python: can't open file '/app/manage.py': [Errno 2] No such file or directory"}
+{"label": "missing-config", "text": "java.lang.NoClassDefFoundError: com/fasterxml/jackson/databind/ObjectMapper"}
+{"label": "missing-config", "text": "Could not find 'pg' in any of the sources (Bundler::GemNotFound)\nRun bundle install to install missing gems."}
+{"label": "missing-config", "text": "FileNotFoundError: [Errno 2] No such file or directory: '/app/config/settings.yaml'"}
+{"label": "missing-config", "text": "Error: configmap \"api-config\" not found\nCreateContainerConfigError: pod api-5d9 cannot start"}
+{"label": "missing-config", "text": "WARN The \"POSTGRES_PASSWORD\" variable is not set. Defaulting to a blank string.\ninvalid interpolation: required variable API_TOKEN is missing a value"}
+{"label": "missing-config", "text": "nginx: [emerg] open() \"/etc/nginx/conf.d/upstreams.conf\" failed (2: No such file or directory) in /etc/nginx/nginx.conf:31"}
+{"label": "missing-config", "text": "Error: The SENDGRID_API_KEY environment variable is missing or empty; either provide it, or instantiate the client with an apiKey option"}

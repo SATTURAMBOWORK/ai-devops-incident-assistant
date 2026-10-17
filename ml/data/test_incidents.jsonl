@@ -1,0 +1,208 @@
+{"label": "oom-killed", "text": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory\n<--- Last few GCs --->\n[1:0x5a] 41200 ms: Mark-sweep 2043.1 (2077.4) -> 2042.3 MB"}
+{"label": "oom-killed", "text": "kubectl describe pod api-7f9: Last State: Terminated  Reason: OOMKilled  Exit Code: 137"}
+{"label": "oom-killed", "text": "java.lang.OutOfMemoryError: GC overhead limit exceeded"}
+{"label": "oom-killed", "text": "<--- JS stacktrace --->\nFATAL ERROR: MarkCompactCollector: young object promotion failed Allocation failed"}
+{"label": "oom-killed", "text": "container_memory_working_set_bytes 2.01e9 / limit 2.00e9, OOMKilled shortly after"}
+{"label": "oom-killed", "text": "runtime: out of memory: cannot allocate 1073741824-byte block (heap)\nfatal error: out of memory"}
+{"label": "oom-killed", "text": "ERROR worker exited with OOM, spawning replacement worker (3rd time this hour)"}
+{"label": "oom-killed", "text": "Fatal Python error: Cannot allocate memory\nCurrent thread 0x00007f2a (most recent call first)"}
+{"label": "oom-killed", "text": "ERR OOM: allocation of 512MB failed, current usage 3.9GB of 4GB limit"}
+{"label": "db-connection-refused", "text": "FATAL: sorry, too many clients already"}
+{"label": "db-connection-refused", "text": "MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. IP not whitelisted."}
+{"label": "db-connection-refused", "text": "PG::ConnectionBad: could not connect to server: Connection refused. Is the server running on host db (172.18.0.2) and accepting TCP/IP connections on port 5432?"}
+{"label": "db-connection-refused", "text": "readiness probe failing: ECONNREFUSED to database host on every attempt"}
+{"label": "db-connection-refused", "text": "sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not connect to server"}
+{"label": "db-connection-refused", "text": "ECONNRESET reading from socket to mysql:3306, connection lost during query"}
+{"label": "db-connection-refused", "text": "ECONNREFUSED while running migrations against the database, aborting"}
+{"label": "disk-full", "text": "nginx: [emerg] open() /var/log/nginx/access.log failed (28: No space left on device)"}
+{"label": "disk-full", "text": "Error response from daemon: mkdir /var/lib/docker/overlay2: no space left on device"}
+{"label": "disk-full", "text": "Cannot save upload: ENOSPC, 0 bytes available on /data"}
+{"label": "disk-full", "text": "sqlite3.OperationalError: database or disk is full"}
+{"label": "disk-full", "text": "docker system df shows 68GB reclaimable in dangling images, host volume full"}
+{"label": "disk-full", "text": "failed to write core dump: disk full, /var/crash unavailable"}
+{"label": "disk-full", "text": "logrotate: error creating output file /var/log/app.log.1: No space left on device"}
+{"label": "disk-full", "text": "rsync: write failed on \"/mnt/data/archive.tar\": No space left on device (28)"}
+{"label": "disk-full", "text": "Disk pressure detected on node worker-3, kubelet evicting pods to reclaim ephemeral storage"}
+{"label": "port-in-use", "text": "netstat -ano | findstr :5000\n  TCP  0.0.0.0:5000  LISTENING  14822"}
+{"label": "port-in-use", "text": "Failed to bind to address http://0.0.0.0:5001: address already in use."}
+{"label": "port-in-use", "text": "Error: EADDRINUSE, another process is listening on the port defined in PORT env var"}
+{"label": "port-in-use", "text": "gunicorn: Connection in use: ('0.0.0.0', 8000)\nRetrying in 1 second."}
+{"label": "port-in-use", "text": "listen tcp 127.0.0.1:9090: bind: address already in use, prometheus exited"}
+{"label": "port-in-use", "text": "bind() to [::]:8443 failed (98: Address already in use), configuration reload aborted"}
+{"label": "port-in-use", "text": "sshd: error: Bind to port 22 on 0.0.0.0 failed: Address already in use."}
+{"label": "crash-loop", "text": "Back-off restarting failed container api in pod api-7f9"}
+{"label": "missing-config", "text": "Error: Cannot find module 'express'\n  at Function.Module._resolveFilename\nnpm ERR! exited with code 1"}
+{"label": "missing-config", "text": "Config validation error: MONGO_URI is required. Process exited with code 1"}
+{"label": "crash-loop", "text": "CrashLoopBackOff, last state terminated with exit code 1, began right after deploy"}
+{"label": "db-connection-refused", "text": "Error: connect ECONNREFUSED at startup, process.exit(1) called from bootstrap"}
+{"label": "crash-loop", "text": "docker inspect: RestartCount 41, State.Status restarting, State.ExitCode 1"}
+{"label": "crash-loop", "text": "prisma: Schema engine error, migrate deploy failed at startup, container terminated"}
+{"label": "ssl-cert-expired", "text": "Error: certificate has expired (CERT_HAS_EXPIRED)"}
+{"label": "ssl-cert-expired", "text": "UNABLE_TO_VERIFY_LEAF_SIGNATURE while calling the payments API"}
+{"label": "ssl-cert-expired", "text": "self signed certificate in certificate chain (DEPTH_ZERO_SELF_SIGNED_CERT)"}
+{"label": "ssl-cert-expired", "text": "openssl s_client: notAfter=Mar 3 00:00:00 2026 GMT, current date past expiry"}
+{"label": "ssl-cert-expired", "text": "certbot renew failed, certificate expires in 0 days, HTTPS requests failing"}
+{"label": "ssl-cert-expired", "text": "x509: certificate signed by unknown authority when calling internal billing service"}
+{"label": "ssl-cert-expired", "text": "Let's Encrypt certificate for api.example.com expired at 2026-09-01T00:00:00Z"}
+{"label": "ssl-cert-expired", "text": "TLS alert 45 certificate_expired sent by peer, connection closed"}
+{"label": "ssl-cert-expired", "text": "wget: ERROR: cannot verify github.com's certificate, issued by unknown authority"}
+{"label": "high-latency", "text": "request count spiked 5x, response times degraded to 6s, no errors yet"}
+{"label": "high-latency", "text": "ALB target response time 9.1s, healthy hosts 2, cpu utilization 97%"}
+{"label": "high-latency", "text": "average response time climbed from 180ms to 5s over twenty minutes under load"}
+{"label": "high-latency", "text": "duration: 18234.112 ms  statement: SELECT * FROM incidents ORDER BY created_at DESC"}
+{"label": "high-latency", "text": "AxiosError: timeout of 10000ms exceeded calling the pricing service"}
+{"label": "high-latency", "text": "thread pool exhausted, 512 active threads, queue depth 3100, responses delayed"}
+{"label": "high-latency", "text": "upstream response time 11.302s, request time 11.310s, status 200"}
+{"label": "high-latency", "text": "nginx upstream_response_time 30.001 upstream_status 504 request GET /api/incidents"}
+{"label": "error-rate-spike", "text": "AssertionError: expected document to exist\n  at save (/app/src/services/incident.service.js:37)\n500 on all write paths"}
+{"label": "error-rate-spike", "text": "CastError: Cast to ObjectId failed for value \"undefined\"\nreturned 500 on 2200 requests"}
+{"label": "error-rate-spike", "text": "status:500 spike detected, top offender POST /api/analyze with 4800 failures in 4 minutes"}
+{"label": "error-rate-spike", "text": "500 Internal Server Error on /api/analyze, cause: TypeError reading 'severity' of undefined"}
+{"label": "error-rate-spike", "text": "Unhandled error: Cannot destructure property 'logs' of 'req.body' as it is undefined. HTTP 500."}
+{"label": "error-rate-spike", "text": "response_code:500 count 7210 | response_code:200 count 1180 | last 10 minutes"}
+{"label": "error-rate-spike", "text": "RangeError: Invalid array length\n  at buildEvidence (/app/src/services/analysis.service.js:112)\n500 returned to client"}
+{"label": "error-rate-spike", "text": "Internal Server Error 500 - unhandled exception in request handler, 4100 occurrences in 6 minutes"}
+{"label": "crash-loop", "text": "Back-off restarting failed container worker in pod worker-5c8d, restartCount 17"}
+{"label": "crash-loop", "text": "kubelet: Container web failed liveness probe, will be restarted (restart 9)"}
+{"label": "crash-loop", "text": "Segmentation fault (core dumped)\ncontainer exited with code 139, restart policy on-failure"}
+{"label": "crash-loop", "text": "exit code 2 on startup after upgrading to the new base image, container keeps restarting"}
+{"label": "dns-resolution-failure", "text": "Error: getaddrinfo EAI_AGAIN redis\n  at GetAddrInfoReqWrap.onlookup (node:dns:107:26)"}
+{"label": "dns-resolution-failure", "text": "socket.gaierror: [Errno -3] Temporary failure in name resolution"}
+{"label": "dns-resolution-failure", "text": "dial tcp: lookup mongo on 127.0.0.11:53: no such host"}
+{"label": "dns-resolution-failure", "text": "CoreDNS: [ERROR] plugin/errors: 2 api.default.svc.cluster.local. A: no such host"}
+{"label": "dns-resolution-failure", "text": "TypeError: fetch failed\n  cause: Error: getaddrinfo ENOTFOUND hooks.slack.com"}
+{"label": "dns-resolution-failure", "text": "EAI_AGAIN while resolving smtp.mailgun.org, email job will retry"}
+{"label": "dns-resolution-failure", "text": "pymongo.errors.ConfigurationError: The DNS query name does not exist: _mongodb._tcp.cluster0.mongodb.net."}
+{"label": "dns-resolution-failure", "text": "dns lookup failed for kafka-0.kafka-headless.default.svc.cluster.local: NXDOMAIN"}
+{"label": "dns-resolution-failure", "text": "java.net.UnknownHostException: s3.amazonaws.com\n  at java.base/java.net.InetAddress.getAllByName0"}
+{"label": "dns-resolution-failure", "text": "grpc: addrConn.createTransport failed: name resolver error: produced zero addresses"}
+{"label": "permission-denied", "text": "postgres: could not open file \"postgresql.conf\": Permission denied, data directory owned by root"}
+{"label": "permission-denied", "text": "nginx: [emerg] open() \"/var/run/nginx.pid\" failed (13: Permission denied)"}
+{"label": "permission-denied", "text": "chown: changing ownership of '/app/data': Operation not permitted"}
+{"label": "permission-denied", "text": "open /etc/app/secrets/token: permission denied"}
+{"label": "permission-denied", "text": "ERROR: permission denied for table incidents"}
+{"label": "permission-denied", "text": "fatal: could not create work tree dir 'repo': Permission denied"}
+{"label": "permission-denied", "text": "logrotate: error: skipping \"/var/log/app/*.log\" because parent directory has insecure permissions"}
+{"label": "permission-denied", "text": "PermissionError: [Errno 13] Permission denied: '/app/model.joblib'"}
+{"label": "missing-config", "text": "ValueError: DATABASE_URL is not set"}
+{"label": "missing-config", "text": "FileNotFoundError: [Errno 2] No such file or directory: 'model.joblib'"}
+{"label": "missing-config", "text": "Error: Environment variable not found: DATABASE_URL.\n  -->  schema.prisma:7"}
+{"label": "missing-config", "text": "ImportError: cannot import name 'BaseSettings' from 'pydantic' - pydantic-settings package not installed"}
+{"label": "missing-config", "text": "error: failed to read config: open .env: no such file or directory"}
+{"label": "too-many-open-files", "text": "Too many open files in system"}
+{"label": "too-many-open-files", "text": "lsof -p 4312 | wc -l -> 65535 open files, nofile limit 65536"}
+{"label": "too-many-open-files", "text": "dockerd: failed to create shim task: too many open files"}
+{"label": "too-many-open-files", "text": "gunicorn: [ERROR] Error handling request: [Errno 24] Too many open files"}
+{"label": "too-many-open-files", "text": "file descriptor count climbing 200 per minute since deploy, EMFILE errors started at 4096"}
+{"label": "too-many-open-files", "text": "elasticsearch: max file descriptors [4096] for elasticsearch process is too low, increase to at least [65535]"}
+{"label": "auth-brute-force", "text": "fail2ban.actions: WARNING [sshd] Ban 218.92.0.107"}
+{"label": "auth-brute-force", "text": "express-rate-limit: blocked 103.99.0.12 on /auth/login after 5 failed attempts per minute"}
+{"label": "auth-brute-force", "text": "CloudTrail: ConsoleLogin Failure for root from 179.43.187.11, 140 events in 15 minutes"}
+{"label": "auth-brute-force", "text": "credential stuffing detected: 12000 failed logins across 9000 accounts from 300 IPs in 1 hour"}
+{"label": "auth-brute-force", "text": "sshd: Disconnecting: Too many authentication failures for root from 61.177.172.13 port 22 ssh2"}
+{"label": "crash-loop", "text": "ECS: Essential container in task exited. Service scheduler starting replacement task (attempt 18)"}
+{"label": "crash-loop", "text": "thread 'main' panicked at 'called Option::unwrap() on a None value', src/main.rs:42\ncontainer restarting"}
+{"label": "crash-loop", "text": "Heroku: State changed from starting to crashed\nProcess exited with status 1\nState changed from crashed to starting"}
+{"label": "crash-loop", "text": "worker keeps dying right after boot: started -> exited(1) -> started -> exited(1), restart policy unless-stopped"}
+{"label": "dns-resolution-failure", "text": "Error: getaddrinfo ENOTFOUND auth-db\n    at GetAddrInfoReqWrap.onlookup [as oncomplete]"}
+{"label": "dns-resolution-failure", "text": "Warning: DNS lookup for inventory-api.default.svc.cluster.local failed"}
+{"label": "dns-resolution-failure", "text": "SocketError: getaddrinfo: nodename nor servname provided, or not known (redis.internal)"}
+{"label": "dns-resolution-failure", "text": "elasticsearch: lookup es-node-2 on 127.0.0.53:53: no such host, marking node dead"}
+{"label": "missing-config", "text": "config error: required key \"database.host\" not found in config.yaml"}
+{"label": "missing-config", "text": "Error: Could not load the default credentials. GOOGLE_APPLICATION_CREDENTIALS is not set."}
+{"label": "missing-config", "text": "Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/app/src/utils/logger.js' imported from /app/src/server.js"}
+{"label": "missing-config", "text": "MountVolume.SetUp failed for volume \"api-keys\": secret \"api-keys\" not found"}
+{"label": "high-latency", "text": "slow request: /reports/export/ took 14.2s, 312 SQL queries"}
+{"label": "high-latency", "text": "Kong: upstream latency 9870ms, proxy latency 3ms, status 200"}
+{"label": "high-latency", "text": "HPA at max replicas 10, cpu 96% of target, response times still climbing"}
+{"label": "high-latency", "text": "envoy: upstream request timeout, response flags UT, duration 15001"}
+{"label": "high-latency", "text": "TimeoutError: Navigation timeout of 30000 ms exceeded"}
+{"label": "disk-full", "text": "elasticsearch: flood stage disk watermark [95%] exceeded on [node-1], all indices on this node will be marked read-only"}
+{"label": "disk-full", "text": "cluster_block_exception: index [logs-2026.09] blocked by: [disk usage exceeded flood-stage watermark, index has read-only-allow-delete block]"}
+{"label": "disk-full", "text": "tar: backup.tar.gz: Wrote only 4096 of 10240 bytes\ntar: Error is not recoverable: exiting now\n/dev/nvme0n1p1 100% /backup"}
+{"label": "disk-full", "text": "error: unable to write file .git/objects/7a/91f: No space left on device\nfatal: unable to write new index file"}
+{"label": "disk-full", "text": "prometheus: level=error msg=\"append failed\" err=\"write to WAL: log samples: write /prometheus/wal/00000412: no space left on device\""}
+{"label": "disk-full", "text": "ERROR: could not write block 4021 of temporary file: No space left on device\nSTATEMENT: SELECT * FROM orders ORDER BY created_at"}
+{"label": "disk-full", "text": "low disk alert: /var/lib/docker 97% used, 1.1G free, image pulls failing"}
+{"label": "permission-denied", "text": "Error: EACCES: permission denied, scandir '/root/.config/yarn'"}
+{"label": "permission-denied", "text": "chmod: changing permissions of '/mnt/nfs/shared': Operation not permitted"}
+{"label": "permission-denied", "text": "rm: cannot remove '/var/cache/app/lock': Permission denied"}
+{"label": "permission-denied", "text": "error: insufficient permission for adding an object to repository database .git/objects"}
+{"label": "permission-denied", "text": "scp: /srv/releases/app.tar.gz: Permission denied"}
+{"label": "permission-denied", "text": "System.UnauthorizedAccessException: Access to the path '/app/keys/key-3f.xml' is denied."}
+{"label": "permission-denied", "text": "Errno::EACCES: Permission denied @ rb_sysopen - /app/log/production.log"}
+{"label": "permission-denied", "text": "prometheus: err=\"open /prometheus/queries.active: permission denied\"\npanic: Unable to create mmap-ed active query log"}
+{"label": "port-in-use", "text": "kubectl port-forward: Unable to listen on port 5432: Listeners failed to create with the following errors: [unable to create listener: Error listen tcp4 127.0.0.1:5432: bind: address already in use]"}
+{"label": "port-in-use", "text": "mysqld: Can't start server: Bind on TCP/IP port: Address already in use\nDo you already have another mysqld server running on port: 3306 ?"}
+{"label": "port-in-use", "text": "asyncio: OSError: [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8765): only one usage of each socket address is normally permitted"}
+{"label": "port-in-use", "text": "httpd: (98)Address already in use: AH00072: make_sock: could not bind to address [::]:80\nno listening sockets available, shutting down"}
+{"label": "port-in-use", "text": "haproxy: [ALERT] Starting frontend http-in: cannot bind socket [0.0.0.0:443]"}
+{"label": "port-in-use", "text": "kafka.common.KafkaException: Socket server failed to bind to 0.0.0.0:9092: Address already in use."}
+{"label": "port-in-use", "text": "elasticsearch: BindTransportException[Failed to bind to 9300]; nested: BindException[Address already in use]"}
+{"label": "port-in-use", "text": "socat: E bind(5, {AF=2 0.0.0.0:2222}, 16): Address already in use"}
+{"label": "port-in-use", "text": "jupyter: The port 8888 is already in use, trying another port.\nERROR: no available port could be found."}
+{"label": "ssl-cert-expired", "text": "requests.exceptions.SSLError: HTTPSConnectionPool(host='api.partner.com', port=443): Max retries exceeded (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1006)')))"}
+{"label": "ssl-cert-expired", "text": "urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'api.internal'>"}
+{"label": "ssl-cert-expired", "text": "Firefox: SEC_ERROR_EXPIRED_CERTIFICATE - api.example.com uses an invalid security certificate. The certificate expired on 9/1/2026."}
+{"label": "ssl-cert-expired", "text": "verify error:num=10:certificate has expired\nnotAfter=Sep  1 12:00:00 2026 GMT\nVerify return code: 10 (certificate has expired)"}
+{"label": "ssl-cert-expired", "text": "rpc error: code = Unavailable desc = connection error: desc = \"transport: authentication handshake failed: tls: failed to verify certificate: x509: certificate has expired or is not yet valid\""}
+{"label": "ssl-cert-expired", "text": "webhook delivery failed: Peer's Certificate has expired. (endpoint https://hooks.partner.io/ingest)"}
+{"label": "ssl-cert-expired", "text": "MongooseServerSelectionError: self-signed certificate in certificate chain (connecting to the replica set over TLS)"}
+{"label": "too-many-open-files", "text": "socket: too many open files (os error 24)"}
+{"label": "too-many-open-files", "text": "memcached: Too many open connections, raise -c or the nofile ulimit (curr_connections 1024)"}
+{"label": "too-many-open-files", "text": "MariaDB: [Warning] Could not increase number of max_open_files to more than 1024 (request: 4186)"}
+{"label": "too-many-open-files", "text": "haproxy: Proxy http-in reached process FD limit (maxsock=4096). Please check 'ulimit-n' and restart."}
+{"label": "too-many-open-files", "text": "nginx: [emerg] open() \"/var/log/nginx/access.log\" failed (24: Too many open files)"}
+{"label": "too-many-open-files", "text": "celery worker: WorkerLostError after OSError(24, 'Too many open files') while forking a new pool process"}
+{"label": "too-many-open-files", "text": "tail: inotify cannot be used, reverting to polling: Too many open files"}
+{"label": "too-many-open-files", "text": "sysctl fs.file-nr: 1048576 0 1048576 - system-wide file handle table exhausted, ENFILE on every open()"}
+{"label": "too-many-open-files", "text": "dmesg: VFS: file-max limit reached; fs.file-max is too low for this host"}
+{"label": "too-many-open-files", "text": "containerd: failed to start shim: start failed: pipe2: too many open files"}
+{"label": "db-connection-refused", "text": "django.db.utils.OperationalError: (2002, \"Can't connect to MySQL server on 'db' (115)\")"}
+{"label": "db-connection-refused", "text": "PrismaClientInitializationError: Can't reach database server at postgres:5432\nPlease make sure your database server is running at postgres:5432."}
+{"label": "db-connection-refused", "text": "Error: P1000: Authentication failed against database server at db, the provided database credentials for app are not valid."}
+{"label": "db-connection-refused", "text": "SequelizeAccessDeniedError: Access denied for user 'api'@'172.18.0.6' (using password: YES)"}
+{"label": "db-connection-refused", "text": "MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017\n  reason: TopologyDescription { type: 'Unknown', servers: Map(1) }"}
+{"label": "db-connection-refused", "text": "MySqlConnector.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts."}
+{"label": "db-connection-refused", "text": "pymysql.err.OperationalError: (1045, \"Access denied for user 'root'@'172.19.0.5' (using password: NO)\")"}
+{"label": "db-connection-refused", "text": "health check: database DOWN - org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection"}
+{"label": "error-rate-spike", "text": "java.lang.IllegalStateException: No serializer found for class com.shop.dto.OrderV2\nServlet.service() for servlet [dispatcherServlet] threw exception, status=500, count=960/min"}
+{"label": "error-rate-spike", "text": "AttributeError: 'NoneType' object has no attribute 'id'\n  File \"/app/views/orders.py\", line 88, in get\n\"GET /orders/ HTTP/1.1\" 500 - on every request after the migration"}
+{"label": "error-rate-spike", "text": "NoMethodError (undefined method 'name' for nil:NilClass):\napp/controllers/users_controller.rb:23\nCompleted 500 Internal Server Error - 5200 times since deploy"}
+{"label": "error-rate-spike", "text": "Sentry: new issue spike - ReferenceError: formatPrice is not defined - 8,400 events, first seen right after release web@5.2.0"}
+{"label": "error-rate-spike", "text": "envoy: upstream_rq_5xx 6200 of upstream_rq_total 14100 for cluster payments"}
+{"label": "error-rate-spike", "text": "GraphQL errors: \"Cannot return null for non-nullable field User.email.\" on 40% of queries after schema change"}
+{"label": "error-rate-spike", "text": "SLO alert: availability 96.1% (target 99.9%), 5xx concentrated on /api/search after feature flag new_ranker enabled"}
+{"label": "error-rate-spike", "text": "[error] 500 Internal Server Error /api/payments x 640\n[error] TypeError: stripe.charges.create is not a function (after dependency bump)"}
+{"label": "auth-brute-force", "text": "Failed login for user \"admin\" (invalid password) - attempt 88 from the same client, lockout triggered"}
+{"label": "auth-brute-force", "text": "Rack_Attack: throttle logins/ip 198.51.100.77 POST /users/sign_in - 300 blocked"}
+{"label": "auth-brute-force", "text": "Auth0: type=limit_wc \"Blocked account\" for user ops@example.com after 10 failed attempts"}
+{"label": "auth-brute-force", "text": "Okta: user.account.lock - Max sign in attempts exceeded for 46 users, originating from a single ASN"}
+{"label": "auth-brute-force", "text": "Azure AD: Sign-in error 50126 Invalid username or password - 5,300 failures across 800 accounts (password spray)"}
+{"label": "auth-brute-force", "text": "api: 429 Too Many Requests returned on POST /v1/auth/token after 500 invalid client_secret attempts"}
+{"label": "crash-loop", "text": "worker-1 exited with code 1\nworker-1 exited with code 1\nworker-1 exited with code 1 (restart: always)"}
+{"label": "crash-loop", "text": "Traceback (most recent call last):\n  File \"/app/worker.py\", line 12, in <module>\nZeroDivisionError: division by zero - process exits on boot, restart count 30"}
+{"label": "crash-loop", "text": "StatefulSet cache-0 stuck in CrashLoopBackOff since rollout, previous container logs are empty, exit code 2"}
+{"label": "crash-loop", "text": "Job ingest-28211 has reached the specified backoff limit, pods failed with exit code 1 each time"}
+{"label": "dns-resolution-failure", "text": "coredns: [ERROR] plugin/errors: 2 inventory.default.svc.cluster.local. A: read udp 10.244.0.3:53211->8.8.8.8:53: i/o timeout"}
+{"label": "dns-resolution-failure", "text": "docker build: failed to solve: failed to fetch oauth token: Get \"https://auth.docker.io/token\": dial tcp: lookup auth.docker.io: no such host"}
+{"label": "high-latency", "text": "LOG: duration: 18342.117 ms  statement: SELECT * FROM events WHERE user_id = $1 ORDER BY ts DESC"}
+{"label": "high-latency", "text": "mongod: Slow query: command app.orders find planSummary: COLLSCAN docsExamined:2400000 durationMillis:9120"}
+{"label": "high-latency", "text": "Apdex 0.41 (was 0.96): average response time 5870 ms on WebTransaction/orders/index"}
+{"label": "missing-config", "text": "Error: Cannot find module 'dotenv/config'\nRequire stack:\n- internal/preload"}
+{"label": "missing-config", "text": "sh: 1: nodemon: not found\nnpm ERR! Missing script: \"start:prod\""}
+{"label": "missing-config", "text": "Error: Could not find or load main class com.acme.Application\nCaused by: java.lang.ClassNotFoundException: com.acme.Application"}
+{"label": "missing-config", "text": "error while loading shared libraries: libvips.so.42: cannot open shared object file: No such file or directory"}
+{"label": "missing-config", "text": "Error: couldn't find key JWT_SECRET in Secret default/api-secrets"}
+{"label": "oom-killed", "text": "Dec  1 19:45:24 combo kernel: Out of Memory: Killed process 17585 (httpd).\nDec  1 19:45:39 combo kernel: Out of Memory: Killed process 17586 (httpd).\nDec  1 19:45:47 combo kernel: Out of Memory: Killed process 17587 (httpd).\nDec  1 19:46:04 combo kernel: Out of Memory: Killed process 17593 (httpd).\nDec  1 19:50:14 combo kernel: Out of Memory: Killed process 17594 (httpd).", "source": "loghub-linux"}
+{"label": "oom-killed", "text": "Dec  4 06:57:36 combo kernel: Out of Memory: Killed process 32667 (httpd).\nDec  4 06:57:45 combo kernel: Out of Memory: Killed process 32668 (httpd).\nDec  4 06:57:54 combo kernel: Out of Memory: Killed process 32669 (httpd).\nDec  4 06:58:04 combo kernel: Out of Memory: Killed process 32670 (httpd).\nDec  4 06:58:19 combo kernel: Out of Memory: Killed process 32672 (httpd).\nDec  4 06:58:28 combo kernel: Out of Memory: Killed process 32671 (httpd).", "source": "loghub-linux"}
+{"label": "oom-killed", "text": "Dec  5 04:11:18 combo kernel: Out of Memory: Killed process 3698 (httpd).\nDec  5 04:11:28 combo kernel: Out of Memory: Killed process 3700 (httpd).\nDec  5 04:11:39 combo kernel: Out of Memory: Killed process 3701 (httpd).\nDec  5 04:11:45 combo kernel: Out of Memory: Killed process 3702 (httpd).\nDec  5 04:11:51 combo kernel: Out of Memory: Killed process 3696 (python).\nDec  5 04:12:00 combo kernel: Out of Memory: Killed process 3703 (httpd).", "source": "loghub-linux"}
+{"label": "oom-killed", "text": "Nov 20 23:21:39 combo kernel: Out of Memory: Killed process 25063 (httpd).\nNov 20 23:25:25 combo kernel: Out of Memory: Killed process 25064 (httpd).\nNov 20 23:25:30 combo kernel: Out of Memory: Killed process 25065 (httpd).\nNov 20 23:25:39 combo kernel: Out of Memory: Killed process 25066 (httpd).\nNov 20 23:26:03 combo kernel: Out of Memory: Killed process 25067 (httpd).\nNov 20 23:26:07 combo kernel: Out of Memory: Killed process 25068 (httpd).\nNov 20 23:26:21 combo kernel: Out of Memory: Killed process 25075 (httpd).\nNov 20 23:26:27 combo kernel: Out of Memory: Killed process 25076 (httpd).\nNov 20 23:26:33 combo kernel: Out of Memory: Killed process 25077 (httpd).", "source": "loghub-linux"}
+{"label": "oom-killed", "text": "Nov 21 02:52:26 combo kernel: Out of Memory: Killed process 26205 (httpd).\nNov 21 02:52:41 combo kernel: Out of Memory: Killed process 26206 (httpd).\nNov 21 02:52:46 combo kernel: Out of Memory: Killed process 26207 (httpd).\nNov 21 02:52:55 combo kernel: Out of Memory: Killed process 26208 (httpd).\nNov 21 02:53:07 combo kernel: Out of Memory: Killed process 26209 (httpd).\nNov 21 02:53:15 combo kernel: Out of Memory: Killed process 26210 (httpd).\nNov 21 02:53:20 combo kernel: Out of Memory: Killed process 26196 (python).\nNov 21 02:53:27 combo kernel: Out of Memory: Killed process 26211 (httpd).\nNov 21 02:53:36 combo kernel: Out of Memory: Killed process 26212 (httpd).", "source": "loghub-linux"}
+{"label": "oom-killed", "text": "Nov 29 01:13:50 combo kernel: Out of Memory: Killed process 423 (httpd).\nNov 29 01:13:55 combo kernel: Out of Memory: Killed process 424 (httpd).\nNov 29 01:14:02 combo kernel: Out of Memory: Killed process 425 (httpd).\nNov 29 01:14:07 combo kernel: Out of Memory: Killed process 426 (httpd).\nNov 29 01:14:15 combo kernel: Out of Memory: Killed process 427 (httpd).", "source": "loghub-linux"}
+{"label": "oom-killed", "text": "Nov 15 04:35:53 combo kernel: Out of Memory: Killed process 28476 (httpd).\nNov 15 04:36:12 combo kernel: Out of Memory: Killed process 28477 (httpd).\nNov 15 04:40:31 combo kernel: Out of Memory: Killed process 6694 (httpd).\nNov 15 04:40:40 combo kernel: Out of Memory: Killed process 6695 (httpd).\nNov 15 04:40:49 combo kernel: Out of Memory: Killed process 6696 (httpd).\nNov 15 04:45:29 combo kernel: Out of Memory: Killed process 6697 (httpd).", "source": "loghub-linux"}
+{"label": "auth-brute-force", "text": "Jan  3 05:30:36 LabSZ sshd[11042]: Failed password for root from 183.63.110.206 port 54181 ssh2\nJan  3 05:30:36 LabSZ sshd[11036]: Failed password for root from 183.192.189.131 port 12157 ssh2\nJan  3 05:30:36 LabSZ sshd[11036]: Connection closed by 183.192.189.131 [preauth]\nJan  3 05:30:37 LabSZ sshd[11044]: reverse mapping checking getaddrinfo for . [183.192.189.131] failed - POSSIBLE BREAK-IN ATTEMPT!\nJan  3 05:30:37 LabSZ sshd[11044]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=183.192.189.131  user=root\nJan  3 05:30:37 LabSZ sshd[11042]: Connection closed by 183.63.110.206 [preauth]\nJan  3 05:30:37 LabSZ sshd[11046]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=183.63.110.206  user=root\nJan  3 05:30:38 LabSZ sshd[11044]: Failed password for root from 183.192.189.131 port 12158 ssh2\nJan  3 05:30:38 LabSZ sshd[11044]: Connection closed by 183.192.189.131 [preauth]", "source": "loghub-ssh"}
+{"label": "auth-brute-force", "text": "Dec 17 00:55:49 LabSZ sshd[10839]: Failed password for root from 183.129.154.138 port 48266 ssh2\nDec 17 00:55:49 LabSZ sshd[10839]: Connection closed by 183.129.154.138 [preauth]\nDec 17 00:55:49 LabSZ sshd[10841]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=183.129.154.138  user=root\nDec 17 00:55:51 LabSZ sshd[10841]: Failed password for root from 183.129.154.138 port 48528 ssh2\nDec 17 00:55:51 LabSZ sshd[10841]: Connection closed by 183.129.154.138 [preauth]\nDec 17 00:55:51 LabSZ sshd[10843]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=183.129.154.138  user=root", "source": "loghub-ssh"}
+{"label": "auth-brute-force", "text": "Jan  4 13:47:58 LabSZ sshd[32233]: Invalid user admin from 123.13.155.69\nJan  4 13:47:58 LabSZ sshd[32233]: input_userauth_request: invalid user admin [preauth]\nJan  4 13:47:58 LabSZ sshd[32233]: pam_unix(sshd:auth): check pass; user unknown\nJan  4 13:47:58 LabSZ sshd[32233]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=123.13.155.69 \nJan  4 13:48:00 LabSZ sshd[32231]: Failed password for root from 59.63.188.30 port 2611 ssh2\nJan  4 13:48:00 LabSZ sshd[32233]: Failed password for invalid user admin from 123.13.155.69 port 47143 ssh2\nJan  4 13:48:00 LabSZ sshd[32233]: pam_unix(sshd:auth): check pass; user unknown", "source": "loghub-ssh"}
+{"label": "auth-brute-force", "text": "Dec 20 11:30:13 LabSZ sshd[15130]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=173.82.194.233 \nDec 20 11:30:14 LabSZ sshd[15130]: Failed password for invalid user apache from 173.82.194.233 port 54282 ssh2\nDec 20 11:30:15 LabSZ sshd[15130]: Received disconnect from 173.82.194.233: 11: Bye Bye [preauth]\nDec 20 11:30:16 LabSZ sshd[15132]: Address 173.82.194.233 maps to 233-194-82-173-dedicated.multacom.com, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!\nDec 20 11:30:16 LabSZ sshd[15132]: Invalid user apache from 173.82.194.233\nDec 20 11:30:16 LabSZ sshd[15132]: input_userauth_request: invalid user apache [preauth]\nDec 20 11:30:16 LabSZ sshd[15132]: pam_unix(sshd:auth): check pass; user unknown\nDec 20 11:30:16 LabSZ sshd[15132]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=173.82.194.233 \nDec 20 11:30:18 LabSZ sshd[15132]: Failed password for invalid user apache from 173.82.194.233 port 54580 ssh2\nDec 20 11:30:18 LabSZ sshd[15132]: Received disconnect from 173.82.194.233: 11: Bye Bye [preauth]\nDec 20 11:30:19 LabSZ sshd[15134]: Address 173.82.194.233 maps to 233-194-82-173-dedicated.multacom.com, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!\nDec 20 11:30:19 LabSZ sshd[15134]: Invalid user apache from 173.82.194.233\nDec 20 11:30:19 LabSZ sshd[15134]: input_userauth_request: invalid user apache [preauth]\nDec 20 11:30:19 LabSZ sshd[15134]: pam_unix(sshd:auth): check pass; user unknown\nDec 20 11:30:19 LabSZ sshd[15134]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=173.82.194.233 \nDec 20 11:30:21 LabSZ sshd[15134]: Failed password for invalid user apache from 173.82.194.233 port 54936 ssh2\nDec 20 11:30:22 LabSZ sshd[15134]: Received disconnect from 173.82.194.233: 11: Bye Bye [preauth]\nDec 20 11:30:23 LabSZ sshd[15136]: Address 173.82.194.233 maps to 233-194-82-173-dedicated.multacom.com, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!", "source": "loghub-ssh"}
+{"label": "auth-brute-force", "text": "Jan  3 00:57:50 LabSZ sshd[21730]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=183.192.189.131  user=root\nJan  3 00:57:50 LabSZ sshd[21726]: Connection closed by 183.63.110.206 [preauth]\nJan  3 00:57:50 LabSZ sshd[21728]: Connection closed by 183.63.110.206 [preauth]\nJan  3 00:57:51 LabSZ sshd[21730]: Failed password for root from 183.192.189.131 port 5625 ssh2\nJan  3 00:57:52 LabSZ sshd[21730]: Connection closed by 183.192.189.131 [preauth]\nJan  3 00:57:52 LabSZ sshd[21732]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=183.63.110.206  user=root\nJan  3 00:57:52 LabSZ sshd[21736]: reverse mapping checking getaddrinfo for . [183.192.189.131] failed - POSSIBLE BREAK-IN ATTEMPT!\nJan  3 00:57:52 LabSZ sshd[21736]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=183.192.189.131  user=root\nJan  3 00:57:52 LabSZ sshd[21733]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=183.63.110.206  user=root\nJan  3 00:57:54 LabSZ sshd[21732]: Failed password for root from 183.63.110.206 port 58828 ssh2\nJan  3 00:57:54 LabSZ sshd[21736]: Failed password for root from 183.192.189.131 port 5626 ssh2", "source": "loghub-ssh"}

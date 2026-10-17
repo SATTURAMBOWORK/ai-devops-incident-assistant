@@ -19,17 +19,22 @@ from predict import UNKNOWN_LABEL
 ML = Path(__file__).resolve().parent.parent
 REPO = ML.parent
 DATA_FILES = [ML / "data" / "incidents.jsonl", ML / "data" / "loghub_incidents.jsonl"]
+TEST_FILE = ML / "data" / "test_incidents.jsonl"
 RUNBOOK = REPO / "backend" / "src" / "knowledge" / "runbook.js"
 FRONTEND_TITLES = REPO / "frontend" / "src" / "components" / "ClassifierPrediction.jsx"
 
 
+def read_rows(paths):
+    return [
+        json.loads(line)
+        for path in paths
+        for line in path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+
+
 def dataset_labels():
-    labels = set()
-    for path in DATA_FILES:
-        for line in path.read_text(encoding="utf-8").splitlines():
-            if line.strip():
-                labels.add(json.loads(line)["label"])
-    return labels
+    return {row["label"] for row in read_rows(DATA_FILES)}
 
 
 class CategoriesTest(unittest.TestCase):
@@ -61,6 +66,19 @@ class CategoriesTest(unittest.TestCase):
                     counts[label] = counts.get(label, 0) + 1
         smallest, largest = min(counts.values()), max(counts.values())
         self.assertLessEqual(largest / smallest, 2, counts)
+
+    def test_test_set_covers_every_category(self):
+        # A category missing from the test set would never be scored there, and
+        # the overall test accuracy would quietly stop covering it.
+        test_labels = {row["label"] for row in read_rows([TEST_FILE])}
+        self.assertEqual(test_labels, self.labels)
+
+    def test_no_test_incident_is_in_the_training_data(self):
+        # The whole point of the test set. train.py refuses to run on this too,
+        # but here it fails in seconds instead of at the start of a training run.
+        training = {row["text"] for row in read_rows(DATA_FILES)}
+        leaked = [row["text"] for row in read_rows([TEST_FILE]) if row["text"] in training]
+        self.assertEqual(leaked, [], "test incidents that are also training data")
 
 
 if __name__ == "__main__":

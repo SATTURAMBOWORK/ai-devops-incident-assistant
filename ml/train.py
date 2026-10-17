@@ -9,6 +9,11 @@ labelled dataset, trains a model, prints how well that model does on data it has
 never seen, and writes the trained model to disk. The FastAPI service (main.py)
 only ever loads that file - it never trains.
 
+The data is used in three separate ways, and no row is ever in two of them:
+  training + validation  80%  5-fold cross-validation, then the final model
+  test                   20%  data/test_incidents.jsonl, scored once at the end
+  real logs                   data/real_eval.jsonl, copied from GitHub issues
+
 Keeping training and serving in separate files matters: training is slow,
 occasional and done by a human who looks at the numbers; serving is fast,
 constant and automatic. Mixing them would mean retraining on every deploy and
@@ -36,7 +41,14 @@ DATA_PATHS = [
     HERE / "data" / "loghub_incidents.jsonl",  # real incidents, from prepare_loghub.py
 ]
 MODEL_PATH = HERE / "model.joblib"
-# Real logs for evaluation only - deliberately not in DATA_PATHS.
+# The held-out test set: 20% of the incidents (16 per category), picked once at
+# random and moved out of the two files above. Deliberately not in DATA_PATHS -
+# nothing here is trained on, cross-validated on, or used to tune a setting, so
+# its score is the one number no decision of ours has ever seen. It is a FILE
+# rather than a split made at run time so that adding training data later can
+# never reshuffle which incidents are in it.
+TEST_PATH = HERE / "data" / "test_incidents.jsonl"
+# Real logs for evaluation only - also not in DATA_PATHS.
 REAL_EVAL_PATH = HERE / "data" / "real_eval.jsonl"
 
 # Fixing the random seed makes the cross-validation folds identical on every
@@ -164,11 +176,11 @@ def cross_validate(texts, labels, noise_pool, folds=FOLDS):
     """
     Train and test `folds` models, each holding out a different fifth of the data.
 
-    Every report in main() comes from here. There used to be a separate single
-    80/20 split as well, but its ~130 test incidents were too few: adding 60
-    rows of data once changed which incidents landed in it and made oom-killed
-    recall appear to fall from 0.97 to 0.67, when cross-validation showed it
-    unchanged. Pooling all folds tests every incident exactly once.
+    This is the validation half: it runs on the training data only, and it is
+    where settings are compared and where the per-category numbers come from.
+    Pooling all folds tests every training incident exactly once, which is what
+    makes per-category recall stable - the held-out test set (see
+    evaluate_test_set) has only 16 incidents per category, too few for that.
 
     sklearn's cross_val_score cannot be used here: it would split data that is
     already augmented, putting noisy copies of the same incident on both sides.
@@ -209,11 +221,33 @@ def predict_all(model, texts):
     return [predict_label(model, text) for text in texts]
 
 
+def print_accuracy_by_kind(y_true, y_pred, kinds):
+    """
+    The same test samples, split by kind. A model can look fine overall while
+    failing badly on exactly the noisy logs real users paste.
+    """
+    print("Accuracy by kind of log")
+    for kind, description in [("clean", "clean snippets"), ("noisy", "buried in noise"),
+                              ("healthy", "healthy (unknown)")]:
+        picked = [(t, p) for t, p, k in zip(y_true, y_pred, kinds) if k == kind]
+        accuracy = accuracy_score([t for t, _ in picked], [p for _, p in picked])
+        print(f"  {description:20}  {accuracy:.3f}  ({len(picked)})")
+
+
 def main():
     texts, labels = load_dataset(DATA_PATHS)
+    test_texts, test_labels = load_dataset([TEST_PATH])
     noise_pool = load_noise_lines()
-    print(f"Loaded {len(texts)} incidents across {len(set(labels))} categories, "
-          f"{len(noise_pool)} noise lines")
+    print(f"Loaded {len(texts)} training incidents and {len(test_texts)} held-out test incidents "
+          f"across {len(set(labels))} categories, {len(noise_pool)} noise lines")
+
+    # A test incident that is also in the training data is not a test. This can
+    # happen silently: prepare_loghub.py rewrites loghub_incidents.jsonl in
+    # full, which would put its held-out rows straight back in.
+    leaked = set(texts) & set(test_texts)
+    if leaked:
+        raise SystemExit(f"{len(leaked)} test incidents are also in the training data, "
+                         f"e.g. {sorted(leaked)[0][:80]!r}. Remove them from the training files.")
 
     cv = cross_validate(texts, labels, noise_pool)
     scores, y_true, y_pred, kinds = cv["scores"], cv["y_true"], cv["y_pred"], cv["kinds"]
@@ -229,21 +263,14 @@ def main():
     print("-" * 64)
     print(classification_report(y_true, y_pred, zero_division=0))
 
-    # The same test samples, split by kind. A model can look fine overall
-    # while failing badly on exactly the noisy logs real users paste.
-    print("Accuracy by kind of log")
-    for kind, description in [("clean", "clean snippets"), ("noisy", "buried in noise"),
-                              ("healthy", "healthy (unknown)")]:
-        picked = [(t, p) for t, p, k in zip(y_true, y_pred, kinds) if k == kind]
-        accuracy = accuracy_score([t for t, _ in picked], [p for _, p in picked])
-        print(f"  {description:20}  {accuracy:.3f}  ({len(picked)})")
+    print_accuracy_by_kind(y_true, y_pred, kinds)
 
     print_confusion_matrix(y_true, y_pred, sorted(set(y_true)))
 
-    # Retrain on ALL the data before saving. The folds existed to measure the
-    # model honestly; now that we have our numbers, holding data back would
-    # only make the shipped model worse. This is standard practice - evaluate
-    # with cross-validation, ship a model trained on everything.
+    # Retrain on ALL the training data before saving. The folds existed to
+    # measure the model; each of those five models saw only 80% of it. The
+    # test set stays out even now: folding it in would ship a slightly better
+    # model whose accuracy nobody had measured.
     all_texts, all_labels = augment(texts, labels, noise_pool, seed=RANDOM_SEED)
     final_model = build_model()
     final_model.fit(all_texts, all_labels)
@@ -256,7 +283,37 @@ def main():
     print(f"\nSaved model -> {MODEL_PATH.name} (trained on {len(all_texts)} samples, "
           f"{len(final_model.named_steps['clf'].classes_)} categories)")
 
+    evaluate_test_set(final_model, test_texts, test_labels, noise_pool)
     evaluate_real_logs(final_model)
+
+
+def evaluate_test_set(model, texts, labels, noise_pool):
+    """
+    Score the shipped model on the held-out test set.
+
+    Cross-validation above is honest about the training rows but not about our
+    choices: the confidence floor, the window size and C were all picked by
+    looking at those scores, so they flatter the model a little. These
+    incidents took no part in any of that.
+
+    They are augmented the same way a fold's test side is - clean, buried in
+    noise, plus healthy logs - with a seed no fold uses, so the two numbers
+    measure the same thing and can be compared.
+
+    Only the overall figures are printed. With 16 incidents per category one
+    miss moves a category's recall by 6 points; per-category numbers belong to
+    cross-validation, which has four times as many.
+    """
+    X_te, y_te = augment(texts, labels, noise_pool, seed=RANDOM_SEED + 200)
+    predictions = predict_all(model, X_te)
+    clean = set(texts)
+    kinds = ["healthy" if y == UNKNOWN_LABEL else "clean" if x in clean else "noisy"
+             for x, y in zip(X_te, y_te)]
+
+    print(f"\nHeld-out test set ({len(texts)} incidents never trained or tuned on, {len(X_te)} samples)")
+    print("-" * 64)
+    print(f"  accuracy {accuracy_score(y_te, predictions):.3f}")
+    print_accuracy_by_kind(y_te, predictions, kinds)
 
 
 def evaluate_real_logs(model):

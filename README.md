@@ -151,26 +151,53 @@ category exists in the training data, the runbook and the frontend.
 
 | Source | Rows | Notes |
 |---|---|---|
-| [`ml/data/incidents.jsonl`](ml/data/incidents.jsonl) | 576 | Hand-written, ~40 per category (60 for the four hardest), varied across Node, Python, Go, Java, nginx, Docker, Kubernetes |
-| [`ml/data/loghub_incidents.jsonl`](ml/data/loghub_incidents.jsonl) | 80 | **Real** incidents from [Loghub](https://github.com/logpai/loghub): 40 kernel OOM kills (Linux) and 40 SSH brute-force attacks |
+| [`ml/data/incidents.jsonl`](ml/data/incidents.jsonl) | 764 | Training. Hand-written, varied across Node, Python, Go, Java, .NET, Ruby, PHP, nginx, Docker, Kubernetes and the common databases |
+| [`ml/data/loghub_incidents.jsonl`](ml/data/loghub_incidents.jsonl) | 68 | Training. **Real** incidents from [Loghub](https://github.com/logpai/loghub): kernel OOM kills (Linux) and SSH brute-force attacks |
+| [`ml/data/test_incidents.jsonl`](ml/data/test_incidents.jsonl) | 208 | **Held-out test set, never trained or tuned on.** 16 per category, picked once at random from the two files above (196 hand-written, 12 Loghub) and moved out of them |
 | [`ml/data/noise_lines.txt`](ml/data/noise_lines.txt) | 1,764 lines | Real healthy log lines from Loghub Apache, Linux and SSH logs, with every line mentioning any category filtered out |
 | [`ml/data/noise_lines_modern.txt`](ml/data/noise_lines_modern.txt) | 160 lines | Hand-written healthy lines from today's stacks (Spring Boot, Node, Vite, nginx, Mongo, Postgres, Redis, Docker, Kubernetes, FastAPI, CI), filtered the same way - a test enforces it |
 | [`ml/data/real_eval.jsonl`](ml/data/real_eval.jsonl) | 44 | **Evaluation only, never trained on.** Log snippets copied verbatim from public GitHub issues, each with its source URL: 38 incidents across 12 categories and 6 healthy startup logs |
 
+Every category has exactly 80 incidents: 64 for training and 16 in the test
+set. 384 of the hand-written rows were added in v2.4 to get there, each checked
+against the existing rows so that near-copies of one message do not end up on
+both sides of the split.
+
 The Loghub files are distilled once by `prepare_loghub.py` (raw logs go in
 `ml/data/loghub/`, gitignored). Only the small outputs are committed, so training
-and the Docker build never need the ~80MB raw files.
+and the Docker build never need the ~80MB raw files. Re-running it rewrites
+`loghub_incidents.jsonl` in full, including the 12 rows now in the test set;
+`train.py` and a unit test both refuse to continue if a test incident is also
+in the training data.
 
 ### Training
 
 [`augment.py`](ml/augment.py) buries each incident among real noise lines (3 noisy
 copies per incident) and generates an `unknown` class of healthy logs.
-[`train.py`](ml/train.py) evaluates with **5-fold cross-validation only**: five
-models, each tested on a different fifth of the incidents, with every report
+
+The data is split three ways, and no incident is in two of them:
+
+| Split | Share | Used for |
+|---|---|---|
+| Training + validation | 80% (832 incidents) | 5-fold cross-validation, then the shipped model |
+| Test | 20% (208 incidents) | Scored once, after everything else is decided |
+| Real logs | 44 logs | A check against logs nobody on this project wrote |
+
+[`train.py`](ml/train.py) runs **5-fold cross-validation** on the 80%: five
+models, each validated on a different fifth of it, with every report
 (per-category precision/recall, accuracy by kind of log, confusion matrix)
 pooled across all five. Each fold **splits before augmenting**, so noisy copies
 of one incident never land on both sides. The shipped model is then trained on
-all the data - 6 models per run in total.
+all of the 80% - 6 models per run in total - and scored on the test set.
+
+Why both: cross-validation is where settings get compared (the confidence floor,
+the window size, `C`), so its score has been looked at while making choices and
+flatters the model a little. The test set took no part in any of that. It is a
+file, not a split made at run time, because an earlier run-time split was
+reshuffled whenever data was added - `oom-killed` recall once appeared to fall
+from 0.97 to 0.67 when nothing had changed. With 16 incidents per category the
+test set is still too small for per-category numbers, so those come from
+cross-validation and the test set gives the overall figure.
 
 Classifying a whole log as one bag of words let a few error lines be diluted by
 dozens of normal ones. [`predict.py`](ml/predict.py) instead scores every 3-line
@@ -214,6 +241,26 @@ test - and on real logs it is the biggest improvement so far (healthy logs left
 alone: 3/6 to 5/6, incidents still 38/38). The old 77.2% was measuring an
 easier problem.
 
+**More data and a held-out test set** (v2.4, shipped). 384 incidents added, then
+20% of everything set aside:
+
+| | Cross-validation (80%) | Held-out test set (20%) |
+|---|---|---|
+| Overall accuracy | 81.8% (folds 79.7% - 84.9%) | **84.9%** |
+| Clean error snippet | 85.6% | 88.9% |
+| Error buried in noise | 80.2% | 84.0% |
+| Healthy log → no prediction | 85.5% | 81.2% |
+
+The 81.8% is **not** comparable with the 75.6% in the table above: that was
+measured on different, smaller data, so the gain cannot be split between "the
+model got better" and "the new examples are easier". The test score being a
+little above cross-validation is expected rather than suspicious - the shipped
+model trains on all 832 incidents, each fold's model on only 666 - and the gap
+is inside the spread between folds.
+
+Per-category recall in cross-validation now runs from 0.71
+(`db-connection-refused`, `missing-config`) to 0.90 (`ssl-cert-expired`).
+
 **Real logs** ([`real_eval.jsonl`](ml/data/real_eval.jsonl), printed at the end
 of every `train.py` run):
 
@@ -223,6 +270,14 @@ of every `train.py` run):
 | v2.1 | 38/38 | 4/6 |
 | v2.2 | 38/38 | 3/6 |
 | v2.3 | 38/38 | **5/6** |
+| v2.4 | 37/38 | 5/6 |
+
+The incident v2.4 misses is a `kubectl describe pod` output that says both
+`Reason: CrashLoopBackOff` and `Reason: OOMKilled`, exit code 137. The model
+scores the two windows 0.96 and 0.95 and reports `crash-loop`; the label is
+`oom-killed`, the root cause. It is the single-label limit below, not a bad
+example, and it was left unfixed on purpose: tuning until this set reads 38/38
+would turn the one set that is supposed to be untouched into training data.
 
 Read these honestly. The incidents were found by searching GitHub for their
 error text (`EADDRINUSE`, `ENOTFOUND`, ...), so they are textbook cases - too
@@ -242,20 +297,30 @@ learning "this server means healthy". They are now ordinary log words, and
 `137` is a top feature for `oom-killed`.
 
 When the model is wrong it mostly returns *no prediction* rather than a wrong
-category: precision is 0.8-1.0 for most categories.
+category: precision is 0.92-1.00 for nine of the thirteen categories, and
+0.74-0.82 for `high-latency`, `db-connection-refused`, `crash-loop` and
+`missing-config`.
 
 ### Known limitations
 
 - 11 of 13 categories rely on hand-written examples; only `oom-killed` and
   `auth-brute-force` have real data. Accuracy on real production logs will be
   lower than the numbers above.
+- The test set is held out, but it is not independent: it was drawn from the
+  same files as the training data, so it is written in the same hand. It shows
+  the model generalises to incidents it has not seen, not to logs written by
+  someone else - the real-log set is the only check on that, and it is small.
+- One category per log. A crash loop caused by an OOM kill is both, and the
+  model reports whichever window scores higher.
 - A healthy log that merely *mentions* a category's vocabulary still trips the
   model: the one real startup log it still flags is a Spring Boot log whose
   Tomcat line says `TLS virtual host ... certificate`, and it reads that as
   `ssl-cert-expired`. The noise pool cannot teach the difference, because every
   noise line containing category vocabulary is filtered out by design.
-- `db-connection-refused` (0.59) and `error-rate-spike` (0.62) have the lowest
-  recall in cross-validation - the next categories needing more examples.
+- `db-connection-refused` and `missing-config` (both 0.71) have the lowest
+  recall in cross-validation. Most of the misses are *no prediction*; the
+  main wrong-category ones are `missing-config` and `crash-loop` taken for
+  each other, and `db-connection-refused` read as `high-latency`.
 - The real-log incident set is keyword-selected and too easy; it has no
   `error-rate-spike` logs, because a spike of 5xx responses across many
   requests is rarely pasted into a GitHub issue.
