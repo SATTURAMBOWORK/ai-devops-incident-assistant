@@ -1,22 +1,64 @@
-# AI DevOps Incident Assistant
+<p align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0d0d,55:7c2d12,100:f97316&height=210&section=header&text=AI%20DevOps%20Incident%20Assistant&fontSize=44&fontColor=fdf2ee&fontAlignY=36&desc=Paste%20logs.%20Get%20the%20root%20cause.&descAlignY=58&descSize=18&animation=fadeIn" />
+</p>
 
-Paste application or Docker logs (plus optional CPU / memory / request-count /
-error-rate metrics) and get back a structured incident analysis: summary, likely
-root cause, supporting evidence, severity, troubleshooting steps and a confidence
-score. Past analyses are stored and browsable.
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2800&pause=700&color=F97316&center=true&vCenter=true&width=680&lines=RAG+over+a+runbook+of+13+incident+patterns;LLM+analysis+validated+with+Zod;Own+classifier%3A+84.9%25+on+a+held-out+test+set;4+services+%C2%B7+Docker+Compose+%C2%B7+GitHub+Actions" />
+</p>
 
-Each analysis combines three independent signals:
+<p align="center">
+  <img src="https://img.shields.io/badge/React%2019-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Express%205-000000?style=flat-square&logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" />
+  <img src="https://img.shields.io/badge/Zod-3E67B1?style=flat-square&logo=zod&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
+</p>
 
-1. **RAG retrieval** - the logs are embedded and matched against a runbook of 13
-   known incident patterns.
-2. **LLM analysis** - the logs, metrics and matched runbook steps go to an LLM,
-   which returns validated structured JSON, so the suggested steps cite
-   documented procedures.
-3. **Our own trained classifier** - a Python service predicts the incident
-   category in milliseconds, with no API cost. The UI shows whether it agrees
-   with retrieval; disagreements are the incidents most worth a second look.
+---
 
-## Stack
+## 🚨 What is this?
+
+When production breaks, someone has to read hundreds of log lines to work out *why*. Paste application or Docker logs (plus optional CPU, memory, request-count and error-rate metrics) and get back a **structured incident analysis**: summary, likely root cause, supporting evidence, severity, troubleshooting steps and a confidence score. Past analyses are stored and browsable.
+
+<p align="center">
+  <img src="./docs/assets/analysis-flow.svg" width="100%" alt="How an incident is analysed: RAG retrieval, LLM analysis and the trained classifier" />
+</p>
+
+Each analysis combines **three independent signals**:
+
+1. **RAG retrieval**: the logs are embedded and matched against a runbook of 13 known incident patterns.
+2. **LLM analysis**: the logs, metrics and matched runbook steps go to an LLM, which returns validated structured JSON, so the suggested steps cite documented procedures.
+3. **Our own trained classifier**: a Python service predicts the incident category in milliseconds, with no API cost. The UI shows whether it agrees with retrieval; disagreements are the incidents most worth a second look.
+
+The ML service is **optional**: if it is down or unsure, the analysis still completes, just without the predicted category.
+
+---
+
+## 📈 Classifier at a glance
+
+<table>
+<tr>
+<td align="center" width="25%"><h2>84.9%</h2>held-out test accuracy</td>
+<td align="center" width="25%"><h2>81.8%</h2>5-fold cross-validation</td>
+<td align="center" width="25%"><h2>37 / 38</h2>real GitHub-issue incidents</td>
+<td align="center" width="25%"><h2>13</h2>incident categories</td>
+</tr>
+</table>
+
+| Kind of log | Cross-validation | Held-out test set |
+|---|---|---|
+| Clean error snippet | 85.6% | 88.9% |
+| Error buried in noise | 80.2% | 84.0% |
+| Healthy log → no prediction | 85.5% | 81.2% |
+
+When the model is wrong it mostly says *no prediction* rather than guessing: precision is 0.92–1.00 for nine of the thirteen categories.
+
+---
+
+## 🧱 Stack
 
 | Layer | Choice |
 |---|---|
@@ -26,94 +68,12 @@ Each analysis combines three independent signals:
 | LLM | Groq (`openai/gpt-oss-120b`) |
 | Embeddings | Voyage AI (`voyage-4-lite`) |
 | ML service | Python 3.12, scikit-learn (TF-IDF + Logistic Regression), FastAPI |
-| Infra | Docker + Docker Compose |
-| CI/CD | GitHub Actions |
+| Infra | Docker + Docker Compose (4 services) |
+| CI/CD | GitHub Actions → GitHub Container Registry |
 
-## Architecture
+---
 
-```mermaid
-flowchart LR
-    B[Browser] --> N[nginx<br/>frontend container]
-    N -- /api --> API[Express backend]
-    API --> DB[(MongoDB)]
-    API -- embed logs --> V[Voyage AI]
-    API -- analyze --> G[Groq LLM]
-    API -- classify --> ML[ML service<br/>FastAPI + scikit-learn]
-```
-
-The ML service is **optional**: if it is down or unsure, the analysis still
-completes, just without the predicted category. Retrieval and the LLM are
-required.
-
-## Structure
-
-```
-backend/    Express API - retrieval, LLM analysis, classifier client, persistence
-frontend/   React dashboard - analyze, history and incident pages
-ml/         Python classifier - data preparation, training, FastAPI service, tests
-docker/     Dockerfiles + nginx config
-.github/    CI/CD workflow
-```
-
-## Running with Docker Compose
-
-Needs Docker and API keys for Voyage and Groq.
-
-```bash
-cp backend/.env.example backend/.env    # fill in VOYAGE_API_KEY and GROQ_API_KEY
-docker compose up --build
-```
-
-| URL | What |
-|---|---|
-| http://localhost:8080 | The app |
-| http://localhost:5000/api/health | Backend health (503 if the database is down) |
-| http://localhost:8000/docs | ML service API docs |
-
-Compose runs its own MongoDB with a named volume, and overrides `MONGO_URI` and
-`ML_SERVICE_URL` from `.env` to point at the containers - so the same `.env`
-works for local development too. `docker compose down -v` also deletes the data.
-
-## Running locally (without Docker)
-
-**Backend** - http://localhost:5000
-
-```bash
-cd backend
-cp .env.example .env     # fill in MONGO_URI (e.g. MongoDB Atlas) and the API keys
-npm install
-npm run dev
-```
-
-**Frontend** - http://localhost:5173 (proxies `/api` to the backend)
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-**ML service** - http://localhost:8000 (optional)
-
-```bash
-cd ml
-python -m venv .venv
-.venv/Scripts/activate            # Windows; on macOS/Linux: source .venv/bin/activate
-pip install -r requirements.txt
-python train.py                   # writes model.joblib (~1 minute)
-uvicorn main:app --reload --port 8000
-```
-
-## Tests
-
-```bash
-cd backend && npm test                                    # Node test runner, fakes for Voyage/Groq, in-memory MongoDB
-cd ml && python -m unittest discover -s tests -t . -v    # fake model, no training needed
-```
-
-No API keys are needed to run the tests.
-
-## CI
+## 🔁 CI/CD
 
 ```mermaid
 flowchart LR
@@ -132,9 +92,12 @@ the images are pushed to GitHub Container Registry, tagged with the commit
 
 Deployment is out of scope: the pipeline stops at tested, ready-to-run images.
 
-## The ML classifier
+---
 
-### Categories
+## 🧠 The ML classifier
+
+<details>
+<summary><b>🏷️ Categories</b></summary>
 
 13 incident categories, each with a runbook entry in
 [`backend/src/knowledge/runbook.js`](backend/src/knowledge/runbook.js):
@@ -147,7 +110,10 @@ A category names the **root cause**, not the symptom: a crash loop caused by a
 missing environment variable is `missing-config`. A test checks that every
 category exists in the training data, the runbook and the frontend.
 
-### Data
+</details>
+
+<details>
+<summary><b>📦 Data</b></summary>
 
 | Source | Rows | Notes |
 |---|---|---|
@@ -170,7 +136,10 @@ and the Docker build never need the ~80MB raw files. Re-running it rewrites
 `train.py` and a unit test both refuse to continue if a test incident is also
 in the training data.
 
-### Training
+</details>
+
+<details>
+<summary><b>🏋️ Training</b></summary>
 
 [`augment.py`](ml/augment.py) buries each incident among real noise lines (3 noisy
 copies per incident) and generates an `unknown` class of healthy logs.
@@ -211,7 +180,10 @@ hostname prefixes, masks IPs, and masks numbers **except** meaningful codes
 Any duration of a second or more (`8400ms`, `9.1s`, `60 seconds`) becomes the
 word `slowduration`, so a slow request no longer looks like a fast one.
 
-### Results
+</details>
+
+<details>
+<summary><b>📊 Full results, version by version</b></summary>
 
 **Windowing** (v2.0, held-out test set on the original 576 incidents):
 
@@ -301,7 +273,10 @@ category: precision is 0.92-1.00 for nine of the thirteen categories, and
 0.74-0.82 for `high-latency`, `db-connection-refused`, `crash-loop` and
 `missing-config`.
 
-### Known limitations
+</details>
+
+<details>
+<summary><b>⚠️ Known limitations</b></summary>
 
 - 11 of 13 categories rely on hand-written examples; only `oom-killed` and
   `auth-brute-force` have real data. Accuracy on real production logs will be
@@ -325,15 +300,28 @@ category: precision is 0.92-1.00 for nine of the thirteen categories, and
   `error-rate-spike` logs, because a spike of 5xx responses across many
   requests is rarely pasted into a GitHub issue.
 
-## Build progress
+</details>
 
-- [x] Step 1 - Express server, health check, central error handling
-- [x] Step 2 - MongoDB connection + Incident model
-- [x] Step 3 - Runbook knowledge base + embeddings + retrieval (RAG)
-- [x] Step 4 - Analysis service (LLM)
-- [x] Step 5 - Incident routes, controller, validation
-- [x] Step 6 - Tests
-- [x] Step 7 - React frontend
-- [x] ML classifier service - data, training, windowed prediction, tests
-- [x] Step 8 - Docker + Compose
-- [x] Step 9 - GitHub Actions CI (tests, frontend build, Docker image build and push)
+---
+
+## 🗂️ Project structure
+
+```
+backend/    Express API: retrieval, LLM analysis, classifier client, persistence
+frontend/   React dashboard: analyze, history and incident pages
+ml/         Python classifier: data preparation, training, FastAPI service, tests
+docker/     Dockerfiles + nginx config
+.github/    CI/CD workflow
+```
+
+Both the backend and the ML service have test suites that run with fakes for Voyage, Groq and the model, so **no API keys are needed to run the tests**.
+
+---
+
+<p align="center">
+  Built by <a href="https://github.com/SATTURAMBOWORK"><b>Satvik Singh</b></a>
+</p>
+
+<p align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:f97316,45:7c2d12,100:0f0d0d&height=110&section=footer" />
+</p>
